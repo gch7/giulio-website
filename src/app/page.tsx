@@ -33,7 +33,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      <NavigationHeader />
+      <NavigationHeader siteSettings={siteSettings} />
       <main>
         {hasCMSContent ? (
           <PageBuilder sections={pageData.sections} />
@@ -46,7 +46,7 @@ export default async function Home() {
           </>
         )}
       </main>
-      <Footer />
+      <Footer siteSettings={siteSettings} />
 
       {/* Draft mode indicator */}
       {isDraftMode && (

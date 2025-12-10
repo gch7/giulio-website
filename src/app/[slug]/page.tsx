@@ -5,8 +5,8 @@ import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 import { PageBuilder } from "@/components/page-builder";
 import { sanityFetch } from "@/sanity/lib/client";
-import { PAGE_BY_SLUG_QUERY, ALL_PAGE_SLUGS_QUERY } from "@/sanity/lib/queries";
-import type { Page } from "@/types/sanity";
+import { PAGE_BY_SLUG_QUERY, ALL_PAGE_SLUGS_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
+import type { Page, SiteSettings } from "@/types/sanity";
 import { getImageUrl } from '@/sanity/lib/image'
 
 interface PageProps {
@@ -60,13 +60,20 @@ export default async function CMSPage({ params }: PageProps) {
     const { slug } = await params
     const { isEnabled: isDraftMode } = await draftMode()
 
-    // Fetch page data from Sanity
-    const page = await sanityFetch<Page | null>({
-        query: PAGE_BY_SLUG_QUERY,
-        params: { slug },
-        revalidate: isDraftMode ? 0 : 60,
-        tags: ['page', slug],
-    })
+    // Fetch page data and site settings from Sanity
+    const [page, siteSettings] = await Promise.all([
+        sanityFetch<Page | null>({
+            query: PAGE_BY_SLUG_QUERY,
+            params: { slug },
+            revalidate: isDraftMode ? 0 : 60,
+            tags: ['page', slug],
+        }),
+        sanityFetch<SiteSettings | null>({
+            query: SITE_SETTINGS_QUERY,
+            revalidate: isDraftMode ? 0 : 60,
+            tags: ['siteSettings'],
+        }),
+    ])
 
     // If no page found or it's the homepage (should be handled by /), return 404
     if (!page || page.isHomepage) {
@@ -75,7 +82,7 @@ export default async function CMSPage({ params }: PageProps) {
 
     return (
         <div className="min-h-screen bg-[#fafafa]">
-            <NavigationHeader />
+            <NavigationHeader siteSettings={siteSettings} />
             <main>
                 {page.sections && page.sections.length > 0 ? (
                     <PageBuilder sections={page.sections} />
@@ -85,7 +92,7 @@ export default async function CMSPage({ params }: PageProps) {
                     </div>
                 )}
             </main>
-            <Footer />
+            <Footer siteSettings={siteSettings} />
 
             {/* Draft mode indicator */}
             {isDraftMode && (
