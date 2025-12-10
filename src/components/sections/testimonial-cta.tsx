@@ -54,28 +54,28 @@ export default function TestimonialCTA() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#111113] py-24 px-6 md:px-12 border-t border-[#1a1a1d]">
+    <section ref={sectionRef} className="w-full bg-[#f4f4f5] py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
       <div className="max-w-[900px] mx-auto text-center">
-        <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1a1a1d] border border-[#27272a] rounded-full mb-8">
+        <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#e4e4e7] rounded-full mb-8">
           <span className="text-[12px] font-medium text-[#71717a] tracking-wide">Trusted by institutional investors</span>
         </div>
-        <h2 ref={titleRef} className="text-[32px] md:text-[44px] font-medium tracking-[-0.02em] leading-[1.15] mb-6 text-white">
+        <h2 ref={titleRef} className="text-[32px] md:text-[44px] font-medium tracking-[-0.02em] leading-[1.15] mb-6 text-[#0a0a0b]">
           Ready to Gain an Edge<br />
           <span className="text-[#71717a]">in Today's Markets?</span>
         </h2>
-        <p ref={paragraphRef} className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto mb-10">
+        <p ref={paragraphRef} className="text-[17px] text-[#a1a1aa] font-normal leading-relaxed max-w-xl mx-auto mb-10">
           Join our community of sophisticated investors gaining access to institutional-grade insights and personalized guidance.
         </p>
         <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link 
             href="/memberships" 
-            className="bg-white text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors"
+            className="bg-[#0a0a0b] text-white px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors"
           >
             Explore Memberships
           </Link>
           <Link 
             href="/contact" 
-            className="bg-transparent text-white px-7 py-3.5 rounded-md text-[14px] font-medium border border-[#27272a] hover:border-[#52525b] hover:bg-[#1a1a1d] transition-colors"
+            className="bg-transparent text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-medium border border-[#e4e4e7] hover:border-[#a1a1aa] hover:bg-white transition-colors"
           >
             Contact Us
           </Link>

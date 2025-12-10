@@ -5,7 +5,7 @@ import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a0b]">
+    <div className="min-h-screen bg-[#fafafa]">
       <NavigationHeader />
       <main>
         <HeroSection />

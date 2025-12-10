@@ -42,14 +42,14 @@ export default function NavigationHeader() {
   }, []);
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 w-full bg-[#0a0a0b]/95 backdrop-blur-md border-b border-[#27272a]">
+    <nav ref={navRef} className="sticky top-0 z-50 w-full bg-[#fafafa]/95 backdrop-blur-md border-b border-[#e4e4e7]">
       <div className="relative flex h-[72px] items-center justify-between px-6 md:px-12 max-w-[1400px] mx-auto">
         <div ref={logoRef} className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 border border-[#c9a227]/30 rounded flex items-center justify-center bg-[#c9a227]/5">
-              <span className="text-[#c9a227] font-semibold text-lg tracking-tight">Γ</span>
+            <div className="w-9 h-9 border border-[#9a7b1a]/30 rounded flex items-center justify-center bg-[#9a7b1a]/5">
+              <span className="text-[#9a7b1a] font-semibold text-lg tracking-tight">Γ</span>
             </div>
-            <span className="text-[17px] font-semibold text-white tracking-tight">Gamma Capital</span>
+            <span className="text-[17px] font-semibold text-[#0a0a0b] tracking-tight">Gamma Capital</span>
           </Link>
         </div>
 
@@ -60,22 +60,22 @@ export default function NavigationHeader() {
               onMouseEnter={() => setIsSolutionsOpen(true)}
               onMouseLeave={() => setIsSolutionsOpen(false)}
             >
-              <button className="flex items-center h-[72px] px-5 relative hover:text-white transition-colors gap-1.5">
-                <span className="text-[14px] font-medium text-[#a1a1aa] hover:text-white transition-colors">Solutions</span>
+              <button className="flex items-center h-[72px] px-5 relative hover:text-[#0a0a0b] transition-colors gap-1.5">
+                <span className="text-[14px] font-medium text-[#52525b] hover:text-[#0a0a0b] transition-colors">Solutions</span>
                 <ChevronDown />
               </button>
               {isSolutionsOpen && (
-                <div className="absolute top-full left-0 w-56 bg-[#111113] border border-[#27272a] rounded-lg shadow-2xl py-2 mt-0">
-                  <Link href="/solutions/strategy-insights" className="block px-4 py-3 hover:bg-[#1a1a1d] transition-colors">
-                    <span className="text-[14px] font-medium text-white">Strategy Insights</span>
+                <div className="absolute top-full left-0 w-56 bg-white border border-[#e4e4e7] rounded-lg shadow-lg py-2 mt-0">
+                  <Link href="/solutions/strategy-insights" className="block px-4 py-3 hover:bg-[#f4f4f5] transition-colors">
+                    <span className="text-[14px] font-medium text-[#0a0a0b]">Strategy Insights</span>
                     <p className="text-[12px] text-[#71717a] mt-0.5">Market Intelligence</p>
                   </Link>
-                  <Link href="/memberships" className="block px-4 py-3 hover:bg-[#1a1a1d] transition-colors">
-                    <span className="text-[14px] font-medium text-white">Discord Memberships</span>
+                  <Link href="/memberships" className="block px-4 py-3 hover:bg-[#f4f4f5] transition-colors">
+                    <span className="text-[14px] font-medium text-[#0a0a0b]">Discord Memberships</span>
                     <p className="text-[12px] text-[#71717a] mt-0.5">Join our community</p>
                   </Link>
-                  <Link href="/consulting" className="block px-4 py-3 hover:bg-[#1a1a1d] transition-colors">
-                    <span className="text-[14px] font-medium text-white">Consulting</span>
+                  <Link href="/consulting" className="block px-4 py-3 hover:bg-[#f4f4f5] transition-colors">
+                    <span className="text-[14px] font-medium text-[#0a0a0b]">Consulting</span>
                     <p className="text-[12px] text-[#71717a] mt-0.5">Expert guidance</p>
                   </Link>
                 </div>
@@ -88,10 +88,10 @@ export default function NavigationHeader() {
           </div>
 
           <div ref={ctaRef} className="hidden lg:flex items-center ml-8 gap-5">
-            <div className="w-px h-5 bg-[#27272a]" />
+            <div className="w-px h-5 bg-[#e4e4e7]" />
             <Link 
               href="/contact" 
-              className="bg-white text-[#0a0a0b] px-5 py-2.5 rounded-md text-[13px] font-semibold hover:bg-[#e4e4e7] transition-colors"
+              className="bg-[#0a0a0b] text-white px-5 py-2.5 rounded-md text-[13px] font-semibold hover:bg-[#27272a] transition-colors"
             >
               Get Started
             </Link>
@@ -100,7 +100,7 @@ export default function NavigationHeader() {
           <div className="lg:hidden ml-4">
             <button 
               onClick={toggleMobileMenu}
-              className="p-2 -mr-2 text-white focus:outline-none"
+              className="p-2 -mr-2 text-[#0a0a0b] focus:outline-none"
               aria-label="Toggle menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,12 +114,12 @@ export default function NavigationHeader() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[73px] z-40 bg-[#0a0a0b] border-t border-[#27272a] lg:hidden overflow-y-auto">
+        <div className="fixed inset-0 top-[73px] z-40 bg-[#fafafa] border-t border-[#e4e4e7] lg:hidden overflow-y-auto">
           <div className="flex flex-col p-6 space-y-6">
             <div className="flex flex-col space-y-1">
               <MobileNavLink href="/" text="Home" />
               <div className="py-3">
-                <span className="text-[11px] font-semibold text-[#52525b] uppercase tracking-wider">Solutions</span>
+                <span className="text-[11px] font-semibold text-[#a1a1aa] uppercase tracking-wider">Solutions</span>
                 <div className="mt-3 flex flex-col space-y-1">
                   <MobileNavLink href="/solutions/strategy-insights" text="Strategy Insights" />
                   <MobileNavLink href="/memberships" text="Discord Memberships" />
@@ -129,11 +129,11 @@ export default function NavigationHeader() {
               <MobileNavLink href="/contact" text="Contact" />
             </div>
 
-            <div className="h-px bg-[#27272a] w-full" />
+            <div className="h-px bg-[#e4e4e7] w-full" />
 
             <Link 
               href="/contact" 
-              className="bg-white text-[#0a0a0b] px-5 py-3.5 rounded-md text-[14px] font-semibold text-center hover:bg-[#e4e4e7] transition-colors"
+              className="bg-[#0a0a0b] text-white px-5 py-3.5 rounded-md text-[14px] font-semibold text-center hover:bg-[#27272a] transition-colors"
             >
               Get Started
             </Link>
@@ -146,15 +146,15 @@ export default function NavigationHeader() {
 
 function NavLink({ text, href }: { text: string; href: string }) {
   return (
-    <Link href={href} className="group flex items-center h-[72px] px-5 relative hover:text-white transition-colors">
-      <span className="text-[14px] font-medium text-[#a1a1aa] group-hover:text-white transition-colors">{text}</span>
+    <Link href={href} className="group flex items-center h-[72px] px-5 relative hover:text-[#0a0a0b] transition-colors">
+      <span className="text-[14px] font-medium text-[#52525b] group-hover:text-[#0a0a0b] transition-colors">{text}</span>
     </Link>
   )
 }
 
 function ChevronDown() {
   return (
-    <svg className="w-3.5 h-3.5 text-[#52525b]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <svg className="w-3.5 h-3.5 text-[#a1a1aa]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M3 4.5L6 7.5L9 4.5" />
     </svg>
   )
@@ -162,7 +162,7 @@ function ChevronDown() {
 
 function MobileNavLink({ text, href }: { text: string; href: string }) {
   return (
-    <Link href={href} className="block text-[16px] font-medium py-2.5 text-[#a1a1aa] hover:text-white transition-colors">
+    <Link href={href} className="block text-[16px] font-medium py-2.5 text-[#52525b] hover:text-[#0a0a0b] transition-colors">
       {text}
     </Link>
   )

@@ -138,51 +138,51 @@ export default function ConsultingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0b]">
+    <div className="min-h-screen bg-[#fafafa]">
       <NavigationHeader />
       <main>
-        <section ref={heroRef} className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#fafafa] py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
-              <span className="w-1.5 h-1.5 bg-[#c9a227] rounded-full"></span>
-              <span className="text-[12px] font-medium text-[#c9a227] tracking-wide uppercase">Expert Advisory</span>
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#9a7b1a]/10 border border-[#9a7b1a]/20 rounded-full mb-8">
+              <span className="w-1.5 h-1.5 bg-[#9a7b1a] rounded-full"></span>
+              <span className="text-[12px] font-medium text-[#9a7b1a] tracking-wide uppercase">Expert Advisory</span>
             </div>
-            <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
+            <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-[#0a0a0b]">
               Personalized<br />
               <span className="text-[#71717a]">Consulting Solutions</span>
             </h1>
-            <p ref={paragraphRef} className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto mb-10">
+            <p ref={paragraphRef} className="text-[17px] text-[#71717a] font-normal leading-relaxed max-w-xl mx-auto mb-10">
               Work directly with our team of experienced analysts to optimize your investment approach and build robust strategies.
             </p>
             <Link 
               ref={ctaButtonRef}
               href="/contact" 
-              className="inline-block bg-white text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors"
+              className="inline-block bg-[#0a0a0b] text-white px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors"
             >
               Schedule a Consultation
             </Link>
           </div>
         </section>
 
-        <section className="w-full bg-[#0a0a0b] py-12 px-6 md:px-12">
+        <section className="w-full bg-[#fafafa] py-12 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto">
             <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-5">
               {services.map((service, index) => (
-                <div key={index} className="border border-[#27272a] rounded-xl p-7 bg-[#111113] card-hover">
-                  <div className="w-10 h-10 bg-[#1a1a1d] border border-[#27272a] rounded-lg flex items-center justify-center mb-5">
-                    <svg className="w-5 h-5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div key={index} className="border border-[#e4e4e7] rounded-xl p-7 bg-white card-hover">
+                  <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center mb-5">
+                    <svg className="w-5 h-5 text-[#9a7b1a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h3 className="text-[18px] font-semibold text-white mb-3">{service.title}</h3>
+                  <h3 className="text-[18px] font-semibold text-[#0a0a0b] mb-3">{service.title}</h3>
                   <p className="text-[14px] text-[#71717a] leading-relaxed mb-5">{service.description}</p>
                   <ul className="flex flex-col gap-2.5">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <svg className="w-3.5 h-3.5 text-[#c9a227] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 text-[#9a7b1a] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-[13px] text-[#a1a1aa]">{feature}</span>
+                        <span className="text-[13px] text-[#52525b]">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -192,10 +192,10 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        <section ref={stepsRef} className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={stepsRef} className="w-full bg-[#f4f4f5] py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[700px] mx-auto">
-            <h2 className="text-[28px] font-semibold text-center mb-4 text-white">How It Works</h2>
-            <p className="text-center text-[#52525b] mb-12 text-[15px]">Simple process to get started with our consulting services</p>
+            <h2 className="text-[28px] font-semibold text-center mb-4 text-[#0a0a0b]">How It Works</h2>
+            <p className="text-center text-[#71717a] mb-12 text-[15px]">Simple process to get started with our consulting services</p>
             
             <div className="flex flex-col gap-6">
               {[
@@ -205,11 +205,11 @@ export default function ConsultingPage() {
                 { step: "04", title: "Strategy Delivery", desc: "Receive comprehensive deliverables with ongoing support for implementation." },
               ].map((item, index) => (
                 <div key={index} className="step-item flex gap-5 items-start">
-                  <div className="w-10 h-10 bg-[#1a1a1d] border border-[#27272a] text-[#c9a227] rounded-lg flex items-center justify-center flex-shrink-0 text-[13px] font-semibold">
+                  <div className="w-10 h-10 bg-white border border-[#e4e4e7] text-[#9a7b1a] rounded-lg flex items-center justify-center flex-shrink-0 text-[13px] font-semibold">
                     {item.step}
                   </div>
                   <div>
-                    <h3 className="text-[16px] font-semibold text-white mb-1">{item.title}</h3>
+                    <h3 className="text-[16px] font-semibold text-[#0a0a0b] mb-1">{item.title}</h3>
                     <p className="text-[14px] text-[#71717a]">{item.desc}</p>
                   </div>
                 </div>
@@ -218,15 +218,15 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        <section ref={finalCtaRef} className="w-full bg-[#0a0a0b] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={finalCtaRef} className="w-full bg-[#fafafa] py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[700px] mx-auto text-center">
-            <h2 className="text-[28px] md:text-[36px] font-medium text-white mb-5">Ready to Get Started?</h2>
-            <p className="text-[16px] text-[#52525b] mb-8">
+            <h2 className="text-[28px] md:text-[36px] font-medium text-[#0a0a0b] mb-5">Ready to Get Started?</h2>
+            <p className="text-[16px] text-[#71717a] mb-8">
               Book a free consultation call to discuss how we can help you achieve your investment goals.
             </p>
             <Link 
               href="/contact" 
-              className="inline-block bg-white text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors"
+              className="inline-block bg-[#0a0a0b] text-white px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors"
             >
               Contact Us Today
             </Link>
