@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { BarChart3, LineChart, Shield, Target } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,13 @@ export default function StrategyInsightsPage() {
     );
   }, []);
 
+  const cardIcons = [
+    <BarChart3 key="bar" className="w-5 h-5 text-[#0d9488]" />,
+    <LineChart key="line" className="w-5 h-5 text-[#0d9488]" />,
+    <Shield key="shield" className="w-5 h-5 text-[#0d9488]" />,
+    <Target key="target" className="w-5 h-5 text-[#0d9488]" />,
+  ];
+
   return (
     <div className="min-h-screen bg-[#fafafa]">
       <NavigationHeader />
@@ -119,9 +127,7 @@ export default function StrategyInsightsPage() {
               ].map((item, index) => (
                 <div key={index} className="border border-[#e4e4e7] rounded-xl p-7 bg-white card-hover">
                   <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center mb-5">
-                    <svg className="w-5 h-5 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
+                    {cardIcons[index]}
                   </div>
                   <h3 className="text-[18px] font-semibold text-[#0a0a0b] mb-3">{item.title}</h3>
                   <p className="text-[14px] text-[#71717a] leading-relaxed">{item.description}</p>

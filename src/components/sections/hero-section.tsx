@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Threads from '../Threads';
+import { Rocket, ArrowRight, BarChart3, Users, ChevronRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -158,12 +159,7 @@ export default function HeroSection() {
         <div style={{ zIndex: 1 }}>
           <div ref={badgeRef} className="flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-[#0a0a0b]/5 border-[#0a0a0b]/10">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 text-[#0d9488]">
-                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-              </svg>
+              <Rocket className="h-3.5 w-3.5 text-[#0d9488]" />
               Institutional Intelligence
             </span>
           </div>
@@ -190,9 +186,7 @@ export default function HeroSection() {
                 >
                   <Link href="/memberships" className="relative z-10 inline-flex items-center gap-2 font-semibold text-[14px]">
                     View Memberships
-                    <svg className="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                    </svg>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-0.5" />
                   </Link>
                   <span className="pointer-events-none absolute bottom-0 left-1/2 right-1/2 h-px bg-gradient-to-r from-transparent via-[#0a0a0b] to-transparent opacity-80 transition-[left,right] duration-500 ease-out group-hover:left-0 group-hover:right-0" />
                   <span className="glow pointer-events-none absolute inset-0 -z-10" aria-hidden="true" />
@@ -220,9 +214,7 @@ export default function HeroSection() {
         <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full mt-20">
           <Link href="/solutions/strategy-insights" className="group relative border border-[#0a0a0b]/10 rounded-xl p-7 bg-white/60 backdrop-blur-xl hover:border-[#0a0a0b]/20 hover:bg-white/80 card-hover flex flex-col h-full transition-all duration-300">
             <div className="w-10 h-10 bg-[#0a0a0b]/5 border border-[#0a0a0b]/10 rounded-lg flex items-center justify-center mb-5">
-              <svg className="w-5 h-5 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
+              <BarChart3 className="w-5 h-5 text-[#0d9488]" />
             </div>
             <h3 className="text-[18px] font-semibold leading-[1.3] mb-2 tracking-tight text-[#0a0a0b]">
               Strategy Insights
@@ -232,9 +224,7 @@ export default function HeroSection() {
             </p>
             <div className="flex items-center gap-2 text-[#0d9488] font-medium text-[13px]">
               <span>Learn more</span>
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
@@ -252,17 +242,13 @@ export default function HeroSection() {
             </p>
             <div className="flex items-center gap-2 text-[#0d9488] font-medium text-[13px]">
               <span>View plans</span>
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
           <Link href="/consulting" className="group relative border border-[#0a0a0b]/10 rounded-xl p-7 bg-white/60 backdrop-blur-xl hover:border-[#0a0a0b]/20 hover:bg-white/80 card-hover flex flex-col h-full transition-all duration-300">
             <div className="w-10 h-10 bg-[#0a0a0b]/5 border border-[#0a0a0b]/10 rounded-lg flex items-center justify-center mb-5">
-              <svg className="w-5 h-5 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
+              <Users className="w-5 h-5 text-[#0d9488]" />
             </div>
             <h3 className="text-[18px] font-semibold leading-[1.3] mb-2 tracking-tight text-[#0a0a0b]">
               Advisory Services
@@ -272,9 +258,7 @@ export default function HeroSection() {
             </p>
             <div className="flex items-center gap-2 text-[#0d9488] font-medium text-[13px]">
               <span>Get started</span>
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>

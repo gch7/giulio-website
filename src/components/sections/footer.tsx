@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { Mail, Linkedin, Twitter } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +65,14 @@ export default function Footer() {
             <p className="text-[13px] text-[#a1a1aa] leading-relaxed">
               Institutional-grade market intelligence and strategic advisory for sophisticated investors.
             </p>
+            <div className="flex items-center gap-3 mt-2">
+              <a href="#" className="w-8 h-8 border border-[#e4e4e7] rounded-lg flex items-center justify-center hover:border-[#0d9488]/50 hover:bg-[#0d9488]/5 transition-colors">
+                <Twitter className="w-4 h-4 text-[#71717a] hover:text-[#0d9488]" />
+              </a>
+              <a href="#" className="w-8 h-8 border border-[#e4e4e7] rounded-lg flex items-center justify-center hover:border-[#0d9488]/50 hover:bg-[#0d9488]/5 transition-colors">
+                <Linkedin className="w-4 h-4 text-[#71717a] hover:text-[#0d9488]" />
+              </a>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -93,7 +102,8 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-[11px] font-semibold text-[#a1a1aa] uppercase tracking-wider mb-1">Connect</h3>
             <div className="flex flex-col gap-2.5">
-              <a href="mailto:contact@gammacapital.com" className="text-[13px] font-medium text-[#52525b] hover:text-[#0a0a0b] transition-colors">
+              <a href="mailto:contact@gammacapital.com" className="text-[13px] font-medium text-[#52525b] hover:text-[#0a0a0b] transition-colors flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5" />
                 contact@gammacapital.com
               </a>
             </div>

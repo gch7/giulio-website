@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { Mail, ChevronDown, Send } from 'lucide-react';
 
 const subjectOptions = [
   { value: '', label: 'Select a topic' },
@@ -88,9 +89,7 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
+                      <Mail className="w-4 h-4 text-[#0d9488]" />
                     </div>
                     <div>
                       <h3 className="text-[15px] font-semibold text-[#0a0a0b] mb-1">Email</h3>
@@ -141,14 +140,7 @@ export default function ContactPage() {
                       } ${formData.subject ? 'text-[#0a0a0b]' : 'text-[#a1a1aa]'}`}
                     >
                       <span>{selectedLabel}</span>
-                      <svg 
-                        className={`w-4 h-4 text-[#71717a] transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                      <ChevronDown className={`w-4 h-4 text-[#71717a] transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {isDropdownOpen && (
                       <div className="absolute z-50 w-full mt-2 py-1 bg-white border border-[#e4e4e7] rounded-lg shadow-lg overflow-hidden">
@@ -185,7 +177,8 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  <button type="submit" className="form-field w-full bg-[#0a0a0b] text-white py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors mt-2">
+                  <button type="submit" className="form-field w-full bg-[#0a0a0b] text-white py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors mt-2 inline-flex items-center justify-center gap-2">
+                    <Send className="w-4 h-4" />
                     Send Message
                   </button>
                 </form>

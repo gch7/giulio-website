@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { PieChart, Compass, ShieldCheck, Check } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -137,6 +138,12 @@ export default function ConsultingPage() {
     );
   }, []);
 
+  const cardIcons = [
+    <PieChart key="pie" className="w-5 h-5 text-[#0d9488]" />,
+    <Compass key="compass" className="w-5 h-5 text-[#0d9488]" />,
+    <ShieldCheck key="shield" className="w-5 h-5 text-[#0d9488]" />,
+  ];
+
   return (
     <div className="min-h-screen bg-[#fafafa]">
       <NavigationHeader />
@@ -170,18 +177,14 @@ export default function ConsultingPage() {
               {services.map((service, index) => (
                 <div key={index} className="border border-[#e4e4e7] rounded-xl p-7 bg-white card-hover">
                   <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center mb-5">
-                    <svg className="w-5 h-5 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
+                    {cardIcons[index]}
                   </div>
                   <h3 className="text-[18px] font-semibold text-[#0a0a0b] mb-3">{service.title}</h3>
                   <p className="text-[14px] text-[#71717a] leading-relaxed mb-5">{service.description}</p>
                   <ul className="flex flex-col gap-2.5">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <svg className="w-3.5 h-3.5 text-[#0d9488] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
+                        <Check className="w-3.5 h-3.5 text-[#0d9488] flex-shrink-0" />
                         <span className="text-[13px] text-[#52525b]">{feature}</span>
                       </li>
                     ))}

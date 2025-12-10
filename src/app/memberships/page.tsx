@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -244,10 +245,7 @@ export default function MembershipsPage() {
                         <p className="text-[12px] tracking-tight text-[#52525b] mt-1 uppercase">Launch fast, learn faster.</p>
                       </div>
                       <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-[#0a0a0b]/5 ring-1 ring-[#0a0a0b]/10 text-[#52525b] group-hover:bg-[#0a0a0b]/10 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="m12 5 7 7-7 7"></path>
-                        </svg>
+                        <ArrowRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
                       </span>
                     </button>
 
@@ -262,10 +260,7 @@ export default function MembershipsPage() {
                         <p className="text-[12px] tracking-tight text-[#52525b] mt-1 uppercase">Grow with confidence.</p>
                       </div>
                       <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-[#0a0a0b]/5 ring-1 ring-[#0a0a0b]/10 text-[#52525b] group-hover:text-[#0a0a0b] group-hover:bg-[#0a0a0b]/10 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="m12 5 7 7-7 7"></path>
-                        </svg>
+                        <ArrowRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
                       </span>
                     </button>
 
@@ -280,10 +275,7 @@ export default function MembershipsPage() {
                         <p className="text-[12px] tracking-tight text-[#52525b] mt-1 uppercase">Tailored for scale &amp; security.</p>
                       </div>
                       <span className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-[#0a0a0b]/5 ring-1 ring-[#0a0a0b]/10 text-[#52525b] group-hover:text-[#0a0a0b] group-hover:bg-[#0a0a0b]/10 transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="m12 5 7 7-7 7"></path>
-                        </svg>
+                        <ArrowRight className="w-[18px] h-[18px]" strokeWidth={1.5} />
                       </span>
                     </button>
                   </div>
@@ -322,9 +314,7 @@ export default function MembershipsPage() {
                     <ul className="space-y-3 text-sm text-[#0a0a0b]">
                       {currentPlan.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 text-[#0d9488]">
-                            <path d="M20 6 9 17l-5-5"></path>
-                          </svg>
+                          <Check className="w-[18px] h-[18px] mt-0.5 text-[#0d9488]" strokeWidth={1.6} />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -360,14 +350,7 @@ export default function MembershipsPage() {
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
                     <span className="text-[15px] font-medium text-[#0a0a0b] pr-4">{faq.question}</span>
-                    <svg 
-                      className={`w-4 h-4 text-[#a1a1aa] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <ChevronDown className={`w-4 h-4 text-[#a1a1aa] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === index && (
                     <div className="px-5 pb-4">

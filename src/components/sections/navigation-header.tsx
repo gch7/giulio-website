@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 export default function NavigationHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -62,7 +63,7 @@ export default function NavigationHeader() {
             >
               <button className="flex items-center h-[72px] px-5 relative hover:text-[#0a0a0b] transition-colors gap-1.5">
                 <span className="text-[14px] font-medium text-[#52525b] hover:text-[#0a0a0b] transition-colors">Solutions</span>
-                <ChevronDown />
+                <ChevronDown className="w-3.5 h-3.5 text-[#a1a1aa]" />
               </button>
               {isSolutionsOpen && (
                 <div className="absolute top-full left-0 w-56 bg-white border border-[#e4e4e7] rounded-lg shadow-lg py-2 mt-0">
@@ -103,11 +104,11 @@ export default function NavigationHeader() {
               className="p-2 -mr-2 text-[#0a0a0b] focus:outline-none"
               aria-label="Toggle menu"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="6" width="16" height="1.5" fill="currentColor" rx="0.75"/>
-                <rect x="4" y="11.25" width="16" height="1.5" fill="currentColor" rx="0.75"/>
-                <rect x="4" y="16.5" width="16" height="1.5" fill="currentColor" rx="0.75"/>
-              </svg>
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -149,14 +150,6 @@ function NavLink({ text, href }: { text: string; href: string }) {
     <Link href={href} className="group flex items-center h-[72px] px-5 relative hover:text-[#0a0a0b] transition-colors">
       <span className="text-[14px] font-medium text-[#52525b] group-hover:text-[#0a0a0b] transition-colors">{text}</span>
     </Link>
-  )
-}
-
-function ChevronDown() {
-  return (
-    <svg className="w-3.5 h-3.5 text-[#a1a1aa]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M3 4.5L6 7.5L9 4.5" />
-    </svg>
   )
 }
 
