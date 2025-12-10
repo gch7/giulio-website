@@ -1,106 +1,94 @@
-export default function ThreeServicesCards() {
-  const cards = [
-    {
-      type: 'kit',
-      logo: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/svgs/68cec44142859c129d0e8e52_logo_20kit_20w_20atquo_20-8.svg',
-      title: 'Launch instantly with fixed-price Kits.',
-      // Using Carro Bite as background, Macbook gif as foreground to match visual stack
-      backImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/68d79c93c2950a70757d663c_Get_20Carro_20Bite_20atQu-2.jpg',
-      frontImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/6851c5d18c87c9f7f7073bed_Case_20-_20Apple_20Macboo-3.gif',
-      benefit: 'Skip the negotiation on standardized workflows.',
-      href: '/kit/situs',
-      frontImageStyles: 'w-[55%] -bottom-2 -right-2'
-    },
-    {
-      type: 'relia',
-      logo: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/svgs/68cec441fafa92df42236c66_Relia_20logo_20w_20atquo_-10.svg',
-      title: 'Grow your team on demand via Relia.',
-      // Using SwipeSimple layout
-      backImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/68b03edd778ca23cbfd1d481_SwipeSimple_20Bite_20atQu-4.png',
-      frontImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/68d79c93c2950a70757d663c_Get_20Carro_20Bite_20atQu-2.jpg',
-      benefit: 'Bypass the hiring and admin time.',
-      href: '/relia',
-      frontImageStyles: 'w-[75%] -bottom-4 left-1/2 -translate-x-1/2'
-    },
-    {
-      type: 'agency',
-      logo: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/svgs/68cec3c5dbbc8b7306862e2f_logo_20agency_20atquo_20w-11.svg',
-      title: 'Lead high-stakes projects with Agency.',
-      // Reusing animations/images for demonstration of layout
-      backImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/6851c5d18c87c9f7f7073bed_Case_20-_20Apple_20Macboo-3.gif',
-      frontImage: 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/images/68d7ae65c2950a70757fc1be_GIF_20GetCarro_20-_20Case-5.gif',
-      benefit: 'Once you got to know us low-risk, use Agency.',
-      href: '/agency',
-      frontImageStyles: 'w-[70%] -bottom-2 right-2'
-    }
-  ];
+'use client';
 
-  const checkIcon = 'https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/4c470a6e-64be-439d-87ef-63069af1eb04-atquo-com/assets/svgs/68d9f5ed18dbb489081bd6b3_check-9.svg';
+import Link from 'next/link';
+import { BarChart3, Users, Building2, Network, Rocket, ChevronRight, type LucideIcon } from 'lucide-react';
+import type { ThreeCardsSectionData, ServiceCard as ServiceCardType } from '@/types/sanity';
+
+// Icon mapping for CMS-driven icons
+const iconMap: Record<string, LucideIcon | React.FC<{ className?: string }>> = {
+  BarChart3: BarChart3,
+  Users: Users,
+  Building2: Building2,
+  Network: Network,
+  Rocket: Rocket,
+  Discord: ({ className }: { className?: string }) => (
+    <svg className={className || "w-5 h-5"} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+    </svg>
+  ),
+};
+
+// Default content (fallback when no CMS data)
+const defaultCards: ServiceCardType[] = [
+  {
+    _key: 'card-1',
+    icon: 'BarChart3',
+    title: 'Strategy Insights',
+    description: 'Data-driven market analysis and actionable intelligence for informed decisions.',
+    href: '/solutions/strategy-insights',
+    linkText: 'Learn more',
+  },
+  {
+    _key: 'card-2',
+    icon: 'Discord',
+    title: 'Discord Community',
+    description: 'Real-time alerts, market discussions, and direct access to our research team.',
+    href: '/memberships',
+    linkText: 'View plans',
+  },
+  {
+    _key: 'card-3',
+    icon: 'Users',
+    title: 'Advisory Services',
+    description: 'Portfolio review, strategy design, and risk framework development.',
+    href: '/consulting',
+    linkText: 'Get started',
+  },
+];
+
+interface ThreeServicesCardsProps {
+  data?: ThreeCardsSectionData;
+}
+
+export default function ThreeServicesCards({ data }: ThreeServicesCardsProps) {
+  // Use CMS data or fallback to defaults
+  const cards = data?.cards ?? defaultCards;
+
+  // Helper to get icon component
+  const getIcon = (iconName?: string) => {
+    if (!iconName) return BarChart3;
+    return iconMap[iconName] || BarChart3;
+  };
 
   return (
-    <section className="bg-white py-20 px-5 md:px-10 lg:px-16" aria-label="Service Offerings">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cards.map((card, index) => (
-          <a
-            key={index}
-            href={card.href}
-            className="group flex flex-col bg-white rounded-lg border border-[#E0E0E0] p-8 transition-all duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-1 relative overflow-hidden"
-          >
-            {/* 1. Header: Logo */}
-            <div className="h-[60px] mb-6 flex items-start">
-              <img
-                src={card.logo}
-                alt={`${card.type} logo`}
-                className="h-[32px] w-auto object-contain"
-                loading="lazy"
-              />
-            </div>
-
-            {/* 2. Headline */}
-            <h2 className="text-[28px] font-semibold leading-[1.3] tracking-[-0.01em] text-black mb-4">
-              {card.title}
-            </h2>
-
-            {/* 3. Showcase Images Area */}
-            <div className="relative w-full h-[240px] mt-2 mb-8 select-none">
-              {/* Back Image (Background layer) */}
-              <div className="absolute top-0 left-0 w-[85%] h-[85%] z-0 rounded-md overflow-hidden border border-gray-100 shadow-sm bg-gray-50 transition-transform duration-500 group-hover:scale-[1.02]">
-                <img
-                  src={card.backImage}
-                  alt=""
-                  className="w-full h-full object-cover opacity-90"
-                />
+    <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {cards.map((card) => {
+          const IconComponent = getIcon(card.icon);
+          return (
+            <Link
+              key={card._key}
+              href={card.href}
+              className="group relative border border-[#0a0a0b]/10 rounded-xl p-7 bg-[#fafafa] hover:bg-white hover:border-[#0a0a0b]/20 hover:shadow-sm flex flex-col h-full transition-all duration-300"
+            >
+              <div className="w-10 h-10 bg-white border border-[#e4e4e7] rounded-lg flex items-center justify-center mb-5 group-hover:border-[#0d9488]/30 transition-colors">
+                <div className="text-[#0d9488]">
+                  <IconComponent className="w-5 h-5" />
+                </div>
               </div>
-              
-              {/* Front Image (Floating/Overlay layer) */}
-              <div 
-                className={`absolute z-10 rounded-md overflow-hidden border border-gray-100 shadow-lg bg-white ${card.frontImageStyles} transition-transform duration-500 group-hover:shadow-xl group-hover:-translate-y-1`}
-              >
-                <img
-                  src={card.frontImage}
-                  alt=""
-                  className="w-full h-auto object-contain block"
-                />
-              </div>
-            </div>
-
-            {/* 4. Bottom Benefit */}
-            <div className="flex items-start gap-3 mt-auto">
-              <div className="flex-shrink-0 w-5 h-5 mt-1 relative">
-                <img
-                  src={checkIcon}
-                  alt="Checkmark"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <p className="text-[16px] font-normal leading-[1.6] text-black">
-                {card.benefit}
+              <h3 className="text-[18px] font-semibold leading-[1.3] mb-2 tracking-tight text-[#0a0a0b]">
+                {card.title}
+              </h3>
+              <p className="text-[14px] leading-relaxed text-[#71717a] mb-5 flex-1">
+                {card.description}
               </p>
-            </div>
-            
-            {/* Implicit Full Card Link Overlay Effect via Anchor tag wrapping content */}
-          </a>
-        ))}
+              <div className="flex items-center gap-2 text-[#0d9488] font-medium text-[13px]">
+                <span>{card.linkText || 'Learn more'}</span>
+                <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
