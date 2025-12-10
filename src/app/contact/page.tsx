@@ -1,6 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 
@@ -20,6 +22,10 @@ export default function ContactPage() {
   });
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
+  
+  const sectionRef = useRef<HTMLElement>(null);
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -38,14 +44,40 @@ export default function ContactPage() {
 
   const selectedLabel = subjectOptions.find(opt => opt.value === formData.subject)?.label || 'Select a topic';
 
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+      leftColRef.current,
+      { opacity: 0, x: -50 },
+      { opacity: 1, x: 0, duration: 0.9 }
+    )
+    .fromTo(
+      formRef.current,
+      { opacity: 0, x: 50, scale: 0.98 },
+      { opacity: 1, x: 0, scale: 1, duration: 0.9 },
+      "-=0.6"
+    );
+
+    if (formRef.current) {
+      const formFields = formRef.current.querySelectorAll('.form-field');
+      tl.fromTo(
+        formFields,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.08 },
+        "-=0.5"
+      );
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0b]">
       <NavigationHeader />
       <main>
-        <section className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
+        <section ref={sectionRef} className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
           <div className="max-w-[1100px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              <div>
+              <div ref={leftColRef}>
                 <h1 className="text-[36px] md:text-[44px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
                   Get in <span className="text-[#71717a]">Touch</span>
                 </h1>
@@ -70,10 +102,10 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-[#111113] border border-[#27272a] rounded-xl p-7 md:p-8">
+              <div ref={formRef} className="bg-[#111113] border border-[#27272a] rounded-xl p-7 md:p-8">
                 <h2 className="text-[20px] font-semibold text-white mb-6">Send us a message</h2>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                  <div>
+                  <div className="form-field">
                     <label htmlFor="name" className="block text-[13px] font-medium text-[#a1a1aa] mb-2">Name</label>
                     <input
                       type="text"
@@ -85,7 +117,7 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  <div>
+                  <div className="form-field">
                     <label htmlFor="email" className="block text-[13px] font-medium text-[#a1a1aa] mb-2">Email</label>
                     <input
                       type="email"
@@ -97,7 +129,7 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  <div ref={dropdownRef} className="relative">
+                  <div ref={dropdownRef} className="form-field relative">
                     <label className="block text-[13px] font-medium text-[#a1a1aa] mb-2">Subject</label>
                     <button
                       type="button"
@@ -141,7 +173,7 @@ export default function ContactPage() {
                     )}
                     <input type="hidden" name="subject" value={formData.subject} required />
                   </div>
-                  <div>
+                  <div className="form-field">
                     <label htmlFor="message" className="block text-[13px] font-medium text-[#a1a1aa] mb-2">Message</label>
                     <textarea
                       id="message"
@@ -153,10 +185,7 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-white text-[#0a0a0b] py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors mt-2"
-                  >
+                  <button type="submit" className="form-field w-full bg-white text-[#0a0a0b] py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors mt-2">
                     Send Message
                   </button>
                 </form>

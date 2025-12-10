@@ -1,9 +1,14 @@
 "use client";
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const plans = {
   explorer: {
@@ -78,32 +83,114 @@ export default function MembershipsPage() {
   const [selectedPlan, setSelectedPlan] = React.useState<PlanKey>('analyst');
   const [billing, setBilling] = React.useState<BillingType>('monthly');
 
+  const heroRef = useRef<HTMLElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const pricingRef = useRef<HTMLElement>(null);
+  const faqRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
+
   const currentPlan = plans[selectedPlan];
   const price = billing === 'monthly' ? currentPlan.priceMonthly : currentPlan.priceAnnual;
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+      badgeRef.current,
+      { opacity: 0, y: -20, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.7 }
+    )
+    .fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.9 },
+      "-=0.4"
+    )
+    .fromTo(
+      paragraphRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7 },
+      "-=0.5"
+    );
+
+    gsap.fromTo(
+      pricingRef.current,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: pricingRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+
+    if (faqRef.current) {
+      const faqItems = faqRef.current.querySelectorAll('.faq-item');
+      gsap.fromTo(
+        faqItems,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: faqRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    gsap.fromTo(
+      ctaRef.current,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0a0a0b]">
       <NavigationHeader />
       <main>
-        <section className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
               <svg className="w-4 h-4 text-[#c9a227]" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
               </svg>
               <span className="text-[12px] font-medium text-[#c9a227] tracking-wide uppercase">Discord Community</span>
             </div>
-            <h1 className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
+            <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
               Join Our Exclusive<br />
               <span className="text-[#71717a]">Discord Community</span>
             </h1>
-            <p className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto">
+            <p ref={paragraphRef} className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto">
               Get real-time market insights, trade alerts, and connect with a community of sophisticated investors.
             </p>
           </div>
         </section>
 
-        <section className="w-full px-4 sm:px-6 lg:px-8 py-16 relative z-10" id="pricing">
+        <section ref={pricingRef} className="w-full px-4 sm:px-6 lg:px-8 py-16 relative z-10" id="pricing">
           <div className="max-w-7xl mx-auto">
             <div className="relative overflow-hidden rounded-3xl ring-1 ring-white/10 bg-neutral-950 backdrop-blur">
               <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/5 blur-3xl"></div>
@@ -262,12 +349,12 @@ export default function MembershipsPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={faqRef} className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
           <div className="max-w-[700px] mx-auto">
             <h2 className="text-[28px] font-semibold text-center mb-10 text-white">Frequently Asked Questions</h2>
             <div className="flex flex-col gap-3">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-[#27272a] rounded-lg bg-[#0a0a0b] overflow-hidden">
+                <div key={index} className="faq-item border border-[#27272a] rounded-lg bg-[#0a0a0b] overflow-hidden">
                   <button
                     className="w-full px-5 py-4 flex items-center justify-between text-left"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -293,7 +380,7 @@ export default function MembershipsPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#0a0a0b] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={ctaRef} className="w-full bg-[#0a0a0b] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
           <div className="max-w-[700px] mx-auto text-center">
             <h2 className="text-[28px] md:text-[36px] font-medium text-white mb-5">Ready to Join?</h2>
             <p className="text-[16px] text-[#52525b] mb-8">

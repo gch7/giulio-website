@@ -1,18 +1,50 @@
 "use client";
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function NavigationHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = React.useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const linksRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    
+    tl.fromTo(
+      logoRef.current,
+      { opacity: 0, x: -30 },
+      { opacity: 1, x: 0, duration: 0.8 }
+    );
+
+    if (linksRef.current) {
+      tl.fromTo(
+        linksRef.current.children,
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
+        "-=0.4"
+      );
+    }
+
+    tl.fromTo(
+      ctaRef.current,
+      { opacity: 0, x: 30 },
+      { opacity: 1, x: 0, duration: 0.6 },
+      "-=0.3"
+    );
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#0a0a0b]/95 backdrop-blur-md border-b border-[#27272a]">
+    <nav ref={navRef} className="sticky top-0 z-50 w-full bg-[#0a0a0b]/95 backdrop-blur-md border-b border-[#27272a]">
       <div className="relative flex h-[72px] items-center justify-between px-6 md:px-12 max-w-[1400px] mx-auto">
-        <div className="flex-shrink-0">
+        <div ref={logoRef} className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-3">
             <div className="w-9 h-9 border border-[#c9a227]/30 rounded flex items-center justify-center bg-[#c9a227]/5">
               <span className="text-[#c9a227] font-semibold text-lg tracking-tight">Γ</span>
@@ -22,7 +54,7 @@ export default function NavigationHeader() {
         </div>
 
         <div className="flex items-center justify-end flex-1 pl-8">
-          <div className="hidden lg:flex items-center h-full gap-0">
+          <div ref={linksRef} className="hidden lg:flex items-center h-full gap-0">
             <div 
               className="relative"
               onMouseEnter={() => setIsSolutionsOpen(true)}
@@ -55,7 +87,7 @@ export default function NavigationHeader() {
             <NavLink text="Contact" href="/contact" />
           </div>
 
-          <div className="hidden lg:flex items-center ml-8 gap-5">
+          <div ref={ctaRef} className="hidden lg:flex items-center ml-8 gap-5">
             <div className="w-px h-5 bg-[#27272a]" />
             <Link 
               href="/contact" 

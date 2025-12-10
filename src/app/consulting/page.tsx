@@ -1,6 +1,14 @@
+'use client';
+
+import { useRef } from 'react';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
@@ -36,24 +44,118 @@ const services = [
 ];
 
 export default function ConsultingPage() {
+  const heroRef = useRef<HTMLElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const ctaButtonRef = useRef<HTMLAnchorElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const stepsRef = useRef<HTMLElement>(null);
+  const finalCtaRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+      badgeRef.current,
+      { opacity: 0, y: -20, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.7 }
+    )
+    .fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50, clipPath: "inset(100% 0% 0% 0%)" },
+      { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 },
+      "-=0.4"
+    )
+    .fromTo(
+      paragraphRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7 },
+      "-=0.5"
+    )
+    .fromTo(
+      ctaButtonRef.current,
+      { opacity: 0, y: 20, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.6 },
+      "-=0.4"
+    );
+
+    if (cardsRef.current) {
+      gsap.fromTo(
+        cardsRef.current.children,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    if (stepsRef.current) {
+      const steps = stepsRef.current.querySelectorAll('.step-item');
+      gsap.fromTo(
+        steps,
+        { opacity: 0, x: -40 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: stepsRef.current,
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    gsap.fromTo(
+      finalCtaRef.current,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: finalCtaRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0b]">
       <NavigationHeader />
       <main>
-        <section className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
               <span className="w-1.5 h-1.5 bg-[#c9a227] rounded-full"></span>
               <span className="text-[12px] font-medium text-[#c9a227] tracking-wide uppercase">Expert Advisory</span>
             </div>
-            <h1 className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
+            <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
               Personalized<br />
               <span className="text-[#71717a]">Consulting Solutions</span>
             </h1>
-            <p className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto mb-10">
+            <p ref={paragraphRef} className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto mb-10">
               Work directly with our team of experienced analysts to optimize your investment approach and build robust strategies.
             </p>
             <Link 
+              ref={ctaButtonRef}
               href="/contact" 
               className="inline-block bg-white text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#e4e4e7] transition-colors"
             >
@@ -64,7 +166,7 @@ export default function ConsultingPage() {
 
         <section className="w-full bg-[#0a0a0b] py-12 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-5">
               {services.map((service, index) => (
                 <div key={index} className="border border-[#27272a] rounded-xl p-7 bg-[#111113] card-hover">
                   <div className="w-10 h-10 bg-[#1a1a1d] border border-[#27272a] rounded-lg flex items-center justify-center mb-5">
@@ -90,7 +192,7 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={stepsRef} className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
           <div className="max-w-[700px] mx-auto">
             <h2 className="text-[28px] font-semibold text-center mb-4 text-white">How It Works</h2>
             <p className="text-center text-[#52525b] mb-12 text-[15px]">Simple process to get started with our consulting services</p>
@@ -102,7 +204,7 @@ export default function ConsultingPage() {
                 { step: "03", title: "Deep Dive Analysis", desc: "Our team conducts thorough research and analysis specific to your needs." },
                 { step: "04", title: "Strategy Delivery", desc: "Receive comprehensive deliverables with ongoing support for implementation." },
               ].map((item, index) => (
-                <div key={index} className="flex gap-5 items-start">
+                <div key={index} className="step-item flex gap-5 items-start">
                   <div className="w-10 h-10 bg-[#1a1a1d] border border-[#27272a] text-[#c9a227] rounded-lg flex items-center justify-center flex-shrink-0 text-[13px] font-semibold">
                     {item.step}
                   </div>
@@ -116,7 +218,7 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#0a0a0b] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={finalCtaRef} className="w-full bg-[#0a0a0b] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
           <div className="max-w-[700px] mx-auto text-center">
             <h2 className="text-[28px] md:text-[36px] font-medium text-white mb-5">Ready to Get Started?</h2>
             <p className="text-[16px] text-[#52525b] mb-8">

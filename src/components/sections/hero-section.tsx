@@ -2,10 +2,22 @@
 
 import Link from 'next/link';
 import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import Threads from '../Threads';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroSection() {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const btn = buttonRef.current;
@@ -14,6 +26,122 @@ export default function HeroSection() {
     btn.style.setProperty('--x', `${e.clientX - rect.left}px`);
     btn.style.setProperty('--y', `${e.clientY - rect.top}px`);
   };
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+      badgeRef.current,
+      { opacity: 0, y: -20, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.8 }
+    );
+
+    if (titleRef.current) {
+      const titles = titleRef.current.querySelectorAll('h1, h2');
+      tl.fromTo(
+        titles,
+        { opacity: 0, y: 60, clipPath: "inset(100% 0% 0% 0%)" },
+        { 
+          opacity: 1, 
+          y: 0, 
+          clipPath: "inset(0% 0% 0% 0%)",
+          duration: 1,
+          stagger: 0.15 
+        },
+        "-=0.5"
+      );
+    }
+
+    tl.fromTo(
+      paragraphRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8 },
+      "-=0.6"
+    );
+
+    if (buttonsRef.current) {
+      tl.fromTo(
+        buttonsRef.current.children,
+        { opacity: 0, y: 20, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1 },
+        "-=0.4"
+      );
+    }
+
+    if (cardsRef.current) {
+      gsap.fromTo(
+        cardsRef.current.children,
+        { opacity: 0, y: 60, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    if (statsRef.current) {
+      const statItems = statsRef.current.querySelectorAll('.stat-item');
+      
+      gsap.fromTo(
+        statItems,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: statsRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+
+      const numbers = statsRef.current.querySelectorAll('.stat-number');
+      numbers.forEach((num) => {
+        const text = num.textContent || '';
+        const match = text.match(/[\d.]+/);
+        if (match) {
+          const endValue = parseFloat(match[0]);
+          const prefix = text.slice(0, text.indexOf(match[0]));
+          const suffix = text.slice(text.indexOf(match[0]) + match[0].length);
+          
+          gsap.fromTo(
+            { val: 0 },
+            { val: endValue },
+            {
+              val: endValue,
+              duration: 2,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: statsRef.current,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+              },
+              onUpdate: function() {
+                const currentVal = this.targets()[0].val;
+                const formatted = endValue % 1 === 0 
+                  ? Math.round(currentVal).toLocaleString()
+                  : currentVal.toFixed(1);
+                (num as HTMLElement).textContent = prefix + formatted + suffix;
+              }
+            }
+          );
+        }
+      });
+    }
+  }, []);
 
   return (
     <div className="relative w-full min-h-[1100px]">
@@ -25,9 +153,9 @@ export default function HeroSection() {
         />
       </div>
       
-      <section className="sm:px-6 lg:px-8 md:py-24 w-full max-w-7xl mx-auto pt-16 px-4 pb-20 relative" style={{ zIndex: 1 }}>
-        <div className="scroll-fade" style={{ zIndex: 1 }}>
-          <div className="flex items-center justify-center">
+      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-24 w-full max-w-7xl mx-auto pt-16 px-4 pb-20 relative" style={{ zIndex: 1 }}>
+        <div style={{ zIndex: 1 }}>
+          <div ref={badgeRef} className="flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-slate-300/80 bg-white/5 border-white/10">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 text-[#c9a227]">
                 <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
@@ -39,25 +167,25 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <div className="scroll-fade scroll-fade-delay text-center max-w-3xl mt-6 mx-auto">
+          <div ref={titleRef} className="text-center max-w-3xl mt-6 mx-auto">
             <h1 className="md:text-6xl text-4xl font-semibold text-slate-50 tracking-tight">Market Intelligence for</h1>
             <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-slate-50 mt-1">
               <span className="bg-clip-text text-transparent italic font-['Playfair_Display'] bg-gradient-to-r from-slate-200 via-[#c9a227] to-[#e8d48a]">
                 Sophisticated Investors
               </span>
             </h2>
-            <p className="mt-6 text-base md:text-lg text-slate-400 max-w-xl mx-auto">
+            <p ref={paragraphRef} className="mt-6 text-base md:text-lg text-slate-400 max-w-xl mx-auto">
               Gamma Capital delivers institutional-grade research, exclusive community access, and personalized consulting to elevate your investment strategy.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <div className="relative inline-block group scroll-fade scroll-fade-delay-2">
+            <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <div className="relative inline-block group">
                 <button
                   ref={buttonRef}
                   onMouseMove={handleMouseMove}
                   onMouseEnter={(e) => e.currentTarget.style.setProperty('--o', '1')}
                   onMouseLeave={(e) => e.currentTarget.style.setProperty('--o', '0')}
-                  className="btn-glow relative z-10 overflow-hidden transition-transform duration-150 ease-out active:scale-[0.98] text-white bg-neutral-900/60 border-white/20 border rounded-xl py-3.5 px-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] animate-[slideInBlur_0.8s_ease-out_forwards]"
+                  className="btn-glow relative z-10 overflow-hidden transition-transform duration-150 ease-out active:scale-[0.98] text-white bg-neutral-900/60 border-white/20 border rounded-xl py-3.5 px-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]"
                 >
                   <Link href="/memberships" className="relative z-10 inline-flex items-center gap-2 font-semibold text-[14px]">
                     View Memberships
@@ -80,7 +208,7 @@ export default function HeroSection() {
 
               <Link 
                 href="/consulting" 
-                className="scroll-fade scroll-fade-delay-2 bg-transparent text-white px-7 py-3.5 rounded-xl text-[14px] font-medium border border-[#27272a] hover:border-[#52525b] hover:bg-[#111113] transition-colors"
+                className="bg-transparent text-white px-7 py-3.5 rounded-xl text-[14px] font-medium border border-[#27272a] hover:border-[#52525b] hover:bg-[#111113] transition-colors"
               >
                 Book Consultation
               </Link>
@@ -88,7 +216,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full mt-20 scroll-fade scroll-fade-delay-3">
+        <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full mt-20">
           <Link href="/solutions/strategy-insights" className="group relative border border-white/10 rounded-xl p-7 bg-white/5 backdrop-blur-xl hover:border-white/20 hover:bg-white/[0.08] card-hover flex flex-col h-full transition-all duration-300">
             <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center mb-5">
               <svg className="w-5 h-5 text-[#c9a227]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,22 +278,22 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <div className="mt-20 pt-16 border-t border-[#1a1a1d] scroll-fade" style={{ animationDelay: '0.8s' }}>
+        <div ref={statsRef} className="mt-20 pt-16 border-t border-[#1a1a1d]">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            <div className="text-center">
-              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight">500+</div>
+            <div className="text-center stat-item">
+              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight stat-number">500+</div>
               <div className="text-[13px] text-[#52525b] mt-1 uppercase tracking-wider">Active Members</div>
             </div>
-            <div className="text-center">
-              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight">$2.1B</div>
+            <div className="text-center stat-item">
+              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight stat-number">$2.1B</div>
               <div className="text-[13px] text-[#52525b] mt-1 uppercase tracking-wider">AUM Advised</div>
             </div>
-            <div className="text-center">
-              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight">12+</div>
+            <div className="text-center stat-item">
+              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight stat-number">12+</div>
               <div className="text-[13px] text-[#52525b] mt-1 uppercase tracking-wider">Years Experience</div>
             </div>
-            <div className="text-center">
-              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight">94%</div>
+            <div className="text-center stat-item">
+              <div className="text-[32px] md:text-[40px] font-semibold text-white tracking-tight stat-number">94%</div>
               <div className="text-[13px] text-[#52525b] mt-1 uppercase tracking-wider">Client Retention</div>
             </div>
           </div>

@@ -1,23 +1,96 @@
+'use client';
+
+import { useRef } from 'react';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function StrategyInsightsPage() {
+  const heroRef = useRef<HTMLElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tl.fromTo(
+      badgeRef.current,
+      { opacity: 0, y: -20, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.7 }
+    )
+    .fromTo(
+      titleRef.current,
+      { opacity: 0, y: 50, clipPath: "inset(100% 0% 0% 0%)" },
+      { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 },
+      "-=0.4"
+    )
+    .fromTo(
+      paragraphRef.current,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7 },
+      "-=0.5"
+    );
+
+    if (cardsRef.current) {
+      gsap.fromTo(
+        cardsRef.current.children,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    }
+
+    gsap.fromTo(
+      ctaRef.current,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0b]">
       <NavigationHeader />
       <main>
-        <section className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#0a0a0b] py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#c9a227]/10 border border-[#c9a227]/20 rounded-full mb-8">
               <span className="w-1.5 h-1.5 bg-[#c9a227] rounded-full"></span>
               <span className="text-[12px] font-medium text-[#c9a227] tracking-wide uppercase">Market Intelligence</span>
             </div>
-            <h1 className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
+            <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-white">
               Strategy<br />
               <span className="text-[#71717a]">Insights</span>
             </h1>
-            <p className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto">
+            <p ref={paragraphRef} className="text-[17px] text-[#52525b] font-normal leading-relaxed max-w-xl mx-auto">
               Actionable market intelligence and data-driven analysis to help you make informed investment decisions with confidence.
             </p>
           </div>
@@ -25,7 +98,7 @@ export default function StrategyInsightsPage() {
 
         <section className="w-full bg-[#0a0a0b] py-12 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-5">
               {[
                 {
                   title: "Market Analysis",
@@ -58,7 +131,7 @@ export default function StrategyInsightsPage() {
           </div>
         </section>
 
-        <section className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
+        <section ref={ctaRef} className="w-full bg-[#111113] py-20 px-6 md:px-12 border-t border-[#1a1a1d]">
           <div className="max-w-[700px] mx-auto text-center">
             <h2 className="text-[28px] md:text-[36px] font-medium text-white mb-5">Access Our Insights</h2>
             <p className="text-[16px] text-[#52525b] mb-8">
