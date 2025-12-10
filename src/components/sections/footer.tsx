@@ -56,8 +56,8 @@ export default function Footer() {
         <div ref={columnsRef} className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="flex flex-col gap-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 border border-[#9a7b1a]/30 rounded flex items-center justify-center bg-[#9a7b1a]/5">
-                <span className="text-[#9a7b1a] font-semibold text-base tracking-tight">Γ</span>
+              <div className="w-8 h-8 border border-[#0d9488]/30 rounded flex items-center justify-center bg-[#0d9488]/5">
+                <span className="text-[#0d9488] font-semibold text-base tracking-tight">Γ</span>
               </div>
               <span className="text-[15px] font-semibold text-[#0a0a0b] tracking-tight">Gamma Capital</span>
             </Link>

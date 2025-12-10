@@ -46,8 +46,8 @@ export default function NavigationHeader() {
       <div className="relative flex h-[72px] items-center justify-between px-6 md:px-12 max-w-[1400px] mx-auto">
         <div ref={logoRef} className="flex-shrink-0">
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 border border-[#9a7b1a]/30 rounded flex items-center justify-center bg-[#9a7b1a]/5">
-              <span className="text-[#9a7b1a] font-semibold text-lg tracking-tight">Γ</span>
+            <div className="w-9 h-9 border border-[#0d9488]/30 rounded flex items-center justify-center bg-[#0d9488]/5">
+              <span className="text-[#0d9488] font-semibold text-lg tracking-tight">Γ</span>
             </div>
             <span className="text-[17px] font-semibold text-[#0a0a0b] tracking-tight">Gamma Capital</span>
           </Link>

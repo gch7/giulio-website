@@ -88,13 +88,13 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-6">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-[#9a7b1a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
                       <h3 className="text-[15px] font-semibold text-[#0a0a0b] mb-1">Email</h3>
-                      <a href="mailto:contact@gammacapital.com" className="text-[14px] text-[#9a7b1a] hover:underline">
+                      <a href="mailto:contact@gammacapital.com" className="text-[14px] text-[#0d9488] hover:underline">
                         contact@gammacapital.com
                       </a>
                     </div>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#9a7b1a]/50 focus:border-[#9a7b1a]/50 transition-colors"
+                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#0d9488]/50 focus:border-[#0d9488]/50 transition-colors"
                       placeholder="Your name"
                       required
                     />
@@ -124,7 +124,7 @@ export default function ContactPage() {
                       id="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#9a7b1a]/50 focus:border-[#9a7b1a]/50 transition-colors"
+                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#0d9488]/50 focus:border-[#0d9488]/50 transition-colors"
                       placeholder="your@email.com"
                       required
                     />
@@ -136,7 +136,7 @@ export default function ContactPage() {
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                       className={`w-full px-4 py-3 border rounded-lg bg-[#fafafa] text-[14px] text-left flex items-center justify-between transition-colors ${
                         isDropdownOpen 
-                          ? 'border-[#9a7b1a]/50 ring-1 ring-[#9a7b1a]/50' 
+                          ? 'border-[#0d9488]/50 ring-1 ring-[#0d9488]/50' 
                           : 'border-[#e4e4e7] hover:border-[#a1a1aa]'
                       } ${formData.subject ? 'text-[#0a0a0b]' : 'text-[#a1a1aa]'}`}
                     >
@@ -162,7 +162,7 @@ export default function ContactPage() {
                             }}
                             className={`w-full px-4 py-2.5 text-[14px] text-left transition-colors ${
                               formData.subject === option.value
-                                ? 'bg-[#9a7b1a]/10 text-[#9a7b1a]'
+                                ? 'bg-[#0d9488]/10 text-[#0d9488]'
                                 : 'text-[#52525b] hover:bg-[#f4f4f5] hover:text-[#0a0a0b]'
                             }`}
                           >
@@ -180,7 +180,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
-                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#9a7b1a]/50 focus:border-[#9a7b1a]/50 transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-[#e4e4e7] rounded-lg bg-[#fafafa] text-[14px] text-[#0a0a0b] placeholder-[#a1a1aa] focus:outline-none focus:ring-1 focus:ring-[#0d9488]/50 focus:border-[#0d9488]/50 transition-colors resize-none"
                       placeholder="How can we help you?"
                       required
                     />

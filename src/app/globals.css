@@ -50,8 +50,8 @@
 
   --color-text-secondary: #71717a;
   --color-surface-elevated: #ffffff;
-  --color-accent-gold: #9a7b1a;
-  --color-accent-gold-muted: rgba(154, 123, 26, 0.1);
+  --color-accent-gold: #0d9488;
+  --color-accent-gold-muted: rgba(13, 148, 136, 0.1);
 
   --font-primary: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: "Playfair Display", Georgia, serif;
@@ -196,14 +196,14 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #9a7b1a 0%, #c9a227 50%, #9a7b1a 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #0d9488 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gold-glow {
-  box-shadow: 0 0 40px rgba(154, 123, 26, 0.15);
+  box-shadow: 0 0 40px rgba(13, 148, 136, 0.15);
 }
 
 .card-hover {

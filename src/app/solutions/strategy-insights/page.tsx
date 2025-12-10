@@ -82,9 +82,9 @@ export default function StrategyInsightsPage() {
       <main>
         <section ref={heroRef} className="w-full bg-[#fafafa] py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
-            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#9a7b1a]/10 border border-[#9a7b1a]/20 rounded-full mb-8">
-              <span className="w-1.5 h-1.5 bg-[#9a7b1a] rounded-full"></span>
-              <span className="text-[12px] font-medium text-[#9a7b1a] tracking-wide uppercase">Market Intelligence</span>
+            <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0d9488]/10 border border-[#0d9488]/20 rounded-full mb-8">
+              <span className="w-1.5 h-1.5 bg-[#0d9488] rounded-full"></span>
+              <span className="text-[12px] font-medium text-[#0d9488] tracking-wide uppercase">Market Intelligence</span>
             </div>
             <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-[#0a0a0b]">
               Strategy<br />
@@ -119,7 +119,7 @@ export default function StrategyInsightsPage() {
               ].map((item, index) => (
                 <div key={index} className="border border-[#e4e4e7] rounded-xl p-7 bg-white card-hover">
                   <div className="w-10 h-10 bg-[#f4f4f5] border border-[#e4e4e7] rounded-lg flex items-center justify-center mb-5">
-                    <svg className="w-5 h-5 text-[#9a7b1a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#0d9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
