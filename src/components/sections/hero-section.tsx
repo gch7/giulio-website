@@ -5,7 +5,6 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import Threads from '../Threads';
 import { Rocket, ArrowRight, BarChart3, Users, ChevronRight, Building2, Network } from 'lucide-react';
 import type { HeroSectionData, ServiceCard as ServiceCardType } from '@/types/sanity';
 
@@ -227,16 +226,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
   return (
     <div className="relative w-full min-h-[1100px]">
-      <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
-        <Threads
-          color={[0.4, 0.4, 0.45]}
-          amplitude={1}
-          distance={0}
-          enableMouseInteraction={true}
-        />
-      </div>
-
-      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-24 w-full max-w-7xl mx-auto pt-16 px-4 pb-20 relative" style={{ zIndex: 1 }}>
+      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-24 w-full max-w-7xl mx-auto pt-16 px-4 pb-20 relative">
         <div style={{ zIndex: 1 }}>
           <div ref={badgeRef} className="flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-[#0a0a0b]/5 border-[#0a0a0b]/10">
