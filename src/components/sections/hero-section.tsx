@@ -75,66 +75,66 @@ export default function HeroSection({ data }: HeroSectionProps) {
   };
 
   useGSAP(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
     tl.fromTo(
       badgeRef.current,
-      { opacity: 0, y: -20, scale: 0.9 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.8 }
+      { opacity: 0, y: -10, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.4 }
     );
 
     if (titleRef.current) {
       const titles = titleRef.current.querySelectorAll('h1');
       tl.fromTo(
         titles,
-        { opacity: 0, y: 60, clipPath: "inset(100% 0% 0% 0%)" },
+        { opacity: 0, y: 30, clipPath: "inset(100% 0% 0% 0%)" },
         {
           opacity: 1,
           y: 0,
           clipPath: "inset(0% 0% 0% 0%)",
-          duration: 1,
-          stagger: 0.15
+          duration: 0.5,
+          stagger: 0.08
         },
-        "-=0.5"
+        "-=0.2"
       );
     }
 
     tl.fromTo(
       paragraphRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.8 },
-      "-=0.6"
+      { opacity: 0, y: 15 },
+      { opacity: 1, y: 0, duration: 0.4 },
+      "-=0.3"
     );
 
     if (bulletsRef.current) {
       tl.fromTo(
         bulletsRef.current.children,
-        { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, duration: 0.6, stagger: 0.1 },
-        "-=0.4"
+        { opacity: 0, x: -10 },
+        { opacity: 1, x: 0, duration: 0.3, stagger: 0.05 },
+        "-=0.2"
       );
     }
 
     if (buttonsRef.current) {
       tl.fromTo(
         buttonsRef.current.children,
-        { opacity: 0, y: 20, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1 },
-        "-=0.3"
+        { opacity: 0, y: 10, scale: 0.98 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.3, stagger: 0.05 },
+        "-=0.15"
       );
     }
 
     tl.fromTo(
       supportingRef.current,
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.5 },
-      "-=0.2"
+      { opacity: 0, y: 5 },
+      { opacity: 1, y: 0, duration: 0.25 },
+      "-=0.1"
     );
   }, []);
 
   return (
     <div className="relative w-full">
-      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-28 w-full max-w-5xl mx-auto pt-20 px-4 pb-24 relative">
+      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-28 w-full max-w-5xl mx-auto pt-12 md:pt-20 px-4 pb-14 md:pb-24 relative">
         <div style={{ zIndex: 1 }}>
           <div ref={badgeRef} className="flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-[#0a0a0b]/5 border-[#0a0a0b]/10">

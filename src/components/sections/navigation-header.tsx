@@ -160,7 +160,7 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
       </div>
 
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[73px] z-40 bg-[#fafafa] border-t border-[#e4e4e7] lg:hidden overflow-y-auto">
+        <div className="fixed left-0 right-0 bottom-0 top-[73px] z-40 bg-[#fafafa] border-t border-[#e4e4e7] lg:hidden overflow-y-auto h-[calc(100vh-73px)] min-h-[calc(100vh-73px)]">
           <div className="flex flex-col p-6 space-y-6">
             <div className="flex flex-col space-y-1">
               <MobileNavLink href="/" text="Home" />

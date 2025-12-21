@@ -84,47 +84,47 @@ export default function ConsultingPageClient() {
 
   useGSAP(() => {
     // Hero animations
-    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    const heroTl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
     heroTl.fromTo(
       '.hero-badge',
-      { opacity: 0, y: -20, scale: 0.9 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.7 }
+      { opacity: 0, y: -10, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.4 }
     )
       .fromTo(
         '.hero-title',
-        { opacity: 0, y: 50, clipPath: "inset(100% 0% 0% 0%)" },
-        { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 },
-        "-=0.4"
+        { opacity: 0, y: 25, clipPath: "inset(100% 0% 0% 0%)" },
+        { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.5 },
+        "-=0.2"
       )
       .fromTo(
         '.hero-subtitle',
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.7 },
-        "-=0.5"
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        "-=0.25"
       )
       .fromTo(
         '.hero-scroll-indicator',
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        "-=0.3"
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.3 },
+        "-=0.15"
       );
 
     // Service nav cards animation
     if (navCardsRef.current) {
       gsap.fromTo(
         navCardsRef.current.children,
-        { opacity: 0, y: 40, scale: 0.95 },
+        { opacity: 0, y: 20, scale: 0.98 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
+          duration: 0.35,
+          stagger: 0.05,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: navCardsRef.current,
-            start: "top 85%",
+            start: "top 92%",
             toggleActions: "play none none reverse"
           }
         }
@@ -136,15 +136,15 @@ export default function ConsultingPageClient() {
     sections.forEach((section) => {
       gsap.fromTo(
         section.querySelector('.section-content'),
-        { opacity: 0, y: 40 },
+        { opacity: 0, y: 20 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          ease: "power3.out",
+          duration: 0.45,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: "top 75%",
+            start: "top 92%",
             toggleActions: "play none none reverse"
           }
         }
@@ -152,17 +152,17 @@ export default function ConsultingPageClient() {
 
       gsap.fromTo(
         section.querySelectorAll('.feature-card'),
-        { opacity: 0, y: 30, scale: 0.95 },
+        { opacity: 0, y: 15, scale: 0.98 },
         {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
+          duration: 0.35,
+          stagger: 0.05,
+          ease: "power2.out",
           scrollTrigger: {
             trigger: section,
-            start: "top 65%",
+            start: "top 88%",
             toggleActions: "play none none reverse"
           }
         }
