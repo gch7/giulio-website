@@ -83,7 +83,7 @@ export default function TestimonialCTA({ data }: TestimonialCTAProps) {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#f4f4f5] to-[#fafafa] py-28 px-6 md:px-12 border-t border-[#e4e4e7]">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#f4f4f5] to-[#fafafa] py-16 md:py-28 px-6 md:px-12 border-t border-[#e4e4e7]">
       <div className="max-w-[900px] mx-auto text-center">
         <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#e4e4e7] rounded-full mb-8 shadow-sm">
           <span className="text-[12px] font-medium text-[#71717a] tracking-wide">{content.badge}</span>

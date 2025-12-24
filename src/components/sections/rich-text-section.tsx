@@ -89,7 +89,7 @@ export default function RichTextSection({ data }: RichTextSectionProps) {
     const bgClass = bgColorClasses[data.backgroundColor || 'white']
 
     return (
-        <section className={`w-full ${bgClass} py-16 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]`}>
+        <section className={`w-full ${bgClass} py-12 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]`}>
             <div className="max-w-[800px] mx-auto">
                 {data.title && (
                     <h2 className="text-[32px] md:text-[40px] font-medium tracking-[-0.02em] leading-[1.15] text-[#0a0a0b] mb-8 text-center">

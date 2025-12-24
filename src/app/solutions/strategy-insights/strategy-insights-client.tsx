@@ -140,7 +140,7 @@ export default function StrategyInsightsClient() {
       <NavigationHeader />
       <main>
         {/* Hero Section */}
-        <section ref={heroRef} className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-28 px-6 md:px-12 relative overflow-hidden">
+        <section ref={heroRef} className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-16 md:py-28 px-6 md:px-12 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
             <div className="absolute inset-0" style={{
@@ -195,7 +195,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section Navigation */}
-        <section id="section-nav" className="w-full bg-white py-16 px-6 md:px-12 border-b border-[#e4e4e7]">
+        <section id="section-nav" className="w-full bg-white py-12 md:py-16 px-6 md:px-12 border-b border-[#e4e4e7]">
           <div className="max-w-[1200px] mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-[24px] md:text-[28px] font-semibold text-[#0a0a0b] mb-3">Our Intelligence Areas</h2>
@@ -224,7 +224,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section 1: Market Intelligence (Core) */}
-        <section id="market-intelligence" className="intel-section w-full py-24 px-6 md:px-12 bg-[#fafafa]">
+        <section id="market-intelligence" className="intel-section w-full py-12 md:py-24 px-6 md:px-12 bg-[#fafafa]">
           <div className="max-w-[1200px] mx-auto">
             <div className="section-content">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -286,7 +286,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section 2: Options Intelligence */}
-        <section id="options-intelligence" className="intel-section w-full py-24 px-6 md:px-12 bg-[#f4f4f5]">
+        <section id="options-intelligence" className="intel-section w-full py-12 md:py-24 px-6 md:px-12 bg-[#f4f4f5]">
           <div className="max-w-[1200px] mx-auto">
             <div className="section-content">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -341,7 +341,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section 3: Structured Products Intelligence */}
-        <section id="structured-products" className="intel-section w-full py-24 px-6 md:px-12 bg-[#fafafa]">
+        <section id="structured-products" className="intel-section w-full py-12 md:py-24 px-6 md:px-12 bg-[#fafafa]">
           <div className="max-w-[1200px] mx-auto">
             <div className="section-content">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -408,7 +408,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section 4: Real Estate Advisory */}
-        <section id="real-estate" className="intel-section w-full py-24 px-6 md:px-12 bg-[#f4f4f5]">
+        <section id="real-estate" className="intel-section w-full py-12 md:py-24 px-6 md:px-12 bg-[#f4f4f5]">
           <div className="max-w-[1200px] mx-auto">
             <div className="section-content">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -458,7 +458,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Section 5: Strategic Network & Access */}
-        <section id="strategic-network" className="intel-section w-full py-24 px-6 md:px-12 bg-[#fafafa]">
+        <section id="strategic-network" className="intel-section w-full py-12 md:py-24 px-6 md:px-12 bg-[#fafafa]">
           <div className="max-w-[1200px] mx-auto">
             <div className="section-content">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -521,7 +521,7 @@ export default function StrategyInsightsClient() {
         </section>
 
         {/* Closing Section */}
-        <section className="closing-section w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-24 px-6 md:px-12 relative overflow-hidden">
+        <section className="closing-section w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-16 md:py-24 px-6 md:px-12 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
             <div className="absolute inset-0" style={{

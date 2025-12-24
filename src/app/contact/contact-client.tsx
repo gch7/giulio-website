@@ -152,7 +152,7 @@ export default function ContactPageClient() {
       <NavigationHeader />
       <main>
         {/* HERO SECTION */}
-        <section ref={heroRef} className="w-full bg-[#fafafa] pt-32 pb-16 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#fafafa] pt-20 pb-10 md:pt-32 md:pb-16 px-6 md:px-12">
           <div className="max-w-[900px] mx-auto text-center">
             <h1 className="hero-animate text-[36px] md:text-[48px] lg:text-[56px] font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-[#0a0a0b]">
               Get in Touch with <span className="text-[#0d9488]">Gamma Capital</span>
@@ -166,7 +166,7 @@ export default function ContactPageClient() {
         </section>
 
         {/* INTRO SECTION - How We Can Help */}
-        <section ref={introRef} className="w-full bg-[#fafafa] py-12 px-6 md:px-12">
+        <section ref={introRef} className="w-full bg-[#fafafa] py-8 md:py-12 px-6 md:px-12">
           <div className="max-w-[800px] mx-auto text-center">
             <h2 className="intro-animate text-[28px] md:text-[32px] font-medium tracking-[-0.02em] leading-[1.2] mb-5 text-[#0a0a0b]">
               How to Contact Us
@@ -187,7 +187,7 @@ export default function ContactPageClient() {
         </section>
 
         {/* CONTACT FORM SECTION */}
-        <section ref={formSectionRef} className="w-full bg-[#fafafa] py-12 px-6 md:px-12">
+        <section ref={formSectionRef} className="w-full bg-[#fafafa] py-8 md:py-12 px-6 md:px-12">
           <div className="max-w-[600px] mx-auto">
             <div className="form-card bg-white border border-[#e4e4e7] rounded-xl p-7 md:p-10 shadow-sm">
               <div className="mb-8">
@@ -275,8 +275,8 @@ export default function ContactPageClient() {
                     type="button"
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className={`w-full px-4 py-3 border rounded-lg bg-[#fafafa] text-[14px] text-left flex items-center justify-between transition-all ${isDropdownOpen
-                        ? 'border-[#0d9488] ring-2 ring-[#0d9488]/30'
-                        : 'border-[#e4e4e7] hover:border-[#a1a1aa]'
+                      ? 'border-[#0d9488] ring-2 ring-[#0d9488]/30'
+                      : 'border-[#e4e4e7] hover:border-[#a1a1aa]'
                       } ${formData.areaOfInterest ? 'text-[#0a0a0b]' : 'text-[#a1a1aa]'}`}
                   >
                     <span>{selectedLabel}</span>
@@ -293,8 +293,8 @@ export default function ContactPageClient() {
                             setIsDropdownOpen(false);
                           }}
                           className={`w-full px-4 py-2.5 text-[14px] text-left transition-colors ${formData.areaOfInterest === option.value
-                              ? 'bg-[#0d9488]/10 text-[#0d9488]'
-                              : 'text-[#52525b] hover:bg-[#f4f4f5] hover:text-[#0a0a0b]'
+                            ? 'bg-[#0d9488]/10 text-[#0d9488]'
+                            : 'text-[#52525b] hover:bg-[#f4f4f5] hover:text-[#0a0a0b]'
                             }`}
                         >
                           {option.label}
@@ -345,7 +345,7 @@ export default function ContactPageClient() {
         </section>
 
         {/* EXPECTATIONS SECTION */}
-        <section ref={expectationsRef} className="w-full bg-[#fafafa] py-16 px-6 md:px-12">
+        <section ref={expectationsRef} className="w-full bg-[#fafafa] py-10 md:py-16 px-6 md:px-12">
           <div className="max-w-[700px] mx-auto">
             <h2 className="text-[24px] md:text-[28px] font-medium tracking-[-0.02em] leading-[1.2] mb-8 text-[#0a0a0b] text-center">
               What to Expect After Contacting Us
@@ -369,7 +369,7 @@ export default function ContactPageClient() {
         </section>
 
         {/* COMPLIANCE / DISCLAIMER SECTION */}
-        <section className="w-full bg-[#fafafa] py-12 pb-20 px-6 md:px-12">
+        <section className="w-full bg-[#fafafa] py-8 pb-12 md:py-12 md:pb-20 px-6 md:px-12">
           <div className="max-w-[750px] mx-auto text-center">
             <p className="text-[13px] text-[#a1a1aa] leading-relaxed">
               Gamma Capital does not provide brokerage services, does not execute trades on behalf of clients, and does not offer legal or tax advice. All information and consulting services are provided for educational and strategic purposes only.

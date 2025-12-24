@@ -134,7 +134,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
   return (
     <div className="relative w-full">
-      <section ref={sectionRef} className="sm:px-6 lg:px-8 md:py-28 w-full max-w-5xl mx-auto pt-12 md:pt-20 px-4 pb-14 md:pb-24 relative">
+      <section ref={sectionRef} className="sm:px-6 lg:px-8 w-full max-w-5xl mx-auto pt-8 md:pt-20 px-4 pb-10 md:pb-24 relative">
         <div style={{ zIndex: 1 }}>
           <div ref={badgeRef} className="flex items-center justify-center">
             <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-[#0a0a0b]/5 border-[#0a0a0b]/10">
@@ -171,7 +171,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </div>
 
           {/* CTA Buttons */}
-          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
             {content.primaryCTA && (
               <div className="relative inline-block group">
                 <button
@@ -212,7 +212,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </div>
 
           {/* Supporting Line */}
-          <p ref={supportingRef} className="text-center text-[13px] text-[#a1a1aa] mt-6 italic">
+          <p ref={supportingRef} className="text-center text-[13px] text-[#a1a1aa] mt-4 md:mt-6 italic">
             No hype, no noise — just structured, data-driven insight.
           </p>
         </div>

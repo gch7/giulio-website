@@ -127,7 +127,7 @@ export default function WhatWeDo({ data }: WhatWeDoProps) {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-white py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
+    <section ref={sectionRef} className="w-full bg-white py-12 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
       <div className="max-w-[1200px] mx-auto">
         <div ref={headerRef} className="text-center mb-16">
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-[#0a0a0b]/5 border-[#0a0a0b]/10 mb-6">

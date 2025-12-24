@@ -49,24 +49,24 @@ export default function NetworkClient() {
       { opacity: 0, y: -20, scale: 0.9 },
       { opacity: 1, y: 0, scale: 1, duration: 0.7 }
     )
-    .fromTo(
-      titleRef.current,
-      { opacity: 0, y: 50, clipPath: "inset(100% 0% 0% 0%)" },
-      { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 },
-      "-=0.4"
-    )
-    .fromTo(
-      paragraphRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.7 },
-      "-=0.5"
-    )
-    .fromTo(
-      ctaButtonRef.current,
-      { opacity: 0, y: 20, scale: 0.95 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.6 },
-      "-=0.4"
-    );
+      .fromTo(
+        titleRef.current,
+        { opacity: 0, y: 50, clipPath: "inset(100% 0% 0% 0%)" },
+        { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 },
+        "-=0.4"
+      )
+      .fromTo(
+        paragraphRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.7 },
+        "-=0.5"
+      )
+      .fromTo(
+        ctaButtonRef.current,
+        { opacity: 0, y: 20, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6 },
+        "-=0.4"
+      );
 
     if (cardsRef.current) {
       gsap.fromTo(
@@ -109,7 +109,7 @@ export default function NetworkClient() {
     <div className="min-h-screen bg-[#fafafa]">
       <NavigationHeader />
       <main>
-        <section ref={heroRef} className="w-full bg-[#fafafa] py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#fafafa] py-12 md:py-24 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto text-center">
             <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0d9488]/10 border border-[#0d9488]/20 rounded-full mb-8">
               <Network className="w-4 h-4 text-[#0d9488]" />
@@ -122,9 +122,9 @@ export default function NetworkClient() {
             <p ref={paragraphRef} className="text-[17px] text-[#71717a] font-normal leading-relaxed max-w-xl mx-auto mb-10">
               Unlock opportunities through our curated network of institutional investors, fund managers, and exclusive deal flow.
             </p>
-            <Link 
+            <Link
               ref={ctaButtonRef}
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-[#0a0a0b] text-white px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors"
             >
               Request Access
@@ -132,7 +132,7 @@ export default function NetworkClient() {
           </div>
         </section>
 
-        <section className="w-full bg-[#fafafa] py-12 px-6 md:px-12">
+        <section className="w-full bg-[#fafafa] py-8 md:py-12 px-6 md:px-12">
           <div className="max-w-[1200px] mx-auto">
             <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-5">
               {services.map((service, index) => {
@@ -159,21 +159,21 @@ export default function NetworkClient() {
           </div>
         </section>
 
-        <section ref={ctaRef} className="w-full bg-[#f4f4f5] py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={ctaRef} className="w-full bg-[#f4f4f5] py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[700px] mx-auto text-center">
             <h2 className="text-[28px] md:text-[36px] font-medium text-[#0a0a0b] mb-5">Ready to Expand Your Network?</h2>
             <p className="text-[16px] text-[#71717a] mb-8">
               Connect with us to learn more about accessing our exclusive network and deal flow opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-[#0a0a0b] text-white px-7 py-3.5 rounded-md text-[14px] font-semibold hover:bg-[#27272a] transition-colors"
               >
                 Contact Us
               </Link>
-              <Link 
-                href="/memberships" 
+              <Link
+                href="/memberships"
                 className="bg-transparent text-[#0a0a0b] px-7 py-3.5 rounded-md text-[14px] font-medium border border-[#e4e4e7] hover:border-[#a1a1aa] hover:bg-white transition-colors"
               >
                 View Memberships

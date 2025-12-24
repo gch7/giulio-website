@@ -87,7 +87,7 @@ export default async function CMSPage({ params }: PageProps) {
                 {page.sections && page.sections.length > 0 ? (
                     <PageBuilder sections={page.sections} />
                 ) : (
-                    <div className="py-24 text-center text-[#a1a1aa]">
+                    <div className="py-12 md:py-24 text-center text-[#a1a1aa]">
                         <p>No content yet. Add sections in Sanity Studio.</p>
                     </div>
                 )}

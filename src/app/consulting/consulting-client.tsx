@@ -234,7 +234,7 @@ export default function ConsultingPageClient() {
     iconGradient?: string;
     shadowColor?: string;
   }) => (
-    <section id={id} className={`service-section w-full py-24 px-6 md:px-12 ${bgAlt ? 'bg-[#f4f4f5]' : 'bg-[#fafafa]'}`}>
+    <section id={id} className={`service-section w-full py-12 md:py-24 px-6 md:px-12 ${bgAlt ? 'bg-[#f4f4f5]' : 'bg-[#fafafa]'}`}>
       <div className="max-w-[1200px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left: Content */}
@@ -281,7 +281,7 @@ export default function ConsultingPageClient() {
       <NavigationHeader />
       <main>
         {/* Hero Section */}
-        <section ref={heroRef} className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-28 px-6 md:px-12 relative overflow-hidden">
+        <section ref={heroRef} className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-16 md:py-28 px-6 md:px-12 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
             <div className="absolute inset-0" style={{
@@ -336,7 +336,7 @@ export default function ConsultingPageClient() {
         </section>
 
         {/* Service Navigation Cards */}
-        <section id="service-nav" className="w-full bg-white py-16 px-6 md:px-12 border-b border-[#e4e4e7]">
+        <section id="service-nav" className="w-full bg-white py-12 md:py-16 px-6 md:px-12 border-b border-[#e4e4e7]">
           <div className="max-w-[1200px] mx-auto">
             <div className="text-center mb-10">
               <h2 className="text-[24px] md:text-[28px] font-semibold text-[#0a0a0b] mb-3">Our Advisory Services</h2>
@@ -462,7 +462,7 @@ export default function ConsultingPageClient() {
         />
 
         {/* Final CTA Section */}
-        <section className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-24 px-6 md:px-12 relative overflow-hidden">
+        <section className="w-full bg-gradient-to-b from-[#0a0a0b] to-[#18181b] py-16 md:py-24 px-6 md:px-12 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-[0.03]">
             <div className="absolute inset-0" style={{

@@ -404,7 +404,7 @@ export default function MembershipsPageClient() {
       <NavigationHeader />
       <main>
         {/* SECTION 1 - Hero */}
-        <section ref={heroRef} className="w-full bg-[#fafafa] py-14 md:py-24 px-6 md:px-12">
+        <section ref={heroRef} className="w-full bg-[#fafafa] py-10 md:py-24 px-6 md:px-12">
           <div className="max-w-[900px] mx-auto text-center">
             <div ref={badgeRef} className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0d9488]/10 border border-[#0d9488]/20 rounded-full mb-5 md:mb-8">
               <svg className="w-4 h-4 text-[#0d9488]" viewBox="0 0 24 24" fill="currentColor">
@@ -438,7 +438,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 2 - What You Will Find Inside */}
-        <section id="inside" ref={insideRef} className="w-full bg-white py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section id="inside" ref={insideRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12 animate-item">
               <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
@@ -469,7 +469,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 3 - Coming Soon */}
-        <section ref={comingSoonRef} className="w-full bg-[#fafafa] py-14 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={comingSoonRef} className="w-full bg-[#fafafa] py-10 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[800px] mx-auto">
             <div className="bg-gradient-to-br from-[#f0fdfa] to-[#ecfdf5] rounded-2xl p-6 md:p-10 border border-[#0d9488]/20">
               <div className="flex items-center gap-3 mb-4">
@@ -502,7 +502,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 4 - What's Included */}
-        <section ref={includedRef} className="w-full bg-white py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={includedRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
@@ -553,7 +553,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 5 - Membership Tiers */}
-        <section ref={pricingRef} id="pricing" className="w-full bg-[#fafafa] py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={pricingRef} id="pricing" className="w-full bg-[#fafafa] py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-6">
               <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
@@ -627,7 +627,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 6 - How Access Works */}
-        <section ref={accessRef} className="w-full bg-white py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={accessRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[800px] mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
@@ -663,7 +663,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 7 - FAQ */}
-        <section ref={faqRef} className="w-full bg-[#f4f4f5] py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={faqRef} className="w-full bg-[#f4f4f5] py-12 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[700px] mx-auto">
             <h2 className="text-[28px] md:text-[36px] font-semibold text-center mb-10 text-[#0a0a0b]">
               Frequently Asked Questions
@@ -690,7 +690,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 8 - Key Benefits */}
-        <section ref={benefitsRef} className="w-full bg-[#fafafa] py-14 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={benefitsRef} className="w-full bg-[#fafafa] py-10 md:py-20 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-[24px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
@@ -716,7 +716,7 @@ export default function MembershipsPageClient() {
         </section>
 
         {/* SECTION 9 - Final CTA */}
-        <section ref={ctaRef} className="w-full bg-gradient-to-b from-[#fafafa] to-[#f4f4f5] py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={ctaRef} className="w-full bg-gradient-to-b from-[#fafafa] to-[#f4f4f5] py-16 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
           <div className="max-w-[700px] mx-auto text-center">
             <h2 className="text-[32px] md:text-[42px] font-semibold text-[#0a0a0b] mb-5 tracking-tight">
               Join the Gamma Capital Discord

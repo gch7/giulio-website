@@ -62,7 +62,7 @@ export default function MultiAssetSection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="w-full bg-[#fafafa] py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
+        <section ref={sectionRef} className="w-full bg-[#fafafa] py-12 md:py-24 px-6 md:px-12 border-t border-[#e4e4e7]">
             <div className="max-w-[1000px] mx-auto">
                 <div ref={contentRef} className="text-center">
                     <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#52525b] bg-white border-[#e4e4e7] mb-6">
