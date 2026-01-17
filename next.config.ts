@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Transpile Sanity packages for embedded Studio
+  transpilePackages: ['sanity', '@sanity/ui', '@sanity/vision', '@sanity/presentation', 'styled-components'],
   turbopack: {
     rules: {
       "*.{jsx,tsx}": {

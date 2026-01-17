@@ -19,7 +19,7 @@ export function getClient(previewToken?: string) {
         perspective: previewToken ? 'drafts' : 'published',
         stega: {
             enabled: !!previewToken,
-            studioUrl: '/studio',
+            studioUrl: '/admin',
         },
     })
 }

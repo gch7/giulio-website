@@ -14,7 +14,7 @@
 
 ### Accessing Studio
 - **URL**: `https://your-sanity-studio-url.sanity.studio`
-- Or run locally: `cd sanity && npm` Run dev` → Access `http://localhost:3333`
+- Or run locally: `cd sanity && npm run dev` → Access `http://localhost:3333`
 
 ### Log in
 1. Click **"Log in"**
@@ -186,10 +186,33 @@
 - `Cmd/Ctrl + Enter`: Publish
 
 ---
+## ❓ Troubleshooting FAQ
+
+### Content not updating on website?
+- After publishing, wait up to 60 seconds for the website to update
+- Hard refresh your browser (Ctrl/Cmd + Shift + R)
+- Check if you actually clicked the green "Publish" button
+
+### Can't see my changes in preview?
+- Make sure you're in Draft Mode (check for the blue banner)
+- Try clearing your browser cache
+- Verify the correct page slug in the URL
+
+### Validation errors when saving?
+- **SEO Description too long**: Keep under 160 characters
+- **Invalid URL**: URLs must start with `/` (internal) or `https://` (external)
+- **Homepage conflict**: Only one page can be homepage - uncheck the other first
+
+### Accidentally deleted content?
+- Go to the document's History (click "..." menu → "History")
+- Find the previous version and click "Restore"
+- Publish the restored version
+
+---
 ## 🆘 Support
 
 If you encounter any problems, contact:
 
-- Email: developer@example.com
+- Email: **[REPLACE WITH ACTUAL SUPPORT EMAIL]**
 
 - Sanity documentation: https://www.sanity.io/docs

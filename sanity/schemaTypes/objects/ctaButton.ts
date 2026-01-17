@@ -15,7 +15,17 @@ export default defineType({
             name: 'href',
             title: 'URL',
             type: 'string',
-            validation: (Rule) => Rule.required(),
+            description: 'Use /page-name for internal links or https://... for external links',
+            validation: (Rule) => [
+                Rule.required(),
+                Rule.custom((value) => {
+                    if (!value) return true
+                    if (value.startsWith('/') || value.startsWith('http') || value.startsWith('mailto:') || value.startsWith('tel:')) {
+                        return true
+                    }
+                    return 'URL must start with / (internal) or http/https (external) or mailto:/tel:'
+                }),
+            ],
         }),
         defineField({
             name: 'variant',

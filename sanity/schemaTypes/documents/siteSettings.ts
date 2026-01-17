@@ -42,6 +42,8 @@ export default defineType({
             type: 'array',
             group: 'navigation',
             of: [defineArrayMember({ type: 'navItem' })],
+            description: 'Main navigation links. Recommended: 4-6 items for best UX.',
+            validation: (Rule) => Rule.max(8).warning('Too many nav items may overwhelm users'),
         }),
         defineField({
             name: 'navCTA',
@@ -165,6 +167,8 @@ export default defineType({
             type: 'text',
             group: 'seo',
             rows: 3,
+            description: 'Default description for pages without their own. Keep under 160 characters.',
+            validation: (Rule) => Rule.max(160).warning('Keep under 160 characters for best SEO'),
         }),
         defineField({
             name: 'ogImage',

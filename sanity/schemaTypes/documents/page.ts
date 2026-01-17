@@ -34,8 +34,23 @@ export default defineType({
             title: 'Is Homepage?',
             type: 'boolean',
             group: 'content',
-            description: 'Mark this page as the homepage (only one page should be marked)',
+            description: '⚠️ Only ONE page should be marked as homepage. Setting this will make this page display at the root URL (/).',
             initialValue: false,
+            validation: (Rule) =>
+                Rule.custom(async (value, context) => {
+                    if (!value) return true
+                    const { document, getClient } = context
+                    const client = getClient({ apiVersion: '2024-01-01' })
+                    const currentId = document?._id?.replace('drafts.', '')
+                    const existingHomepage = await client.fetch(
+                        `*[_type == "page" && isHomepage == true && _id != $id && !(_id in path("drafts.**"))][0]._id`,
+                        { id: currentId }
+                    )
+                    if (existingHomepage) {
+                        return 'Another page is already set as homepage. Please uncheck that page first.'
+                    }
+                    return true
+                }),
         }),
         defineField({
             name: 'sections',
@@ -65,7 +80,11 @@ export default defineType({
             type: 'text',
             group: 'seo',
             rows: 3,
-            description: 'Description for search engines (150-160 characters recommended)',
+            description: 'Description for search engines. Keep under 160 characters for best results.',
+            validation: (Rule) => [
+                Rule.max(160).warning('Keep under 160 characters for best SEO'),
+                Rule.min(50).warning('Add more description for better SEO (at least 50 chars)'),
+            ],
         }),
         defineField({
             name: 'ogImage',

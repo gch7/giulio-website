@@ -9,7 +9,7 @@ export default defineType({
             name: 'icon',
             title: 'Icon Name',
             type: 'string',
-            description: 'Lucide icon name (e.g., "BarChart3", "Users", "Building2")',
+            description: 'Choose an icon from the list. Icons are from the Lucide library.',
             options: {
                 list: [
                     { title: 'BarChart3 (Market)', value: 'BarChart3' },
@@ -38,7 +38,17 @@ export default defineType({
             name: 'href',
             title: 'Link URL',
             type: 'string',
-            validation: (Rule) => Rule.required(),
+            description: 'Where this card links to. Use /page-name for internal links.',
+            validation: (Rule) => [
+                Rule.required(),
+                Rule.custom((value) => {
+                    if (!value) return true
+                    if (value.startsWith('/') || value.startsWith('http') || value.startsWith('mailto:')) {
+                        return true
+                    }
+                    return 'URL must start with / (internal) or http/https (external)'
+                }),
+            ],
         }),
         defineField({
             name: 'linkText',
