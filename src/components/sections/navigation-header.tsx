@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ChevronDown, Menu, X, Search, ChevronRight } from 'lucide-react';
+import { ChevronDown, Menu, X, ChevronRight } from 'lucide-react';
 import type { SiteSettings, NavItem } from '@/types/sanity';
 import { urlFor } from '@/sanity/lib/image';
 
@@ -171,18 +171,6 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
       {isMobileMenuOpen && (
         <div className="fixed inset-x-0 bottom-0 top-[72px] z-[100] bg-white lg:hidden overflow-y-auto">
           <div className="flex flex-col min-h-full px-8 pt-6 pb-12 bg-white">
-            {/* Search Bar */}
-            <div className="relative mb-8">
-              <div className="flex items-center border-b border-[#2563EB]/20 pb-3">
-                <Search className="w-5 h-5 text-[#2563EB]/60" />
-                <input
-                  type="text"
-                  placeholder="Find insights..."
-                  className="bg-transparent border-none outline-none flex-1 ml-4 text-[17px] placeholder-[#2563EB]/30 font-medium text-[#111827]"
-                  autoFocus
-                />
-              </div>
-            </div>
 
             {/* Main Navigation Items */}
             <div className="flex flex-col">
