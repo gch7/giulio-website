@@ -8,7 +8,7 @@ import serviceCard from './objects/serviceCard'
 // Section Types
 import heroSection from './sections/heroSection'
 import whatWeDoSection from './sections/whatWeDoSection'
-import testimonialCTASection from './sections/testimonialCTASection'
+import testimonialCTASection from './sections/ctaSection'
 import threeCardsSection from './sections/threeCardsSection'
 import richTextSection from './sections/richTextSection'
 

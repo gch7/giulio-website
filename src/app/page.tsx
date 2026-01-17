@@ -7,6 +7,7 @@ import WhyGammaSection from "@/components/sections/why-gamma-section";
 import TestimonialCTA from "@/components/sections/testimonial-cta";
 import Footer from "@/components/sections/footer";
 import { PageBuilder } from "@/components/page-builder";
+import { OrganizationSchema } from "@/components/structured-data";
 import { sanityFetch } from "@/sanity/lib/client";
 import { HOMEPAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 import type { Page, SiteSettings } from "@/types/sanity";
@@ -35,6 +36,9 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data for SEO */}
+      <OrganizationSchema siteSettings={siteSettings} />
+
       <NavigationHeader siteSettings={siteSettings} />
       <main>
         {hasCMSContent ? (

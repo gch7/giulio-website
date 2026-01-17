@@ -1,8 +1,9 @@
 import { defineType, defineField } from 'sanity'
 
 export default defineType({
+    // Keep internal name for backward compat with existing data
     name: 'testimonialCTASection',
-    title: 'Testimonial CTA Section',
+    title: 'CTA Section', // Display name updated for clarity
     type: 'object',
     fields: [
         defineField({
