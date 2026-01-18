@@ -244,6 +244,9 @@ export const CONSULTING_PAGE_QUERY = defineQuery(`
     heroTitle,
     heroSubtitle,
     heroDescription,
+    heroStats[] { value, label },
+    serviceNavTitle,
+    serviceNavSubtitle,
     serviceNavItems[] {
       id,
       title,
@@ -338,8 +341,12 @@ export const UI_STRINGS_QUERY = defineQuery(`
     systemLoading,
     systemError,
     systemRetry,
+    sectionErrorTitle,
+    sectionErrorMessage,
     comingSoonTitle,
     comingSoonMessage,
+    exploreServicesLabel,
+    readyToStartBadge,
     mobileMenuOpenLabel,
     mobileMenuCloseLabel,
     navigationBackLabel,
@@ -350,5 +357,5 @@ export const UI_STRINGS_QUERY = defineQuery(`
     carouselPrev,
     carouselNext
   }
-`)(
+`)
 

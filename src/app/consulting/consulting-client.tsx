@@ -63,17 +63,24 @@ interface ConsultingPageClientProps {
 
 export default function ConsultingPageClient({ pageData, siteSettings, uiStrings }: ConsultingPageClientProps) {
   // Extract CMS data with fallbacks
-  const heroBadge = pageData?.heroBadge ?? 'Advisory Services';
-  const heroTitle = pageData?.heroTitle ?? 'Consulting';
-  const heroSubtitle = pageData?.heroSubtitle ?? 'Institution-level advisory designed for private investors who demand precision, clarity, and actionable insight across every major asset class.';
+  const heroBadge = pageData?.heroBadge;
+  const heroTitle = pageData?.heroTitle;
+  const heroSubtitle = pageData?.heroSubtitle;
+  const heroStats = pageData?.heroStats || [];
+
+  const serviceNavTitle = pageData?.serviceNavTitle;
+  const serviceNavSubtitle = pageData?.serviceNavSubtitle;
 
   const serviceNavItems = pageData?.serviceNavItems || [];
   const serviceSections = pageData?.serviceSections || [];
 
-  const ctaTitle = pageData?.ctaTitle ?? 'Ready to Elevate Your Investment Process?';
-  const ctaDescription = pageData?.ctaDescription ?? 'Schedule a consultation to discuss how Gamma Capital can bring institutional-level precision and clarity to your portfolio.';
-  const ctaButtonText = pageData?.ctaButtonText ?? 'Get in Touch';
-  const ctaButtonHref = pageData?.ctaButtonHref ?? '/contact';
+  const ctaTitle = pageData?.ctaTitle;
+  const ctaDescription = pageData?.ctaDescription;
+  const ctaButtonText = pageData?.ctaButtonText;
+  const ctaButtonHref = pageData?.ctaButtonHref;
+
+  const exploreServicesLabel = uiStrings?.exploreServicesLabel;
+  const readyToStartBadge = uiStrings?.readyToStartBadge;
 
   const heroRef = useRef<HTMLElement>(null);
   const navCardsRef = useRef<HTMLDivElement>(null);
@@ -301,10 +308,12 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
           <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-[#2563EB]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="max-w-[1200px] mx-auto text-center relative z-10">
-            <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-[#2563EB]/20 border border-[#2563EB]/30 rounded-full mb-8">
-              <span className="w-2 h-2 bg-[#2563EB] rounded-full animate-pulse"></span>
-              <span className="text-[13px] font-medium text-[#2563EB] tracking-wide uppercase">{heroBadge}</span>
-            </div>
+            {heroBadge && (
+              <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-[#2563EB]/20 border border-[#2563EB]/30 rounded-full mb-8">
+                <span className="w-2 h-2 bg-[#2563EB] rounded-full animate-pulse"></span>
+                <span className="text-[13px] font-medium text-[#2563EB] tracking-wide uppercase">{heroBadge}</span>
+              </div>
+            )}
 
             <h1 className="hero-title text-[42px] md:text-[56px] lg:text-[64px] font-display font-medium tracking-[-0.03em] leading-[1.05] mb-8 text-white">
               {heroTitle}
@@ -315,28 +324,26 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
             </p>
 
             {/* Stats Row */}
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
-              <div className="text-center">
-                <div className="text-[32px] md:text-[40px] font-bold text-white mb-1">6</div>
-                <div className="text-[13px] text-[#9CA3AF] uppercase tracking-wider">Core Services</div>
+            {heroStats.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
+                {heroStats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-[32px] md:text-[40px] font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-[13px] text-[#9CA3AF] uppercase tracking-wider">{stat.label}</div>
+                  </div>
+                ))}
               </div>
-              <div className="text-center">
-                <div className="text-[32px] md:text-[40px] font-bold text-white mb-1">Multi-Asset</div>
-                <div className="text-[13px] text-[#9CA3AF] uppercase tracking-wider">Coverage</div>
-              </div>
-              <div className="text-center">
-                <div className="text-[32px] md:text-[40px] font-bold text-white mb-1">Institutional</div>
-                <div className="text-[13px] text-[#9CA3AF] uppercase tracking-wider">Precision</div>
-              </div>
-            </div>
+            )}
 
-            <button
-              onClick={() => scrollToSection('service-nav')}
-              className="hero-scroll-indicator inline-flex flex-col items-center gap-2 text-[#9CA3AF] hover:text-[#2563EB] transition-colors cursor-pointer"
-            >
-              <span className="text-[13px] font-medium">Explore Services</span>
-              <ChevronDown className="w-5 h-5 animate-bounce" />
-            </button>
+            {exploreServicesLabel && (
+              <button
+                onClick={() => scrollToSection('service-nav')}
+                className="hero-scroll-indicator inline-flex flex-col items-center gap-2 text-[#9CA3AF] hover:text-[#2563EB] transition-colors cursor-pointer"
+              >
+                <span className="text-[13px] font-medium">{exploreServicesLabel}</span>
+                <ChevronDown className="w-5 h-5 animate-bounce" />
+              </button>
+            )}
           </div>
         </section>
 
@@ -344,8 +351,8 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
         <section id="service-nav" className="w-full bg-white py-12 md:py-16 px-6 md:px-12 border-b border-[#E5E7EB]">
           <div className="max-w-[1200px] mx-auto">
             <div className="text-center mb-10">
-              <h2 className="text-[24px] md:text-[28px] font-semibold text-[#111827] mb-3">Our Advisory Services</h2>
-              <p className="text-[15px] text-[#6B7280]">Click to explore each service in detail</p>
+              <h2 className="text-[24px] md:text-[28px] font-semibold text-[#111827] mb-3">{serviceNavTitle}</h2>
+              <p className="text-[15px] text-[#6B7280]">{serviceNavSubtitle}</p>
             </div>
             <div ref={navCardsRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {serviceNavItems.map((item) => {
@@ -411,9 +418,11 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#2563EB]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
           <div className="max-w-[800px] mx-auto text-center relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
-              <span className="text-[13px] font-medium text-white/70">Ready to Start?</span>
-            </div>
+            {readyToStartBadge && (
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
+                <span className="text-[13px] font-medium text-white/70">{readyToStartBadge}</span>
+              </div>
+            )}
 
             <h2 className="text-[32px] md:text-[42px] font-medium text-white mb-6 tracking-[-0.02em]">
               {ctaTitle}
@@ -421,13 +430,15 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
             <p className="text-[17px] text-[#9CA3AF] mb-10 leading-relaxed max-w-xl mx-auto">
               {ctaDescription}
             </p>
-            <Link
-              href={ctaButtonHref}
-              className="inline-flex items-center gap-3 bg-[#2563EB] text-white px-8 py-4 rounded-xl text-[15px] font-semibold hover:bg-[#1E3A8A] transition-all duration-300 group shadow-lg shadow-[#2563EB]/20"
-            >
-              {ctaButtonText}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            {ctaButtonHref && ctaButtonText && (
+              <Link
+                href={ctaButtonHref}
+                className="inline-flex items-center gap-3 bg-[#2563EB] text-white px-8 py-4 rounded-xl text-[15px] font-semibold hover:bg-[#1E3A8A] transition-all duration-300 group shadow-lg shadow-[#2563EB]/20"
+              >
+                {ctaButtonText}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            )}
           </div>
         </section>
       </main>

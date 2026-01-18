@@ -39,6 +39,22 @@ export default defineType({
             group: 'hero',
             rows: 3,
         }),
+        defineField({
+            name: 'heroStats',
+            title: 'Hero Stats',
+            type: 'array',
+            group: 'hero',
+            of: [{
+                type: 'object',
+                fields: [
+                    defineField({ name: 'value', title: 'Value', type: 'string' }),
+                    defineField({ name: 'label', title: 'Label', type: 'string' }),
+                ],
+                preview: {
+                    select: { title: 'value', subtitle: 'label' },
+                },
+            }],
+        }),
 
         // Service Navigation
         defineField({
@@ -72,6 +88,20 @@ export default defineType({
                     select: { title: 'title', subtitle: 'id' },
                 },
             }],
+        }),
+        defineField({
+            name: 'serviceNavTitle',
+            title: 'Service Navigation Title',
+            type: 'string',
+            group: 'services',
+            initialValue: 'Our Advisory Services',
+        }),
+        defineField({
+            name: 'serviceNavSubtitle',
+            title: 'Service Navigation Subtitle',
+            type: 'string',
+            group: 'services',
+            initialValue: 'Click to explore each service in detail',
         }),
 
         // Service Sections

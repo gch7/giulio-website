@@ -23,11 +23,15 @@ interface PageBuilderProps {
 
 // Error fallback component
 function SectionErrorFallback({ error, resetErrorBoundary, uiStrings }: FallbackProps & { uiStrings?: UIStrings | null }) {
-    if (process.env.NODE_ENV === 'development' || uiStrings?.systemError) {
+    const errorTitle = uiStrings?.sectionErrorTitle ?? uiStrings?.systemError ?? 'Section Error'
+    const retryLabel = uiStrings?.systemRetry ?? 'Retry'
+    const show = process.env.NODE_ENV === 'development' || uiStrings?.sectionErrorTitle || uiStrings?.systemError
+
+    if (show) {
         return (
             <div className="p-6 my-4 bg-red-50 border border-red-200 rounded-lg">
                 <h3 className="text-red-800 font-semibold mb-2">
-                    {uiStrings?.systemError || 'Section Error'}
+                    {errorTitle}
                 </h3>
                 {process.env.NODE_ENV === 'development' && (
                     <p className="text-red-600 text-sm font-mono mb-3">
@@ -38,7 +42,7 @@ function SectionErrorFallback({ error, resetErrorBoundary, uiStrings }: Fallback
                     onClick={resetErrorBoundary}
                     className="text-sm px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
                 >
-                    {uiStrings?.systemRetry || 'Retry'}
+                    {retryLabel}
                 </button>
             </div>
         )

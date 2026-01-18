@@ -134,6 +134,13 @@ export default defineType({
             group: 'navigation',
             initialValue: 'Back',
         }),
+        defineField({
+            name: 'exploreServicesLabel',
+            title: 'Explore Services Label',
+            type: 'string',
+            group: 'navigation',
+            initialValue: 'Explore Services',
+        }),
 
         // General UI Strings
         defineField({
@@ -150,6 +157,30 @@ export default defineType({
             group: 'general',
             initialValue: 'Exit',
         }),
+        defineField({
+            name: 'readyToStartBadge',
+            title: 'Ready to Start Badge',
+            type: 'string',
+            group: 'general',
+            initialValue: 'Ready to Start?',
+        }),
+
+        // System Strings - Errors
+        defineField({
+            name: 'sectionErrorTitle',
+            title: 'Section Error Title',
+            type: 'string',
+            group: 'system',
+            initialValue: 'Section Error',
+        }),
+        defineField({
+            name: 'sectionErrorMessage',
+            title: 'Section Error Message Default',
+            type: 'string',
+            group: 'system',
+            initialValue: 'Unknown error',
+        }),
+
         // Accessibility & Controls
         defineField({
             name: 'paginationPrev',

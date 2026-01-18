@@ -295,6 +295,12 @@ export interface ConsultingPage {
     heroTitle?: string
     heroSubtitle?: string
     heroDescription?: string
+    heroStats?: Array<{
+        value: string
+        label: string
+    }>
+    serviceNavTitle?: string
+    serviceNavSubtitle?: string
     serviceNavItems?: Array<{
         id: string
         title: string
@@ -380,19 +386,23 @@ export interface UIStrings {
     notFoundContactButtonText?: string
     notFoundQuickLinksTitle?: string
     notFoundQuickLinks?: Array<{ label: string; href: string }>
-    // General
-    draftModeLabel?: string
-    draftModeExitText?: string
-    // System
-    systemLoading?: string
-    systemError?: string
-    systemRetry?: string
-    comingSoonTitle?: string
-    comingSoonMessage?: string
     // Navigation
     mobileMenuOpenLabel?: string
     mobileMenuCloseLabel?: string
     navigationBackLabel?: string
+    exploreServicesLabel?: string
+    // General
+    draftModeLabel?: string
+    draftModeExitText?: string
+    readyToStartBadge?: string
+    // System
+    systemLoading?: string
+    systemError?: string
+    systemRetry?: string
+    sectionErrorTitle?: string
+    sectionErrorMessage?: string
+    comingSoonTitle?: string
+    comingSoonMessage?: string
     // Accessibility
     paginationPrev?: string
     paginationNext?: string
