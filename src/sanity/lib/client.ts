@@ -24,6 +24,7 @@ export function getClient(previewToken?: string) {
     })
 }
 
+
 // Utility function for fetching data with error handling
 export async function sanityFetch<T>({
     query,
@@ -37,6 +38,31 @@ export async function sanityFetch<T>({
     tags?: string[]
 }): Promise<T | null> {
     try {
+        const { draftMode } = await import('next/headers')
+        const { isEnabled } = await draftMode()
+
+        if (isEnabled) {
+            const previewClient = createClient({
+                projectId,
+                dataset,
+                apiVersion,
+                useCdn: false,
+                token: process.env.SANITY_API_READ_TOKEN,
+                perspective: 'previewDrafts',
+                stega: {
+                    enabled: true,
+                    studioUrl: '/admin',
+                },
+            })
+
+            return await previewClient.fetch<T>(query, params, {
+                next: {
+                    revalidate: 0,
+                    tags,
+                },
+            })
+        }
+
         return await client.fetch<T>(query, params, {
             next: {
                 revalidate,
@@ -49,3 +75,4 @@ export async function sanityFetch<T>({
         return null
     }
 }
+

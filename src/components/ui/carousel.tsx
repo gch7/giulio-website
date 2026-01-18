@@ -8,6 +8,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { useUIStrings } from "@/components/providers/ui-strings-provider"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -170,10 +171,6 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
     />
   )
 }
-
-import { useUIStrings } from "@/components/providers/ui-strings-provider"
-
-// ... imports
 
 function CarouselPrevious({
   className,

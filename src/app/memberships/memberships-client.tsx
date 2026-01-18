@@ -94,7 +94,17 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
 
 
   const heroRef = useRef<HTMLElement>(null);
-  // ... refs ...
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const insideRef = useRef<HTMLElement>(null);
+  const benefitsRef = useRef<HTMLElement>(null);
+  const includedRef = useRef<HTMLElement>(null);
+  const pricingRef = useRef<HTMLElement>(null);
+  const accessRef = useRef<HTMLElement>(null);
+  const faqRef = useRef<HTMLElement>(null);
+  const comingSoonRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
 
   const handleCheckout = async (planId: string) => {
     setIsLoading(planId);
@@ -121,11 +131,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
       setIsLoading(null);
     }
   };
-
-  // ... refs ...
-  const badgeRef = useRef<HTMLDivElement>(null);
-  // ... (keeping other refs same)
-  // ...
 
   // Removed misplaced code block
 

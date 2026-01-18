@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     const secret = searchParams.get('secret')
 
     // Validate secret to protect the endpoint
-    const previewSecret = process.env.SANITY_PREVIEW_SECRET
+    const previewSecret = process.env.SANITY_PREVIEW_SECRET || process.env.NEXT_PUBLIC_SANITY_PREVIEW_SECRET
 
     // In production, require secret to be configured and match
     if (!previewSecret) {

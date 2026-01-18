@@ -7,8 +7,10 @@ import { draftMode } from "next/headers";
 import { DisableDraftMode } from "@/components/DisableDraftMode";
 import { headers } from "next/headers";
 import { sanityFetch } from "@/sanity/lib/client";
-import { SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
-import type { SiteSettings } from "@/types/sanity";
+import { SITE_SETTINGS_QUERY, UI_STRINGS_QUERY } from "@/sanity/lib/queries";
+import type { SiteSettings, UIStrings } from "@/types/sanity";
+import { UIStringsProvider } from "@/components/providers/ui-strings-provider";
+import { SanityThemeProvider } from "@/components/providers/SanityThemeProvider";
 
 
 const geistSans = Geist({
@@ -32,12 +34,6 @@ export async function generateMetadata(): Promise<Metadata> {
     description: settings?.seoDescription ?? undefined,
   };
 }
-
-import { UI_STRINGS_QUERY } from "@/sanity/lib/queries";
-import type { UIStrings } from "@/types/sanity";
-import { UIStringsProvider } from "@/components/providers/ui-strings-provider";
-
-// ... imports remain the same
 
 export default async function RootLayout({
   children,
@@ -65,13 +61,15 @@ export default async function RootLayout({
         <UIStringsProvider uiStrings={uiStrings}>
           {children}
         </UIStringsProvider>
-        {!isAdminPage && <VisualEditsMessenger />}
-        {isDraftMode && !isAdminPage && (
-          <>
-            <VisualEditing />
-            <DisableDraftMode />
-          </>
-        )}
+        <SanityThemeProvider>
+          {!isAdminPage && <VisualEditsMessenger />}
+          {isDraftMode && !isAdminPage && (
+            <>
+              <VisualEditing />
+              <DisableDraftMode />
+            </>
+          )}
+        </SanityThemeProvider>
       </body>
     </html>
   );
