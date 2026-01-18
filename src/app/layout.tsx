@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 
   return {
-    title: settings?.seoTitle ?? "Gamma Capital",
+    title: settings?.seoTitle ?? settings?.siteName ?? "Gamma Capital",
     description: settings?.seoDescription ?? "Institutional-grade market intelligence.",
   };
 }
