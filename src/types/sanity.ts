@@ -403,6 +403,19 @@ export interface UIStrings {
     sectionErrorMessage?: string
     comingSoonTitle?: string
     comingSoonMessage?: string
+    // Memberships
+    membershipSuccessTitle?: string
+    membershipSuccessMessage?: string
+    membershipProcessingText?: string
+    membershipOrderReferencePrefix?: string
+    membershipReturnHomeButton?: string
+    membershipContactSupportButton?: string
+    // Forms
+    formSubmitButton?: string
+    formSubmittingText?: string
+    formSuccessTitle?: string
+    formErrorTitle?: string
+    formRequiredFieldLabel?: string
     // Accessibility
     paginationPrev?: string
     paginationNext?: string

@@ -10,6 +10,8 @@ export default defineType({
         { name: 'notFound', title: '404 Page' },
         { name: 'system', title: 'System' },
         { name: 'navigation', title: 'Navigation' },
+        { name: 'forms', title: 'Forms & Validation' },
+        { name: 'memberships', title: 'Memberships' },
         { name: 'general', title: 'General' },
     ],
     fields: [
@@ -140,6 +142,88 @@ export default defineType({
             type: 'string',
             group: 'navigation',
             initialValue: 'Explore Services',
+        }),
+
+        // Memberships Strings
+        defineField({
+            name: 'membershipSuccessTitle',
+            title: 'Success Page Title',
+            type: 'string',
+            group: 'memberships',
+            initialValue: 'Welcome to the Community!',
+        }),
+        defineField({
+            name: 'membershipSuccessMessage',
+            title: 'Success Page Message',
+            type: 'text',
+            group: 'memberships',
+            rows: 3,
+            initialValue: "Your membership has been activated successfully. You'll receive an email with your exclusive Discord invite link within 24 hours.",
+        }),
+        defineField({
+            name: 'membershipProcessingText',
+            title: 'Processing Payment Text',
+            type: 'string',
+            group: 'memberships',
+            initialValue: 'Processing your payment...',
+        }),
+        defineField({
+            name: 'membershipOrderReferencePrefix',
+            title: 'Order Reference Prefix',
+            type: 'string',
+            group: 'memberships',
+            initialValue: 'Order reference:',
+        }),
+        defineField({
+            name: 'membershipReturnHomeButton',
+            title: 'Return Home Button',
+            type: 'string',
+            group: 'memberships',
+            initialValue: 'Return Home',
+        }),
+        defineField({
+            name: 'membershipContactSupportButton',
+            title: 'Contact Support Button',
+            type: 'string',
+            group: 'memberships',
+            initialValue: 'Contact Support',
+        }),
+
+        // Forms & Validation Strings
+        defineField({
+            name: 'formSubmitButton',
+            title: 'Submit Button Default',
+            type: 'string',
+            group: 'forms',
+            initialValue: 'Submit Request',
+        }),
+        defineField({
+            name: 'formSubmittingText',
+            title: 'Submitting Text',
+            type: 'string',
+            group: 'forms',
+            initialValue: 'Submitting...',
+        }),
+        defineField({
+            name: 'formSuccessTitle',
+            title: 'Success Message Title',
+            type: 'string',
+            group: 'forms',
+            initialValue: 'Request submitted successfully!',
+        }),
+        defineField({
+            name: 'formErrorTitle',
+            title: 'Error Message Title',
+            type: 'string',
+            group: 'forms',
+            initialValue: 'Failed to submit request',
+        }),
+        defineField({
+            name: 'formRequiredFieldLabel',
+            title: 'Required Field Indicator (screen readers)',
+            type: 'string',
+            group: 'forms',
+            initialValue: '(required)',
         }),
 
         // General UI Strings
