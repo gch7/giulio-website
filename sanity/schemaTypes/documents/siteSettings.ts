@@ -229,6 +229,7 @@ export default defineType({
             type: 'text',
             group: 'seo',
             rows: 3,
+            initialValue: 'Institutional-grade market intelligence.',
             description: 'Default description for pages without their own. Keep under 160 characters.',
             validation: (Rule) => Rule.max(160).warning('Keep under 160 characters for best SEO'),
         }),

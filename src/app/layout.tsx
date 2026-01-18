@@ -28,8 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 
   return {
-    title: settings?.seoTitle ?? settings?.siteName ?? "Gamma Capital",
-    description: settings?.seoDescription ?? "Institutional-grade market intelligence.",
+    title: settings?.seoTitle ?? settings?.siteName ?? undefined,
+    description: settings?.seoDescription ?? undefined,
   };
 }
 

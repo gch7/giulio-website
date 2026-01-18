@@ -54,19 +54,7 @@ export default async function Home() {
       </main>
       <Footer siteSettings={siteSettings} />
 
-      {/* Draft mode indicator */}
-      {isDraftMode && (
-        <div className="fixed bottom-4 right-4 z-50 bg-[#2563EB] text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium flex items-center gap-2">
-          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-          Draft Mode
-          <a
-            href="/api/disable-draft"
-            className="ml-2 underline hover:no-underline"
-          >
-            Exit
-          </a>
-        </div>
-      )}
+
     </div>
   );
 }
