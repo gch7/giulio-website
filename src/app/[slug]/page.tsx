@@ -21,7 +21,7 @@ export const revalidate = 60
 export async function generateStaticParams() {
     const slugs = await sanityFetch<string[]>({
         query: ALL_PAGE_SLUGS_QUERY,
-        revalidate: 3600, // Revalidate every hour
+        revalidate: 3600, 
         tags: ['page'],
     })
 
