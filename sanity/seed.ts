@@ -16,6 +16,7 @@ const client = createClient({
 const siteSettings = {
     _id: 'siteSettings',
     _type: 'siteSettings',
+    // title field removed as it is not in schema
     siteName: 'Gamma Capital',
     logoText: 'Γ',
     navItems: [
@@ -80,7 +81,7 @@ const siteSettings = {
 const homepage = {
     _id: 'homepage',
     _type: 'page',
-    title: 'Homepage',
+    title: 'Homepage', // Kept as 'page' schema has 'title'
     slug: { _type: 'slug', current: 'home' },
     isHomepage: true,
     sections: [
@@ -217,7 +218,7 @@ const homepage = {
 const solutionsPage = {
     _id: 'solutionsPage',
     _type: 'solutionsPage',
-    title: 'Solutions Page',
+    // title field removed
     seoTitle: 'Investment Solutions - Gamma Capital',
     seoDescription: 'Explore our comprehensive range of investment solutions, from market intelligence to personalized consulting.',
     heroBadge: 'Our Solutions',
@@ -265,7 +266,7 @@ const solutionsPage = {
 const membershipsPage = {
     _id: 'membershipsPage',
     _type: 'membershipsPage',
-    title: 'Memberships Page',
+    // title field removed
     heroBadge: 'Premium Discord Access',
     heroTitle: 'Join the Elite Investment Community',
     heroSubtitle: 'Elevate Your Strategy',
@@ -346,7 +347,7 @@ const membershipsPage = {
 const consultingPage = {
     _id: 'consultingPage',
     _type: 'consultingPage',
-    title: 'Consulting Page',
+    // title field removed
     heroBadge: 'Expert Advisory',
     heroTitle: 'Personalized Investment Consulting',
     heroSubtitle: 'Tailored Strategies',
@@ -399,7 +400,7 @@ const consultingPage = {
 const contactPage = {
     _id: 'contactPage',
     _type: 'contactPage',
-    title: 'Contact Page',
+    // title field removed
     heroTitle: 'Get in Touch with {brand}Gamma Capital{/brand}',
     heroDescription: 'We are here to answer your questions and help you find the right solution.',
     heroHighlight: 'Contact Us',
@@ -444,7 +445,7 @@ const contactPage = {
 const uiStrings = {
     _id: 'uiStrings',
     _type: 'uiStrings',
-    title: 'UI Strings',
+    // title field removed
     notFoundBadge: 'Error 404',
     notFoundTitle: 'Lost in {highlight}Data.{/highlight}',
     notFoundDescription: 'The page you are looking for has been moved, removed, or never existed in our strategy framework.',
@@ -520,7 +521,7 @@ const uiStrings = {
 const networkPage = {
     _id: 'networkPage',
     _type: 'serviceLandingPage',
-    title: 'Network Page',
+    // title field removed
     heroBadge: 'Strategic Connections',
     heroTitle: 'Global Investment Network',
     heroSubtitle: 'Access Opportunities',
@@ -544,7 +545,7 @@ const networkPage = {
 const realEstatePage = {
     _id: 'realEstatePage',
     _type: 'serviceLandingPage',
-    title: 'Real Estate Page',
+    // title field removed
     heroBadge: 'Real Assets',
     heroTitle: 'Real Estate Advisory',
     heroSubtitle: 'Strategic Growth',
@@ -568,7 +569,7 @@ const realEstatePage = {
 const strategyPage = {
     _id: 'strategyPage',
     _type: 'serviceLandingPage',
-    title: 'Strategy Page',
+    // title field removed
     heroBadge: 'Market Intelligence',
     heroTitle: 'Strategic Insights',
     heroSubtitle: 'Data Driven',
