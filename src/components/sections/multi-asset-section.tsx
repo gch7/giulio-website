@@ -93,9 +93,6 @@ export default function MultiAssetSection({ data }: MultiAssetSectionProps) {
                     <p className="text-[16px] md:text-[17px] text-[#6B7280] max-w-3xl mx-auto leading-relaxed mb-4">
                         {secondaryDescription}
                     </p>
-                    <p className="text-[16px] md:text-[17px] text-[#374151] max-w-3xl mx-auto leading-relaxed font-medium">
-                        Our work integrates financial markets analysis with real-world asset experience, offering a broader and more resilient strategic view.
-                    </p>
                 </div>
 
                 {/* Asset Class Pills */}
