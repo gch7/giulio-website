@@ -213,6 +213,382 @@ const homepage = {
     seoDescription: 'Institutional-grade market intelligence, research, and advisory services for sophisticated investors.',
 }
 
+// Solutions Page
+const solutionsPage = {
+    _id: 'solutionsPage',
+    _type: 'solutionsPage',
+    title: 'Solutions Page',
+    seoTitle: 'Investment Solutions - Gamma Capital',
+    seoDescription: 'Explore our comprehensive range of investment solutions, from market intelligence to personalized consulting.',
+    heroBadge: 'Our Solutions',
+    heroTitle: 'Comprehensive Investment Solutions',
+    heroSubtitle: 'Investment Solutions',
+    heroDescription: 'From market intelligence to personalized consulting, we provide the tools and insights you need to succeed in today\'s markets.',
+    solutions: [
+        {
+            _key: 'sol-1',
+            title: 'Market Intelligence',
+            description: 'Data-driven analysis and research reports.',
+            icon: 'BarChart3',
+            color: '#2563EB',
+            href: '/solutions/strategy-insights',
+            features: ['Daily Reports', 'Market Analysis', 'Trend Identification']
+        },
+        {
+            _key: 'sol-2',
+            title: 'Discord Community',
+            description: 'Real-time alerts and community access.',
+            icon: 'Users',
+            color: '#7C3AED',
+            href: '/memberships',
+            features: ['Live Alerts', 'Community Chat', 'Expert Access']
+        },
+        {
+            _key: 'sol-3',
+            title: 'Consulting Services',
+            description: 'Personalized strategic guidance.',
+            icon: 'Building2',
+            color: '#059669',
+            href: '/consulting',
+            features: ['Portfolio Review', 'Risk Assessment', 'Strategy Design']
+        }
+    ],
+    ctaTitle: 'Not Sure Where to Start?',
+    ctaDescription: 'Book a free consultation call to discuss your goals and find the right solution for your investment needs.',
+    primaryCtaText: 'Schedule a Call',
+    primaryCtaLink: '/contact',
+    secondaryCtaText: 'View Memberships',
+    secondaryCtaLink: '/memberships',
+}
+
+// Memberships Page
+const membershipsPage = {
+    _id: 'membershipsPage',
+    _type: 'membershipsPage',
+    title: 'Memberships Page',
+    heroBadge: 'Premium Discord Access',
+    heroTitle: 'Join the Elite Investment Community',
+    heroSubtitle: 'Elevate Your Strategy',
+    heroDescription: 'Get real-time market alerts, exclusive research, and direct access to institutional analysts.',
+    heroPrimaryCta: 'Join the Membership',
+    heroSecondaryCta: 'Discover What\'s Inside',
+    insideSectionTitle: 'Inside the Community',
+    insideSectionDescription: 'Access a wealth of resources designed to improve your trading and investment performance.',
+    insideFeatures: [
+        { _key: 'if-1', icon: 'TrendingUp', text: 'Real-time Trade Alerts' },
+        { _key: 'if-2', icon: 'Eye', text: 'Market Watchlists' },
+        { _key: 'if-3', icon: 'MessageSquare', text: 'Analyst Q&A' },
+        { _key: 'if-4', icon: 'GraduationCap', text: 'Educational Resources' }
+    ],
+    benefitsSectionTitle: 'Key Benefits of Joining',
+    keyBenefits: [
+        { _key: 'kb-1', icon: 'Zap', title: 'Speed', description: 'React faster to market movements with instant alerts.' },
+        { _key: 'kb-2', icon: 'Target', title: 'Precision', description: 'High-conviction setups and analysis.' },
+        { _key: 'kb-3', icon: 'Users', title: 'Network', description: 'Connect with like-minded serious investors.' }
+    ],
+    includedSectionTitle: 'What\'s Included in the Membership',
+    includedFeatures: ['Daily Market Analysis', 'Live Trading Sessions', 'Portfolio Tracking Templates', 'Risk Management Tools'],
+    educationalMiniCourseTitle: 'Educational mini-course:',
+    educationalItems: ['Technical Analysis Mastery', 'Fundamental Analysis Basics', 'Risk Management Framework'],
+    additionalIncluded: ['Priority Support', 'Quarterly Strategy Calls'],
+    includedTagline: 'Everything you need to succeed.',
+    pricingSectionTitle: 'Membership Tiers',
+    pricingSectionDescription: 'Choose the plan that fits your investment style and needs.',
+    plans: [
+        {
+            _key: 'plan-1',
+            id: 'monthly',
+            name: 'Monthly Access',
+            price: '$99',
+            priceValue: 99,
+            trial: '7 days free trial',
+            description: 'Flexible monthly billing.',
+            cta: 'Start Free Trial',
+            popular: false,
+            stripePriceId: 'price_monthly_id'
+        },
+        {
+            _key: 'plan-2',
+            id: 'yearly',
+            name: 'Annual Pro',
+            price: '$899',
+            priceValue: 899,
+            trial: '14 days free trial',
+            description: 'Save 25% with annual billing.',
+            cta: 'Start Free Trial',
+            popular: true,
+            stripePriceId: 'price_yearly_id'
+        }
+    ],
+    popularBadgeText: 'Most Popular',
+    accessSectionTitle: 'How Access Works',
+    accessSteps: [
+        { _key: 'as-1', step: 1, title: 'Choose Plan', description: 'Select your membership tier.' },
+        { _key: 'as-2', step: 2, title: 'Connect Discord', description: 'Link your Discord account securely.' },
+        { _key: 'as-3', step: 3, title: 'Instant Access', description: 'Get immediate access to all channels.' }
+    ],
+    accessTagline: 'No friction, no manual steps, no waiting.',
+    faqSectionTitle: 'Frequently Asked Questions',
+    faqs: [
+        { _key: 'faq-1', question: 'Can I cancel anytime?', answer: 'Yes, you can cancel your subscription at any time from your dashboard.' },
+        { _key: 'faq-2', question: 'Do you offer refunds?', answer: 'We offer a 14-day money-back guarantee for annual plans.' }
+    ],
+    comingSoonTitle: 'Coming Soon',
+    comingSoonDescription: 'We are constantly adding new features.',
+    finalCtaTitle: 'Ready to Upgrade Your Trading?',
+    finalCtaDescription: 'Join hundreds of satisfied members today.',
+    finalCtaButton: 'Choose Your Membership Plan',
+    seoTitle: 'Premium Investment Community - Gamma Capital',
+    seoDescription: 'Join our premium Discord community for real-time alerts and expert analysis.',
+}
+
+// Consulting Page
+const consultingPage = {
+    _id: 'consultingPage',
+    _type: 'consultingPage',
+    title: 'Consulting Page',
+    heroBadge: 'Expert Advisory',
+    heroTitle: 'Personalized Investment Consulting',
+    heroSubtitle: 'Tailored Strategies',
+    heroDescription: 'Work directly with our experts to build a robust investment portfolio tailored to your unique goals and risk tolerance.',
+    heroStats: [
+        { _key: 'cs-1', value: '100+', label: 'Clients Advised' },
+        { _key: 'cs-2', value: '$500M+', label: 'Strategy Volume' }
+    ],
+    serviceNavTitle: 'Our Advisory Services',
+    serviceNavSubtitle: 'Click to explore each service in detail',
+    serviceNavItems: [
+        { _key: 'sni-1', id: 'portfolio', title: 'Portfolio Review', icon: 'Briefcase' },
+        { _key: 'sni-2', id: 'risk', title: 'Risk Management', icon: 'Shield' }
+    ],
+    serviceSections: [
+        {
+            _key: 'ss-1',
+            id: 'portfolio',
+            icon: 'Briefcase',
+            title: 'Portfolio Review',
+            description: ['Comprehensive analysis of your current holdings.', 'Identification of overlapping assets and concentration risks.'],
+            highlight: 'Optimize your allocation',
+            features: [
+                { _key: 'pf-1', icon: 'BarChart3', title: 'Asset Allocation', desc: 'Optimal distribution across asset classes.' },
+                { _key: 'pf-2', icon: 'Target', title: 'Goal Alignment', desc: 'Ensuring investments match your objectives.' }
+            ]
+        },
+        {
+            _key: 'ss-2',
+            id: 'risk',
+            icon: 'Shield',
+            title: 'Risk Management',
+            description: ['Develop a personalized risk framework.', 'Stress test your portfolio against market scenarios.'],
+            highlight: 'Protect your capital',
+            features: [
+                { _key: 'rf-1', icon: 'Shield', title: 'Downside Protection', desc: 'Strategies to limit losses.' },
+                { _key: 'rf-2', icon: 'Calculator', title: 'Position Sizing', desc: 'Mathematical approach to trade size.' }
+            ]
+        }
+    ],
+    ctaTitle: 'Let\'s Discuss Your Portfolio',
+    ctaDescription: 'Book a discovery call to see how we can help you achieve your financial goals.',
+    ctaButtonText: 'Schedule Consultation',
+    ctaButtonHref: '/contact',
+    seoTitle: 'Investment Consulting Services - Gamma Capital',
+    seoDescription: 'Professional investment consulting and portfolio advisory services.',
+}
+
+// Contact Page
+const contactPage = {
+    _id: 'contactPage',
+    _type: 'contactPage',
+    title: 'Contact Page',
+    heroTitle: 'Get in Touch with {brand}Gamma Capital{/brand}',
+    heroDescription: 'We are here to answer your questions and help you find the right solution.',
+    heroHighlight: 'Contact Us',
+    introHeading: 'How can we help?',
+    introDescription: 'Choose a topic below or send us a general inquiry.',
+    introEmailLabel: 'For general communication:',
+    introEmail: 'hello@gammacapital.com',
+    formTitle: 'Contact Request',
+    formSubtitle: 'Fill out the form and we will get back to you shortly.',
+    formSuccessTitle: 'Request submitted successfully!',
+    formSuccessMessage: 'Thank you for reaching out. We will be in touch soon.',
+    formErrorTitle: 'Failed to submit request',
+    formErrorMessage: 'Please try again later.',
+    formNameLabel: 'Full Name',
+    formNamePlaceholder: 'Your full name',
+    formEmailLabel: 'Email Address',
+    formEmailPlaceholder: 'your@email.com',
+    formCountryLabel: 'Country',
+    formCountryPlaceholder: 'Your country',
+    formInterestLabel: 'Area of Interest',
+    formInterestPlaceholder: 'Select an area',
+    formMessageLabel: 'Message',
+    formMessagePlaceholder: 'How can we help you?',
+    formButtonText: 'Submit Request',
+    formButtonSubmittingText: 'Submitting...',
+    areaOfInterestOptions: [
+        { _key: 'aoi-1', value: 'membership', label: 'Membership' },
+        { _key: 'aoi-2', value: 'consulting', label: 'Consulting' },
+        { _key: 'aoi-3', value: 'other', label: 'Other' }
+    ],
+    expectationsHeading: 'What to Expect After Contacting Us',
+    expectationItems: [
+        { _key: 'ei-1', icon: 'Clock', text: 'Response within 24 hours' },
+        { _key: 'ei-2', icon: 'UserCheck', text: 'Personalized reply' }
+    ],
+    disclaimer: 'Your privacy is important to us.',
+    seoTitle: 'Contact Gamma Capital',
+    seoDescription: 'Get in touch with our team for inquiries about memberships and consulting.',
+}
+
+// UI Strings
+const uiStrings = {
+    _id: 'uiStrings',
+    _type: 'uiStrings',
+    title: 'UI Strings',
+    notFoundBadge: 'Error 404',
+    notFoundTitle: 'Lost in {highlight}Data.{/highlight}',
+    notFoundDescription: 'The page you are looking for has been moved, removed, or never existed in our strategy framework.',
+    notFoundHomeButtonText: 'Return Home',
+    notFoundContactButtonText: 'Contact Support',
+    notFoundQuickLinksTitle: 'Popular Insights',
+    notFoundQuickLinks: [
+        { _key: 'ql-1', label: 'Strategy Insights', href: '/solutions/strategy-insights' },
+        { _key: 'ql-2', label: 'Memberships', href: '/memberships' }
+    ],
+    systemLoading: 'Loading...',
+    systemError: 'Error',
+    systemRetry: 'Retry',
+    comingSoonTitle: 'Coming Soon',
+    comingSoonMessage: 'This page is currently being updated.',
+    mobileMenuOpenLabel: 'Open menu',
+    mobileMenuCloseLabel: 'Close menu',
+    navigationBackLabel: 'Back',
+    exploreServicesLabel: 'Explore Services',
+    logoAriaLabel: 'Go to Homepage',
+    skipToContentLabel: 'Skip to content',
+    membershipSuccessTitle: 'Welcome to the Community!',
+    membershipSuccessMessage: "Your membership has been activated successfully. You'll receive an email with your exclusive Discord invite link within 24 hours.",
+    membershipProcessingText: 'Processing your payment...',
+    membershipOrderReferencePrefix: 'Order reference:',
+    membershipReturnHomeButton: 'Return Home',
+    membershipContactSupportButton: 'Contact Support',
+    formSubmitButton: 'Submit Request',
+    formSubmittingText: 'Submitting...',
+    formSuccessTitle: 'Request submitted successfully!',
+    formErrorTitle: 'Failed to submit request',
+    formRequiredFieldLabel: '(required)',
+    draftModeLabel: 'Draft Mode',
+    draftModeExitText: 'Exit',
+    readyToStartBadge: 'Ready to Start?',
+    sectionErrorTitle: 'Section Error',
+    sectionErrorMessage: 'Unknown error',
+    paginationPrev: 'Previous',
+    paginationNext: 'Next',
+    carouselPrev: 'Previous slide',
+    carouselNext: 'Next slide',
+    exploreLabel: 'Explore',
+    freeTrialSuffix: 'free trial',
+    insideChannelsLabel: 'Inside the private channels you will find:',
+    checkoutProcessingText: 'Processing...',
+    checkoutErrorText: 'Something went wrong. Please try again.',
+    formNameLabel: 'Full Name',
+    formNamePlaceholder: 'Your full name',
+    formEmailLabel: 'Email Address',
+    formEmailPlaceholder: 'your@email.com',
+    formCountryLabel: 'Country of Residence',
+    formCountryPlaceholder: 'e.g., Switzerland, United States, etc.',
+    formInterestLabel: 'Area of Interest',
+    formInterestPlaceholder: 'Select an area of interest',
+    formMessageLabel: 'Message',
+    formMessagePlaceholder: 'Briefly describe your situation, objectives, or question.',
+    spinnerLoadingLabel: 'Loading',
+    paginationEllipsis: 'More pages',
+    sidebarToggleLabel: 'Toggle Sidebar',
+    sheetCloseLabel: 'Close',
+    dialogCloseLabel: 'Close',
+    breadcrumbAriaLabel: 'breadcrumb',
+    breadcrumbMoreLabel: 'More',
+    adminLoadingText: 'Loading Sanity Studio...',
+    contactRoute: '/contact',
+    membershipsRoute: '/memberships',
+    solutionsRoute: '/solutions',
+    loginRoute: '/login',
+    disableDraftRoute: '/api/disable-draft',
+}
+
+// Service Landing Pages (Singletons)
+const networkPage = {
+    _id: 'networkPage',
+    _type: 'serviceLandingPage',
+    title: 'Network Page',
+    heroBadge: 'Strategic Connections',
+    heroTitle: 'Global Investment Network',
+    heroSubtitle: 'Access Opportunities',
+    heroDescription: 'Unlock exclusive deal flow and connect with institutional partners.',
+    heroCtaText: 'Join Network',
+    heroCtaLink: '/contact',
+    services: [
+        { _key: 'ns-1', title: 'Deal Flow', description: 'Access to off-market deals.', icon: 'Network', features: ['Private Equity', 'Venture Capital'] },
+        { _key: 'ns-2', title: 'Events', description: 'Exclusive networking events.', icon: 'Users', features: ['Summits', 'Roundtables'] }
+    ],
+    ctaTitle: 'Expand Your Reach',
+    ctaDescription: 'Connect with us to access our global network.',
+    primaryCtaText: 'Contact Us',
+    primaryCtaLink: '/contact',
+    secondaryCtaText: 'Learn More',
+    secondaryCtaLink: '/about',
+    seoTitle: 'Strategic Network - Gamma Capital',
+    seoDescription: 'Exclusive investment network and deal flow.',
+}
+
+const realEstatePage = {
+    _id: 'realEstatePage',
+    _type: 'serviceLandingPage',
+    title: 'Real Estate Page',
+    heroBadge: 'Real Assets',
+    heroTitle: 'Real Estate Advisory',
+    heroSubtitle: 'Strategic Growth',
+    heroDescription: 'Expert guidance on real estate investment and portfolio diversification.',
+    heroCtaText: 'View Portfolio',
+    heroCtaLink: '/contact',
+    services: [
+        { _key: 'res-1', title: 'Market Analysis', description: 'Deep dive into property markets.', icon: 'Building2', features: ['Residential', 'Commercial'] },
+        { _key: 'res-2', title: 'Investment Strategy', description: 'Tailored real estate strategies.', icon: 'BarChart3', features: ['Acquisition', 'Development'] }
+    ],
+    ctaTitle: 'Invest in Real Estate',
+    ctaDescription: 'Let us help you build a robust real estate portfolio.',
+    primaryCtaText: 'Get Started',
+    primaryCtaLink: '/contact',
+    secondaryCtaText: 'View Projects',
+    secondaryCtaLink: '/projects',
+    seoTitle: 'Real Estate Advisory - Gamma Capital',
+    seoDescription: 'Real estate investment advisory and market analysis.',
+}
+
+const strategyPage = {
+    _id: 'strategyPage',
+    _type: 'serviceLandingPage',
+    title: 'Strategy Page',
+    heroBadge: 'Market Intelligence',
+    heroTitle: 'Strategic Insights',
+    heroSubtitle: 'Data Driven',
+    heroDescription: 'Actionable market intelligence and strategic insights.',
+    heroCtaText: 'Read Reports',
+    heroCtaLink: '/solutions/strategy-insights',
+    services: [
+        { _key: 'sts-1', title: 'Daily Reports', description: 'Market movements and analysis.', icon: 'TrendingUp', features: ['Forex', 'Equities'] },
+        { _key: 'sts-2', title: 'Macro Analysis', description: 'Global economic trends.', icon: 'Map', features: ['Inflation', 'Rates'] }
+    ],
+    ctaTitle: 'Stay Informed',
+    ctaDescription: 'Subscribe to our intelligence reports.',
+    primaryCtaText: 'Subscribe',
+    primaryCtaLink: '/memberships',
+    secondaryCtaText: 'Sample Report',
+    secondaryCtaLink: '#',
+    seoTitle: 'Strategy Insights - Gamma Capital',
+    seoDescription: 'Market intelligence and strategic investment insights.',
+}
+
 async function seed() {
     console.log('🌱 Starting seed...')
 
@@ -226,6 +602,39 @@ async function seed() {
         console.log('📝 Creating Homepage...')
         await client.createOrReplace(homepage)
         console.log('✅ Homepage created')
+
+        console.log('📝 Creating Solutions Page...')
+        await client.createOrReplace(solutionsPage)
+        console.log('✅ Solutions Page created')
+
+        console.log('📝 Creating Memberships Page...')
+        await client.createOrReplace(membershipsPage)
+        console.log('✅ Memberships Page created')
+
+        console.log('📝 Creating Consulting Page...')
+        await client.createOrReplace(consultingPage)
+        console.log('✅ Consulting Page created')
+
+        console.log('📝 Creating Contact Page...')
+        await client.createOrReplace(contactPage)
+        console.log('✅ Contact Page created')
+
+        console.log('📝 Creating UI Strings...')
+        await client.createOrReplace(uiStrings)
+        console.log('✅ UI Strings created')
+
+        console.log('📝 Creating Network Page...')
+        await client.createOrReplace(networkPage)
+        console.log('✅ Network Page created')
+
+        console.log('📝 Creating Real Estate Page...')
+        await client.createOrReplace(realEstatePage)
+        console.log('✅ Real Estate Page created')
+
+        console.log('📝 Creating Strategy Page...')
+        await client.createOrReplace(strategyPage)
+        console.log('✅ Strategy Page created')
+
 
         console.log('🎉 Seed completed successfully!')
     } catch (error) {
