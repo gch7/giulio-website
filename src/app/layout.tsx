@@ -28,8 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 
   return {
-    title: settings?.seoTitle ?? "Gamma Capital - Market Intelligence & Strategic Advisory",
-    description: settings?.seoDescription ?? "Gamma Capital delivers institutional-grade market intelligence, exclusive Discord community access, and personalized consulting to elevate your investment strategy.",
+    title: settings?.seoTitle ?? "Gamma Capital",
+    description: settings?.seoDescription ?? "Institutional-grade market intelligence.",
   };
 }
 

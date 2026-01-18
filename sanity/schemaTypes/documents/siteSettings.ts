@@ -8,6 +8,7 @@ export default defineType({
     icon: Settings,
     groups: [
         { name: 'navigation', title: 'Navigation' },
+        { name: 'mobile', title: 'Mobile Menu' },
         { name: 'footer', title: 'Footer' },
         { name: 'seo', title: 'SEO & Meta' },
     ],
@@ -65,6 +66,24 @@ export default defineType({
             title: 'Navigation CTA Button',
             type: 'ctaButton',
             group: 'navigation',
+        }),
+
+        // Mobile Menu Group
+        defineField({
+            name: 'mobileSecondaryLinks',
+            title: 'Mobile Secondary Links',
+            type: 'array',
+            group: 'mobile',
+            of: [defineArrayMember({ type: 'link' })],
+            description: 'Links displayed in the grid at the bottom of the mobile menu',
+        }),
+        defineField({
+            name: 'mobileFooterText',
+            title: 'Mobile Footer Text',
+            type: 'text',
+            group: 'mobile',
+            rows: 2,
+            description: 'Text displayed at the very bottom of the mobile menu',
         }),
 
         // Footer Group
@@ -179,6 +198,13 @@ export default defineType({
             type: 'text',
             group: 'footer',
             rows: 3,
+        }),
+        defineField({
+            name: 'connectColumnTitle',
+            title: 'Connect Column Title',
+            type: 'string',
+            group: 'footer',
+            initialValue: 'Connect',
         }),
 
         // SEO Group

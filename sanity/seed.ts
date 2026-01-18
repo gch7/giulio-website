@@ -62,6 +62,13 @@ const siteSettings = {
             ],
         },
     ],
+    connectColumnTitle: 'Connect',
+    mobileSecondaryLinks: [
+        { _key: 'mob-1', text: 'Intelligence', href: '/solutions/strategy-insights', isExternal: false },
+        { _key: 'mob-2', text: 'Contact Us', href: '/contact', isExternal: false },
+        { _key: 'mob-3', text: 'Community', href: '/memberships', isExternal: false },
+    ],
+    mobileFooterText: 'Institutional-grade market intelligence.',
     contactEmail: 'contact@gammacapital.com',
     copyrightText: '© 2024 Gamma Capital. All rights reserved.',
     disclaimer: 'Disclaimer: The information provided is for educational purposes only and should not be considered financial advice. Past performance is not indicative of future results.',

@@ -6,33 +6,8 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ChevronDown, Menu, X, ChevronRight } from 'lucide-react';
-import type { SiteSettings, NavItem } from '@/types/sanity';
+import type { SiteSettings } from '@/types/sanity';
 import { urlFor } from '@/sanity/lib/image';
-
-// Default navigation data (fallback)
-const defaultNavItems: NavItem[] = [
-  {
-    text: 'Solutions',
-    href: '/solutions',
-    hasDropdown: true,
-    dropdownItems: [
-      { text: 'Strategy Insights', description: 'Market Intelligence', href: '/solutions/strategy-insights' },
-      { text: 'Memberships', description: 'Join our community', href: '/memberships' },
-      { text: 'Consulting', description: 'Expert guidance', href: '/consulting' },
-    ],
-  },
-  { text: 'Memberships', href: '/memberships' },
-  { text: 'Consulting', href: '/consulting' },
-  { text: 'Contact', href: '/contact' },
-];
-
-const secondaryNavItems = [
-  { text: 'Intelligence', href: '/solutions/strategy-insights' },
-  { text: 'Contact Us', href: '/contact' },
-  { text: 'Community', href: '/memberships' },
-];
-
-const defaultNavCTA = { text: 'Get Started', href: '/contact' };
 
 interface NavigationHeaderProps {
   siteSettings?: SiteSettings | null;
@@ -46,12 +21,20 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
   const linksRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
 
-  // Use CMS data or fallback
-  const siteName = siteSettings?.siteName || 'GAMMA CAPITAL';
+  // Use CMS data or return null/skeleton if critical data is missing
+  // Ideally, if siteSettings is null, layout might handle it, or we render a skeleton.
+  // For now, we assume siteSettings might be partial but if navigation is missing, we render nothing or empty list.
+
+  const siteName = siteSettings?.siteName || 'Gamma Capital';
   const logoText = siteSettings?.logoText || 'Γ';
-  const navItems = siteSettings?.navItems || defaultNavItems;
-  const navCTA = siteSettings?.navCTA || defaultNavCTA;
   const logoImage = siteSettings?.logo;
+
+  const navItems = siteSettings?.navItems || [];
+  const navCTA = siteSettings?.navCTA;
+
+  // New mobile fields
+  const mobileSecondaryLinks = siteSettings?.mobileSecondaryLinks || [];
+  const mobileFooterText = siteSettings?.mobileFooterText;
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -73,16 +56,15 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
       );
     }
 
-    tl.fromTo(
-      ctaRef.current,
-      { opacity: 0, x: 30 },
-      { opacity: 1, x: 0, duration: 0.6 },
-      "-=0.3"
-    );
+    if (ctaRef.current) {
+      tl.fromTo(
+        ctaRef.current,
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.6 },
+        "-=0.3"
+      );
+    }
   }, []);
-
-  // Find dropdown items for "Solutions" nav item
-  const solutionsNavItem = navItems.find(item => item.hasDropdown);
 
   return (
     <>
@@ -140,15 +122,17 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
               ))}
             </div>
 
-            <div ref={ctaRef} className="hidden lg:flex items-center ml-8 gap-5">
-              <div className="w-px h-5 bg-[#E5E7EB]" />
-              <Link
-                href={navCTA.href}
-                className="bg-[#2563EB] text-white px-5 py-2.5 rounded-md text-[13px] font-semibold hover:bg-[#1E3A8A] transition-colors"
-              >
-                {navCTA.text}
-              </Link>
-            </div>
+            {navCTA && (
+              <div ref={ctaRef} className="hidden lg:flex items-center ml-8 gap-5">
+                <div className="w-px h-5 bg-[#E5E7EB]" />
+                <Link
+                  href={navCTA.href}
+                  className="bg-[#2563EB] text-white px-5 py-2.5 rounded-md text-[13px] font-semibold hover:bg-[#1E3A8A] transition-colors"
+                >
+                  {navCTA.text}
+                </Link>
+              </div>
+            )}
 
             <div className="lg:hidden ml-4 relative z-50">
               <button
@@ -192,25 +176,30 @@ export default function NavigationHeader({ siteSettings }: NavigationHeaderProps
             </div>
 
             {/* Secondary Navigation Grid */}
-            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 pb-8">
-              {secondaryNavItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-[#2563EB] text-[15px] font-semibold tracking-tight hover:opacity-80 transition-opacity"
-                >
-                  {item.text}
-                </Link>
-              ))}
-            </div>
+            {mobileSecondaryLinks.length > 0 && (
+              <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 pb-8">
+                {mobileSecondaryLinks.map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-[#2563EB] text-[15px] font-semibold tracking-tight hover:opacity-80 transition-opacity"
+                  >
+                    {item.text}
+                  </Link>
+                ))}
+              </div>
+            )}
 
-            <div className="mt-auto pt-8 border-t border-gray-100">
-              <p className="text-[12px] text-[#9CA3AF] font-medium mb-1">GAMMA CAPITAL</p>
-              <p className="text-[11px] text-[#9CA3AF] leading-relaxed">
-                Institutional-grade market intelligence.
-              </p>
-            </div>
+            {/* Mobile Footer */}
+            {mobileFooterText && (
+              <div className="mt-auto pt-8 border-t border-gray-100">
+                <p className="text-[12px] text-[#9CA3AF] font-medium mb-1">{siteName.toUpperCase()}</p>
+                <p className="text-[11px] text-[#9CA3AF] leading-relaxed">
+                  {mobileFooterText}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       )}

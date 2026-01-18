@@ -17,48 +17,18 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
 };
 
-// Default content (fallback when no CMS data)
-const defaultData: HeroSectionData = {
-  _key: 'default-hero',
-  _type: 'heroSection',
-  badge: 'Institutional Intelligence',
-  titleLine1: 'Institutional-Grade Market Intelligence',
-  titleLine2: 'and Strategy Design',
-  description: 'Gamma Capital helps investors navigate complex markets through structured analysis, options-driven insights, and disciplined strategy frameworks. We combine institutional methodology, real-time market intelligence, and a private Discord community to support better decision-making across market conditions.',
-  primaryCTA: {
-    text: 'Join Discord Memberships',
-    href: '/memberships',
-    variant: 'primary',
-    showArrow: true,
-  },
-  secondaryCTA: {
-    text: 'Explore Our Solutions',
-    href: '/solutions',
-    variant: 'secondary',
-  },
-  featureCards: [],
-  stats: [],
-  bulletPoints: [
-    { icon: 'TrendingUp', text: 'Options flow, volatility dynamics, and institutional market signals' },
-    { icon: 'Activity', text: 'Structured strategy insights across derivatives, yield and risk management' },
-    { icon: 'Shield', text: 'Premium Discord access, education, and professional consulting' },
-  ],
-  supportingTagline: 'Research · Consulting · Private Community',
-};
-
 interface HeroSectionProps {
   data?: HeroSectionData;
 }
 
 export default function HeroSection({ data }: HeroSectionProps) {
-  // Use CMS data or fallback to defaults
-  const content = data ?? defaultData;
+  // Strict CMS mode: if no data, render nothing.
+  if (!data) return null;
 
-  // Get bulletPoints with fallback
-  const bulletPoints = content.bulletPoints?.length
-    ? content.bulletPoints
-    : defaultData.bulletPoints ?? [];
-  const supportingTagline = content.supportingTagline ?? defaultData.supportingTagline;
+  const content = data;
+
+  const bulletPoints = content.bulletPoints || [];
+  const supportingTagline = content.supportingTagline;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -140,10 +110,12 @@ export default function HeroSection({ data }: HeroSectionProps) {
       <section ref={sectionRef} className="sm:px-6 lg:px-8 w-full max-w-5xl mx-auto pt-8 md:pt-20 px-4 pb-10 md:pb-24 relative">
         <div style={{ zIndex: 1 }}>
           <div ref={badgeRef} className="flex items-center justify-center">
-            <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#6B7280] bg-[#0A1A2F]/5 border-[#0A1A2F]/10">
-              <Activity className="h-3.5 w-3.5 text-[#2563EB]" />
-              {content.badge}
-            </span>
+            {content.badge && (
+              <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide border rounded-full px-3 py-1 text-[#6B7280] bg-[#0A1A2F]/5 border-[#0A1A2F]/10">
+                <Activity className="h-3.5 w-3.5 text-[#2563EB]" />
+                {content.badge}
+              </span>
+            )}
           </div>
 
           <div ref={titleRef} className="text-center max-w-4xl mt-8 mx-auto">
@@ -162,19 +134,21 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </div>
 
           {/* Key Bullets */}
-          <div ref={bulletsRef} className="flex flex-col gap-4 mt-10 max-w-2xl mx-auto">
-            {bulletPoints.map((bullet: { icon?: string; text: string }, index: number) => {
-              const IconComponent = iconMap[bullet.icon ?? ''] ?? TrendingUp;
-              return (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-[#2563EB]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <IconComponent className="w-3.5 h-3.5 text-[#2563EB]" />
+          {bulletPoints.length > 0 && (
+            <div ref={bulletsRef} className="flex flex-col gap-4 mt-10 max-w-2xl mx-auto">
+              {bulletPoints.map((bullet: { icon?: string; text: string }, index: number) => {
+                const IconComponent = iconMap[bullet.icon ?? ''] ?? TrendingUp;
+                return (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-[#2563EB]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <IconComponent className="w-3.5 h-3.5 text-[#2563EB]" />
+                    </div>
+                    <span className="text-[15px] text-[#6B7280] leading-relaxed">{bullet.text}</span>
                   </div>
-                  <span className="text-[15px] text-[#6B7280] leading-relaxed">{bullet.text}</span>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          )}
 
           {/* CTA Buttons */}
           <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center mt-8 md:mt-12">
@@ -218,9 +192,11 @@ export default function HeroSection({ data }: HeroSectionProps) {
           </div>
 
           {/* Supporting Line */}
-          <p ref={supportingRef} className="text-center text-[13px] text-[#6B7280] mt-4 md:mt-6 italic">
-            No hype, no noise — just structured, data-driven insight.
-          </p>
+          {supportingTagline && (
+            <p ref={supportingRef} className="text-center text-[13px] text-[#6B7280] mt-4 md:mt-6 italic">
+              {supportingTagline}
+            </p>
+          )}
         </div>
       </section>
     </div>

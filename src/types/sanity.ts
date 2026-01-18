@@ -149,6 +149,8 @@ export interface SiteSettings {
     logoText?: string
     navItems?: NavItem[]
     navCTA?: CTAButton
+    mobileSecondaryLinks?: Link[]
+    mobileFooterText?: string
     footerDescription?: string
     socialLinks?: Array<{
         platform: 'twitter' | 'linkedin' | 'discord' | 'email'
@@ -160,6 +162,7 @@ export interface SiteSettings {
     }>
     contactEmail?: string
     copyrightText?: string
+    connectColumnTitle?: string
     disclaimer?: string
     seoTitle?: string
     seoDescription?: string

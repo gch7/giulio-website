@@ -27,34 +27,6 @@ const socialIconMap: Record<string, React.FC<{ className?: string }>> = {
   email: ({ className }) => <Mail className={className} />,
 };
 
-// Default footer data (fallback)
-const defaultFooterData = {
-  siteName: 'Gamma Capital',
-  logoText: 'Γ',
-  footerDescription: 'Institutional-grade market intelligence and strategic advisory for sophisticated investors.',
-  socialLinks: [
-    { platform: 'twitter' as const, url: '#' },
-    { platform: 'linkedin' as const, url: '#' },
-  ],
-  footerColumns: [
-    {
-      title: 'Solutions',
-      links: [
-        { text: 'Strategy Insights', href: '/solutions/strategy-insights' },
-        { text: 'Discord Memberships', href: '/memberships' },
-        { text: 'Consulting', href: '/consulting' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [{ text: 'Contact', href: '/contact' }],
-    },
-  ],
-  contactEmail: 'contact@gammacapital.com',
-  copyrightText: '© 2024 Gamma Capital. All rights reserved.',
-  disclaimer: 'Disclaimer: The information provided is for educational purposes only and should not be considered financial advice. Past performance is not indicative of future results.',
-};
-
 interface FooterProps {
   siteSettings?: SiteSettings | null;
 }
@@ -64,16 +36,17 @@ export default function Footer({ siteSettings }: FooterProps) {
   const columnsRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  // Use CMS data or fallback
-  const siteName = siteSettings?.siteName || defaultFooterData.siteName;
-  const logoText = siteSettings?.logoText || defaultFooterData.logoText;
+  // Use CMS data or return safe defaults/null
+  const siteName = siteSettings?.siteName || 'Gamma Capital';
+  const logoText = siteSettings?.logoText || 'Γ';
   const logoImage = siteSettings?.logo;
-  const footerDescription = siteSettings?.footerDescription || defaultFooterData.footerDescription;
-  const socialLinks = siteSettings?.socialLinks || defaultFooterData.socialLinks;
-  const footerColumns = siteSettings?.footerColumns || defaultFooterData.footerColumns;
-  const contactEmail = siteSettings?.contactEmail || defaultFooterData.contactEmail;
-  const copyrightText = siteSettings?.copyrightText || defaultFooterData.copyrightText;
-  const disclaimer = siteSettings?.disclaimer || defaultFooterData.disclaimer;
+  const footerDescription = siteSettings?.footerDescription;
+  const socialLinks = siteSettings?.socialLinks || [];
+  const footerColumns = siteSettings?.footerColumns || [];
+  const contactEmail = siteSettings?.contactEmail;
+  const copyrightText = siteSettings?.copyrightText;
+  const disclaimer = siteSettings?.disclaimer;
+  const connectColumnTitle = siteSettings?.connectColumnTitle || 'Connect';
 
   useGSAP(() => {
     if (columnsRef.current) {
@@ -133,9 +106,11 @@ export default function Footer({ siteSettings }: FooterProps) {
               )}
               <span className="text-[15px] font-display font-semibold text-[#111827] tracking-tight">{siteName}</span>
             </Link>
-            <p className="text-[13px] text-[#6B7280] leading-relaxed">
-              {footerDescription}
-            </p>
+            {footerDescription && (
+              <p className="text-[13px] text-[#6B7280] leading-relaxed">
+                {footerDescription}
+              </p>
+            )}
             <div className="flex items-center gap-3 mt-2">
               {socialLinks.map((social, index) => {
                 const IconComponent = socialIconMap[social.platform] || Twitter;
@@ -173,13 +148,15 @@ export default function Footer({ siteSettings }: FooterProps) {
           ))}
 
           <div className="flex flex-col gap-4">
-            <h3 className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider mb-1 font-display">Connect</h3>
-            <div className="flex flex-col gap-2.5">
-              <a href={`mailto:${contactEmail}`} className="text-[13px] font-medium text-[#6B7280] hover:text-[#111827] transition-colors flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5" />
-                {contactEmail}
-              </a>
-            </div>
+            <h3 className="text-[11px] font-semibold text-[#9CA3AF] uppercase tracking-wider mb-1 font-display">{connectColumnTitle}</h3>
+            {contactEmail && (
+              <div className="flex flex-col gap-2.5">
+                <a href={`mailto:${contactEmail}`} className="text-[13px] font-medium text-[#6B7280] hover:text-[#111827] transition-colors flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5" />
+                  {contactEmail}
+                </a>
+              </div>
+            )}
           </div>
         </div>
 

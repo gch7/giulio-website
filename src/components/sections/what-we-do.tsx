@@ -25,55 +25,16 @@ const iconMap: Record<string, LucideIcon | React.FC<{ className?: string }>> = {
   Discord: DiscordIcon,
 };
 
-// Core pillars data
-const corePillars: ServiceCardType[] = [
-  {
-    _key: 'pillar-1',
-    icon: 'BarChart3',
-    title: 'Market Intelligence & Strategy Insights',
-    description: 'We analyse options flow, volatility regimes, dealer positioning and key macro drivers to generate structured strategy insights. Instead of isolated trade ideas, we focus on context: why a setup exists, how it behaves across scenarios, and how it fits into a coherent risk framework.',
-    href: '/solutions/strategy-insights',
-    linkText: 'Learn more',
-  },
-  {
-    _key: 'pillar-2',
-    icon: 'Discord',
-    title: 'Discord Memberships',
-    description: 'Through our private Discord community, members access real-time market commentary, unusual options activity, structured insights and educational material. The environment is designed for investors who value clarity, discipline and professional discussion — not noise or speculation.',
-    href: '/memberships',
-    linkText: 'View plans',
-  },
-  {
-    _key: 'pillar-3',
-    icon: 'Briefcase',
-    title: 'Consulting & Portfolio Advisory',
-    description: 'For investors requiring tailored guidance, Gamma Capital offers one-to-one consulting across portfolio review, strategy design, options structures, structured products and broader asset allocation. The objective is simple: align strategy, risk and time horizon in a coherent, professional way.',
-    href: '/consulting',
-    linkText: 'Get started',
-  },
-];
-
-// Default content (fallback when no CMS data)
-const defaultData: WhatWeDoSectionData = {
-  _key: 'default-whatwedo',
-  _type: 'whatWeDoSection',
-  badge: 'Our Approach',
-  title: 'What We Do',
-  description: 'Gamma Capital is a research, strategy and advisory platform focused on options, structured products and multi-asset portfolio frameworks. Our mission is to bring institutional-style discipline, tools and reasoning to serious investors who seek clarity, structure and consistency rather than generic market commentary.',
-  services: corePillars,
-  showViewAllButton: false,
-  viewAllButtonText: '',
-  viewAllButtonHref: '',
-};
-
 interface WhatWeDoProps {
   data?: WhatWeDoSectionData;
 }
 
 export default function WhatWeDo({ data }: WhatWeDoProps) {
-  // Use CMS data or fallback to defaults
-  const content = data ?? defaultData;
-  const services = content.services && content.services.length > 0 ? content.services : corePillars;
+  // Strict CMS mode
+  if (!data) return null;
+
+  const content = data;
+  const services = content.services || [];
 
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);

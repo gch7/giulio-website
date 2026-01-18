@@ -1,10 +1,5 @@
 import { draftMode } from 'next/headers'
 import NavigationHeader from "@/components/sections/navigation-header";
-import HeroSection from "@/components/sections/hero-section";
-import WhatWeDo from "@/components/sections/what-we-do";
-import MultiAssetSection from "@/components/sections/multi-asset-section";
-import WhyGammaSection from "@/components/sections/why-gamma-section";
-import TestimonialCTA from "@/components/sections/testimonial-cta";
 import Footer from "@/components/sections/footer";
 import { PageBuilder } from "@/components/page-builder";
 import { OrganizationSchema } from "@/components/structured-data";
@@ -31,7 +26,7 @@ export default async function Home() {
     }),
   ])
 
-  // If we have CMS data, use PageBuilder; otherwise fall back to static components
+  // If we have CMS data, use PageBuilder; otherwise show "Coming Soon" or 404
   const hasCMSContent = pageData?.sections && pageData.sections.length > 0
 
   return (
@@ -44,14 +39,12 @@ export default async function Home() {
         {hasCMSContent ? (
           <PageBuilder sections={pageData.sections} />
         ) : (
-          // Fallback to static components when no CMS data
-          <>
-            <HeroSection />
-            <WhatWeDo />
-            <MultiAssetSection />
-            <WhyGammaSection />
-            <TestimonialCTA />
-          </>
+          <div className="flex items-center justify-center min-h-[50vh]">
+            <div className="text-center">
+              <h1 className="text-2xl font-semibold text-gray-900">Coming Soon</h1>
+              <p className="mt-2 text-gray-600">This page is currently being updated.</p>
+            </div>
+          </div>
         )}
       </main>
       <Footer siteSettings={siteSettings} />

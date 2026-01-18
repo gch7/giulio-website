@@ -11,32 +11,17 @@ import type { TestimonialCTASectionData } from '@/types/sanity';
 gsap.registerPlugin(ScrollTrigger);
 
 // Default content (fallback when no CMS data)
-const defaultData: TestimonialCTASectionData = {
-  _key: 'default-cta',
-  _type: 'testimonialCTASection',
-  badge: 'Get Started',
-  titleLine1: 'Built for Investors Who Want',
-  titleLine2: 'Structure and Clarity',
-  description: 'Whether you are looking for actionable market intelligence, a disciplined community, or strategic advisory support, Gamma Capital is designed to help you operate with confidence in complex markets.',
-  primaryCTA: {
-    text: 'Join Discord Memberships',
-    href: '/memberships',
-    variant: 'primary',
-  },
-  secondaryCTA: {
-    text: 'Explore Our Solutions',
-    href: '/solutions',
-    variant: 'secondary',
-  },
-};
+
 
 interface TestimonialCTAProps {
   data?: TestimonialCTASectionData;
 }
 
 export default function TestimonialCTA({ data }: TestimonialCTAProps) {
-  // Use CMS data or fallback to defaults
-  const content = data ?? defaultData;
+  // Strict CMS mode
+  if (!data) return null;
+
+  const content = data;
 
   const sectionRef = useRef<HTMLElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
