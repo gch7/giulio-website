@@ -571,12 +571,13 @@ const strategyPage = {
     _id: 'strategyPage',
     _type: 'serviceLandingPage',
     // title field removed
-    heroBadge: 'Market Intelligence',
-    heroTitle: 'Data-driven insights, algorithms and institutional frameworks',
-    heroSubtitle: '', // Leaving empty as title is long enough
-    heroDescription: 'to understand markets and manage risk.',
+    heroBadge: 'Strategy Insights',
+    heroTitle: 'Market Intelligence',
+    heroSubtitle: '',
+    heroDescription: 'Data-driven insights, algorithms and institutional frameworks to understand markets and manage risk.',
     heroCtaText: 'Contact Us',
     heroCtaLink: '/contact',
+    layout: 'list',
     services: [
         {
             _key: 'sts-1',
@@ -593,24 +594,26 @@ const strategyPage = {
             description: "Options are a key source of market information. We analyse institutional options flow, GEX, dealer positioning and volatility dynamics to understand where risk is building or being hedged.\n\nOur focus is on:",
             icon: 'TrendingUp',
             features: [
-                'flow-driven market behaviour',
-                'gamma exposure and dealer hedging',
-                'volatility regimes and term structure',
+                'Flow-driven market behaviour',
+                'Gamma exposure and dealer hedging',
+                'Volatility regimes and term structure',
                 'This intelligence supports timing, risk management and strategy design.'
-            ]
+            ],
+            // CTA: none
         },
         {
             _key: 'sts-3',
             title: 'Structured Products Intelligence',
             description: "We analyse and design structured payoffs from an institutional perspective. Our work focuses on:",
-            icon: 'Layers', // Using Layers if available, or just fallback
+            icon: 'Layers',
             features: [
-                'payoff asymmetry and embedded optionality',
-                'issuer hedging logic',
-                'regime-dependent performance',
-                'efficiency vs complexity',
+                'Payoff asymmetry and embedded optionality',
+                'Issuer hedging logic',
+                'Regime-dependent performance',
+                'Efficiency vs complexity',
                 'We also replicate or improve structured payoffs using options, removing unnecessary opacity.'
-            ]
+            ],
+            // CTA: none
         },
         {
             _key: 'sts-4',
@@ -627,9 +630,9 @@ const strategyPage = {
             description: "Gamma Capital operates within a selective network of professionals across finance, real estate and alternative investments.\n\nThis network provides access to:",
             icon: 'Network',
             features: [
-                'high-level market insight',
-                'experienced operators',
-                'strategic alignment and introductions, where appropriate',
+                'High-level market insight',
+                'Experienced operators',
+                'Strategic alignment and introductions, where appropriate',
                 'Not a service, but a strategic advantage for selected clients.'
             ],
             linkUrl: '/contact',
@@ -637,7 +640,7 @@ const strategyPage = {
         }
     ],
     ctaTitle: 'Institutional insight, applied with clarity.',
-    ctaDescription: 'Contact us to learn more about our services.',
+    ctaDescription: '', // Empty as per request "Closing line: Institutional insight..." is the title basically.
     primaryCtaText: 'Contact Us',
     primaryCtaLink: '/contact',
     secondaryCtaText: 'View Memberships',

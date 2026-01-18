@@ -64,6 +64,21 @@ export default defineType({
             group: 'hero',
         }),
 
+        defineField({
+            name: 'layout',
+            title: 'Layout Style',
+            type: 'string',
+            group: 'services',
+            options: {
+                list: [
+                    { title: 'Grid (Default)', value: 'grid' },
+                    { title: 'List (Detailed)', value: 'list' },
+                ],
+                layout: 'radio',
+            },
+            initialValue: 'grid',
+        }),
+
         // Services Grid
         defineField({
             name: 'services',

@@ -360,6 +360,7 @@ export interface ServiceLandingPage {
     heroDescription?: string
     heroCtaText?: string
     heroCtaLink?: string
+    layout?: 'grid' | 'list'
     services?: Array<{
         title: string
         description: string
