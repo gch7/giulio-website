@@ -408,7 +408,7 @@ export default function ContactPageClient({ pageData, siteSettings, uiStrings }:
         {/* COMPLIANCE / DISCLAIMER SECTION */}
         <section className="w-full bg-[#fafafa] py-8 pb-12 md:py-12 md:pb-20 px-6 md:px-12">
           <div className="max-w-[750px] mx-auto text-center">
-            <p className="text-[13px] text-[#a1a1aa] leading-relaxed">
+            <p className="text-[13px] text-[#a1a1aa] leading-relaxed whitespace-pre-line">
               {disclaimer}
             </p>
           </div>
