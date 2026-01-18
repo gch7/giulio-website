@@ -8,6 +8,8 @@ import type {
     TestimonialCTASectionData,
     ThreeCardsSectionData,
     RichTextSectionData,
+    MultiAssetSectionData,
+    WhyGammaSectionData,
     UIStrings,
 } from '@/types/sanity'
 import HeroSection from './sections/hero-section'
@@ -15,6 +17,8 @@ import WhatWeDo from './sections/what-we-do'
 import TestimonialCTA from './sections/testimonial-cta'
 import ThreeServicesCards from './sections/three-services-cards'
 import RichTextSection from './sections/rich-text-section'
+import MultiAssetSection from './sections/multi-asset-section'
+import WhyGammaSection from './sections/why-gamma-section'
 
 interface PageBuilderProps {
     sections?: PageSection[]
@@ -62,6 +66,10 @@ function renderSection(section: PageSection) {
             return <ThreeServicesCards key={section._key} data={section as ThreeCardsSectionData} />
         case 'richTextSection':
             return <RichTextSection key={section._key} data={section as RichTextSectionData} />
+        case 'multiAssetSection':
+            return <MultiAssetSection key={section._key} data={section as MultiAssetSectionData} />
+        case 'whyGammaSection':
+            return <WhyGammaSection key={section._key} data={section as WhyGammaSectionData} />
         default:
             console.warn(`Unknown section type: ${(section as PageSection)._type}`)
             return null
