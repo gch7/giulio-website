@@ -61,6 +61,45 @@ const structure = (S: any) =>
             .title('Strategy Page')
         ),
       S.divider(),
+      // Other Pages (Singletons)
+      S.listItem()
+        .title('Memberships Page')
+        .id('membershipsPage')
+        .child(
+          S.document()
+            .schemaType('membershipsPage')
+            .documentId('membershipsPage')
+            .title('Memberships Page')
+        ),
+      S.listItem()
+        .title('Consulting Page')
+        .id('consultingPage')
+        .child(
+          S.document()
+            .schemaType('consultingPage')
+            .documentId('consultingPage')
+            .title('Consulting Page')
+        ),
+      S.listItem()
+        .title('Contact Page')
+        .id('contactPage')
+        .child(
+          S.document()
+            .schemaType('contactPage')
+            .documentId('contactPage')
+            .title('Contact Page')
+        ),
+      S.divider(),
+      // UI Strings
+      S.listItem()
+        .title('UI Strings')
+        .id('uiStrings')
+        .child(
+          S.document()
+            .schemaType('uiStrings')
+            .documentId('uiStrings')
+            .title('UI Strings')
+        ),
       // Pages
       S.documentTypeListItem('page').title('Pages'),
     ])
