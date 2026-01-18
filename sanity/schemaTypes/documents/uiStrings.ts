@@ -14,7 +14,7 @@ export default defineType({
         { name: 'forms', title: 'Forms & Validation' },
         { name: 'memberships', title: 'Memberships' },
         { name: 'routes', title: 'Route Paths' },
-        { name: 'forms', title: 'Forms & Validation' },
+
         { name: 'general', title: 'General' },
     ],
     fields: [
