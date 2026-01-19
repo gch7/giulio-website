@@ -7,7 +7,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ChevronDown, Menu, X, ChevronRight } from 'lucide-react';
 import type { SiteSettings, UIStrings } from '@/types/sanity';
-import { urlFor } from '@/sanity/lib/image';
+import { getImageUrl } from '@/sanity/lib/image';
+import { LanguageSwitcher, LanguageSwitcherMobile } from '@/components/language-switcher';
 
 interface NavigationHeaderProps {
   siteSettings?: SiteSettings | null;
@@ -26,6 +27,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
   const siteName = siteSettings?.siteName;
   const logoText = siteSettings?.logoText;
   const logoImage = siteSettings?.logo;
+  const logoUrl = logoImage ? getImageUrl(logoImage, { width: 36, height: 36 }) : null;
 
   const navItems = siteSettings?.navItems || [];
   const navCTA = siteSettings?.navCTA;
@@ -76,16 +78,16 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
         <div className="relative flex h-[72px] items-center justify-between px-6 md:px-12 max-w-[1400px] mx-auto">
           <div ref={logoRef} className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3" aria-label={logoAriaLabel}>
-              {logoImage && (
+              {logoUrl && (
                 <Image
-                  src={urlFor(logoImage).width(36).height(36).url()}
+                  src={logoUrl}
                   alt={siteName || ''}
                   width={36}
                   height={36}
                   className="rounded"
                 />
               )}
-              {!logoImage && logoText && (
+              {!logoUrl && logoText && (
                 <div className="w-9 h-9 border border-[#2563EB]/30 rounded flex items-center justify-center bg-[#2563EB]/5">
                   <span className="text-[#2563EB] font-display font-semibold text-lg tracking-tight">{logoText}</span>
                 </div>
@@ -129,8 +131,13 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
               ))}
             </div>
 
+            {/* Language Switcher - Desktop */}
+            <div className="hidden lg:flex items-center ml-6">
+              <LanguageSwitcher />
+            </div>
+
             {navCTA && (
-              <div ref={ctaRef} className="hidden lg:flex items-center ml-8 gap-5">
+              <div ref={ctaRef} className="hidden lg:flex items-center ml-6 gap-5">
                 <div className="w-px h-5 bg-[#E5E7EB]" />
                 <Link
                   href={navCTA.href}
@@ -179,9 +186,14 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
               ))}
             </div>
 
+            {/* Language Switcher - Mobile */}
+            <div className="mt-8 pb-6 border-b border-gray-100">
+              <LanguageSwitcherMobile />
+            </div>
+
             {/* Secondary Navigation Grid */}
             {mobileSecondaryLinks.length > 0 && (
-              <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 pb-8">
+              <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-6 pb-8">
                 {mobileSecondaryLinks.map((item, index) => (
                   <Link
                     key={index}

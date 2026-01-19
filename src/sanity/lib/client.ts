@@ -42,6 +42,12 @@ export async function sanityFetch<T>({
     skipDraftMode?: boolean
 }): Promise<T | null> {
     try {
+        // Ensure locale is always provided if query uses $locale
+        const mergedParams = {
+            locale: 'en', // Default locale as fallback
+            ...params,
+        }
+        
         let isEnabled = false
 
         // Only check draftMode when we're in a request context
@@ -70,7 +76,7 @@ export async function sanityFetch<T>({
                 },
             })
 
-            return await previewClient.fetch<T>(query, params, {
+            return await previewClient.fetch<T>(query, mergedParams, {
                 next: {
                     revalidate: 0,
                     tags,
@@ -78,7 +84,7 @@ export async function sanityFetch<T>({
             })
         }
 
-        return await client.fetch<T>(query, params, {
+        return await client.fetch<T>(query, mergedParams, {
             next: {
                 revalidate,
                 tags,

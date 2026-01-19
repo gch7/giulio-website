@@ -17,6 +17,12 @@ export default defineType({
         { name: 'seo', title: 'SEO' },
     ],
     fields: [
+        defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+            hidden: true,
+        }),
         // Hero Section
         defineField({
             name: 'heroBadge',

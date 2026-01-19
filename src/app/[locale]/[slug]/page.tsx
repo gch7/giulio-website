@@ -8,50 +8,59 @@ import { sanityFetch } from "@/sanity/lib/client";
 import { PAGE_BY_SLUG_QUERY, ALL_PAGE_SLUGS_QUERY, SITE_SETTINGS_QUERY, UI_STRINGS_QUERY } from "@/sanity/lib/queries";
 import type { Page, SiteSettings, UIStrings } from "@/types/sanity";
 import { getImageUrl } from '@/sanity/lib/image'
+import { locales, type Locale } from '@/i18n/config'
 
 interface PageProps {
     params: Promise<{
+        locale: Locale
         slug: string
     }>
 }
 
 export const revalidate = 60
 
-// Generate static params for all CMS pages
+// Generate static params for all CMS pages across all locales
 export async function generateStaticParams() {
-    const slugs = await sanityFetch<string[]>({
-        query: ALL_PAGE_SLUGS_QUERY,
-        revalidate: 3600, 
-        tags: ['page'],
-        skipDraftMode: true, // draftMode() not available in generateStaticParams
-    })
+    const results = []
+    
+    for (const locale of locales) {
+        const slugs = await sanityFetch<string[]>({
+            query: ALL_PAGE_SLUGS_QUERY,
+            params: { locale },
+            revalidate: 3600,
+            tags: ['page'],
+            skipDraftMode: true,
+        })
 
-    // Handle null case (fetch failed)
-    if (!slugs) return []
-
-    return slugs.map((slug) => ({
-        slug,
-    }))
+        if (slugs) {
+            for (const slug of slugs) {
+                results.push({ locale, slug })
+            }
+        }
+    }
+    
+    return results
 }
 
 // Generate metadata for SEO - cascades to site-level defaults
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = await params
+    const { locale, slug } = await params
 
     // Fetch page and site settings in parallel for fallback
     const [page, siteSettings] = await Promise.all([
         sanityFetch<Page | null>({
             query: PAGE_BY_SLUG_QUERY,
-            params: { slug },
+            params: { slug, locale },
             revalidate: 60,
             tags: ['page', slug],
-            skipDraftMode: true, // draftMode() not available in generateMetadata
+            skipDraftMode: true,
         }),
         sanityFetch<SiteSettings | null>({
             query: SITE_SETTINGS_QUERY,
+            params: { locale },
             revalidate: 60,
             tags: ['siteSettings'],
-            skipDraftMode: true, // draftMode() not available in generateMetadata
+            skipDraftMode: true,
         }),
     ])
 
@@ -76,12 +85,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             },
         }),
         alternates: {
-            canonical: `${siteUrl}/${slug}`,
+            canonical: `${siteUrl}/${locale}/${slug}`,
+            languages: {
+                en: `${siteUrl}/en/${slug}`,
+                it: `${siteUrl}/it/${slug}`,
+            },
         },
         openGraph: {
             title,
             description,
-            url: `${siteUrl}/${slug}`,
+            url: `${siteUrl}/${locale}/${slug}`,
             images: ogImageUrl ? [{
                 url: ogImageUrl,
                 width: 1200,
@@ -103,24 +116,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 
 export default async function CMSPage({ params }: PageProps) {
-    const { slug } = await params
+    const { locale, slug } = await params
     const { isEnabled: isDraftMode } = await draftMode()
 
     // Fetch page data and site settings from Sanity
     const [page, siteSettings, uiStrings] = await Promise.all([
         sanityFetch<Page | null>({
             query: PAGE_BY_SLUG_QUERY,
-            params: { slug },
+            params: { slug, locale },
             revalidate: isDraftMode ? 0 : 60,
             tags: ['page', slug],
         }),
         sanityFetch<SiteSettings | null>({
             query: SITE_SETTINGS_QUERY,
+            params: { locale },
             revalidate: isDraftMode ? 0 : 60,
             tags: ['siteSettings'],
         }),
         sanityFetch<UIStrings | null>({
             query: UI_STRINGS_QUERY,
+            params: { locale },
             revalidate: isDraftMode ? 0 : 60,
             tags: ['uiStrings'],
         }),

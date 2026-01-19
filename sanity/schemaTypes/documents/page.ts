@@ -12,6 +12,12 @@ export default defineType({
     ],
     fields: [
         defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+            hidden: true,
+        }),
+        defineField({
             name: 'title',
             title: 'Page Title',
             type: 'string',

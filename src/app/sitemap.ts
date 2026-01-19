@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { sanityFetch } from '@/sanity/lib/client'
+import { locales, defaultLocale } from '@/i18n/config'
 
 interface PageData {
     _id: string
@@ -7,70 +8,97 @@ interface PageData {
     slug: string
     isHomepage?: boolean
     noIndex?: boolean
+    language?: string
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gammacapital.com'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gammacap.ch'
 
-    // Custom query to include noIndex field for filtering
-    const SITEMAP_PAGES_QUERY = `*[_type == "page"] {
+    // Custom query to include noIndex and language fields
+    const SITEMAP_PAGES_QUERY = `*[_type == "page" && (language == $locale || !defined(language))] {
         _id,
         title,
         "slug": slug.current,
         isHomepage,
-        noIndex
+        noIndex,
+        language
     }`
 
-    // Fetch all pages from Sanity
-    const pages = await sanityFetch<PageData[] | null>({
-        query: SITEMAP_PAGES_QUERY,
-        revalidate: 3600, // Revalidate every hour
-        tags: ['page', 'sitemap'],
-    })
+    const allRoutes: MetadataRoute.Sitemap = []
 
-    // Static routes that always exist
-    const staticRoutes: MetadataRoute.Sitemap = [
-        {
-            url: siteUrl,
+    // Generate routes for each locale
+    for (const locale of locales) {
+        const alternates = {
+            languages: Object.fromEntries(
+                locales.map(l => [l, `${siteUrl}/${l}`])
+            ) as Record<string, string>,
+        }
+
+        // Homepage for each locale
+        allRoutes.push({
+            url: `${siteUrl}/${locale}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
-            priority: 1,
-        },
-        {
-            url: `${siteUrl}/memberships`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.9,
-        },
-        {
-            url: `${siteUrl}/solutions`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        {
-            url: `${siteUrl}/contact`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.6,
-        },
-        {
-            url: `${siteUrl}/consulting`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-    ]
+            priority: locale === defaultLocale ? 1 : 0.9,
+            alternates,
+        })
 
-    // Dynamic CMS pages (excluding homepage and noIndex pages)
-    const cmsRoutes: MetadataRoute.Sitemap = (pages || [])
-        .filter((page) => !page.isHomepage && page.slug && !page.noIndex)
-        .map((page) => ({
-            url: `${siteUrl}/${page.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly' as const,
-            priority: 0.7,
-        }))
+        // Static routes for each locale
+        const staticPaths = ['memberships', 'solutions', 'contact', 'consulting']
+        for (const path of staticPaths) {
+            allRoutes.push({
+                url: `${siteUrl}/${locale}/${path}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+                alternates: {
+                    languages: Object.fromEntries(
+                        locales.map(l => [l, `${siteUrl}/${l}/${path}`])
+                    ) as Record<string, string>,
+                },
+            })
+        }
 
-    return [...staticRoutes, ...cmsRoutes]
+        // Solutions subpages
+        const solutionPaths = ['network', 'real-estate', 'strategy-insights']
+        for (const path of solutionPaths) {
+            allRoutes.push({
+                url: `${siteUrl}/${locale}/solutions/${path}`,
+                lastModified: new Date(),
+                changeFrequency: 'monthly',
+                priority: 0.7,
+                alternates: {
+                    languages: Object.fromEntries(
+                        locales.map(l => [l, `${siteUrl}/${l}/solutions/${path}`])
+                    ) as Record<string, string>,
+                },
+            })
+        }
+
+        // Dynamic CMS pages for this locale
+        const pages = await sanityFetch<PageData[] | null>({
+            query: SITEMAP_PAGES_QUERY,
+            params: { locale },
+            revalidate: 3600,
+            tags: ['page', 'sitemap'],
+        })
+
+        const cmsRoutes = (pages || [])
+            .filter((page) => !page.isHomepage && page.slug && !page.noIndex)
+            .map((page) => ({
+                url: `${siteUrl}/${locale}/${page.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly' as const,
+                priority: 0.7,
+                alternates: {
+                    languages: Object.fromEntries(
+                        locales.map(l => [l, `${siteUrl}/${l}/${page.slug}`])
+                    ) as Record<string, string>,
+                },
+            }))
+
+        allRoutes.push(...cmsRoutes)
+    }
+
+    return allRoutes
 }

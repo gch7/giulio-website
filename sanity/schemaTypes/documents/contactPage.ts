@@ -14,6 +14,12 @@ export default defineType({
         { name: 'seo', title: 'SEO' },
     ],
     fields: [
+        defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+            hidden: true,
+        }),
         // Hero Section
         defineField({
             name: 'heroTitle',
@@ -273,8 +279,14 @@ export default defineType({
         }),
     ],
     preview: {
-        prepare() {
-            return { title: 'Contact Page' }
+        select: {
+            language: 'language',
+        },
+        prepare({ language }) {
+            return { 
+                title: 'Contact Page',
+                subtitle: language ? language.toUpperCase() : 'Default'
+            }
         },
     },
 })

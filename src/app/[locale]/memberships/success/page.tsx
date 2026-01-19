@@ -8,15 +8,24 @@ import { sanityFetch } from '@/sanity/lib/client';
 import { SITE_SETTINGS_QUERY, UI_STRINGS_QUERY } from '@/sanity/lib/queries';
 import type { SiteSettings, UIStrings } from '@/types/sanity';
 import { SuccessContent } from './success-content';
+import type { Locale } from '@/i18n/config';
 
-export default async function SuccessPage() {
+interface PageProps {
+  params: Promise<{ locale: Locale }>
+}
+
+export default async function SuccessPage({ params }: PageProps) {
+  const { locale } = await params;
+  
   const [siteSettings, uiStrings] = await Promise.all([
     sanityFetch<SiteSettings | null>({
       query: SITE_SETTINGS_QUERY,
+      params: { locale },
       tags: ['siteSettings'],
     }),
     sanityFetch<UIStrings | null>({
       query: UI_STRINGS_QUERY,
+      params: { locale },
       tags: ['uiStrings'],
     }),
   ]);

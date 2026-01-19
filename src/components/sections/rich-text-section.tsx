@@ -3,7 +3,7 @@
 import { PortableText, type PortableTextComponents, type PortableTextBlock } from 'next-sanity'
 import Image from 'next/image'
 import type { RichTextSectionData } from '@/types/sanity'
-import { urlFor } from '@/sanity/lib/image'
+import { getImageUrl } from '@/sanity/lib/image'
 
 interface RichTextSectionProps {
     data: RichTextSectionData
@@ -58,12 +58,13 @@ const portableTextComponents: PortableTextComponents = {
     },
     types: {
         image: ({ value }) => {
-            if (!value?.asset?._ref) return null
+            const imageUrl = getImageUrl(value, { width: 1200 })
+            if (!imageUrl) return null
             return (
                 <figure className="my-8">
                     <div className="relative w-full aspect-video">
                         <Image
-                            src={urlFor(value).width(1200).url()}
+                            src={imageUrl}
                             alt={value.alt || 'Content image'}
                             fill
                             sizes="(max-width: 800px) 100vw, 800px"

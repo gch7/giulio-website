@@ -12,6 +12,12 @@ export default defineType({
         { name: 'cta', title: 'Call to Action' },
     ],
     fields: [
+        defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+            hidden: true,
+        }),
         // SEO
         defineField({
             name: 'seoTitle',

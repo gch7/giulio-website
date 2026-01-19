@@ -4,34 +4,42 @@ import ServicePageClient from '@/components/templates/service-page-client';
 import { sanityFetch } from "@/sanity/lib/client";
 import { SERVICE_LANDING_PAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 import type { ServiceLandingPage, SiteSettings } from "@/types/sanity";
+import type { Locale } from '@/i18n/config';
 
-export async function generateMetadata(): Promise<Metadata> {
+interface PageProps {
+  params: Promise<{ locale: Locale }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
   const pageData = await sanityFetch<ServiceLandingPage | null>({
     query: SERVICE_LANDING_PAGE_QUERY,
-    params: { id: 'strategyPage' },
+    params: { id: 'realEstatePage', locale },
     revalidate: 60,
-    tags: ['strategyPage'],
-    skipDraftMode: true, // draftMode() not available in generateMetadata
+    tags: ['realEstatePage'],
+    skipDraftMode: true,
   });
 
   return {
-    title: pageData?.seoTitle || 'Strategy Insights | Gamma Capital',
-    description: pageData?.seoDescription || 'Actionable market intelligence and data-driven analysis including market research, technical signals, risk assessment, and opportunity identification.',
+    title: pageData?.seoTitle || 'Real Estate Advisory | Gamma Capital',
+    description: pageData?.seoDescription || 'Strategic real estate investment guidance including market analysis, due diligence, and investment strategy development for property investments.',
   };
 }
 
-export default async function StrategyInsightsPage() {
+export default async function RealEstatePage({ params }: PageProps) {
+  const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
 
   const [pageData, siteSettings] = await Promise.all([
     sanityFetch<ServiceLandingPage | null>({
       query: SERVICE_LANDING_PAGE_QUERY,
-      params: { id: 'strategyPage' },
+      params: { id: 'realEstatePage', locale },
       revalidate: isDraftMode ? 0 : 60,
-      tags: ['strategyPage'],
+      tags: ['realEstatePage'],
     }),
     sanityFetch<SiteSettings | null>({
       query: SITE_SETTINGS_QUERY,
+      params: { locale },
       revalidate: isDraftMode ? 0 : 60,
       tags: ['siteSettings'],
     }),
@@ -41,8 +49,8 @@ export default async function StrategyInsightsPage() {
     <ServicePageClient
       pageData={pageData}
       siteSettings={siteSettings}
-      defaultBadge="Strategy Insights"
-      defaultTitle="Market Intelligence & Strategy"
+      defaultBadge="Real Estate Advisory"
+      defaultTitle="Strategic Real Estate Guidance"
     />
   );
 }

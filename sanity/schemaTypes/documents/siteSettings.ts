@@ -13,6 +13,12 @@ export default defineType({
         { name: 'seo', title: 'SEO & Meta' },
     ],
     fields: [
+        defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+            hidden: true,
+        }),
         // Navigation Group
         defineField({
             name: 'siteName',

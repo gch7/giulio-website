@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
-import { VisualEditing } from "next-sanity/visual-editing";
-import { draftMode } from "next/headers";
-import { DisableDraftMode } from "@/components/DisableDraftMode";
-import { headers } from "next/headers";
-import { sanityFetch } from "@/sanity/lib/client";
-import { SITE_SETTINGS_QUERY, UI_STRINGS_QUERY } from "@/sanity/lib/queries";
-import type { SiteSettings, UIStrings } from "@/types/sanity";
-import { UIStringsProvider } from "@/components/providers/ui-strings-provider";
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,56 +12,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const settings = await sanityFetch<SiteSettings | null>({
-    query: SITE_SETTINGS_QUERY,
-    tags: ['siteSettings'],
-    skipDraftMode: true, // draftMode() not available in generateMetadata
-  });
+export const metadata: Metadata = {
+  title: "GAMMA Capital",
+  description: "Investment and consulting services",
+};
 
-  return {
-    title: settings?.seoTitle ?? settings?.siteName ?? undefined,
-    description: settings?.seoDescription ?? undefined,
-  };
-}
-
-import StyledComponentsRegistry from '@/lib/registry'
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // ... (keep existing code like draftMode check) ...
-  const { isEnabled: isDraftMode } = await draftMode();
-  const headersList = await headers();
-  const pathname = headersList.get("x-invoke-path") || "";
-  const isAdminPage = pathname.startsWith("/admin");
-
-  // Fetch UI Strings globally
-  const uiStrings = await sanityFetch<UIStrings | null>({
-    query: UI_STRINGS_QUERY,
-    revalidate: isDraftMode ? 0 : 60,
-    tags: ['uiStrings'],
-  });
-
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <StyledComponentsRegistry>
-          <UIStringsProvider uiStrings={uiStrings}>
-            {children}
-          </UIStringsProvider>
-          {!isAdminPage && <VisualEditsMessenger />}
-          {isDraftMode && !isAdminPage && (
-            <>
-              <VisualEditing />
-              <DisableDraftMode />
-            </>
-          )}
-        </StyledComponentsRegistry>
+        {children}
       </body>
     </html>
   );

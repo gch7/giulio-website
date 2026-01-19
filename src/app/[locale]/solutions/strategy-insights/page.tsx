@@ -1,56 +1,56 @@
 import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
-import { notFound } from 'next/navigation';
 import ServicePageClient from '@/components/templates/service-page-client';
 import { sanityFetch } from "@/sanity/lib/client";
 import { SERVICE_LANDING_PAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 import type { ServiceLandingPage, SiteSettings } from "@/types/sanity";
+import type { Locale } from '@/i18n/config';
 
-// Metadata is now handled within the page component or via generateMetadata referencing CMS if needed
-export async function generateMetadata(): Promise<Metadata> {
-  // Fetch with ID 'networkPage'
+interface PageProps {
+  params: Promise<{ locale: Locale }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
   const pageData = await sanityFetch<ServiceLandingPage | null>({
     query: SERVICE_LANDING_PAGE_QUERY,
-    params: { id: 'networkPage' },
+    params: { id: 'strategyPage', locale },
     revalidate: 60,
-    tags: ['networkPage'],
-    skipDraftMode: true, // draftMode() not available in generateMetadata
+    tags: ['strategyPage'],
+    skipDraftMode: true,
   });
 
   return {
-    title: pageData?.seoTitle || 'Strategic Network | Gamma Capital',
-    description: pageData?.seoDescription || 'Access exclusive deal flow, institutional connections, and curated investment opportunities through our strategic network.',
+    title: pageData?.seoTitle || 'Strategy Insights | Gamma Capital',
+    description: pageData?.seoDescription || 'Actionable market intelligence and data-driven analysis including market research, technical signals, risk assessment, and opportunity identification.',
   };
 }
 
-export default async function NetworkPage() {
+export default async function StrategyInsightsPage({ params }: PageProps) {
+  const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
 
   const [pageData, siteSettings] = await Promise.all([
     sanityFetch<ServiceLandingPage | null>({
       query: SERVICE_LANDING_PAGE_QUERY,
-      params: { id: 'networkPage' },
+      params: { id: 'strategyPage', locale },
       revalidate: isDraftMode ? 0 : 60,
-      tags: ['networkPage'],
+      tags: ['strategyPage'],
     }),
     sanityFetch<SiteSettings | null>({
       query: SITE_SETTINGS_QUERY,
+      params: { locale },
       revalidate: isDraftMode ? 0 : 60,
       tags: ['siteSettings'],
     }),
   ]);
 
-  if (!pageData && !isDraftMode) {
-    // Optional: could render with defaults or notFound
-    // notFound();
-  }
-
   return (
     <ServicePageClient
       pageData={pageData}
       siteSettings={siteSettings}
-      defaultBadge="Strategic Network"
-      defaultTitle="Exclusive Access & Strategic Connections"
+      defaultBadge="Strategy Insights"
+      defaultTitle="Market Intelligence & Strategy"
     />
   );
 }

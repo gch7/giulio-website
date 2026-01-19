@@ -60,10 +60,14 @@ const SEO_PROJECTION = `
 // Site Settings Queries
 // ============================================
 
+// With locale filter - falls back to doc without language if not found
 export const SITE_SETTINGS_QUERY = defineQuery(`
-  *[_type == "siteSettings"][0] {
+  *[_type == "siteSettings" && (language == $locale || !defined(language))][0] {
     siteName,
-    logo,
+    logo {
+      ...,
+      asset->
+    },
     logoText,
     navItems[] {
       text,
@@ -105,7 +109,7 @@ export const SITE_SETTINGS_QUERY = defineQuery(`
 // ============================================
 
 export const HOMEPAGE_QUERY = defineQuery(`
-  *[_type == "page" && isHomepage == true][0] {
+  *[_type == "page" && isHomepage == true && (language == $locale || !defined(language))][0] {
     _id,
     title,
     slug,
@@ -115,7 +119,7 @@ export const HOMEPAGE_QUERY = defineQuery(`
 `)
 
 export const PAGE_BY_SLUG_QUERY = defineQuery(`
-  *[_type == "page" && slug.current == $slug][0] {
+  *[_type == "page" && slug.current == $slug && (language == $locale || !defined(language))][0] {
     _id,
     title,
     slug,
@@ -127,7 +131,7 @@ export const PAGE_BY_SLUG_QUERY = defineQuery(`
 `)
 
 export const ALL_PAGES_QUERY = defineQuery(`
-  *[_type == "page"] {
+  *[_type == "page" && (language == $locale || !defined(language))] {
     _id,
     title,
     "slug": slug.current,
@@ -135,9 +139,9 @@ export const ALL_PAGES_QUERY = defineQuery(`
   }
 `)
 
-// For generating static paths
+// For generating static paths - get all slugs for a locale
 export const ALL_PAGE_SLUGS_QUERY = defineQuery(`
-  *[_type == "page" && defined(slug.current) && isHomepage != true].slug.current
+  *[_type == "page" && defined(slug.current) && isHomepage != true && (language == $locale || !defined(language))].slug.current
 `)
 
 // ============================================
@@ -145,7 +149,7 @@ export const ALL_PAGE_SLUGS_QUERY = defineQuery(`
 // ============================================
 
 export const CONTACT_PAGE_QUERY = defineQuery(`
-  *[_type == "contactPage"][0] {
+  *[_type == "contactPage" && (language == $locale || !defined(language))][0] {
     heroTitle,
     heroDescription,
     heroHighlight,
@@ -175,7 +179,7 @@ export const CONTACT_PAGE_QUERY = defineQuery(`
 `)
 
 export const MEMBERSHIPS_PAGE_QUERY = defineQuery(`
-  *[_type == "membershipsPage"][0] {
+  *[_type == "membershipsPage" && (language == $locale || !defined(language))][0] {
     heroBadge,
     heroTitle,
     heroSubtitle,
@@ -239,7 +243,7 @@ export const MEMBERSHIPS_PAGE_QUERY = defineQuery(`
 `)
 
 export const CONSULTING_PAGE_QUERY = defineQuery(`
-  *[_type == "consultingPage"][0] {
+  *[_type == "consultingPage" && (language == $locale || !defined(language))][0] {
     heroBadge,
     heroTitle,
     heroSubtitle,
@@ -276,7 +280,7 @@ export const CONSULTING_PAGE_QUERY = defineQuery(`
 `)
 
 export const SOLUTIONS_PAGE_QUERY = defineQuery(`
-  *[_type == "solutionsPage"][0] {
+  *[_type == "solutionsPage" && (language == $locale || !defined(language))][0] {
     seoTitle,
     seoDescription,
     heroBadge,
@@ -301,7 +305,7 @@ export const SOLUTIONS_PAGE_QUERY = defineQuery(`
 `)
 
 export const SERVICE_LANDING_PAGE_QUERY = defineQuery(`
-  *[_type == "serviceLandingPage" && _id == $id][0] {
+  *[_type == "serviceLandingPage" && _id == $id && (language == $locale || !defined(language))][0] {
     seoTitle,
     seoDescription,
     heroBadge,
@@ -327,7 +331,7 @@ export const SERVICE_LANDING_PAGE_QUERY = defineQuery(`
 
 // UI Strings Query
 export const UI_STRINGS_QUERY = defineQuery(`
-  *[_type == "uiStrings"][0] {
+  *[_type == "uiStrings" && (language == $locale || !defined(language))][0] {
     notFoundBadge,
     notFoundTitle,
     notFoundDescription,
@@ -396,4 +400,3 @@ export const UI_STRINGS_QUERY = defineQuery(`
     disableDraftRoute
   }
 `)
-

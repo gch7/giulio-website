@@ -4,34 +4,42 @@ import ServicePageClient from '@/components/templates/service-page-client';
 import { sanityFetch } from "@/sanity/lib/client";
 import { SERVICE_LANDING_PAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/queries";
 import type { ServiceLandingPage, SiteSettings } from "@/types/sanity";
+import type { Locale } from '@/i18n/config';
 
-export async function generateMetadata(): Promise<Metadata> {
+interface PageProps {
+  params: Promise<{ locale: Locale }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
   const pageData = await sanityFetch<ServiceLandingPage | null>({
     query: SERVICE_LANDING_PAGE_QUERY,
-    params: { id: 'realEstatePage' },
+    params: { id: 'networkPage', locale },
     revalidate: 60,
-    tags: ['realEstatePage'],
-    skipDraftMode: true, // draftMode() not available in generateMetadata
+    tags: ['networkPage'],
+    skipDraftMode: true,
   });
 
   return {
-    title: pageData?.seoTitle || 'Real Estate Advisory | Gamma Capital',
-    description: pageData?.seoDescription || 'Strategic real estate investment guidance including market analysis, due diligence, and investment strategy development for property investments.',
+    title: pageData?.seoTitle || 'Strategic Network | Gamma Capital',
+    description: pageData?.seoDescription || 'Access exclusive deal flow, institutional connections, and curated investment opportunities through our strategic network.',
   };
 }
 
-export default async function RealEstatePage() {
+export default async function NetworkPage({ params }: PageProps) {
+  const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
 
   const [pageData, siteSettings] = await Promise.all([
     sanityFetch<ServiceLandingPage | null>({
       query: SERVICE_LANDING_PAGE_QUERY,
-      params: { id: 'realEstatePage' },
+      params: { id: 'networkPage', locale },
       revalidate: isDraftMode ? 0 : 60,
-      tags: ['realEstatePage'],
+      tags: ['networkPage'],
     }),
     sanityFetch<SiteSettings | null>({
       query: SITE_SETTINGS_QUERY,
+      params: { locale },
       revalidate: isDraftMode ? 0 : 60,
       tags: ['siteSettings'],
     }),
@@ -41,8 +49,8 @@ export default async function RealEstatePage() {
     <ServicePageClient
       pageData={pageData}
       siteSettings={siteSettings}
-      defaultBadge="Real Estate Advisory"
-      defaultTitle="Strategic Real Estate Guidance"
+      defaultBadge="Strategic Network"
+      defaultTitle="Exclusive Access & Strategic Connections"
     />
   );
 }

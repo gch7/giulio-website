@@ -2,7 +2,26 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { presentationTool } from 'sanity/presentation'
+import { documentInternationalization } from '@sanity/document-internationalization'
 import { schemaTypes } from './schemaTypes'
+
+// Supported languages for internationalization
+const supportedLanguages = [
+  { id: 'en', title: 'English' },
+  { id: 'it', title: 'Italiano' }
+]
+
+// Document types that support internationalization
+const i18nSchemaTypes = [
+  'page',
+  'siteSettings',
+  'contactPage',
+  'membershipsPage',
+  'consultingPage',
+  'solutionsPage',
+  'serviceLandingPage',
+  'uiStrings'
+]
 
 // Custom structure for singleton documents
 const singletonTypes = ['siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage', 'networkPage', 'realEstatePage', 'strategyPage', 'uiStrings']
@@ -84,10 +103,8 @@ const structure = (S: any) =>
         .title('Contact Page')
         .id('contactPage')
         .child(
-          S.document()
-            .schemaType('contactPage')
-            .documentId('contactPage')
-            .title('Contact Page')
+          S.documentTypeList('contactPage')
+            .title('Contact Page (All Languages)')
         ),
       S.divider(),
       // UI Strings
@@ -126,6 +143,10 @@ export default defineConfig({
       },
     }),
     visionTool(),
+    documentInternationalization({
+      supportedLanguages,
+      schemaTypes: i18nSchemaTypes,
+    }),
   ],
 
   schema: {

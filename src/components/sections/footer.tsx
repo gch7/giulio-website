@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Mail, Linkedin, Twitter, Facebook, Instagram, Youtube, Github } from 'lucide-react';
 import type { SiteSettings } from '@/types/sanity';
-import { urlFor } from '@/sanity/lib/image';
+import { getImageUrl } from '@/sanity/lib/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +44,7 @@ export default function Footer({ siteSettings }: FooterProps) {
   const siteName = siteSettings?.siteName;
   const logoText = siteSettings?.logoText;
   const logoImage = siteSettings?.logo;
+  const logoUrl = logoImage ? getImageUrl(logoImage, { width: 32, height: 32 }) : null;
   const footerDescription = siteSettings?.footerDescription;
   const socialLinks = siteSettings?.socialLinks || [];
   const footerColumns = siteSettings?.footerColumns || [];
@@ -95,16 +96,16 @@ export default function Footer({ siteSettings }: FooterProps) {
         <div ref={columnsRef} className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="flex flex-col gap-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-2">
-              {logoImage && (
+              {logoUrl && (
                 <Image
-                  src={urlFor(logoImage).width(32).height(32).url()}
+                  src={logoUrl}
                   alt={siteName || ''}
                   width={32}
                   height={32}
                   className="rounded"
                 />
               )}
-              {!logoImage && logoText && (
+              {!logoUrl && logoText && (
                 <div className="w-8 h-8 border border-[#2563EB]/30 rounded flex items-center justify-center bg-[#2563EB]/5">
                   <span className="text-[#2563EB] font-display font-semibold text-base tracking-tight">{logoText}</span>
                 </div>
