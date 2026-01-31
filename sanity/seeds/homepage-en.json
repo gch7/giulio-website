@@ -1,0 +1,75 @@
+{
+    "_id": "homepage-en",
+    "_type": "page",
+    "language": "en",
+    "title": "Homepage",
+    "slug": {
+        "_type": "slug",
+        "current": "home"
+    },
+    "isHomepage": true,
+    "seoTitle": "Gamma Capital - Institutional Market Intelligence",
+    "seoDescription": "Gamma Capital provides institutional-grade market intelligence, strategic advisory, and exclusive community access for sophisticated investors.",
+    "sections": [
+        {
+            "_key": "hero",
+            "_type": "heroSection",
+            "badge": "Structure and Clarity",
+            "titleLine1": "Market Intelligence for",
+            "titleLine2": "Sophisticated Investors",
+            "description": "Whether you are looking for actionable market intelligence, a disciplined community, or strategic advisory support, Gamma Capital is designed to help you operate with confidence in complex markets.",
+            "primaryCTA": {
+                "text": "Join Discord Memberships",
+                "href": "/memberships",
+                "variant": "primary",
+                "showArrow": true
+            },
+            "secondaryCTA": {
+                "text": "Explore Our Solutions",
+                "href": "/solutions",
+                "variant": "outline",
+                "showArrow": false
+            },
+            "stats": [
+                {
+                    "_key": "stat1",
+                    "value": "15+",
+                    "label": "Years Experience"
+                },
+                {
+                    "_key": "stat2",
+                    "value": "€50M+",
+                    "label": "Assets Advised"
+                },
+                {
+                    "_key": "stat3",
+                    "value": "500+",
+                    "label": "Active Members"
+                }
+            ]
+        },
+        {
+            "_key": "whyGamma",
+            "_type": "whyGammaSection",
+            "badge": "Why Gamma",
+            "title": "Built on Professional Standards",
+            "reasons": [
+                {
+                    "_key": "r1",
+                    "icon": "Building",
+                    "text": "Institutional Experience"
+                },
+                {
+                    "_key": "r2",
+                    "icon": "Target",
+                    "text": "Data-Driven Approach"
+                },
+                {
+                    "_key": "r3",
+                    "icon": "Shield",
+                    "text": "Risk Management First"
+                }
+            ]
+        }
+    ]
+}

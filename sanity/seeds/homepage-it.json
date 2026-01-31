@@ -1,0 +1,75 @@
+{
+    "_id": "homepage-it",
+    "_type": "page",
+    "language": "it",
+    "title": "Homepage (Italiano)",
+    "slug": {
+        "_type": "slug",
+        "current": "home-it"
+    },
+    "isHomepage": true,
+    "seoTitle": "Gamma Capital - Intelligenza di Mercato Istituzionale",
+    "seoDescription": "Gamma Capital fornisce intelligenza di mercato di livello istituzionale, consulenza strategica e accesso esclusivo alla comunità per investitori sofisticati.",
+    "sections": [
+        {
+            "_key": "hero",
+            "_type": "heroSection",
+            "badge": "Struttura e Chiarezza",
+            "titleLine1": "Intelligenza di Mercato per",
+            "titleLine2": "Investitori Sofisticati",
+            "description": "Che tu stia cercando intelligenza di mercato azionabile, una comunità disciplinata o supporto di consulenza strategica, Gamma Capital è progettata per aiutarti a operare con sicurezza nei mercati complessi.",
+            "primaryCTA": {
+                "text": "Unisciti agli Abbonamenti",
+                "href": "/memberships",
+                "variant": "primary",
+                "showArrow": true
+            },
+            "secondaryCTA": {
+                "text": "Esplora le Soluzioni",
+                "href": "/solutions",
+                "variant": "outline",
+                "showArrow": false
+            },
+            "stats": [
+                {
+                    "_key": "stat1",
+                    "value": "15+",
+                    "label": "Anni di Esperienza"
+                },
+                {
+                    "_key": "stat2",
+                    "value": "€50M+",
+                    "label": "Patrimonio Consigliato"
+                },
+                {
+                    "_key": "stat3",
+                    "value": "500+",
+                    "label": "Membri Attivi"
+                }
+            ]
+        },
+        {
+            "_key": "whyGamma",
+            "_type": "whyGammaSection",
+            "badge": "Perché Gamma",
+            "title": "Costruito su Standard Professionali",
+            "reasons": [
+                {
+                    "_key": "r1",
+                    "icon": "Building",
+                    "text": "Esperienza Istituzionale"
+                },
+                {
+                    "_key": "r2",
+                    "icon": "Target",
+                    "text": "Approccio Basato sui Dati"
+                },
+                {
+                    "_key": "r3",
+                    "icon": "Shield",
+                    "text": "Gestione del Rischio Prima di Tutto"
+                }
+            ]
+        }
+    ]
+}

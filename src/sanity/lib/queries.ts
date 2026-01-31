@@ -4,14 +4,10 @@ import { defineQuery } from 'next-sanity'
 // Reusable Query Fragments
 // ============================================
 
-// Helper to get localized value from internationalizedArray
+// Helper to generate localized value selection with fallback
 // The plugin uses _key as the language identifier
-const LOCALIZED_VALUE = `
-  "value": select(
-    defined(.[_key == $locale][0].value) => .[_key == $locale][0].value,
-    .[_key == "en"][0].value
-  )
-`
+const localized = (field: string) => `coalesce(${field}[_key == $locale][0].value, ${field}[_key == "en"][0].value)`
+
 
 
 // Sections projection used in page queries
@@ -72,8 +68,8 @@ const SEO_PROJECTION = `
 
 export const SITE_SETTINGS_QUERY = defineQuery(`
   *[_type == "siteSettings" && (language == $locale || !defined(language))][0] {
-    "siteName": siteName{${LOCALIZED_VALUE}}.value,
-    "logoText": logoText{${LOCALIZED_VALUE}}.value,
+    "siteName": ${localized('siteName')},
+    "logoText": ${localized('logoText')},
     navItems[] {
       text,
       href,
@@ -108,38 +104,38 @@ export const SITE_SETTINGS_QUERY = defineQuery(`
 
 export const UI_STRINGS_QUERY = defineQuery(`
   *[_type == "uiStrings"][0] {
-    "notFoundBadge": notFoundBadge{${LOCALIZED_VALUE}}.value,
-    "notFoundTitle": notFoundTitle{${LOCALIZED_VALUE}}.value,
-    "notFoundDescription": notFoundDescription{${LOCALIZED_VALUE}}.value,
-    "notFoundHomeButtonText": notFoundHomeButtonText{${LOCALIZED_VALUE}}.value,
-    "notFoundContactButtonText": notFoundContactButtonText{${LOCALIZED_VALUE}}.value,
-    "notFoundQuickLinksTitle": notFoundQuickLinksTitle{${LOCALIZED_VALUE}}.value,
+    "notFoundBadge": ${localized('notFoundBadge')},
+    "notFoundTitle": ${localized('notFoundTitle')},
+    "notFoundDescription": ${localized('notFoundDescription')},
+    "notFoundHomeButtonText": ${localized('notFoundHomeButtonText')},
+    "notFoundContactButtonText": ${localized('notFoundContactButtonText')},
+    "notFoundQuickLinksTitle": ${localized('notFoundQuickLinksTitle')},
     
-    "systemLoading": systemLoading{${LOCALIZED_VALUE}}.value,
-    "systemError": systemError{${LOCALIZED_VALUE}}.value,
-    "comingSoonTitle": comingSoonTitle{${LOCALIZED_VALUE}}.value,
+    "systemLoading": ${localized('systemLoading')},
+    "systemError": ${localized('systemError')},
+    "comingSoonTitle": ${localized('comingSoonTitle')},
     
-    "mobileMenuOpenLabel": mobileMenuOpenLabel{${LOCALIZED_VALUE}}.value,
-    "mobileMenuCloseLabel": mobileMenuCloseLabel{${LOCALIZED_VALUE}}.value,
-    "logoAriaLabel": logoAriaLabel{${LOCALIZED_VALUE}}.value,
-    "exploreServicesLabel": exploreServicesLabel{${LOCALIZED_VALUE}}.value,
-    "navigationBackLabel": navigationBackLabel{${LOCALIZED_VALUE}}.value,
-    "skipToContentLabel": skipToContentLabel{${LOCALIZED_VALUE}}.value,
+    "mobileMenuOpenLabel": ${localized('mobileMenuOpenLabel')},
+    "mobileMenuCloseLabel": ${localized('mobileMenuCloseLabel')},
+    "logoAriaLabel": ${localized('logoAriaLabel')},
+    "exploreServicesLabel": ${localized('exploreServicesLabel')},
+    "navigationBackLabel": ${localized('navigationBackLabel')},
+    "skipToContentLabel": ${localized('skipToContentLabel')},
     
-    "readyToStartBadge": readyToStartBadge{${LOCALIZED_VALUE}}.value,
-    "exploreLabel": exploreLabel{${LOCALIZED_VALUE}}.value,
-    "paginationPrev": paginationPrev{${LOCALIZED_VALUE}}.value,
-    "paginationNext": paginationNext{${LOCALIZED_VALUE}}.value,
+    "readyToStartBadge": ${localized('readyToStartBadge')},
+    "exploreLabel": ${localized('exploreLabel')},
+    "paginationPrev": ${localized('paginationPrev')},
+    "paginationNext": ${localized('paginationNext')},
 
-    "membershipSuccessTitle": membershipSuccessTitle{${LOCALIZED_VALUE}}.value,
-    "membershipSuccessMessage": membershipSuccessMessage{${LOCALIZED_VALUE}}.value,
-    "membershipProcessingText": membershipProcessingText{${LOCALIZED_VALUE}}.value,
+    "membershipSuccessTitle": ${localized('membershipSuccessTitle')},
+    "membershipSuccessMessage": ${localized('membershipSuccessMessage')},
+    "membershipProcessingText": ${localized('membershipProcessingText')},
 
-    "formSubmitButton": formSubmitButton{${LOCALIZED_VALUE}}.value,
-    "formSubmittingText": formSubmittingText{${LOCALIZED_VALUE}}.value,
-    "formRequiredError": formRequiredError{${LOCALIZED_VALUE}}.value,
-    "formEmailError": formEmailError{${LOCALIZED_VALUE}}.value,
-    "formSuccessTitle": formSuccessTitle{${LOCALIZED_VALUE}}.value,
+    "formSubmitButton": ${localized('formSubmitButton')},
+    "formSubmittingText": ${localized('formSubmittingText')},
+    "formRequiredError": ${localized('formRequiredError')},
+    "formEmailError": ${localized('formEmailError')},
+    "formSuccessTitle": ${localized('formSuccessTitle')},
     
     contactRoute,
     solutionsRoute,
