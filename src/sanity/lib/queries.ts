@@ -1,8 +1,14 @@
-import { defineQuery } from 'next-sanity'
-
 // ============================================
 // Reusable Query Fragments
 // ============================================
+
+// Helper to get localized value from internationalizedArray
+const LOCALIZED_VALUE = `
+  "value": select(
+    defined(.[language == $locale][0].value) => .[language == $locale][0].value,
+    .[language == "en"][0].value
+  )
+`
 
 // Sections projection used in page queries
 const SECTIONS_PROJECTION = `
@@ -57,50 +63,71 @@ const SEO_PROJECTION = `
 `
 
 // ============================================
-// Site Settings Queries
+// Brand & Site Settings Queries
 // ============================================
 
-// With locale filter - falls back to doc without language if not found
 export const SITE_SETTINGS_QUERY = defineQuery(`
-  *[_type == "siteSettings" && (language == $locale || !defined(language))][0] {
-    siteName,
-    logo {
-      ...,
-      asset->
+  {
+    "brand": *[_type == "brandSettings"][0] {
+      siteName,
+      logo { ..., asset-> },
+      favicon { ..., asset-> },
+      socialLinks[] { platform, url, iconName },
+      contactEmail
     },
-    logoText,
-    navItems[] {
-      text,
-      href,
-      hasDropdown,
-      dropdownItems[] {
-        text,
-        description,
-        href
-      }
-    },
-    navCTA {
-      text,
-      href,
-      variant
-    },
-    footerDescription,
-    socialLinks[] {
-      platform,
-      url
-    },
-    footerColumns[] {
-      title,
-      links[] {
+    "settings": *[_type == "siteSettings" && (language == $locale || !defined(language))][0] {
+      "siteName": siteName[]{${LOCALIZED_VALUE}}[0].value,
+      "logoText": logoText[]{${LOCALIZED_VALUE}}[0].value,
+      navItems[] {
         text,
         href,
-        isExternal
-      }
-    },
-    contactEmail,
-    copyrightText,
-    disclaimer,
-    ${SEO_PROJECTION}
+        hasDropdown,
+        dropdownItems[] { text, description, href }
+      },
+      navCTA { text, href, variant, showArrow },
+      footerDescription,
+      footerColumns[] {
+        title,
+        links[] { text, href, isExternal }
+      },
+      copyrightText,
+      disclaimer,
+      ${SEO_PROJECTION}
+    }
+  }
+`)
+
+// ============================================
+// UI Strings Query
+// ============================================
+
+export const UI_STRINGS_QUERY = defineQuery(`
+  *[_type == "uiStrings"][0] {
+    "notFoundBadge": notFoundBadge[]{${LOCALIZED_VALUE}}[0].value,
+    "notFoundTitle": notFoundTitle[]{${LOCALIZED_VALUE}}[0].value,
+    "notFoundDescription": notFoundDescription[]{${LOCALIZED_VALUE}}[0].value,
+    "notFoundHomeButtonText": notFoundHomeButtonText[]{${LOCALIZED_VALUE}}[0].value,
+    "notFoundContactButtonText": notFoundContactButtonText[]{${LOCALIZED_VALUE}}[0].value,
+    "notFoundQuickLinksTitle": notFoundQuickLinksTitle[]{${LOCALIZED_VALUE}}[0].value,
+    
+    "systemLoading": systemLoading[]{${LOCALIZED_VALUE}}[0].value,
+    "systemError": systemError[]{${LOCALIZED_VALUE}}[0].value,
+    "comingSoonTitle": comingSoonTitle[]{${LOCALIZED_VALUE}}[0].value,
+    
+    "mobileMenuOpenLabel": mobileMenuOpenLabel[]{${LOCALIZED_VALUE}}[0].value,
+    "mobileMenuCloseLabel": mobileMenuCloseLabel[]{${LOCALIZED_VALUE}}[0].value,
+    "logoAriaLabel": logoAriaLabel[]{${LOCALIZED_VALUE}}[0].value,
+    "exploreServicesLabel": exploreServicesLabel[]{${LOCALIZED_VALUE}}[0].value,
+    "navigationBackLabel": navigationBackLabel[]{${LOCALIZED_VALUE}}[0].value,
+    
+    "formSubmitButton": formSubmitButton[]{${LOCALIZED_VALUE}}[0].value,
+    "formSubmittingText": formSubmittingText[]{${LOCALIZED_VALUE}}[0].value,
+    "formRequiredError": formRequiredError[]{${LOCALIZED_VALUE}}[0].value,
+    "formEmailError": formEmailError[]{${LOCALIZED_VALUE}}[0].value,
+    "formSuccessTitle": formSuccessTitle[]{${LOCALIZED_VALUE}}[0].value,
+    
+    contactRoute,
+    solutionsRoute
   }
 `)
 
@@ -139,13 +166,12 @@ export const ALL_PAGES_QUERY = defineQuery(`
   }
 `)
 
-// For generating static paths - get all slugs for a locale
 export const ALL_PAGE_SLUGS_QUERY = defineQuery(`
   *[_type == "page" && defined(slug.current) && isHomepage != true && (language == $locale || !defined(language))].slug.current
 `)
 
 // ============================================
-// Page Singleton Queries
+// Page Singleton Queries (Translation Documents)
 // ============================================
 
 export const CONTACT_PAGE_QUERY = defineQuery(`
@@ -163,15 +189,9 @@ export const CONTACT_PAGE_QUERY = defineQuery(`
     formSuccessMessage,
     formErrorTitle,
     formErrorMessage,
-    areaOfInterestOptions[] {
-      value,
-      label
-    },
+    areaOfInterestOptions[] { value, label },
     expectationsHeading,
-    expectationItems[] {
-      icon,
-      text
-    },
+    expectationItems[] { icon, text },
     disclaimer,
     seoTitle,
     seoDescription
@@ -188,16 +208,9 @@ export const MEMBERSHIPS_PAGE_QUERY = defineQuery(`
     heroSecondaryCta,
     insideSectionTitle,
     insideSectionDescription,
-    insideFeatures[] {
-      icon,
-      text
-    },
+    insideFeatures[] { icon, text },
     benefitsSectionTitle,
-    keyBenefits[] {
-      icon,
-      title,
-      description
-    },
+    keyBenefits[] { icon, title, description },
     includedSectionTitle,
     includedFeatures,
     educationalMiniCourseTitle,
@@ -207,29 +220,14 @@ export const MEMBERSHIPS_PAGE_QUERY = defineQuery(`
     pricingSectionTitle,
     pricingSectionDescription,
     plans[] {
-      id,
-      name,
-      price,
-      priceValue,
-      trial,
-      description,
-      cta,
-      popular,
-      stripePriceId
+      id, name, price, priceValue, trial, description, cta, popular, stripePriceId
     },
     popularBadgeText,
     accessSectionTitle,
-    accessSteps[] {
-      step,
-      title,
-      description
-    },
+    accessSteps[] { step, title, description },
     accessTagline,
     faqSectionTitle,
-    faqs[] {
-      question,
-      answer
-    },
+    faqs[] { question, answer },
     comingSoonTitle,
     comingSoonDescription,
     comingSoonFeatures,
@@ -251,24 +249,10 @@ export const CONSULTING_PAGE_QUERY = defineQuery(`
     heroStats[] { value, label },
     serviceNavTitle,
     serviceNavSubtitle,
-    serviceNavItems[] {
-      id,
-      title,
-      icon
-    },
+    serviceNavItems[] { id, title, icon },
     serviceSections[] {
-      id,
-      icon,
-      title,
-      description,
-      highlight,
-      iconGradient,
-      shadowColor,
-      features[] {
-        icon,
-        title,
-        desc
-      }
+      id, icon, title, description, highlight, iconGradient, shadowColor,
+      features[] { icon, title, desc }
     },
     ctaTitle,
     ctaDescription,
@@ -287,14 +271,7 @@ export const SOLUTIONS_PAGE_QUERY = defineQuery(`
     heroTitle,
     heroSubtitle,
     heroDescription,
-    solutions[] {
-      title,
-      description,
-      icon,
-      color,
-      href,
-      features
-    },
+    solutions[] { title, description, icon, color, href, features },
     ctaTitle,
     ctaDescription,
     primaryCtaText,
@@ -314,89 +291,12 @@ export const SERVICE_LANDING_PAGE_QUERY = defineQuery(`
     heroDescription,
     heroCtaText,
     heroCtaLink,
-    services[] {
-      title,
-      description,
-      icon,
-      features
-    },
+    services[] { title, description, icon, features },
     ctaTitle,
     ctaDescription,
     primaryCtaText,
     primaryCtaLink,
     secondaryCtaText,
     secondaryCtaLink
-  }
-`)
-
-// UI Strings Query
-export const UI_STRINGS_QUERY = defineQuery(`
-  *[_type == "uiStrings" && (language == $locale || !defined(language))][0] {
-    notFoundBadge,
-    notFoundTitle,
-    notFoundDescription,
-    notFoundHomeButtonText,
-    notFoundContactButtonText,
-    notFoundQuickLinksTitle,
-    notFoundQuickLinks[] {
-      label,
-      href
-    },
-    systemLoading,
-    systemError,
-    systemRetry,
-    sectionErrorTitle,
-    sectionErrorMessage,
-    comingSoonTitle,
-    comingSoonMessage,
-    exploreServicesLabel,
-    readyToStartBadge,
-    mobileMenuOpenLabel,
-    mobileMenuCloseLabel,
-    navigationBackLabel,
-    logoAriaLabel,
-    skipToContentLabel,
-    draftModeLabel,
-    draftModeExitText,
-    paginationPrev,
-    paginationNext,
-    carouselPrev,
-    carouselNext,
-    exploreLabel,
-    freeTrialSuffix,
-    insideChannelsLabel,
-    checkoutProcessingText,
-    checkoutErrorText,
-    formNameLabel,
-    formNamePlaceholder,
-    formEmailLabel,
-    formEmailPlaceholder,
-    formCountryLabel,
-    formCountryPlaceholder,
-    formInterestLabel,
-    formInterestPlaceholder,
-    formMessageLabel,
-    formMessagePlaceholder,
-    formRequiredError,
-    formEmailError,
-    membershipSuccessTitle,
-    membershipSuccessMessage,
-    membershipProcessingText,
-    membershipOrderReferencePrefix,
-    membershipReturnHomeButton,
-    membershipContactSupportButton,
-    spinnerLoadingLabel,
-    paginationEllipsis,
-    sidebarToggleLabel,
-    sheetCloseLabel,
-    dialogCloseLabel,
-    breadcrumbAriaLabel,
-    breadcrumbMoreLabel,
-    adminLoadingText,
-    contactRoute,
-    membershipsRoute,
-    solutionsRoute,
-    loginRoute,
-    disableDraftRoute
   }
 `)

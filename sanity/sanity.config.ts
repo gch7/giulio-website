@@ -19,30 +19,44 @@ const i18nSchemaTypes = [
   'consultingPage',
   'solutionsPage',
   'serviceLandingPage',
-  'uiStrings'
 ]
 
-const singletonTypes = ['serviceLandingPage']
-const i18nListTypes = ['siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage', 'uiStrings', 'serviceLandingPage']
+const singletonTypes = ['brandSettings', 'uiStrings', 'siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage']
+const i18nListTypes = ['page', 'siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage', 'serviceLandingPage']
 
 const structure = (S: any) =>
   S.list()
     .title('Content')
     .items([
+      // Global Brand & System
+      S.listItem()
+        .title('Brand Identity')
+        .id('brandSettings')
+        .icon(() => '🎨')
+        .child(S.document().schemaType('brandSettings').documentId('brandSettings').title('Brand Identity')),
+      S.listItem()
+        .title('UI Strings')
+        .id('uiStrings')
+        .icon(() => '🔤')
+        .child(S.document().schemaType('uiStrings').documentId('uiStrings').title('UI Strings Export')),
+      S.divider(),
+
+      // Branding & Settings (Localizable)
       S.listItem()
         .title('Site Settings')
         .id('siteSettings')
         .child(S.documentTypeList('siteSettings').title('Site Settings (All Languages)')),
+      S.divider(),
+
+      // Core Pages
       S.listItem()
         .title('Solutions Page')
         .id('solutionsPage')
         .child(S.documentTypeList('solutionsPage').title('Solutions Page (All Languages)')),
-      S.divider(),
       S.listItem()
         .title('Service Pages')
         .id('servicePages')
         .child(S.documentTypeList('serviceLandingPage').title('Service Pages (All Languages)')),
-      S.divider(),
       S.listItem()
         .title('Memberships Page')
         .id('membershipsPage')
@@ -56,11 +70,12 @@ const structure = (S: any) =>
         .id('contactPage')
         .child(S.documentTypeList('contactPage').title('Contact Page (All Languages)')),
       S.divider(),
+
+      // Custom Pages
       S.listItem()
-        .title('UI Strings')
-        .id('uiStrings')
-        .child(S.documentTypeList('uiStrings').title('UI Strings (All Languages)')),
-      S.documentTypeListItem('page').title('Pages'),
+        .title('Custom Pages')
+        .id('customPages')
+        .child(S.documentTypeList('page').title('Custom Pages (All Languages)')),
     ])
 
 export default defineConfig({
@@ -89,13 +104,18 @@ export default defineConfig({
       supportedLanguages,
       schemaTypes: i18nSchemaTypes,
     }),
+    internationalizedArray({
+      languages: supportedLanguages,
+      defaultLanguages: ['en'],
+      fieldTypes: ['string', 'text'],
+    }),
   ],
 
   schema: {
     types: schemaTypes,
     templates: (templates) =>
       templates.filter(({ schemaType }) =>
-        !i18nListTypes.includes(schemaType)
+        !i18nListTypes.includes(schemaType) && schemaType !== 'brandSettings' && schemaType !== 'uiStrings'
       ),
   },
 
@@ -110,4 +130,3 @@ export default defineConfig({
     },
   },
 })
-

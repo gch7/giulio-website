@@ -23,6 +23,7 @@ import consultingPage from './documents/consultingPage'
 import solutionsPage from './documents/solutionsPage'
 import serviceLandingPage from './documents/serviceLandingPage'
 import uiStrings from './documents/uiStrings'
+import brandSettings from './documents/brandSettings'
 
 export const schemaTypes = [
     // Objects (reusable)
@@ -42,6 +43,7 @@ export const schemaTypes = [
     whyGammaSection,
 
     // Documents
+    brandSettings,
     siteSettings,
     page,
     contactPage,

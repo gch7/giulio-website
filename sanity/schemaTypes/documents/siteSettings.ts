@@ -13,66 +13,35 @@ export default defineType({
         { name: 'seo', title: 'SEO & Meta' },
     ],
     fields: [
-        defineField({
-            name: 'language',
-            title: 'Language',
-            type: 'string',
-            description: 'Select the language for this document',
-            options: {
-                list: [
-                    { title: 'English', value: 'en' },
-                    { title: 'Italiano', value: 'it' },
-                ],
-            },
-            validation: (Rule) => Rule.required(),
-        }),
-        // Navigation Group
+        // Navigation Group (Localizable)
         defineField({
             name: 'siteName',
-            title: 'Site Name',
-            type: 'string',
+            title: 'Display Site Name',
+            type: 'internationalizedArrayString',
             group: 'navigation',
-            initialValue: 'Gamma Capital',
-        }),
-        defineField({
-            name: 'logo',
-            title: 'Logo',
-            type: 'image',
-            group: 'navigation',
-            options: {
-                hotspot: true,
-            },
-            fields: [
-                defineField({
-                    name: 'alt',
-                    title: 'Alt Text',
-                    type: 'string',
-                    description: 'Important for accessibility and SEO',
-                    validation: (Rule) => Rule.custom((alt, context) => {
-                        // @ts-expect-error - parent access
-                        if (context?.parent?.asset && !alt) {
-                            return 'Alt text is recommended for accessibility'
-                        }
-                        return true
-                    }).warning(),
-                }),
-            ],
         }),
         defineField({
             name: 'logoText',
             title: 'Logo Text (if no image)',
-            type: 'string',
+            type: 'internationalizedArrayString',
             group: 'navigation',
-            initialValue: 'Γ',
         }),
+        // For complex arrays like navItems, we can either use document-level i18n
+        // Or we keep it as a regular array but its elements have translated fields.
+        // Given we are still in document-level for SiteSettings (as per sidebar), 
+        // but the goal was to "Optimize". 
+        // If SiteSettings is still a list in sidebar, we keep it as is but cleaned up.
+
+        // Wait, I put siteSettings in i18nListTypes in config.ts. 
+        // That means it STILL uses translated documents.
+        // The optimization is that GLOBAL fields are now in Brand Identity.
+
         defineField({
             name: 'navItems',
             title: 'Navigation Menu Items',
             type: 'array',
             group: 'navigation',
             of: [defineArrayMember({ type: 'navItem' })],
-            description: 'Main navigation links. Recommended: 4-6 items for best UX.',
-            validation: (Rule) => Rule.max(8).warning('Too many nav items may overwhelm users'),
         }),
         defineField({
             name: 'navCTA',
@@ -81,89 +50,20 @@ export default defineType({
             group: 'navigation',
         }),
 
-        // Mobile Menu Group
-        defineField({
-            name: 'mobileSecondaryLinks',
-            title: 'Mobile Secondary Links',
-            type: 'array',
-            group: 'mobile',
-            of: [defineArrayMember({ type: 'link' })],
-            description: 'Links displayed in the grid at the bottom of the mobile menu',
-        }),
+        // Mobile Menu
         defineField({
             name: 'mobileFooterText',
             title: 'Mobile Footer Text',
             type: 'text',
             group: 'mobile',
-            rows: 2,
-            description: 'Text displayed at the very bottom of the mobile menu',
         }),
 
-        // Footer Group
+        // Footer
         defineField({
             name: 'footerDescription',
             title: 'Footer Description',
             type: 'text',
             group: 'footer',
-            rows: 2,
-        }),
-        defineField({
-            name: 'socialLinks',
-            title: 'Social Media Links',
-            type: 'array',
-            group: 'footer',
-            of: [
-                {
-                    type: 'object',
-                    fields: [
-                        defineField({
-                            name: 'platform',
-                            title: 'Platform Name',
-                            type: 'string',
-                        }),
-                        defineField({
-                            name: 'iconName',
-                            title: 'Social Icon',
-                            type: 'string',
-                            options: {
-                                list: [
-                                    { title: 'Twitter/X', value: 'twitter' },
-                                    { title: 'LinkedIn', value: 'linkedin' },
-                                    { title: 'Discord', value: 'discord' },
-                                    { title: 'Email', value: 'email' },
-                                    { title: 'Facebook', value: 'facebook' },
-                                    { title: 'Instagram', value: 'instagram' },
-                                    { title: 'YouTube', value: 'youtube' },
-                                    { title: 'GitHub', value: 'github' },
-                                ],
-                            },
-                        }),
-                        defineField({
-                            name: 'url',
-                            title: 'URL',
-                            type: 'string',
-                            validation: (Rule) => Rule.custom((value, context) => {
-                                if (!value) return true
-                                // @ts-expect-error - parent access
-                                const platform = context?.parent?.platform
-                                if (platform === 'email') {
-                                    return value.includes('@') || 'Please enter a valid email address'
-                                }
-                                if (value.startsWith('http://') || value.startsWith('https://')) {
-                                    return true
-                                }
-                                return 'URL must start with http:// or https://'
-                            }),
-                        }),
-                    ],
-                    preview: {
-                        select: {
-                            title: 'platform',
-                            subtitle: 'url',
-                        },
-                    },
-                },
-            ],
         }),
         defineField({
             name: 'footerColumns',
@@ -171,14 +71,10 @@ export default defineType({
             type: 'array',
             group: 'footer',
             of: [
-                {
+                defineArrayMember({
                     type: 'object',
                     fields: [
-                        defineField({
-                            name: 'title',
-                            title: 'Column Title',
-                            type: 'string',
-                        }),
+                        defineField({ name: 'title', title: 'Column Title', type: 'string' }),
                         defineField({
                             name: 'links',
                             title: 'Links',
@@ -186,47 +82,20 @@ export default defineType({
                             of: [defineArrayMember({ type: 'link' })],
                         }),
                     ],
-                    preview: {
-                        select: {
-                            title: 'title',
-                            links: 'links',
-                        },
-                        prepare({ title, links }) {
-                            return {
-                                title,
-                                subtitle: `${links?.length || 0} links`,
-                            }
-                        },
-                    },
-                },
+                }),
             ],
-        }),
-        defineField({
-            name: 'contactEmail',
-            title: 'Contact Email',
-            type: 'string',
-            group: 'footer',
         }),
         defineField({
             name: 'copyrightText',
             title: 'Copyright Text',
             type: 'string',
             group: 'footer',
-            initialValue: '© 2024 Gamma Capital. All rights reserved.',
         }),
         defineField({
             name: 'disclaimer',
             title: 'Footer Disclaimer',
             type: 'text',
             group: 'footer',
-            rows: 3,
-        }),
-        defineField({
-            name: 'connectColumnTitle',
-            title: 'Connect Column Title',
-            type: 'string',
-            group: 'footer',
-            initialValue: 'Connect',
         }),
 
         // SEO Group
@@ -241,33 +110,12 @@ export default defineType({
             title: 'Default Meta Description',
             type: 'text',
             group: 'seo',
-            rows: 3,
-            initialValue: 'Institutional-grade market intelligence.',
-            description: 'Default description for pages without their own. Keep under 160 characters.',
-            validation: (Rule) => Rule.max(160).warning('Keep under 160 characters for best SEO'),
-        }),
-        defineField({
-            name: 'ogImage',
-            title: 'Default OG Image',
-            type: 'image',
-            group: 'seo',
-            options: {
-                hotspot: true,
-            },
-            fields: [
-                defineField({
-                    name: 'alt',
-                    title: 'Alt Text',
-                    type: 'string',
-                    description: 'Describe this image for accessibility and SEO',
-                }),
-            ],
         }),
     ],
     preview: {
         prepare() {
             return {
-                title: 'Site Settings',
+                title: 'Localizable Site Settings',
             }
         },
     },
