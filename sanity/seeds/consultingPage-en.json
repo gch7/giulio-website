@@ -2,156 +2,130 @@
     "_id": "consultingPage-en",
     "_type": "consultingPage",
     "language": "en",
-    "seoTitle": "Consulting Services - Gamma Capital",
-    "seoDescription": "Expert investment consulting and advisory services. Personal guidance for your financial goals.",
-    "heroBadge": "Expert Advisory",
-    "heroTitle": "Personalized Investment Consulting",
-    "heroSubtitle": "Investment Consulting",
-    "heroDescription": "Work directly with our team of experts to develop strategies tailored to your unique financial goals.",
+    "seoTitle": "Gamma Capital Consulting - Portfolio Review & Strategy Design",
+    "seoDescription": "Institutional-grade consulting for portfolio review, strategy design, options, structured products, and multi-asset allocation.",
+    "heroBadge": "Advisory Services",
+    "heroTitle": "Institutional Consulting",
+    "heroSubtitle": "Strategic Guidance",
+    "heroDescription": "Tailored strategic guidance for sophisticated investors, family offices, and professional traders. We bring institutional structure to private portfolios.",
     "heroStats": [
         {
-            "_key": "1",
-            "label": "Years Experience",
-            "value": "15+"
+            "value": "15+",
+            "label": "Years Experience"
         },
         {
-            "_key": "2",
-            "label": "Clients Served",
-            "value": "500+"
-        },
-        {
-            "_key": "3",
-            "label": "AUM Advised",
-            "value": "€50M+"
+            "value": "Bespoke",
+            "label": "Strategy Design"
         }
     ],
     "serviceNavTitle": "Our Advisory Services",
     "serviceNavSubtitle": "Click to explore each service in detail",
     "serviceNavItems": [
         {
-            "_key": "portfolio",
-            "id": "portfolio",
+            "id": "portfolio-review",
             "title": "Portfolio Review",
+            "icon": "Briefcase"
+        },
+        {
+            "id": "strategy-design",
+            "title": "Strategy Design",
             "icon": "BarChart3"
         },
         {
-            "_key": "strategy",
-            "id": "strategy",
-            "title": "Strategy Development",
-            "icon": "Target"
+            "id": "options",
+            "title": "Options",
+            "icon": "Layers"
         },
         {
-            "_key": "wealth",
-            "id": "wealth",
-            "title": "Wealth Management",
-            "icon": "Briefcase"
+            "id": "structured-products",
+            "title": "Structured Products",
+            "icon": "Shield"
+        },
+        {
+            "id": "real-estate",
+            "title": "Real Estate",
+            "icon": "Building2"
+        },
+        {
+            "id": "crypto",
+            "title": "Crypto",
+            "icon": "Bitcoin"
         }
     ],
     "serviceSections": [
         {
-            "_key": "portfolio",
-            "id": "portfolio",
-            "icon": "BarChart3",
+            "id": "portfolio-review",
+            "icon": "Briefcase",
             "title": "Portfolio Review",
             "description": [
-                "Get a comprehensive analysis of your current investment portfolio.",
-                "Our experts will identify opportunities for optimization and risk reduction."
+                "A disciplined, multi-asset review designed to reveal how your portfolio truly behaves.",
+                "We analyse every component to identify hidden risks, inefficiencies and structural imbalances: equities, options, ETFs, fixed income, structured products, crypto, real estate and alternatives.",
+                "Using institutional tools such as scenario analysis, stress testing, correlation mapping, VaR/CVaR and factor modelling, we highlight where performance is being lost and how risk can be repositioned.",
+                "The result is a clear, refined interpretation of your exposures and a practical roadmap to bring order, coherence and discipline to your investment process."
             ],
-            "highlight": "Detailed analysis report included",
-            "iconGradient": "from-[#2563EB] to-[#1E3A8A]",
-            "shadowColor": "[#2563EB]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Search",
-                    "title": "Deep Analysis",
-                    "desc": "Complete portfolio breakdown"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Target",
-                    "title": "Optimization",
-                    "desc": "Identify improvement areas"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Shield",
-                    "title": "Risk Assessment",
-                    "desc": "Evaluate exposure levels"
-                }
-            ]
+            "highlight": "Highlight hidden risks and structural imbalances"
         },
         {
-            "_key": "strategy",
-            "id": "strategy",
-            "icon": "Target",
-            "title": "Strategy Development",
+            "id": "strategy-design",
+            "icon": "BarChart3",
+            "title": "Strategy Design",
             "description": [
-                "Work with our team to create a personalized investment strategy.",
-                "Align your portfolio with your financial goals and risk tolerance."
+                "We design investment strategies that combine institutional structure with private-investor flexibility. Our philosophy is opportunistic and options-driven, integrating short-term tactics with medium- and long-term positioning.",
+                "Each strategy is built around your objectives, risk tolerance and liquidity profile, ranging from tailored frameworks to fully bespoke architectures. Where requested, we also design tailor-made algorithms to systematise execution, risk rules and signal logic.",
+                "What makes our work unique is the fusion of options flow analysis, structured-product logic, multi-asset integration and scenario-driven adaptability.",
+                "Every strategy defines how to express an idea, how to size it, how to hedge it, and how to evolve it as conditions change — creating a disciplined, repeatable system rather than isolated trades."
             ],
-            "highlight": "Custom strategy document provided",
-            "iconGradient": "from-[#7C3AED] to-[#5B21B6]",
-            "shadowColor": "[#7C3AED]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Compass",
-                    "title": "Goal Setting",
-                    "desc": "Define your objectives"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Map",
-                    "title": "Roadmap",
-                    "desc": "Clear action plan"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Gauge",
-                    "title": "Benchmarks",
-                    "desc": "Track your progress"
-                }
-            ]
+            "highlight": "Fusion of options flow, structured logic and adaptability"
         },
         {
-            "_key": "wealth",
-            "id": "wealth",
-            "icon": "Briefcase",
-            "title": "Wealth Management",
+            "id": "options",
+            "icon": "Layers",
+            "title": "Options",
             "description": [
-                "Comprehensive wealth management for high-net-worth individuals.",
-                "Preserve and grow your wealth across generations."
+                "Options flow is the core of Gamma Capital. Our primary edge comes from monitoring and interpreting institutional-grade options flow and unusual activity to understand positioning, risk transfer, and potential market intent.",
+                "We connect flow to derivatives mechanics, GEX (gamma exposure), delta hedging dynamics, vanna/charm effects, volatility regimes, skew, and term structure, to frame how options markets can influence price action and liquidity.",
+                "Whether the objective is tactical exposure, yield enhancement, convexity management, or hedging, our approach translates complex market signals into clear, risk-aware frameworks — with the structure and precision of a professional derivatives desk."
             ],
-            "highlight": "Dedicated wealth advisor",
-            "iconGradient": "from-[#059669] to-[#047857]",
-            "shadowColor": "[#059669]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Building2",
-                    "title": "Estate Planning",
-                    "desc": "Generational wealth transfer"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Scale",
-                    "title": "Tax Optimization",
-                    "desc": "Minimize tax burden"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Lock",
-                    "title": "Asset Protection",
-                    "desc": "Secure your wealth"
-                }
-            ]
+            "highlight": "Structure and precision of a professional derivatives desk"
+        },
+        {
+            "id": "structured-products",
+            "icon": "Shield",
+            "title": "Structured Products",
+            "description": [
+                "Our structured-product advisory blends academic depth with institutional insight gained through exposure to portfolio managers at UBS and studies at USI Lugano.",
+                "We help investors evaluate and design a wide range of structures, from autocallables and Phoenix notes to reverse convertibles, express products and capital-protected solutions.",
+                "Our focus is on understanding payoff design, issuer hedging, risk transfer and market-regime suitability.",
+                "When appropriate, we replicate or enhance these payoffs using options to achieve greater flexibility and efficiency."
+            ],
+            "highlight": "Payoff design, issuer hedging and risk transfer"
+        },
+        {
+            "id": "real-estate",
+            "icon": "Building2",
+            "title": "Real Estate & Other Assets",
+            "description": [
+                "Our real estate perspective is shaped by direct experience in Switzerland and Italy, with deep familiarity in markets such as Lugano, Chiasso, Venice, Como, Udine and Rome.",
+                "We analyse property opportunities with the same rigor applied to financial assets — cash-flow projections, yield modelling, risk mapping, seasonality, and strategic integration within a broader portfolio.",
+                "From short-stay optimisation to long-term capital allocation, we help clients treat real estate not as isolated purchases but as deliberate components of a multi-asset strategy."
+            ],
+            "highlight": "Real estate as a deliberate component of multi-asset strategy"
+        },
+        {
+            "id": "crypto",
+            "icon": "Bitcoin",
+            "title": "Crypto",
+            "description": [
+                "Active in the crypto markets since 2017, we bring historical context and institutional discipline to an asset class often dominated by noise.",
+                "We focus on market structure, liquidity cycles, risk sizing, macro correlations and scenario-based positioning.",
+                "Our network includes experienced crypto professionals whose insights add depth beyond superficial commentary.",
+                "Crypto is approached not as speculation, but as an asymmetric asset requiring measured sizing, structural awareness and strategic integration within a diversified portfolio."
+            ],
+            "highlight": "Asymmetric asset requiring measured sizing and structure"
         }
     ],
-    "ctaTitle": "Ready to Get Started?",
-    "ctaDescription": "Book a free consultation to discuss your needs and how we can help.",
-    "ctaPrimaryText": "Schedule Consultation",
-    "ctaPrimaryLink": "/contact",
-    "ctaSecondaryText": "View Memberships",
-    "ctaSecondaryLink": "/memberships"
+    "ctaTitle": "Ready to Optimise Your Portfolio?",
+    "ctaDescription": "Contact us to schedule a personalized consultation and discuss your specific requirements.",
+    "ctaButtonText": "Get a Consultation",
+    "ctaButtonHref": "/contact"
 }

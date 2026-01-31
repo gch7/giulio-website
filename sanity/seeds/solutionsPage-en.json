@@ -2,60 +2,88 @@
     "_id": "solutionsPage-en",
     "_type": "solutionsPage",
     "language": "en",
-    "seoTitle": "Our Solutions - Gamma Capital",
-    "seoDescription": "Discover comprehensive investment solutions from Gamma Capital. From market intelligence to personalized consulting.",
-    "heroBadge": "Our Solutions",
-    "heroTitle": "Comprehensive Investment Solutions",
-    "heroSubtitle": "Investment Solutions",
-    "heroDescription": "From market intelligence to personalized consulting, we provide the tools and insights you need to succeed in today's markets.",
+    "seoTitle": "Market Intelligence - Gamma Capital",
+    "seoDescription": "Data-driven insights, algorithms and institutional frameworks to understand markets and manage risk.",
+    "heroBadge": "Market Intelligence",
+    "heroTitle": "Market Intelligence",
+    "heroSubtitle": "Data-driven insights",
+    "heroDescription": "Data-driven insights, algorithms and institutional frameworks to understand markets and manage risk.",
     "solutions": [
         {
-            "_key": "insights",
-            "title": "Strategy Insights",
-            "description": "Access premium market analysis, trading signals, and investment research from our team of experts.",
+            "_key": "core_intelligence",
+            "title": "Analysis & Algorithms",
+            "description": "We develop advanced analytical frameworks and proprietary algorithms to interpret markets, manage portfolio risk and identify asymmetric opportunities. Our models adapt to volatility, liquidity and macro regimes, and can be custom-built on request.",
             "icon": "BarChart3",
             "color": "#2563EB",
+            "href": "/contact",
+            "features": [
+                "Proprietary algorithms",
+                "Portfolio risk management",
+                "Asymmetric opportunities",
+                "Regime adaptation"
+            ]
+        },
+        {
+            "_key": "options_intelligence",
+            "title": "Options Intelligence",
+            "description": "We analyse institutional options flow, GEX, dealer positioning and volatility dynamics to understand where risk is building or being hedged. This intelligence supports timing, risk management and strategy design.",
+            "icon": "TrendingUp",
+            "color": "#7C3AED",
             "href": "/solutions/strategy-insights",
             "features": [
-                "Daily market analysis",
-                "Trading signals",
-                "Research reports",
-                "Portfolio recommendations"
+                "Flow-driven market behaviour",
+                "Gamma exposure and dealer hedging",
+                "Volatility regimes",
+                "Term structure analysis"
+            ]
+        },
+        {
+            "_key": "structured_products",
+            "title": "Structured Products",
+            "description": "We analyse and design structured payoffs from an institutional perspective. We also replicate or improve structured payoffs using options, removing unnecessary opacity.",
+            "icon": "Building2",
+            "color": "#059669",
+            "href": "/consulting",
+            "features": [
+                "Payoff asymmetry and embedded optionality",
+                "Issuer hedging logic",
+                "Regime-dependent performance",
+                "Efficiency vs complexity"
+            ]
+        },
+        {
+            "_key": "real_estate",
+            "title": "Real Estate Advisory",
+            "description": "Our real estate intelligence combines financial analysis with direct operational experience in Switzerland and Italy. Real estate is treated as part of a broader multi-asset framework, not as an isolated investment.",
+            "icon": "Building2",
+            "color": "#D97706",
+            "href": "/contact",
+            "features": [
+                "Lugano, Chiasso, Venice, Como, Udine, Rome",
+                "Yield and risk analysis",
+                "Cash flow optimization",
+                "Strategic allocation"
             ]
         },
         {
             "_key": "network",
-            "title": "Professional Network",
-            "description": "Connect with fellow investors, industry experts, and potential partners in our exclusive community.",
-            "icon": "Users",
-            "color": "#7C3AED",
-            "href": "/solutions/network",
+            "title": "Strategic Network",
+            "description": "Gamma Capital operates within a selective network of professionals across finance, real estate and alternative investments. Not a service, but a strategic advantage for selected clients.",
+            "icon": "Network",
+            "color": "#DC2626",
+            "href": "/contact",
             "features": [
-                "Exclusive events",
-                "Networking opportunities",
-                "Expert introductions",
-                "Community forums"
-            ]
-        },
-        {
-            "_key": "realestate",
-            "title": "Real Estate",
-            "description": "Explore carefully vetted real estate investment opportunities with strong return potential.",
-            "icon": "Building2",
-            "color": "#059669",
-            "href": "/solutions/real-estate",
-            "features": [
-                "Property analysis",
-                "Investment opportunities",
-                "Due diligence",
-                "Portfolio diversification"
+                "High-level market insight",
+                "Experienced operators",
+                "Strategic alignment",
+                "Executive introductions"
             ]
         }
     ],
-    "ctaTitle": "Not Sure Where to Start?",
-    "ctaDescription": "Book a free consultation call to discuss your goals and find the right solution for your investment needs.",
-    "primaryCtaText": "Schedule a Call",
+    "ctaTitle": "Institutional insight, applied with clarity.",
+    "ctaDescription": "Contact us to discuss how our market intelligence can support your investment strategy.",
+    "primaryCtaText": "Contact Us",
     "primaryCtaLink": "/contact",
-    "secondaryCtaText": "View Memberships",
-    "secondaryCtaLink": "/memberships"
+    "secondaryCtaText": "View Strategy Insights",
+    "secondaryCtaLink": "/solutions/strategy-insights"
 }

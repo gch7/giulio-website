@@ -8,18 +8,18 @@
         "current": "home-it"
     },
     "isHomepage": true,
-    "seoTitle": "Gamma Capital - Intelligenza di Mercato Istituzionale",
-    "seoDescription": "Gamma Capital fornisce intelligenza di mercato di livello istituzionale, consulenza strategica e accesso esclusivo alla comunità per investitori sofisticati.",
+    "seoTitle": "Gamma Capital - Intelligence di Mercato Istituzionale e Strategia",
+    "seoDescription": "Gamma Capital aiuta gli investitori a navigare nei mercati complessi attraverso analisi strutturate, insight basati sulle opzioni e framework strategici disciplinati.",
     "sections": [
         {
             "_key": "hero",
             "_type": "heroSection",
-            "badge": "Struttura e Chiarezza",
-            "titleLine1": "Intelligenza di Mercato per",
-            "titleLine2": "Investitori Sofisticati",
-            "description": "Che tu stia cercando intelligenza di mercato azionabile, una comunità disciplinata o supporto di consulenza strategica, Gamma Capital è progettata per aiutarti a operare con sicurezza nei mercati complessi.",
+            "badge": "Intelligenza Istituzionale",
+            "titleLine1": "Intelligence di Mercato Istituzionale",
+            "titleLine2": "e Progettazione Strategica",
+            "description": "Gamma Capital aiuta gli investitori a navigare nei mercati complessi attraverso analisi strutturate, insight basati sulle opzioni e framework strategici disciplinati. Combiniamo metodologia istituzionale, market intelligence in tempo reale e una community Discord privata per supportare decisioni migliori.",
             "primaryCTA": {
-                "text": "Unisciti agli Abbonamenti",
+                "text": "Unisciti agli Abbonamenti Discord",
                 "href": "/memberships",
                 "variant": "primary",
                 "showArrow": true
@@ -32,44 +32,163 @@
             },
             "stats": [
                 {
-                    "_key": "stat1",
+                    "_key": "s1",
                     "value": "15+",
                     "label": "Anni di Esperienza"
                 },
                 {
-                    "_key": "stat2",
+                    "_key": "s2",
                     "value": "€50M+",
-                    "label": "Patrimonio Consigliato"
+                    "label": "Patrimonio Gestito"
                 },
                 {
-                    "_key": "stat3",
+                    "_key": "s3",
                     "value": "500+",
-                    "label": "Membri Attivi"
+                    "label": "Membri della Community"
+                }
+            ],
+            "bulletPoints": [
+                {
+                    "_key": "b1",
+                    "icon": "Activity",
+                    "text": "Flussi di opzioni, dinamiche di volatilità e segnali istituzionali"
+                },
+                {
+                    "_key": "b2",
+                    "icon": "Shield",
+                    "text": "Insight strategici su derivati, rendimenti e gestione del rischio"
+                },
+                {
+                    "_key": "b3",
+                    "icon": "TrendingUp",
+                    "text": "Accesso Discord Premium, formazione e consulenza professionale"
+                }
+            ],
+            "supportingTagline": "Nessun hype, nessun rumore - solo insight strutturati e guidati dai dati."
+        },
+        {
+            "_key": "whatWeDo",
+            "_type": "whatWeDoSection",
+            "badge": "I Nostri Servizi",
+            "title": "Cosa Facciamo",
+            "description": "Gamma Capital è una piattaforma di ricerca, strategia e consulenza focalizzata su opzioni, prodotti strutturati e framework di portafoglio multi-asset. La nostra missione è portare disciplina e strumenti istituzionali agli investitori seri.",
+            "showViewAllButton": true,
+            "viewAllButtonText": "Tutte le Soluzioni",
+            "viewAllButtonHref": "/solutions",
+            "services": [
+                {
+                    "_key": "svc1",
+                    "icon": "BarChart3",
+                    "title": "Market Intelligence & Strategy Insights",
+                    "description": "Analizziamo flussi di opzioni, regimi di volatilità e driver macro. Invece di idee isolate, ci concentriamo sul contesto: perché esiste un setup e come si comporta nei vari scenari all'interno di un framework di rischio.",
+                    "href": "/solutions/strategy-insights",
+                    "linkText": "Scopri di più"
+                },
+                {
+                    "_key": "svc2",
+                    "icon": "Users",
+                    "title": "Abbonamenti Discord",
+                    "description": "Accesso a commenti di mercato in tempo reale, attività in opzioni inusuali e materiale educativo. Un ambiente progettato per investitori che apprezzano chiarezza, disciplina e discussione professionale.",
+                    "href": "/memberships",
+                    "linkText": "Unisciti ora"
+                },
+                {
+                    "_key": "svc3",
+                    "icon": "Briefcase",
+                    "title": "Consulenza & Advisory",
+                    "description": "Consulenza one-to-one su revisione del portafoglio, strategia, strutture di opzioni e asset allocation. L'obiettivo è allineare strategia, rischio e orizzonte temporale in modo coerente.",
+                    "href": "/consulting",
+                    "linkText": "Prenota chiamata"
+                }
+            ]
+        },
+        {
+            "_key": "multiAsset",
+            "_type": "multiAssetSection",
+            "badge": "Visione Olistica",
+            "title": "Una Prospettiva Multi-Asset, Istituzionale",
+            "description": "Gamma Capital opera su diverse classi di asset, tra cui azioni, derivati, prodotti strutturati, immobiliare e asset digitali.",
+            "secondaryDescription": "Questa prospettiva cross-asset ci permette di identificare correlazioni nascoste e opportunità invisibili. Il nostro lavoro integra l'analisi dei mercati finanziari con l'esperienza negli asset reali, offrendo una visione strategica più ampia e resiliente.",
+            "assetClasses": [
+                {
+                    "_key": "ac1",
+                    "icon": "TrendingUp",
+                    "label": "Azioni"
+                },
+                {
+                    "_key": "ac2",
+                    "icon": "Layers",
+                    "label": "Derivati"
+                },
+                {
+                    "_key": "ac3",
+                    "icon": "Globe",
+                    "label": "Immobiliare"
+                },
+                {
+                    "_key": "ac4",
+                    "icon": "Coins",
+                    "label": "Asset Digitali"
+                },
+                {
+                    "_key": "ac5",
+                    "icon": "Building2",
+                    "label": "Prodotti Strutturati"
                 }
             ]
         },
         {
             "_key": "whyGamma",
             "_type": "whyGammaSection",
-            "badge": "Perché Gamma",
-            "title": "Costruito su Standard Professionali",
+            "badge": "Perché Gamma Capital",
+            "title": "Perché Gamma Capital",
             "reasons": [
                 {
                     "_key": "r1",
                     "icon": "Building",
-                    "text": "Esperienza Istituzionale"
+                    "text": "Logica istituzionale applicata ai portafogli privati"
                 },
                 {
                     "_key": "r2",
-                    "icon": "Target",
-                    "text": "Approccio Basato sui Dati"
+                    "icon": "Activity",
+                    "text": "Forte focus sui flussi di opzioni e payoff strutturati"
                 },
                 {
                     "_key": "r3",
                     "icon": "Shield",
-                    "text": "Gestione del Rischio Prima di Tutto"
+                    "text": "Metodologia consapevole del rischio e basata su scenari"
+                },
+                {
+                    "_key": "r4",
+                    "icon": "MessageSquare",
+                    "text": "Comunicazione pulita, nessun hype o rumore retail"
+                },
+                {
+                    "_key": "r5",
+                    "icon": "Layers",
+                    "text": "Un ecosistema in crescita: ricerca, Discord e consulenza"
                 }
             ]
+        },
+        {
+            "_key": "cta",
+            "_type": "testimonialCTASection",
+            "badge": "Inizia Ora",
+            "titleLine1": "Costruito per Investitori che Vogliono",
+            "titleLine2": "Struttura e Chiarezza",
+            "description": "Che tu stia cercando market intelligence azionabile, una community disciplinata o supporto di consulenza strategica, Gamma Capital è progettata per aiutarti a operare con fiducia nei mercati complessi.",
+            "primaryCTA": {
+                "text": "Unisciti agli Abbonamenti Discord",
+                "href": "/memberships",
+                "variant": "primary",
+                "showArrow": true
+            },
+            "secondaryCTA": {
+                "text": "Esplora le Soluzioni",
+                "href": "/solutions",
+                "variant": "outline",
+                "showArrow": false
+            }
         }
     ]
 }

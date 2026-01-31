@@ -2,121 +2,176 @@
     "_id": "membershipsPage-it",
     "_type": "membershipsPage",
     "language": "it",
-    "seoTitle": "Abbonamenti - Gamma Capital",
-    "seoDescription": "Unisciti alla comunità Discord premium di Gamma Capital. Accedi a insight di mercato esclusivi, segnali di trading e analisi esperte.",
-    "heroBadge": "Accesso Discord Premium",
-    "heroTitle": "Unisciti alla Nostra Comunità Esclusiva",
-    "heroSubtitle": "Comunità di Investimento",
-    "heroDescription": "Ottieni accesso a insight premium di mercato, segnali di trading in tempo reale e una comunità di investitori affini.",
-    "heroPrimaryCtaText": "Scegli il Tuo Piano",
-    "heroPrimaryCtaLink": "#pricing",
-    "heroSecondaryCtaText": "Scopri di Più",
-    "heroSecondaryCtaLink": "#features",
-    "insideSectionTitle": "Cosa Trovi nel Nostro Discord",
-    "insideSectionDescription": "Esplora i canali e le funzionalità disponibili per tutti i membri.",
+    "seoTitle": "Gamma Capital Membership - Community Discord Privata",
+    "seoDescription": "Unisciti a un ambiente privato dedicato a insight azionabili, interpretazione dei flussi di opzioni e guida di mercato strutturata.",
+    "heroBadge": "Membership",
+    "heroTitle": "Accesso Discord Premium per Partecipanti Seri al Mercato",
+    "heroSubtitle": "Chiarezza Istituzionale",
+    "heroDescription": "Unisciti a un ambiente privato dedicato a insight azionabili, interpretazione dei flussi di opzioni, monitoraggio di attività inusuali e guida di mercato strutturata e in tempo reale — senza rumore, hype o confusione.",
+    "heroPrimaryCta": "Unisciti alla Membership",
+    "heroSecondaryCta": "Scopri Cosa C'è Dentro",
+    "insideSectionTitle": "Cosa Troverai Dentro Discord",
+    "insideSectionDescription": "Il Discord di Gamma Capital è progettato per investitori che vogliono vera chiarezza nei mercati veloci. All'interno dei canali privati troverai:",
     "insideFeatures": [
         {
-            "_key": "signals",
             "icon": "TrendingUp",
-            "text": "Segnali di Trading in Tempo Reale"
+            "text": "Monitoraggio in tempo reale dei flussi istituzionali e attività in opzioni inusuali"
         },
         {
-            "_key": "analysis",
             "icon": "BarChart3",
-            "text": "Analisi di Mercato Giornaliera"
+            "text": "Analisi di mercato giornaliera su equity USA e driver macro chiave"
         },
         {
-            "_key": "community",
-            "icon": "Users",
-            "text": "Chat Privata della Comunità"
+            "icon": "Zap",
+            "text": "Avvisi veloci su movimenti anomali e setup ad alto potenziale"
         },
         {
-            "_key": "qa",
-            "icon": "MessageCircle",
-            "text": "Sessioni Q&A con Esperti"
+            "icon": "MessageSquare",
+            "text": "Discussioni private in una community di alta qualità con membri motivati"
+        },
+        {
+            "icon": "GraduationCap",
+            "text": "Materiale educativo, inclusi moduli introduttivi su opzioni e interpretazione dei flussi"
         }
     ],
-    "benefitsSectionTitle": "Vantaggi Chiave dell'Iscrizione",
+    "benefitsSectionTitle": "Vantaggi Chiave dell'Adesione",
     "keyBenefits": [
         {
-            "_key": "1",
-            "title": "Analisi Esperta",
-            "description": "Ottieni insight da trader e analisti esperti"
+            "icon": "BookOpen",
+            "title": "Insight Strutturati",
+            "description": "Ricevi insight di mercato disciplinati e ben organizzati — non rumore o speculazione."
         },
         {
-            "_key": "2",
-            "title": "Avvisi in Tempo Reale",
-            "description": "Non perdere mai un'opportunità di trading con notifiche istantanee"
+            "icon": "Zap",
+            "title": "Vantaggio Informativo Anticipato",
+            "description": "Monitora il comportamento istituzionale e l'attività inusuale prima che la maggior parte dei trader retail se ne accorga."
         },
         {
-            "_key": "3",
-            "title": "Supporto della Comunità",
-            "description": "Impara e cresci con altri investitori"
+            "icon": "Users",
+            "title": "Una Community Pulita e Seria",
+            "description": "Uno spazio curato per investitori che vogliono focus, chiarezza e analisi reale."
+        },
+        {
+            "icon": "GraduationCap",
+            "title": "Fondamenta Educative",
+            "description": "Accedi a materiale introduttivo che ti aiuta a capire opzioni, flussi e la logica smart money."
+        },
+        {
+            "icon": "Target",
+            "title": "Metodologia Comprovata",
+            "description": "Lo stesso approccio analitico usato nella nostra consulenza — adattato per l'uso operativo quotidiano."
         }
     ],
-    "includedSectionTitle": "Cosa Include l'Abbonamento",
-    "includedTagline": "Tutto ciò di cui hai bisogno per prendere decisioni di investimento più intelligenti",
-    "includedItems": [
-        "Accesso a tutti i canali Discord",
-        "Post di analisi di mercato giornalieri",
-        "Segnali di trading in tempo reale",
-        "Sessioni Q&A live settimanali",
-        "Report di ricerca esclusivi",
-        "Supporto prioritario"
+    "includedSectionTitle": "Cosa è Incluso nella Membership",
+    "includedFeatures": [
+        "Accesso a tutti i canali privati Discord",
+        "Monitoraggio in tempo reale dei flussi di opzioni istituzionali",
+        "Commento giornaliero su eventi di mercato ad alto impatto",
+        "Avvisi veloci su attività inusuale e setup ad alto potenziale",
+        "Accesso prioritario alle discussioni della community",
+        "Assegnazione automatica del ruolo Premium dopo l'acquisto"
     ],
-    "pricingSectionTitle": "Livelli di Abbonamento",
-    "pricingSectionDescription": "Scegli il piano adatto al tuo percorso di investimento.",
+    "educationalMiniCourseTitle": "Mini-corso educativo:",
+    "educationalItems": [
+        "come funzionano le opzioni",
+        "come leggere i flussi istituzionali",
+        "come operare con la logica smart money"
+    ],
+    "includedTagline": "Tutto è progettato per supportare il tuo processo decisionale con chiarezza e focus.",
+    "pricingSectionTitle": "Livelli di Membership",
+    "pricingSectionDescription": "Tutti i piani includono l'esperienza premium completa. L'unica differenza è la durata.",
     "plans": [
         {
-            "_key": "monthly",
-            "name": "Mensile",
-            "price": "€19,99",
-            "interval": "mese",
-            "trialDays": 3,
-            "isPopular": false
+            "id": "monthly",
+            "name": "Piano Mensile",
+            "price": "€19.99",
+            "priceValue": 19.99,
+            "trial": "3 giorni prova gratuita",
+            "description": "Ideale per testare la community e il suo valore.",
+            "cta": "Abbonati Mensile",
+            "stripePriceId": "price_monthly_id",
+            "popular": false
         },
         {
-            "_key": "quarterly",
-            "name": "Trimestrale",
-            "price": "€54,99",
-            "interval": "3 mesi",
-            "trialDays": 7,
-            "isPopular": true
+            "id": "quarterly",
+            "name": "Piano Trimestrale",
+            "price": "€54.99",
+            "priceValue": 54.99,
+            "trial": "7 giorni prova gratuita",
+            "description": "Risparmia rispetto al piano mensile.",
+            "cta": "Abbonati Trimestrale",
+            "stripePriceId": "price_quarterly_id",
+            "popular": true
         },
         {
-            "_key": "annual",
-            "name": "Annuale",
-            "price": "€219,99",
-            "interval": "anno",
-            "trialDays": 30,
-            "isPopular": false
+            "id": "annual",
+            "name": "Piano Annuale",
+            "price": "€219.99",
+            "priceValue": 219.99,
+            "trial": "30 giorni prova gratuita",
+            "description": "Il miglior valore per membri dedicati.",
+            "cta": "Abbonati Annuale",
+            "stripePriceId": "price_annual_id",
+            "popular": false
         }
     ],
-    "popularBadgeText": "Più Popolare",
     "accessSectionTitle": "Come Funziona l'Accesso",
     "accessSteps": [
         {
-            "_key": "1",
-            "step": "1",
-            "title": "Scegli il Tuo Piano",
-            "description": "Seleziona il livello di abbonamento adatto a te"
+            "step": 1,
+            "title": "Seleziona Piano",
+            "description": "Seleziona il piano che preferisci e completa il checkout via Stripe."
         },
         {
-            "_key": "2",
-            "step": "2",
-            "title": "Completa il Pagamento",
-            "description": "Checkout sicuro via Stripe"
+            "step": 2,
+            "title": "Attivazione",
+            "description": "Il tuo ruolo Premium su Discord viene attivato automaticamente."
         },
         {
-            "_key": "3",
-            "step": "3",
-            "title": "Ottieni Accesso Discord",
-            "description": "Ricevi il tuo link di invito esclusivo"
+            "step": 3,
+            "title": "Accesso",
+            "description": "Ottieni accesso immediato a tutti i canali privati e materiali educativi."
+        },
+        {
+            "step": 4,
+            "title": "Libertà",
+            "description": "Alla scadenza, puoi rinnovare o cancellare liberamente — il tuo ruolo si adegua di conseguenza."
         }
     ],
-    "accessTagline": "Inizia il tuo percorso in pochi minuti",
-    "comingSoonTitle": "Prossimamente",
-    "comingSoonDescription": "Aggiungiamo costantemente nuove funzionalità e contenuti per i nostri membri.",
-    "finalCtaTitle": "Pronto a Unirti?",
-    "finalCtaButtonText": "Scegli il Tuo Piano di Abbonamento"
+    "accessTagline": "Nessuna frizione, nessun passaggio manuale, nessuna attesa.",
+    "faqSectionTitle": "FAQ",
+    "faqs": [
+        {
+            "question": "Serve esperienza di trading per unirsi?",
+            "answer": "La conoscenza base aiuta, ma la community è progettata per essere accessibile anche agli investitori che stanno ancora imparando."
+        },
+        {
+            "question": "Fornite segnali?",
+            "answer": "No. Offriamo struttura, contesto e insight strategici — non chiamate cieche."
+        },
+        {
+            "question": "Posso cancellare quando voglio?",
+            "answer": "Sì. Puoi cancellare in qualsiasi momento; l'accesso rimane valido fino alla fine del tuo ciclo di fatturazione."
+        },
+        {
+            "question": "Come funzionano le prove gratuite?",
+            "answer": "Ottieni accesso completo durante il periodo di prova. Se cancelli prima che finisca, non ti verrà addebitato nulla."
+        },
+        {
+            "question": "Su quali mercati vi concentrate?",
+            "answer": "Principalmente azionario USA, opzioni e segnali di mercato basati sui flussi."
+        }
+    ],
+    "comingSoonTitle": "In Arrivo",
+    "comingSoonDescription": "Gamma Capital evolve costantemente. Nuovi strumenti e canali verranno aggiunti progressivamente, inclusi:",
+    "comingSoonFeatures": [
+        "dashboard flussi avanzate",
+        "moduli educativi",
+        "canali analitici più profondi",
+        "breakdown periodici di mercato"
+    ],
+    "comingSoonNote": "I membri Premium riceveranno l'accesso automaticamente man mano che queste funzionalità verranno rilasciate.",
+    "finalCtaTitle": "Unisciti al Discord di Gamma Capital",
+    "finalCtaDescription": "Ottieni chiarezza, struttura e insight anticipati nei mercati che premiano gli investitori preparati.",
+    "finalCtaButton": "Scegli il Tuo Piano"
 }

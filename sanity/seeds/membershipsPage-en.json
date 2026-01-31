@@ -2,121 +2,176 @@
     "_id": "membershipsPage-en",
     "_type": "membershipsPage",
     "language": "en",
-    "seoTitle": "Memberships - Gamma Capital",
-    "seoDescription": "Join Gamma Capital's premium Discord community. Access exclusive market insights, trading signals, and expert analysis.",
-    "heroBadge": "Premium Discord Access",
-    "heroTitle": "Join Our Exclusive Investment Community",
-    "heroSubtitle": "Investment Community",
-    "heroDescription": "Get access to premium market insights, real-time trading signals, and a community of like-minded investors.",
-    "heroPrimaryCtaText": "Choose Your Plan",
-    "heroPrimaryCtaLink": "#pricing",
-    "heroSecondaryCtaText": "Learn More",
-    "heroSecondaryCtaLink": "#features",
-    "insideSectionTitle": "What's Inside Our Discord",
-    "insideSectionDescription": "Explore the channels and features available to all members.",
+    "seoTitle": "Gamma Capital Membership - Private Discord Community",
+    "seoDescription": "Join a private environment dedicated to actionable insights, options flow interpretation, and structured market guidance.",
+    "heroBadge": "Membership",
+    "heroTitle": "Premium Discord Access for Serious Market Participants",
+    "heroSubtitle": "Institutional Clarity",
+    "heroDescription": "Join a private environment dedicated to actionable insights, options flow interpretation, unusual activity monitoring and structured, real-time market guidance — without noise, hype or confusion.",
+    "heroPrimaryCta": "Join the Membership",
+    "heroSecondaryCta": "Discover What’s Inside",
+    "insideSectionTitle": "What You Will Find Inside the Discord",
+    "insideSectionDescription": "The Gamma Capital Discord is designed for investors who want real clarity in fast-moving markets. Inside the private channels you will find:",
     "insideFeatures": [
         {
-            "_key": "signals",
             "icon": "TrendingUp",
-            "text": "Real-time Trading Signals"
+            "text": "Real-time monitoring of institutional flows and unusual options activity"
         },
         {
-            "_key": "analysis",
             "icon": "BarChart3",
-            "text": "Daily Market Analysis"
+            "text": "Daily market analysis on key U.S. equities and macro drivers"
         },
         {
-            "_key": "community",
-            "icon": "Users",
-            "text": "Private Community Chat"
+            "icon": "Zap",
+            "text": "Fast alerts on anomalous moves and high-potential setups"
         },
         {
-            "_key": "qa",
-            "icon": "MessageCircle",
-            "text": "Expert Q&A Sessions"
+            "icon": "MessageSquare",
+            "text": "Private discussions within a high-quality community of motivated members"
+        },
+        {
+            "icon": "GraduationCap",
+            "text": "Educational material, including introductory modules on options and flow interpretation"
         }
     ],
     "benefitsSectionTitle": "Key Benefits of Joining",
     "keyBenefits": [
         {
-            "_key": "1",
-            "title": "Expert Analysis",
-            "description": "Get insights from experienced traders and analysts"
+            "icon": "BookOpen",
+            "title": "Structured Insights",
+            "description": "Receive disciplined, well-organized market insights — not noise or speculation."
         },
         {
-            "_key": "2",
-            "title": "Real-time Alerts",
-            "description": "Never miss a trading opportunity with instant notifications"
+            "icon": "Zap",
+            "title": "Early Information Advantage",
+            "description": "Monitor institutional behavior and unusual activity before the majority of retail traders even notice."
         },
         {
-            "_key": "3",
-            "title": "Community Support",
-            "description": "Learn and grow with fellow investors"
+            "icon": "Users",
+            "title": "A Clean, Serious Community",
+            "description": "A curated space for investors who want focus, clarity and real analysis."
+        },
+        {
+            "icon": "GraduationCap",
+            "title": "Educational Foundation",
+            "description": "Access introductory material that helps you understand options, flows and smart money logic."
+        },
+        {
+            "icon": "Target",
+            "title": "Proven Methodology",
+            "description": "The same analytical approach used in our consulting work — adapted for daily operational use."
         }
     ],
-    "includedSectionTitle": "What's Included in the Membership",
-    "includedTagline": "Everything you need to make smarter investment decisions",
-    "includedItems": [
-        "Access to all Discord channels",
-        "Daily market analysis posts",
-        "Real-time trading signals",
-        "Weekly live Q&A sessions",
-        "Exclusive research reports",
-        "Priority support"
+    "includedSectionTitle": "What’s Included in the Membership",
+    "includedFeatures": [
+        "Access to all private Discord channels",
+        "Real-time monitoring of institutional options flow",
+        "Daily commentary on high-impact market events",
+        "Fast alerts on unusual activity and high-potential setups",
+        "Priority access to community discussions",
+        "Automatic Premium role assignment after purchase"
     ],
+    "educationalMiniCourseTitle": "Educational mini-course:",
+    "educationalItems": [
+        "how options work",
+        "how to read institutional flows",
+        "how to operate with smart-money logic"
+    ],
+    "includedTagline": "Everything is designed to support your decision-making with clarity and focus.",
     "pricingSectionTitle": "Membership Tiers",
-    "pricingSectionDescription": "Choose the plan that fits your investment journey.",
+    "pricingSectionDescription": "All plans include the full premium experience. The only difference is the duration.",
     "plans": [
         {
-            "_key": "monthly",
-            "name": "Monthly",
+            "id": "monthly",
+            "name": "Monthly Plan",
             "price": "€19.99",
-            "interval": "month",
-            "trialDays": 3,
-            "isPopular": false
+            "priceValue": 19.99,
+            "trial": "3 days free trial",
+            "description": "Best for testing the community and its value.",
+            "cta": "Join Monthly",
+            "stripePriceId": "price_monthly_id",
+            "popular": false
         },
         {
-            "_key": "quarterly",
-            "name": "Quarterly",
+            "id": "quarterly",
+            "name": "Quarterly Plan",
             "price": "€54.99",
-            "interval": "3 months",
-            "trialDays": 7,
-            "isPopular": true
+            "priceValue": 54.99,
+            "trial": "7 days free trial",
+            "description": "Saves money compared to the monthly plan.",
+            "cta": "Join Quarterly",
+            "stripePriceId": "price_quarterly_id",
+            "popular": true
         },
         {
-            "_key": "annual",
-            "name": "Annual",
+            "id": "annual",
+            "name": "Annual Plan",
             "price": "€219.99",
-            "interval": "year",
-            "trialDays": 30,
-            "isPopular": false
+            "priceValue": 219.99,
+            "trial": "30 days free trial",
+            "description": "The best value for dedicated members.",
+            "cta": "Join Annual",
+            "stripePriceId": "price_annual_id",
+            "popular": false
         }
     ],
-    "popularBadgeText": "Most Popular",
     "accessSectionTitle": "How Access Works",
     "accessSteps": [
         {
-            "_key": "1",
-            "step": "1",
-            "title": "Choose Your Plan",
-            "description": "Select the membership tier that suits you"
+            "step": 1,
+            "title": "Select Plan",
+            "description": "Select the plan you prefer and complete the checkout via Stripe."
         },
         {
-            "_key": "2",
-            "step": "2",
-            "title": "Complete Payment",
-            "description": "Secure checkout via Stripe"
+            "step": 2,
+            "title": "Activation",
+            "description": "Your Premium role on Discord is activated automatically."
         },
         {
-            "_key": "3",
-            "step": "3",
-            "title": "Get Discord Access",
-            "description": "Receive your exclusive invite link"
+            "step": 3,
+            "title": "Access",
+            "description": "You gain instant access to all private channels and educational materials."
+        },
+        {
+            "step": 4,
+            "title": "Freedom",
+            "description": "At expiration, you can renew or cancel freely — your role adjusts accordingly."
         }
     ],
-    "accessTagline": "Start your journey in minutes",
+    "accessTagline": "No friction, no manual steps, no waiting.",
+    "faqSectionTitle": "FAQ",
+    "faqs": [
+        {
+            "question": "Do I need trading experience to join?",
+            "answer": "Basic market knowledge helps, but the community is designed to be accessible even for investors who are still learning."
+        },
+        {
+            "question": "Are signals provided?",
+            "answer": "No. We offer structure, context and strategic insights — not blind trade calls."
+        },
+        {
+            "question": "Can I cancel anytime?",
+            "answer": "Yes. You can cancel at any moment; access remains valid until the end of your billing cycle."
+        },
+        {
+            "question": "How do free trials work?",
+            "answer": "You get full access during the trial period. If you cancel before it ends, you will not be charged."
+        },
+        {
+            "question": "What markets do you focus on?",
+            "answer": "Primarily U.S. equities, options and flow-based market signals."
+        }
+    ],
     "comingSoonTitle": "Coming Soon",
-    "comingSoonDescription": "We're constantly adding new features and content for our members.",
-    "finalCtaTitle": "Ready to Join?",
-    "finalCtaButtonText": "Choose Your Membership Plan"
+    "comingSoonDescription": "Gamma Capital constantly evolves. New tools and channels will be added progressively, including:",
+    "comingSoonFeatures": [
+        "enhanced flow dashboards",
+        "educational modules",
+        "deeper analytical channels",
+        "periodic market breakdowns"
+    ],
+    "comingSoonNote": "Premium members will receive access automatically as these features roll out.",
+    "finalCtaTitle": "Join the Gamma Capital Discord",
+    "finalCtaDescription": "Gain clarity, structure and early insight in markets that reward prepared investors.",
+    "finalCtaButton": "Choose Your Membership Plan"
 }

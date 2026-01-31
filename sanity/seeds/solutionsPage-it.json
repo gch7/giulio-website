@@ -2,60 +2,88 @@
     "_id": "solutionsPage-it",
     "_type": "solutionsPage",
     "language": "it",
-    "seoTitle": "Le Nostre Soluzioni - Gamma Capital",
-    "seoDescription": "Scopri soluzioni di investimento complete da Gamma Capital. Dall'intelligenza di mercato alla consulenza personalizzata.",
-    "heroBadge": "Le Nostre Soluzioni",
-    "heroTitle": "Soluzioni di Investimento Complete",
-    "heroSubtitle": "Soluzioni di Investimento",
-    "heroDescription": "Dall'intelligenza di mercato alla consulenza personalizzata, forniamo gli strumenti e gli approfondimenti necessari per avere successo nei mercati di oggi.",
+    "seoTitle": "Market Intelligence - Gamma Capital",
+    "seoDescription": "Insight guidati dai dati, algoritmi e framework istituzionali per comprendere i mercati e gestire il rischio.",
+    "heroBadge": "Market Intelligence",
+    "heroTitle": "Market Intelligence",
+    "heroSubtitle": "Insight guidati dai dati",
+    "heroDescription": "Insight guidati dai dati, algoritmi e framework istituzionali per comprendere i mercati e gestire il rischio.",
     "solutions": [
         {
-            "_key": "insights",
-            "title": "Strategy Insights",
-            "description": "Accedi ad analisi di mercato premium, segnali di trading e ricerche sugli investimenti dal nostro team di esperti.",
+            "_key": "core_intelligence",
+            "title": "Analisi e Algoritmi",
+            "description": "Sviluppiamo framework analitici avanzati e algoritmi proprietari per interpretare i mercati, gestire il rischio di portafoglio e identificare opportunità asimmetriche. I nostri modelli si adattano ai regimi di volatilità, liquidità e macro.",
             "icon": "BarChart3",
             "color": "#2563EB",
+            "href": "/contact",
+            "features": [
+                "Algoritmi proprietari",
+                "Gestione del rischio",
+                "Opportunità asimmetriche",
+                "Adattamento al regime"
+            ]
+        },
+        {
+            "_key": "options_intelligence",
+            "title": "Intelligence sulle Opzioni",
+            "description": "Analizziamo i flussi istituzionali di opzioni, GEX, posizionamento dei dealer e dinamiche della volatilità per capire dove si accumula il rischio. Questa intelligence supporta il timing e la strategia.",
+            "icon": "TrendingUp",
+            "color": "#7C3AED",
             "href": "/solutions/strategy-insights",
             "features": [
-                "Analisi di mercato giornaliera",
-                "Segnali di trading",
-                "Report di ricerca",
-                "Raccomandazioni di portafoglio"
+                "Comportamento guidato dai flussi",
+                "Esposizione Gamma e hedging",
+                "Regimi di volatilità",
+                "Analisi strutturale"
+            ]
+        },
+        {
+            "_key": "structured_products",
+            "title": "Prodotti Strutturati",
+            "description": "Analizziamo e progettiamo payoff strutturati da una prospettiva istituzionale. Replichiamo o miglioriamo i payoff strutturati utilizzando le opzioni, rimuovendo l'opacità non necessaria.",
+            "icon": "Building2",
+            "color": "#059669",
+            "href": "/consulting",
+            "features": [
+                "Asimmetria del payoff",
+                "Logica di copertura",
+                "Performance dipendente dal regime",
+                "Efficienza vs complessità"
+            ]
+        },
+        {
+            "_key": "real_estate",
+            "title": "Advisory Immobiliare",
+            "description": "La nostra intelligence unisce analisi finanziaria ed esperienza operativa diretta in Svizzera e Italia. L'immobiliare è trattato come parte di un framework multi-asset più ampio, non come investimento isolato.",
+            "icon": "Building2",
+            "color": "#D97706",
+            "href": "/contact",
+            "features": [
+                "Lugano, Chiasso, Venezia, Como...",
+                "Analisi rendimento e rischio",
+                "Ottimizzazione cash flow",
+                "Allocazione strategica"
             ]
         },
         {
             "_key": "network",
-            "title": "Network Professionale",
-            "description": "Connettiti con altri investitori, esperti del settore e potenziali partner nella nostra comunità esclusiva.",
-            "icon": "Users",
-            "color": "#7C3AED",
-            "href": "/solutions/network",
+            "title": "Network Strategico",
+            "description": "Gamma Capital opera all'interno di un network selettivo di professionisti in finanza, immobiliare e investimenti alternativi. Non un servizio, ma un vantaggio strategico per clienti selezionati.",
+            "icon": "Network",
+            "color": "#DC2626",
+            "href": "/contact",
             "features": [
-                "Eventi esclusivi",
-                "Opportunità di networking",
-                "Presentazioni di esperti",
-                "Forum della comunità"
-            ]
-        },
-        {
-            "_key": "realestate",
-            "title": "Immobiliare",
-            "description": "Esplora opportunità di investimento immobiliare accuratamente selezionate con forte potenziale di rendimento.",
-            "icon": "Building2",
-            "color": "#059669",
-            "href": "/solutions/real-estate",
-            "features": [
-                "Analisi immobiliare",
-                "Opportunità di investimento",
-                "Due diligence",
-                "Diversificazione del portafoglio"
+                "Insight di alto livello",
+                "Operatori esperti",
+                "Allineamento strategico",
+                "Introduzioni executive"
             ]
         }
     ],
-    "ctaTitle": "Non Sai Da Dove Iniziare?",
-    "ctaDescription": "Prenota una chiamata di consulenza gratuita per discutere i tuoi obiettivi e trovare la soluzione giusta per le tue esigenze di investimento.",
-    "primaryCtaText": "Prenota una Chiamata",
+    "ctaTitle": "Insight istituzionali, applicati con chiarezza.",
+    "ctaDescription": "Contattaci per discutere come la nostra market intelligence può supportare la tua strategia di investimento.",
+    "primaryCtaText": "Contattaci",
     "primaryCtaLink": "/contact",
-    "secondaryCtaText": "Vedi Abbonamenti",
-    "secondaryCtaLink": "/memberships"
+    "secondaryCtaText": "Vedi Strategy Insights",
+    "secondaryCtaLink": "/solutions/strategy-insights"
 }

@@ -2,74 +2,80 @@
     "_id": "contactPage-it",
     "_type": "contactPage",
     "language": "it",
-    "seoTitle": "Contattaci - Gamma Capital",
-    "seoDescription": "Mettiti in contatto con Gamma Capital. Siamo qui per aiutarti con le tue domande sugli investimenti e le esigenze di consulenza.",
-    "heroTitle": "Mettiti in Contatto",
-    "heroSubtitle": "Contattaci",
-    "heroDescription": "Hai domande sui nostri servizi o sei pronto a iniziare? Ci piacerebbe sentirti.",
-    "introTitle": "Iniziamo una Conversazione",
-    "introDescription": "Che tu stia cercando consulenza sugli investimenti, sia interessato ai nostri abbonamenti o abbia domande generali, il nostro team è qui per aiutarti.",
-    "introEmailLabel": "Per comunicazioni generali:",
-    "introEmail": "info@gammacap.ch",
+    "seoTitle": "Contatta Gamma Capital - Mettiti in Contatto",
+    "seoDescription": "Contatta Gamma Capital per servizi di consulenza, membership Discord o collaborazioni strategiche.",
+    "heroTitle": "Mettiti in Contatto con {brand}Gamma Capital{/brand}",
+    "heroDescription": "Che tu sia interessato ai nostri abbonamenti Discord, ai servizi di consulenza o a una collaborazione strategica, puoi contattarci qui. Esaminiamo ogni richiesta con attenzione e rispondiamo in modo selettivo.",
+    "introHeading": "Come Contattarci",
+    "introDescription": "Gamma Capital lavora con investitori, professionisti e partner che apprezzano chiarezza, struttura e processo decisionale disciplinato. Usa il modulo qui sotto per contattarci riguardante membership, consulenza o altre richieste professionali.",
+    "introEmailLabel": "Per comunicazioni generali, puoi anche contattarci direttamente a:",
+    "introEmail": "contact@gammacap.ch",
     "formTitle": "Richiesta di Contatto",
-    "formDescription": "Compila il modulo qui sotto e ti risponderemo entro 24 ore.",
-    "formSuccessTitle": "Messaggio Inviato!",
-    "formSuccessMessage": "Grazie per averci contattato. Il nostro team esaminerà il tuo messaggio e risponderà a breve.",
-    "formErrorMessage": "Qualcosa è andato storto. Riprova o scrivici direttamente via email.",
+    "formSubtitle": "Fornisci alcuni dettagli per aiutarci a capire meglio la tua richiesta e rispondere in modo appropriato.",
     "formNameLabel": "Nome Completo",
-    "formNamePlaceholder": "Inserisci il tuo nome completo",
+    "formNamePlaceholder": "Il tuo nome completo",
     "formEmailLabel": "Indirizzo Email",
-    "formEmailPlaceholder": "tua@email.com",
-    "formCountryLabel": "Paese",
-    "formCountryPlaceholder": "es. Svizzera, Italia, ecc.",
+    "formEmailPlaceholder": "iltuo@email.com",
+    "formCountryLabel": "Paese di Residenza",
+    "formCountryPlaceholder": "es. Svizzera, Italia",
     "formInterestLabel": "Area di Interesse",
-    "formInterestPlaceholder": "Seleziona un'opzione",
+    "formInterestPlaceholder": "Seleziona un'area di interesse",
     "formMessageLabel": "Messaggio",
-    "formMessagePlaceholder": "Raccontaci dei tuoi obiettivi di investimento o delle tue domande...",
-    "formButtonText": "Invia Messaggio",
+    "formMessagePlaceholder": "Descrivi brevemente la tua situazione, obiettivi o domanda.",
+    "formButtonText": "Invia Richiesta",
     "formButtonSubmittingText": "Invio in corso...",
     "areaOfInterestOptions": [
         {
-            "_key": "memberships",
-            "value": "memberships",
+            "value": "discord",
             "label": "Abbonamenti Discord"
         },
         {
-            "_key": "consulting",
             "value": "consulting",
-            "label": "Servizi di Consulenza"
+            "label": "Consulenza & Revisione Portafoglio"
         },
         {
-            "_key": "realestate",
-            "value": "realestate",
-            "label": "Investimenti Immobiliari"
+            "value": "strategy",
+            "label": "Design Strategico"
         },
         {
-            "_key": "general",
-            "value": "general",
-            "label": "Richiesta Generale"
+            "value": "options",
+            "label": "Opzioni & Derivati"
+        },
+        {
+            "value": "structured_products",
+            "label": "Prodotti Strutturati"
+        },
+        {
+            "value": "real_estate",
+            "label": "Immobiliare & Altri Asset"
+        },
+        {
+            "value": "crypto",
+            "label": "Cripto"
+        },
+        {
+            "value": "other",
+            "label": "Partnership / Altro"
         }
     ],
-    "expectationsHeading": "Cosa Aspettarsi Dopo il Contatto",
+    "expectationsHeading": "Cosa Aspettarsi Dopo Averci Contattato",
     "expectationItems": [
         {
-            "_key": "1",
+            "icon": "UserCheck",
+            "text": "Ogni richiesta viene esaminata personalmente"
+        },
+        {
             "icon": "Clock",
-            "title": "Risposta Rapida",
-            "description": "Rispondiamo a tutte le richieste entro 24 ore lavorative"
+            "text": "Rispondiamo tipicamente entro 1–2 giorni lavorativi"
         },
         {
-            "_key": "2",
-            "icon": "Phone",
-            "title": "Attenzione Personale",
-            "description": "Un membro del nostro team esaminerà personalmente la tua richiesta"
+            "icon": "MessageSquare",
+            "text": "Non tutte le richieste potrebbero ricevere una risposta"
         },
         {
-            "_key": "3",
-            "icon": "Shield",
-            "title": "Confidenziale",
-            "description": "Le tue informazioni sono mantenute strettamente riservate"
+            "icon": "ShieldCheck",
+            "text": "Gli incarichi di consulenza sono soggetti a disponibilità"
         }
     ],
-    "disclaimer": "Gamma Capital non fornisce consulenza personalizzata sugli investimenti attraverso questo modulo. Qualsiasi consulenza è solo a scopo informativo."
+    "disclaimer": "Gamma Capital non fornisce servizi di brokeraggio, non esegue operazioni per conto dei clienti e non offre consulenza legale o fiscale. Tutte le informazioni e i servizi di consulenza sono forniti solo a scopo educativo e strategico."
 }

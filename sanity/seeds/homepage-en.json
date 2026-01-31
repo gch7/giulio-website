@@ -8,16 +8,16 @@
         "current": "home"
     },
     "isHomepage": true,
-    "seoTitle": "Gamma Capital - Institutional Market Intelligence",
-    "seoDescription": "Gamma Capital provides institutional-grade market intelligence, strategic advisory, and exclusive community access for sophisticated investors.",
+    "seoTitle": "Gamma Capital - Institutional Market Intelligence & Strategy",
+    "seoDescription": "Gamma Capital helps investors navigate complex markets through structured analysis, options-driven insights, and disciplined strategy frameworks.",
     "sections": [
         {
             "_key": "hero",
             "_type": "heroSection",
-            "badge": "Structure and Clarity",
-            "titleLine1": "Market Intelligence for",
-            "titleLine2": "Sophisticated Investors",
-            "description": "Whether you are looking for actionable market intelligence, a disciplined community, or strategic advisory support, Gamma Capital is designed to help you operate with confidence in complex markets.",
+            "badge": "Institutional Intelligence",
+            "titleLine1": "Institutional-Grade Market Intelligence",
+            "titleLine2": "and Strategy Design",
+            "description": "Gamma Capital helps investors navigate complex markets through structured analysis, options-driven insights, and disciplined strategy frameworks. We combine institutional methodology, real-time market intelligence, and a private Discord community to support better decision-making across market conditions.",
             "primaryCTA": {
                 "text": "Join Discord Memberships",
                 "href": "/memberships",
@@ -32,44 +32,163 @@
             },
             "stats": [
                 {
-                    "_key": "stat1",
+                    "_key": "s1",
                     "value": "15+",
                     "label": "Years Experience"
                 },
                 {
-                    "_key": "stat2",
+                    "_key": "s2",
                     "value": "€50M+",
                     "label": "Assets Advised"
                 },
                 {
-                    "_key": "stat3",
+                    "_key": "s3",
                     "value": "500+",
-                    "label": "Active Members"
+                    "label": "Community Members"
+                }
+            ],
+            "bulletPoints": [
+                {
+                    "_key": "b1",
+                    "icon": "Activity",
+                    "text": "Options flow, volatility dynamics, and institutional market signals"
+                },
+                {
+                    "_key": "b2",
+                    "icon": "Shield",
+                    "text": "Structured strategy insights across derivatives, yield and risk management"
+                },
+                {
+                    "_key": "b3",
+                    "icon": "TrendingUp",
+                    "text": "Premium Discord access, education, and professional consulting"
+                }
+            ],
+            "supportingTagline": "No hype, no noise — just structured, data-driven insight."
+        },
+        {
+            "_key": "whatWeDo",
+            "_type": "whatWeDoSection",
+            "badge": "Our Services",
+            "title": "What We Do",
+            "description": "Gamma Capital is a research, strategy and advisory platform focused on options, structured products and multi-asset portfolio frameworks. Our mission is to bring institutional-style discipline, tools and reasoning to serious investors who seek clarity, structure and consistency rather than generic market commentary.",
+            "showViewAllButton": true,
+            "viewAllButtonText": "View All Solutions",
+            "viewAllButtonHref": "/solutions",
+            "services": [
+                {
+                    "_key": "svc1",
+                    "icon": "BarChart3",
+                    "title": "Market Intelligence & Strategy Insights",
+                    "description": "Instead of isolated trade ideas, we focus on context: why a setup exists, how it behaves across scenarios, and how it fits into a coherent risk framework. We analyse options flow, volatility regimes, dealer positioning and key macro drivers.",
+                    "href": "/solutions/strategy-insights",
+                    "linkText": "Learn more"
+                },
+                {
+                    "_key": "svc2",
+                    "icon": "Users",
+                    "title": "Discord Memberships",
+                    "description": "Through our private Discord community, members access real-time market commentary, unusual options activity, structured insights and educational material. Designed for investors who value clarity and professional discussion.",
+                    "href": "/memberships",
+                    "linkText": "Join now"
+                },
+                {
+                    "_key": "svc3",
+                    "icon": "Briefcase",
+                    "title": "Consulting & Portfolio Advisory",
+                    "description": "One-to-one consulting across portfolio review, strategy design, options structures, structured products and broader asset allocation. The objective is simple: align strategy, risk and time horizon in a coherent way.",
+                    "href": "/consulting",
+                    "linkText": "Book call"
+                }
+            ]
+        },
+        {
+            "_key": "multiAsset",
+            "_type": "multiAssetSection",
+            "badge": "Holistic View",
+            "title": "A Multi-Asset, Institutional Perspective",
+            "description": "Gamma Capital operates across multiple asset classes, including equities, derivatives, structured products, real estate and digital assets.",
+            "secondaryDescription": "This cross-asset perspective allows us to identify hidden correlations, structural inefficiencies and opportunities that remain invisible within single-asset approaches. Our work integrates financial markets analysis with real-world asset experience, offering a broader and more resilient strategic view.",
+            "assetClasses": [
+                {
+                    "_key": "ac1",
+                    "icon": "TrendingUp",
+                    "label": "Equities"
+                },
+                {
+                    "_key": "ac2",
+                    "icon": "Layers",
+                    "label": "Derivatives"
+                },
+                {
+                    "_key": "ac3",
+                    "icon": "Globe",
+                    "label": "Real Estate"
+                },
+                {
+                    "_key": "ac4",
+                    "icon": "Coins",
+                    "label": "Digital Assets"
+                },
+                {
+                    "_key": "ac5",
+                    "icon": "Building2",
+                    "label": "Structured Products"
                 }
             ]
         },
         {
             "_key": "whyGamma",
             "_type": "whyGammaSection",
-            "badge": "Why Gamma",
-            "title": "Built on Professional Standards",
+            "badge": "Why Gamma Capital",
+            "title": "Why Gamma Capital",
             "reasons": [
                 {
                     "_key": "r1",
                     "icon": "Building",
-                    "text": "Institutional Experience"
+                    "text": "Institutional logic applied to private portfolios"
                 },
                 {
                     "_key": "r2",
-                    "icon": "Target",
-                    "text": "Data-Driven Approach"
+                    "icon": "Activity",
+                    "text": "Strong focus on options flow and structured payoffs"
                 },
                 {
                     "_key": "r3",
                     "icon": "Shield",
-                    "text": "Risk Management First"
+                    "text": "Risk-aware, scenario-driven methodology"
+                },
+                {
+                    "_key": "r4",
+                    "icon": "MessageSquare",
+                    "text": "Clean communication, no hype or retail noise"
+                },
+                {
+                    "_key": "r5",
+                    "icon": "Layers",
+                    "text": "A growing ecosystem: research, Discord, and advisory"
                 }
             ]
+        },
+        {
+            "_key": "cta",
+            "_type": "testimonialCTASection",
+            "badge": "Get Started",
+            "titleLine1": "Built for Investors Who Want",
+            "titleLine2": "Structure and Clarity",
+            "description": "Whether you are looking for actionable market intelligence, a disciplined community, or strategic advisory support, Gamma Capital is designed to help you operate with confidence in complex markets.",
+            "primaryCTA": {
+                "text": "Join Discord Memberships",
+                "href": "/memberships",
+                "variant": "primary",
+                "showArrow": true
+            },
+            "secondaryCTA": {
+                "text": "Explore Our Solutions",
+                "href": "/solutions",
+                "variant": "outline",
+                "showArrow": false
+            }
         }
     ]
 }

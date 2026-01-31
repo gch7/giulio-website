@@ -2,156 +2,130 @@
     "_id": "consultingPage-it",
     "_type": "consultingPage",
     "language": "it",
-    "seoTitle": "Servizi di Consulenza - Gamma Capital",
-    "seoDescription": "Consulenza esperta sugli investimenti e servizi di advisory. Guida personalizzata per i tuoi obiettivi finanziari.",
-    "heroBadge": "Advisory Esperto",
-    "heroTitle": "Consulenza di Investimento Personalizzata",
-    "heroSubtitle": "Consulenza di Investimento",
-    "heroDescription": "Lavora direttamente con il nostro team di esperti per sviluppare strategie su misura per i tuoi obiettivi finanziari unici.",
+    "seoTitle": "Gamma Capital Consulting - Revisione Portafoglio e Strategia",
+    "seoDescription": "Consulenza di livello istituzionale per revisione portafogli, design strategico, opzioni, prodotti strutturati e asset allocation.",
+    "heroBadge": "Servizi di Advisory",
+    "heroTitle": "Consulenza Istituzionale",
+    "heroSubtitle": "Guida Strategica",
+    "heroDescription": "Guida strategica su misura per investitori sofisticati, family office e trader professionisti. Portiamo struttura istituzionale ai portafogli privati.",
     "heroStats": [
         {
-            "_key": "1",
-            "label": "Anni di Esperienza",
-            "value": "15+"
+            "value": "15+",
+            "label": "Anni di Esperienza"
         },
         {
-            "_key": "2",
-            "label": "Clienti Serviti",
-            "value": "500+"
-        },
-        {
-            "_key": "3",
-            "label": "AUM Consigliato",
-            "value": "€50M+"
+            "value": "Su Misura",
+            "label": "Design Strategico"
         }
     ],
-    "serviceNavTitle": "I Nostri Servizi di Advisory",
-    "serviceNavSubtitle": "Clicca per esplorare ogni servizio in dettaglio",
+    "serviceNavTitle": "I Nostri Servizi",
+    "serviceNavSubtitle": "Clicca per esplorare ogni servizio nel dettaglio",
     "serviceNavItems": [
         {
-            "_key": "portfolio",
-            "id": "portfolio",
+            "id": "portfolio-review",
             "title": "Revisione Portafoglio",
+            "icon": "Briefcase"
+        },
+        {
+            "id": "strategy-design",
+            "title": "Design Strategico",
             "icon": "BarChart3"
         },
         {
-            "_key": "strategy",
-            "id": "strategy",
-            "title": "Sviluppo Strategia",
-            "icon": "Target"
+            "id": "options",
+            "title": "Opzioni",
+            "icon": "Layers"
         },
         {
-            "_key": "wealth",
-            "id": "wealth",
-            "title": "Gestione Patrimoniale",
-            "icon": "Briefcase"
+            "id": "structured-products",
+            "title": "Prodotti Strutturati",
+            "icon": "Shield"
+        },
+        {
+            "id": "real-estate",
+            "title": "Immobiliare",
+            "icon": "Building2"
+        },
+        {
+            "id": "crypto",
+            "title": "Cripto",
+            "icon": "Bitcoin"
         }
     ],
     "serviceSections": [
         {
-            "_key": "portfolio",
-            "id": "portfolio",
-            "icon": "BarChart3",
-            "title": "Revisione Portafoglio",
-            "description": [
-                "Ottieni un'analisi completa del tuo portafoglio di investimenti attuale.",
-                "I nostri esperti identificheranno opportunità di ottimizzazione e riduzione del rischio."
-            ],
-            "highlight": "Report di analisi dettagliato incluso",
-            "iconGradient": "from-[#2563EB] to-[#1E3A8A]",
-            "shadowColor": "[#2563EB]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Search",
-                    "title": "Analisi Approfondita",
-                    "desc": "Scomposizione completa del portafoglio"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Target",
-                    "title": "Ottimizzazione",
-                    "desc": "Identifica aree di miglioramento"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Shield",
-                    "title": "Valutazione Rischio",
-                    "desc": "Valuta i livelli di esposizione"
-                }
-            ]
-        },
-        {
-            "_key": "strategy",
-            "id": "strategy",
-            "icon": "Target",
-            "title": "Sviluppo Strategia",
-            "description": [
-                "Lavora con il nostro team per creare una strategia di investimento personalizzata.",
-                "Allinea il tuo portafoglio ai tuoi obiettivi finanziari e tolleranza al rischio."
-            ],
-            "highlight": "Documento strategico personalizzato fornito",
-            "iconGradient": "from-[#7C3AED] to-[#5B21B6]",
-            "shadowColor": "[#7C3AED]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Compass",
-                    "title": "Definizione Obiettivi",
-                    "desc": "Definisci i tuoi obiettivi"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Map",
-                    "title": "Roadmap",
-                    "desc": "Piano d'azione chiaro"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Gauge",
-                    "title": "Benchmark",
-                    "desc": "Monitora i tuoi progressi"
-                }
-            ]
-        },
-        {
-            "_key": "wealth",
-            "id": "wealth",
+            "id": "portfolio-review",
             "icon": "Briefcase",
-            "title": "Gestione Patrimoniale",
+            "title": "Revisione del Portafoglio",
             "description": [
-                "Gestione patrimoniale completa per individui ad alto patrimonio netto.",
-                "Preserva e fai crescere il tuo patrimonio attraverso le generazioni."
+                "Una revisione disciplinata e multi-asset progettata per rivelare come si comporta veramente il tuo portafoglio.",
+                "Analizziamo ogni componente per identificare rischi nascosti, inefficienze e squilibri strutturali: azioni, opzioni, ETF, reddito fisso, prodotti strutturati, cripto, immobiliare e alternativi.",
+                "Utilizzando strumenti istituzionali come analisi di scenario, stress testing, mappatura delle correlazioni, VaR/CVaR e modellazione fattoriale, evidenziamo dove si perde performance e come riposizionare il rischio.",
+                "Il risultato è un'interpretazione chiara e raffinata delle tue esposizioni e una roadmap pratica per portare ordine, coerenza e disciplina al tuo processo di investimento."
             ],
-            "highlight": "Consulente patrimoniale dedicato",
-            "iconGradient": "from-[#059669] to-[#047857]",
-            "shadowColor": "[#059669]/20",
-            "features": [
-                {
-                    "_key": "1",
-                    "icon": "Building2",
-                    "title": "Pianificazione Successoria",
-                    "desc": "Trasferimento patrimoniale generazionale"
-                },
-                {
-                    "_key": "2",
-                    "icon": "Scale",
-                    "title": "Ottimizzazione Fiscale",
-                    "desc": "Minimizza il carico fiscale"
-                },
-                {
-                    "_key": "3",
-                    "icon": "Lock",
-                    "title": "Protezione Patrimonio",
-                    "desc": "Proteggi la tua ricchezza"
-                }
-            ]
+            "highlight": "Evidenzia rischi nascosti e squilibri strutturali"
+        },
+        {
+            "id": "strategy-design",
+            "icon": "BarChart3",
+            "title": "Progettazione Strategica",
+            "description": [
+                "Progettiamo strategie di investimento che combinano struttura istituzionale con flessibilità da investitore privato. La nostra filosofia è opportunistica e guidata dalle opzioni, integrando tattiche a breve termine con posizionamento a medio e lungo termine.",
+                "Ogni strategia è costruita attorno ai tuoi obiettivi, tolleranza al rischio e profilo di liquidità, spaziando da framework su misura ad architetture completamente personalizzate. Dove richiesto, progettiamo anche algoritmi su misura per sistematizzare esecuzione, regole di rischio e logica dei segnali.",
+                "Ciò che rende unico il nostro lavoro è la fusione di analisi dei flussi di opzioni, logica dei prodotti strutturati, integrazione multi-asset e adattabilità guidata dagli scenari.",
+                "Ogni strategia definisce come esprimere un'idea, come dimensionarla (sizing), come coprirla (hedging) e come evolverla al cambiare delle condizioni — creando un sistema disciplinato e ripetibile piuttosto che operazioni isolate."
+            ],
+            "highlight": "Fusione di flussi di opzioni, logica strutturata e adattabilità"
+        },
+        {
+            "id": "options",
+            "icon": "Layers",
+            "title": "Opzioni",
+            "description": [
+                "Il flusso di opzioni è il cuore di Gamma Capital. Il nostro vantaggio principale deriva dal monitoraggio e dall'interpretazione dei flussi di opzioni istituzionali e dell'attività inusuale per comprendere il posizionamento, il trasferimento del rischio e le potenziali intenzioni di mercato.",
+                "Colleghiamo il flusso alla meccanica dei derivati, GEX (esposizione gamma), dinamiche di delta hedging, effetti vanna/charm, regimi di volatilità, skew e struttura a termine, per inquadrare come i mercati delle opzioni possono influenzare l'azione dei prezzi e la liquidità.",
+                "Che l'obiettivo sia esposizione tattica, miglioramento del rendimento (yield enhancement), gestione della convessità o copertura, il nostro approccio traduce segnali di mercato complessi in framework chiari e consapevoli del rischio — con la struttura e la precisione di un desk derivati professionale."
+            ],
+            "highlight": "Struttura e precisione di un desk derivati professionale"
+        },
+        {
+            "id": "structured-products",
+            "icon": "Shield",
+            "title": "Prodotti Strutturati",
+            "description": [
+                "La nostra consulenza sui prodotti strutturati fonde profondità accademica con insight istituzionale acquisito attraverso l'esposizione a gestori di portafoglio presso UBS e studi all'USI di Lugano.",
+                "Aiutiamo gli investitori a valutare e progettare una vasta gamma di strutture, da autocallable e note Phoenix a reverse convertible, prodotti express e soluzioni a capitale protetto.",
+                "Il nostro focus è sulla comprensione del design del payoff, dell'hedging dell'emittente, del trasferimento del rischio e dell'idoneità al regime di mercato.",
+                "Quando appropriato, replichiamo o miglioriamo questi payoff utilizzando le opzioni per ottenere maggiore flessibilità ed efficienza."
+            ],
+            "highlight": "Design del payoff, hedging dell'emittente e trasferimento del rischio"
+        },
+        {
+            "id": "real-estate",
+            "icon": "Building2",
+            "title": "Immobiliare e Altri Asset",
+            "description": [
+                "La nostra prospettiva immobiliare è plasmata dall'esperienza diretta in Svizzera e Italia, con profonda familiarità in mercati come Lugano, Chiasso, Venezia, Como, Udine e Roma.",
+                "Analizziamo le opportunità immobiliari con lo stesso rigore applicato agli asset finanziari — proiezioni di cash-flow, modellazione del rendimento, mappatura del rischio, stagionalità e integrazione strategica all'interno di un portafoglio più ampio.",
+                "Dall'ottimizzazione degli affitti brevi all'allocazione di capitale a lungo termine, aiutiamo i clienti a trattare l'immobiliare non come acquisti isolati ma come componenti deliberate di una strategia multi-asset."
+            ],
+            "highlight": "Immobiliare come componente deliberata di una strategia multi-asset"
+        },
+        {
+            "id": "crypto",
+            "icon": "Bitcoin",
+            "title": "Cripto",
+            "description": [
+                "Attivi nei mercati cripto dal 2017, portiamo contesto storico e disciplina istituzionale a una classe di asset spesso dominata dal rumore.",
+                "Ci concentriamo sulla struttura del mercato, cicli di liquidità, sizing del rischio, correlazioni macro e posizionamento basato su scenari.",
+                "Il nostro network include professionisti cripto esperti i cui insight aggiungono profondità oltre i commenti superficiali.",
+                "Le cripto vengono approcciate non come speculazione, ma come un asset asimmetrico che richiede dimensionamento misurato, consapevolezza strutturale e integrazione strategica all'interno di un portafoglio diversificato."
+            ],
+            "highlight": "Asset asimmetrico che richiede dimensionamento e struttura"
         }
     ],
-    "ctaTitle": "Pronto a Iniziare?",
-    "ctaDescription": "Prenota una consulenza gratuita per discutere le tue esigenze e come possiamo aiutarti.",
-    "ctaPrimaryText": "Prenota Consulenza",
-    "ctaPrimaryLink": "/contact",
-    "ctaSecondaryText": "Vedi Abbonamenti",
-    "ctaSecondaryLink": "/memberships"
+    "ctaTitle": "Pronto a Ottimizzare il Tuo Portafoglio?",
+    "ctaDescription": "Contattaci per pianificare una consulenza personalizzata e discutere le tue esigenze specifiche.",
+    "ctaButtonText": "Richiedi Consulenza",
+    "ctaButtonHref": "/contact"
 }

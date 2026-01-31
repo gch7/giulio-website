@@ -2,74 +2,80 @@
     "_id": "contactPage-en",
     "_type": "contactPage",
     "language": "en",
-    "seoTitle": "Contact Us - Gamma Capital",
-    "seoDescription": "Get in touch with Gamma Capital. We're here to help with your investment questions and consulting needs.",
-    "heroTitle": "Get in Touch",
-    "heroSubtitle": "Contact Us",
-    "heroDescription": "Have questions about our services or ready to get started? We'd love to hear from you.",
-    "introTitle": "Let's Start a Conversation",
-    "introDescription": "Whether you're looking for investment advice, interested in our memberships, or have general questions, our team is here to help.",
-    "introEmailLabel": "For general communication:",
-    "introEmail": "info@gammacap.ch",
+    "seoTitle": "Contact Gamma Capital - Get In Touch",
+    "seoDescription": "Contact Gamma Capital for consulting services, Discord memberships, or strategic collaborations. We review every request carefully.",
+    "heroTitle": "Get in Touch with {brand}Gamma Capital{/brand}",
+    "heroDescription": "Whether you are interested in our Discord memberships, consulting services, or a strategic collaboration, you can contact us here. We review every request carefully and respond selectively.",
+    "introHeading": "How to Contact Us",
+    "introDescription": "Gamma Capital works with investors, professionals and partners who value clarity, structure and disciplined decision-making. Use the form below to reach us regarding memberships, consulting, or other professional inquiries.",
+    "introEmailLabel": "For general communication, you can also reach us directly at:",
+    "introEmail": "contact@gammacap.ch",
     "formTitle": "Contact Request",
-    "formDescription": "Fill out the form below and we'll get back to you within 24 hours.",
-    "formSuccessTitle": "Message Sent!",
-    "formSuccessMessage": "Thank you for reaching out. Our team will review your message and respond shortly.",
-    "formErrorMessage": "Something went wrong. Please try again or email us directly.",
+    "formSubtitle": "Please provide a few details so we can better understand your request and respond appropriately.",
     "formNameLabel": "Full Name",
-    "formNamePlaceholder": "Enter your full name",
+    "formNamePlaceholder": "Your full name",
     "formEmailLabel": "Email Address",
     "formEmailPlaceholder": "your@email.com",
-    "formCountryLabel": "Country",
-    "formCountryPlaceholder": "e.g., Switzerland, United States, etc.",
+    "formCountryLabel": "Country of Residence",
+    "formCountryPlaceholder": "e.g., Switzerland, United States",
     "formInterestLabel": "Area of Interest",
-    "formInterestPlaceholder": "Select an option",
+    "formInterestPlaceholder": "Select an area of interest",
     "formMessageLabel": "Message",
-    "formMessagePlaceholder": "Tell us about your investment goals or questions...",
-    "formButtonText": "Send Message",
-    "formButtonSubmittingText": "Sending...",
+    "formMessagePlaceholder": "Briefly describe your situation, objectives, or question.",
+    "formButtonText": "Submit Request",
+    "formButtonSubmittingText": "Submitting...",
     "areaOfInterestOptions": [
         {
-            "_key": "memberships",
-            "value": "memberships",
+            "value": "discord",
             "label": "Discord Memberships"
         },
         {
-            "_key": "consulting",
             "value": "consulting",
-            "label": "Consulting Services"
+            "label": "Consulting & Portfolio Review"
         },
         {
-            "_key": "realestate",
-            "value": "realestate",
-            "label": "Real Estate Investments"
+            "value": "strategy",
+            "label": "Strategy Design"
         },
         {
-            "_key": "general",
-            "value": "general",
-            "label": "General Inquiry"
+            "value": "options",
+            "label": "Options & Derivatives"
+        },
+        {
+            "value": "structured_products",
+            "label": "Structured Products"
+        },
+        {
+            "value": "real_estate",
+            "label": "Real Estate & Other Assets"
+        },
+        {
+            "value": "crypto",
+            "label": "Crypto"
+        },
+        {
+            "value": "other",
+            "label": "Partnerships / Other"
         }
     ],
     "expectationsHeading": "What to Expect After Contacting Us",
     "expectationItems": [
         {
-            "_key": "1",
+            "icon": "UserCheck",
+            "text": "Every request is reviewed personally"
+        },
+        {
             "icon": "Clock",
-            "title": "Quick Response",
-            "description": "We respond to all inquiries within 24 business hours"
+            "text": "We typically respond within 1–2 business days"
         },
         {
-            "_key": "2",
-            "icon": "Phone",
-            "title": "Personal Attention",
-            "description": "A member of our team will personally review your request"
+            "icon": "MessageSquare",
+            "text": "Not all requests may receive a response"
         },
         {
-            "_key": "3",
-            "icon": "Shield",
-            "title": "Confidential",
-            "description": "Your information is kept strictly confidential"
+            "icon": "ShieldCheck",
+            "text": "Consulting engagements are subject to availability and fit"
         }
     ],
-    "disclaimer": "Gamma Capital does not provide personalized investment advice through this form. Any consultation is for informational purposes only."
+    "disclaimer": "Gamma Capital does not provide brokerage services, does not execute trades on behalf of clients, and does not offer legal or tax advice. All information and consulting services are provided for educational and strategic purposes only."
 }
