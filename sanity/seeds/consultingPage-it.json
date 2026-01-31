@@ -1,0 +1,157 @@
+{
+    "_id": "consultingPage-it",
+    "_type": "consultingPage",
+    "language": "it",
+    "seoTitle": "Servizi di Consulenza - Gamma Capital",
+    "seoDescription": "Consulenza esperta sugli investimenti e servizi di advisory. Guida personalizzata per i tuoi obiettivi finanziari.",
+    "heroBadge": "Advisory Esperto",
+    "heroTitle": "Consulenza di Investimento Personalizzata",
+    "heroSubtitle": "Consulenza di Investimento",
+    "heroDescription": "Lavora direttamente con il nostro team di esperti per sviluppare strategie su misura per i tuoi obiettivi finanziari unici.",
+    "heroStats": [
+        {
+            "_key": "1",
+            "label": "Anni di Esperienza",
+            "value": "15+"
+        },
+        {
+            "_key": "2",
+            "label": "Clienti Serviti",
+            "value": "500+"
+        },
+        {
+            "_key": "3",
+            "label": "AUM Consigliato",
+            "value": "€50M+"
+        }
+    ],
+    "serviceNavTitle": "I Nostri Servizi di Advisory",
+    "serviceNavSubtitle": "Clicca per esplorare ogni servizio in dettaglio",
+    "serviceNavItems": [
+        {
+            "_key": "portfolio",
+            "id": "portfolio",
+            "title": "Revisione Portafoglio",
+            "icon": "BarChart3"
+        },
+        {
+            "_key": "strategy",
+            "id": "strategy",
+            "title": "Sviluppo Strategia",
+            "icon": "Target"
+        },
+        {
+            "_key": "wealth",
+            "id": "wealth",
+            "title": "Gestione Patrimoniale",
+            "icon": "Briefcase"
+        }
+    ],
+    "serviceSections": [
+        {
+            "_key": "portfolio",
+            "id": "portfolio",
+            "icon": "BarChart3",
+            "title": "Revisione Portafoglio",
+            "description": [
+                "Ottieni un'analisi completa del tuo portafoglio di investimenti attuale.",
+                "I nostri esperti identificheranno opportunità di ottimizzazione e riduzione del rischio."
+            ],
+            "highlight": "Report di analisi dettagliato incluso",
+            "iconGradient": "from-[#2563EB] to-[#1E3A8A]",
+            "shadowColor": "[#2563EB]/20",
+            "features": [
+                {
+                    "_key": "1",
+                    "icon": "Search",
+                    "title": "Analisi Approfondita",
+                    "desc": "Scomposizione completa del portafoglio"
+                },
+                {
+                    "_key": "2",
+                    "icon": "Target",
+                    "title": "Ottimizzazione",
+                    "desc": "Identifica aree di miglioramento"
+                },
+                {
+                    "_key": "3",
+                    "icon": "Shield",
+                    "title": "Valutazione Rischio",
+                    "desc": "Valuta i livelli di esposizione"
+                }
+            ]
+        },
+        {
+            "_key": "strategy",
+            "id": "strategy",
+            "icon": "Target",
+            "title": "Sviluppo Strategia",
+            "description": [
+                "Lavora con il nostro team per creare una strategia di investimento personalizzata.",
+                "Allinea il tuo portafoglio ai tuoi obiettivi finanziari e tolleranza al rischio."
+            ],
+            "highlight": "Documento strategico personalizzato fornito",
+            "iconGradient": "from-[#7C3AED] to-[#5B21B6]",
+            "shadowColor": "[#7C3AED]/20",
+            "features": [
+                {
+                    "_key": "1",
+                    "icon": "Compass",
+                    "title": "Definizione Obiettivi",
+                    "desc": "Definisci i tuoi obiettivi"
+                },
+                {
+                    "_key": "2",
+                    "icon": "Map",
+                    "title": "Roadmap",
+                    "desc": "Piano d'azione chiaro"
+                },
+                {
+                    "_key": "3",
+                    "icon": "Gauge",
+                    "title": "Benchmark",
+                    "desc": "Monitora i tuoi progressi"
+                }
+            ]
+        },
+        {
+            "_key": "wealth",
+            "id": "wealth",
+            "icon": "Briefcase",
+            "title": "Gestione Patrimoniale",
+            "description": [
+                "Gestione patrimoniale completa per individui ad alto patrimonio netto.",
+                "Preserva e fai crescere il tuo patrimonio attraverso le generazioni."
+            ],
+            "highlight": "Consulente patrimoniale dedicato",
+            "iconGradient": "from-[#059669] to-[#047857]",
+            "shadowColor": "[#059669]/20",
+            "features": [
+                {
+                    "_key": "1",
+                    "icon": "Building2",
+                    "title": "Pianificazione Successoria",
+                    "desc": "Trasferimento patrimoniale generazionale"
+                },
+                {
+                    "_key": "2",
+                    "icon": "Scale",
+                    "title": "Ottimizzazione Fiscale",
+                    "desc": "Minimizza il carico fiscale"
+                },
+                {
+                    "_key": "3",
+                    "icon": "Lock",
+                    "title": "Protezione Patrimonio",
+                    "desc": "Proteggi la tua ricchezza"
+                }
+            ]
+        }
+    ],
+    "ctaTitle": "Pronto a Iniziare?",
+    "ctaDescription": "Prenota una consulenza gratuita per discutere le tue esigenze e come possiamo aiutarti.",
+    "ctaPrimaryText": "Prenota Consulenza",
+    "ctaPrimaryLink": "/contact",
+    "ctaSecondaryText": "Vedi Abbonamenti",
+    "ctaSecondaryLink": "/memberships"
+}

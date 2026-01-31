@@ -1,0 +1,125 @@
+{
+    "_id": "siteSettings-en",
+    "_type": "siteSettings",
+    "language": "en",
+    "siteName": [
+        {
+            "_key": "en",
+            "value": "Gamma Capital"
+        }
+    ],
+    "logoText": [
+        {
+            "_key": "en",
+            "value": "Gamma Capital"
+        }
+    ],
+    "navItems": [
+        {
+            "_key": "solutions",
+            "text": "Solutions",
+            "href": "/solutions",
+            "hasDropdown": true,
+            "dropdownItems": [
+                {
+                    "_key": "insights",
+                    "text": "Strategy Insights",
+                    "description": "Market intelligence and analysis",
+                    "href": "/solutions/strategy-insights"
+                },
+                {
+                    "_key": "network",
+                    "text": "Network",
+                    "description": "Professional connections",
+                    "href": "/solutions/network"
+                },
+                {
+                    "_key": "realestate",
+                    "text": "Real Estate",
+                    "description": "Property investments",
+                    "href": "/solutions/real-estate"
+                }
+            ]
+        },
+        {
+            "_key": "memberships",
+            "text": "Memberships",
+            "href": "/memberships",
+            "hasDropdown": false
+        },
+        {
+            "_key": "consulting",
+            "text": "Consulting",
+            "href": "/consulting",
+            "hasDropdown": false
+        },
+        {
+            "_key": "contact",
+            "text": "Contact",
+            "href": "/contact",
+            "hasDropdown": false
+        }
+    ],
+    "navCTA": {
+        "text": "Get Started",
+        "href": "/memberships",
+        "variant": "primary",
+        "showArrow": true
+    },
+    "mobileFooterText": "Join thousands of investors making smarter decisions.",
+    "footerDescription": "Gamma Capital provides premium investment insights and advisory services to help you navigate today's complex markets.",
+    "footerColumns": [
+        {
+            "_key": "solutions",
+            "title": "Solutions",
+            "links": [
+                {
+                    "_key": "insights",
+                    "text": "Strategy Insights",
+                    "href": "/solutions/strategy-insights",
+                    "isExternal": false
+                },
+                {
+                    "_key": "network",
+                    "text": "Network",
+                    "href": "/solutions/network",
+                    "isExternal": false
+                },
+                {
+                    "_key": "realestate",
+                    "text": "Real Estate",
+                    "href": "/solutions/real-estate",
+                    "isExternal": false
+                }
+            ]
+        },
+        {
+            "_key": "company",
+            "title": "Company",
+            "links": [
+                {
+                    "_key": "memberships",
+                    "text": "Memberships",
+                    "href": "/memberships",
+                    "isExternal": false
+                },
+                {
+                    "_key": "consulting",
+                    "text": "Consulting",
+                    "href": "/consulting",
+                    "isExternal": false
+                },
+                {
+                    "_key": "contact",
+                    "text": "Contact",
+                    "href": "/contact",
+                    "isExternal": false
+                }
+            ]
+        }
+    ],
+    "copyrightText": "© 2024 Gamma Capital. All rights reserved.",
+    "disclaimer": "Investment involves risk. Past performance is not indicative of future results.",
+    "seoTitle": "Gamma Capital - Premium Investment Insights",
+    "seoDescription": "Gamma Capital provides premium investment insights and advisory services to help you navigate today's complex markets."
+}

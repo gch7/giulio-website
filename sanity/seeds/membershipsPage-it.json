@@ -1,0 +1,122 @@
+{
+    "_id": "membershipsPage-it",
+    "_type": "membershipsPage",
+    "language": "it",
+    "seoTitle": "Abbonamenti - Gamma Capital",
+    "seoDescription": "Unisciti alla comunità Discord premium di Gamma Capital. Accedi a insight di mercato esclusivi, segnali di trading e analisi esperte.",
+    "heroBadge": "Accesso Discord Premium",
+    "heroTitle": "Unisciti alla Nostra Comunità Esclusiva",
+    "heroSubtitle": "Comunità di Investimento",
+    "heroDescription": "Ottieni accesso a insight premium di mercato, segnali di trading in tempo reale e una comunità di investitori affini.",
+    "heroPrimaryCtaText": "Scegli il Tuo Piano",
+    "heroPrimaryCtaLink": "#pricing",
+    "heroSecondaryCtaText": "Scopri di Più",
+    "heroSecondaryCtaLink": "#features",
+    "insideSectionTitle": "Cosa Trovi nel Nostro Discord",
+    "insideSectionDescription": "Esplora i canali e le funzionalità disponibili per tutti i membri.",
+    "insideFeatures": [
+        {
+            "_key": "signals",
+            "icon": "TrendingUp",
+            "text": "Segnali di Trading in Tempo Reale"
+        },
+        {
+            "_key": "analysis",
+            "icon": "BarChart3",
+            "text": "Analisi di Mercato Giornaliera"
+        },
+        {
+            "_key": "community",
+            "icon": "Users",
+            "text": "Chat Privata della Comunità"
+        },
+        {
+            "_key": "qa",
+            "icon": "MessageCircle",
+            "text": "Sessioni Q&A con Esperti"
+        }
+    ],
+    "benefitsSectionTitle": "Vantaggi Chiave dell'Iscrizione",
+    "keyBenefits": [
+        {
+            "_key": "1",
+            "title": "Analisi Esperta",
+            "description": "Ottieni insight da trader e analisti esperti"
+        },
+        {
+            "_key": "2",
+            "title": "Avvisi in Tempo Reale",
+            "description": "Non perdere mai un'opportunità di trading con notifiche istantanee"
+        },
+        {
+            "_key": "3",
+            "title": "Supporto della Comunità",
+            "description": "Impara e cresci con altri investitori"
+        }
+    ],
+    "includedSectionTitle": "Cosa Include l'Abbonamento",
+    "includedTagline": "Tutto ciò di cui hai bisogno per prendere decisioni di investimento più intelligenti",
+    "includedItems": [
+        "Accesso a tutti i canali Discord",
+        "Post di analisi di mercato giornalieri",
+        "Segnali di trading in tempo reale",
+        "Sessioni Q&A live settimanali",
+        "Report di ricerca esclusivi",
+        "Supporto prioritario"
+    ],
+    "pricingSectionTitle": "Livelli di Abbonamento",
+    "pricingSectionDescription": "Scegli il piano adatto al tuo percorso di investimento.",
+    "plans": [
+        {
+            "_key": "monthly",
+            "name": "Mensile",
+            "price": "€19,99",
+            "interval": "mese",
+            "trialDays": 3,
+            "isPopular": false
+        },
+        {
+            "_key": "quarterly",
+            "name": "Trimestrale",
+            "price": "€54,99",
+            "interval": "3 mesi",
+            "trialDays": 7,
+            "isPopular": true
+        },
+        {
+            "_key": "annual",
+            "name": "Annuale",
+            "price": "€219,99",
+            "interval": "anno",
+            "trialDays": 30,
+            "isPopular": false
+        }
+    ],
+    "popularBadgeText": "Più Popolare",
+    "accessSectionTitle": "Come Funziona l'Accesso",
+    "accessSteps": [
+        {
+            "_key": "1",
+            "step": "1",
+            "title": "Scegli il Tuo Piano",
+            "description": "Seleziona il livello di abbonamento adatto a te"
+        },
+        {
+            "_key": "2",
+            "step": "2",
+            "title": "Completa il Pagamento",
+            "description": "Checkout sicuro via Stripe"
+        },
+        {
+            "_key": "3",
+            "step": "3",
+            "title": "Ottieni Accesso Discord",
+            "description": "Ricevi il tuo link di invito esclusivo"
+        }
+    ],
+    "accessTagline": "Inizia il tuo percorso in pochi minuti",
+    "comingSoonTitle": "Prossimamente",
+    "comingSoonDescription": "Aggiungiamo costantemente nuove funzionalità e contenuti per i nostri membri.",
+    "finalCtaTitle": "Pronto a Unirti?",
+    "finalCtaButtonText": "Scegli il Tuo Piano di Abbonamento"
+}

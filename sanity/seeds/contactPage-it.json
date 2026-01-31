@@ -1,0 +1,75 @@
+{
+    "_id": "contactPage-it",
+    "_type": "contactPage",
+    "language": "it",
+    "seoTitle": "Contattaci - Gamma Capital",
+    "seoDescription": "Mettiti in contatto con Gamma Capital. Siamo qui per aiutarti con le tue domande sugli investimenti e le esigenze di consulenza.",
+    "heroTitle": "Mettiti in Contatto",
+    "heroSubtitle": "Contattaci",
+    "heroDescription": "Hai domande sui nostri servizi o sei pronto a iniziare? Ci piacerebbe sentirti.",
+    "introTitle": "Iniziamo una Conversazione",
+    "introDescription": "Che tu stia cercando consulenza sugli investimenti, sia interessato ai nostri abbonamenti o abbia domande generali, il nostro team è qui per aiutarti.",
+    "introEmailLabel": "Per comunicazioni generali:",
+    "introEmail": "info@gammacap.ch",
+    "formTitle": "Richiesta di Contatto",
+    "formDescription": "Compila il modulo qui sotto e ti risponderemo entro 24 ore.",
+    "formSuccessTitle": "Messaggio Inviato!",
+    "formSuccessMessage": "Grazie per averci contattato. Il nostro team esaminerà il tuo messaggio e risponderà a breve.",
+    "formErrorMessage": "Qualcosa è andato storto. Riprova o scrivici direttamente via email.",
+    "formNameLabel": "Nome Completo",
+    "formNamePlaceholder": "Inserisci il tuo nome completo",
+    "formEmailLabel": "Indirizzo Email",
+    "formEmailPlaceholder": "tua@email.com",
+    "formCountryLabel": "Paese",
+    "formCountryPlaceholder": "es. Svizzera, Italia, ecc.",
+    "formInterestLabel": "Area di Interesse",
+    "formInterestPlaceholder": "Seleziona un'opzione",
+    "formMessageLabel": "Messaggio",
+    "formMessagePlaceholder": "Raccontaci dei tuoi obiettivi di investimento o delle tue domande...",
+    "formButtonText": "Invia Messaggio",
+    "formButtonSubmittingText": "Invio in corso...",
+    "areaOfInterestOptions": [
+        {
+            "_key": "memberships",
+            "value": "memberships",
+            "label": "Abbonamenti Discord"
+        },
+        {
+            "_key": "consulting",
+            "value": "consulting",
+            "label": "Servizi di Consulenza"
+        },
+        {
+            "_key": "realestate",
+            "value": "realestate",
+            "label": "Investimenti Immobiliari"
+        },
+        {
+            "_key": "general",
+            "value": "general",
+            "label": "Richiesta Generale"
+        }
+    ],
+    "expectationsHeading": "Cosa Aspettarsi Dopo il Contatto",
+    "expectationItems": [
+        {
+            "_key": "1",
+            "icon": "Clock",
+            "title": "Risposta Rapida",
+            "description": "Rispondiamo a tutte le richieste entro 24 ore lavorative"
+        },
+        {
+            "_key": "2",
+            "icon": "Phone",
+            "title": "Attenzione Personale",
+            "description": "Un membro del nostro team esaminerà personalmente la tua richiesta"
+        },
+        {
+            "_key": "3",
+            "icon": "Shield",
+            "title": "Confidenziale",
+            "description": "Le tue informazioni sono mantenute strettamente riservate"
+        }
+    ],
+    "disclaimer": "Gamma Capital non fornisce consulenza personalizzata sugli investimenti attraverso questo modulo. Qualsiasi consulenza è solo a scopo informativo."
+}

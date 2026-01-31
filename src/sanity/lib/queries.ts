@@ -5,12 +5,14 @@ import { defineQuery } from 'next-sanity'
 // ============================================
 
 // Helper to get localized value from internationalizedArray
+// The plugin uses _key as the language identifier
 const LOCALIZED_VALUE = `
   "value": select(
-    defined(.[language == $locale][0].value) => .[language == $locale][0].value,
-    .[language == "en"][0].value
+    defined(.[_key == $locale][0].value) => .[_key == $locale][0].value,
+    .[_key == "en"][0].value
   )
 `
+
 
 // Sections projection used in page queries
 const SECTIONS_PROJECTION = `

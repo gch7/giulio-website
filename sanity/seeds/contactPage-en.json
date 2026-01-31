@@ -1,0 +1,75 @@
+{
+    "_id": "contactPage-en",
+    "_type": "contactPage",
+    "language": "en",
+    "seoTitle": "Contact Us - Gamma Capital",
+    "seoDescription": "Get in touch with Gamma Capital. We're here to help with your investment questions and consulting needs.",
+    "heroTitle": "Get in Touch",
+    "heroSubtitle": "Contact Us",
+    "heroDescription": "Have questions about our services or ready to get started? We'd love to hear from you.",
+    "introTitle": "Let's Start a Conversation",
+    "introDescription": "Whether you're looking for investment advice, interested in our memberships, or have general questions, our team is here to help.",
+    "introEmailLabel": "For general communication:",
+    "introEmail": "info@gammacap.ch",
+    "formTitle": "Contact Request",
+    "formDescription": "Fill out the form below and we'll get back to you within 24 hours.",
+    "formSuccessTitle": "Message Sent!",
+    "formSuccessMessage": "Thank you for reaching out. Our team will review your message and respond shortly.",
+    "formErrorMessage": "Something went wrong. Please try again or email us directly.",
+    "formNameLabel": "Full Name",
+    "formNamePlaceholder": "Enter your full name",
+    "formEmailLabel": "Email Address",
+    "formEmailPlaceholder": "your@email.com",
+    "formCountryLabel": "Country",
+    "formCountryPlaceholder": "e.g., Switzerland, United States, etc.",
+    "formInterestLabel": "Area of Interest",
+    "formInterestPlaceholder": "Select an option",
+    "formMessageLabel": "Message",
+    "formMessagePlaceholder": "Tell us about your investment goals or questions...",
+    "formButtonText": "Send Message",
+    "formButtonSubmittingText": "Sending...",
+    "areaOfInterestOptions": [
+        {
+            "_key": "memberships",
+            "value": "memberships",
+            "label": "Discord Memberships"
+        },
+        {
+            "_key": "consulting",
+            "value": "consulting",
+            "label": "Consulting Services"
+        },
+        {
+            "_key": "realestate",
+            "value": "realestate",
+            "label": "Real Estate Investments"
+        },
+        {
+            "_key": "general",
+            "value": "general",
+            "label": "General Inquiry"
+        }
+    ],
+    "expectationsHeading": "What to Expect After Contacting Us",
+    "expectationItems": [
+        {
+            "_key": "1",
+            "icon": "Clock",
+            "title": "Quick Response",
+            "description": "We respond to all inquiries within 24 business hours"
+        },
+        {
+            "_key": "2",
+            "icon": "Phone",
+            "title": "Personal Attention",
+            "description": "A member of our team will personally review your request"
+        },
+        {
+            "_key": "3",
+            "icon": "Shield",
+            "title": "Confidential",
+            "description": "Your information is kept strictly confidential"
+        }
+    ],
+    "disclaimer": "Gamma Capital does not provide personalized investment advice through this form. Any consultation is for informational purposes only."
+}

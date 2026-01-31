@@ -1,0 +1,277 @@
+{
+    "_id": "uiStrings",
+    "_type": "uiStrings",
+    "notFoundBadge": [
+        {
+            "_key": "en",
+            "value": "404 Error"
+        },
+        {
+            "_key": "it",
+            "value": "Errore 404"
+        }
+    ],
+    "notFoundTitle": [
+        {
+            "_key": "en",
+            "value": "Page {highlight}Not Found{/highlight}"
+        },
+        {
+            "_key": "it",
+            "value": "Pagina {highlight}Non Trovata{/highlight}"
+        }
+    ],
+    "notFoundDescription": [
+        {
+            "_key": "en",
+            "value": "The page you're looking for doesn't exist or has been moved."
+        },
+        {
+            "_key": "it",
+            "value": "La pagina che stai cercando non esiste o è stata spostata."
+        }
+    ],
+    "notFoundHomeButtonText": [
+        {
+            "_key": "en",
+            "value": "Go Home"
+        },
+        {
+            "_key": "it",
+            "value": "Torna alla Home"
+        }
+    ],
+    "notFoundContactButtonText": [
+        {
+            "_key": "en",
+            "value": "Contact Us"
+        },
+        {
+            "_key": "it",
+            "value": "Contattaci"
+        }
+    ],
+    "notFoundQuickLinksTitle": [
+        {
+            "_key": "en",
+            "value": "Quick Links"
+        },
+        {
+            "_key": "it",
+            "value": "Link Rapidi"
+        }
+    ],
+    "mobileMenuOpenLabel": [
+        {
+            "_key": "en",
+            "value": "Open menu"
+        },
+        {
+            "_key": "it",
+            "value": "Apri menu"
+        }
+    ],
+    "mobileMenuCloseLabel": [
+        {
+            "_key": "en",
+            "value": "Close menu"
+        },
+        {
+            "_key": "it",
+            "value": "Chiudi menu"
+        }
+    ],
+    "logoAriaLabel": [
+        {
+            "_key": "en",
+            "value": "Go to homepage"
+        },
+        {
+            "_key": "it",
+            "value": "Vai alla homepage"
+        }
+    ],
+    "exploreServicesLabel": [
+        {
+            "_key": "en",
+            "value": "Explore Services"
+        },
+        {
+            "_key": "it",
+            "value": "Esplora i Servizi"
+        }
+    ],
+    "navigationBackLabel": [
+        {
+            "_key": "en",
+            "value": "Back"
+        },
+        {
+            "_key": "it",
+            "value": "Indietro"
+        }
+    ],
+    "formSubmitButton": [
+        {
+            "_key": "en",
+            "value": "Submit"
+        },
+        {
+            "_key": "it",
+            "value": "Invia"
+        }
+    ],
+    "formSubmittingText": [
+        {
+            "_key": "en",
+            "value": "Submitting..."
+        },
+        {
+            "_key": "it",
+            "value": "Invio in corso..."
+        }
+    ],
+    "formRequiredError": [
+        {
+            "_key": "en",
+            "value": "This field is required"
+        },
+        {
+            "_key": "it",
+            "value": "Questo campo è obbligatorio"
+        }
+    ],
+    "formEmailError": [
+        {
+            "_key": "en",
+            "value": "Please enter a valid email address"
+        },
+        {
+            "_key": "it",
+            "value": "Inserisci un indirizzo email valido"
+        }
+    ],
+    "formSuccessTitle": [
+        {
+            "_key": "en",
+            "value": "Success!"
+        },
+        {
+            "_key": "it",
+            "value": "Successo!"
+        }
+    ],
+    "systemLoading": [
+        {
+            "_key": "en",
+            "value": "Loading..."
+        },
+        {
+            "_key": "it",
+            "value": "Caricamento..."
+        }
+    ],
+    "systemError": [
+        {
+            "_key": "en",
+            "value": "Something went wrong"
+        },
+        {
+            "_key": "it",
+            "value": "Qualcosa è andato storto"
+        }
+    ],
+    "comingSoonTitle": [
+        {
+            "_key": "en",
+            "value": "Coming Soon"
+        },
+        {
+            "_key": "it",
+            "value": "Prossimamente"
+        }
+    ],
+    "membershipSuccessTitle": [
+        {
+            "_key": "en",
+            "value": "Welcome to Gamma Capital!"
+        },
+        {
+            "_key": "it",
+            "value": "Benvenuto in Gamma Capital!"
+        }
+    ],
+    "membershipSuccessMessage": [
+        {
+            "_key": "en",
+            "value": "Your membership has been successfully activated. Check your email for next steps."
+        },
+        {
+            "_key": "it",
+            "value": "La tua iscrizione è stata attivata con successo. Controlla la tua email per i prossimi passi."
+        }
+    ],
+    "membershipProcessingText": [
+        {
+            "_key": "en",
+            "value": "Processing your membership..."
+        },
+        {
+            "_key": "it",
+            "value": "Elaborazione della tua iscrizione..."
+        }
+    ],
+    "skipToContentLabel": [
+        {
+            "_key": "en",
+            "value": "Skip to content"
+        },
+        {
+            "_key": "it",
+            "value": "Vai al contenuto"
+        }
+    ],
+    "paginationPrev": [
+        {
+            "_key": "en",
+            "value": "Previous"
+        },
+        {
+            "_key": "it",
+            "value": "Precedente"
+        }
+    ],
+    "paginationNext": [
+        {
+            "_key": "en",
+            "value": "Next"
+        },
+        {
+            "_key": "it",
+            "value": "Successivo"
+        }
+    ],
+    "exploreLabel": [
+        {
+            "_key": "en",
+            "value": "Explore"
+        },
+        {
+            "_key": "it",
+            "value": "Esplora"
+        }
+    ],
+    "readyToStartBadge": [
+        {
+            "_key": "en",
+            "value": "Ready to Start?"
+        },
+        {
+            "_key": "it",
+            "value": "Pronto a Iniziare?"
+        }
+    ],
+    "contactRoute": "/contact",
+    "solutionsRoute": "/solutions",
+    "membershipsRoute": "/memberships"
+}

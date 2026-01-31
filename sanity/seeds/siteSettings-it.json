@@ -1,0 +1,125 @@
+{
+    "_id": "siteSettings-it",
+    "_type": "siteSettings",
+    "language": "it",
+    "siteName": [
+        {
+            "_key": "it",
+            "value": "Gamma Capital"
+        }
+    ],
+    "logoText": [
+        {
+            "_key": "it",
+            "value": "Gamma Capital"
+        }
+    ],
+    "navItems": [
+        {
+            "_key": "solutions",
+            "text": "Soluzioni",
+            "href": "/solutions",
+            "hasDropdown": true,
+            "dropdownItems": [
+                {
+                    "_key": "insights",
+                    "text": "Strategy Insights",
+                    "description": "Intelligenza di mercato e analisi",
+                    "href": "/solutions/strategy-insights"
+                },
+                {
+                    "_key": "network",
+                    "text": "Network",
+                    "description": "Connessioni professionali",
+                    "href": "/solutions/network"
+                },
+                {
+                    "_key": "realestate",
+                    "text": "Immobiliare",
+                    "description": "Investimenti immobiliari",
+                    "href": "/solutions/real-estate"
+                }
+            ]
+        },
+        {
+            "_key": "memberships",
+            "text": "Abbonamenti",
+            "href": "/memberships",
+            "hasDropdown": false
+        },
+        {
+            "_key": "consulting",
+            "text": "Consulenza",
+            "href": "/consulting",
+            "hasDropdown": false
+        },
+        {
+            "_key": "contact",
+            "text": "Contatti",
+            "href": "/contact",
+            "hasDropdown": false
+        }
+    ],
+    "navCTA": {
+        "text": "Inizia Ora",
+        "href": "/memberships",
+        "variant": "primary",
+        "showArrow": true
+    },
+    "mobileFooterText": "Unisciti a migliaia di investitori che prendono decisioni più intelligenti.",
+    "footerDescription": "Gamma Capital fornisce approfondimenti premium sugli investimenti e servizi di consulenza per aiutarti a navigare nei mercati complessi di oggi.",
+    "footerColumns": [
+        {
+            "_key": "solutions",
+            "title": "Soluzioni",
+            "links": [
+                {
+                    "_key": "insights",
+                    "text": "Strategy Insights",
+                    "href": "/solutions/strategy-insights",
+                    "isExternal": false
+                },
+                {
+                    "_key": "network",
+                    "text": "Network",
+                    "href": "/solutions/network",
+                    "isExternal": false
+                },
+                {
+                    "_key": "realestate",
+                    "text": "Immobiliare",
+                    "href": "/solutions/real-estate",
+                    "isExternal": false
+                }
+            ]
+        },
+        {
+            "_key": "company",
+            "title": "Azienda",
+            "links": [
+                {
+                    "_key": "memberships",
+                    "text": "Abbonamenti",
+                    "href": "/memberships",
+                    "isExternal": false
+                },
+                {
+                    "_key": "consulting",
+                    "text": "Consulenza",
+                    "href": "/consulting",
+                    "isExternal": false
+                },
+                {
+                    "_key": "contact",
+                    "text": "Contatti",
+                    "href": "/contact",
+                    "isExternal": false
+                }
+            ]
+        }
+    ],
+    "copyrightText": "© 2024 Gamma Capital. Tutti i diritti riservati.",
+    "disclaimer": "L'investimento comporta rischi. Le performance passate non sono indicative dei risultati futuri.",
+    "seoTitle": "Gamma Capital - Approfondimenti Premium sugli Investimenti",
+    "seoDescription": "Gamma Capital fornisce approfondimenti premium sugli investimenti e servizi di consulenza per aiutarti a navigare nei mercati complessi di oggi."
+}

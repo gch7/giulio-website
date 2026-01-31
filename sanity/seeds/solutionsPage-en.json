@@ -1,0 +1,61 @@
+{
+    "_id": "solutionsPage-en",
+    "_type": "solutionsPage",
+    "language": "en",
+    "seoTitle": "Our Solutions - Gamma Capital",
+    "seoDescription": "Discover comprehensive investment solutions from Gamma Capital. From market intelligence to personalized consulting.",
+    "heroBadge": "Our Solutions",
+    "heroTitle": "Comprehensive Investment Solutions",
+    "heroSubtitle": "Investment Solutions",
+    "heroDescription": "From market intelligence to personalized consulting, we provide the tools and insights you need to succeed in today's markets.",
+    "solutions": [
+        {
+            "_key": "insights",
+            "title": "Strategy Insights",
+            "description": "Access premium market analysis, trading signals, and investment research from our team of experts.",
+            "icon": "BarChart3",
+            "color": "#2563EB",
+            "href": "/solutions/strategy-insights",
+            "features": [
+                "Daily market analysis",
+                "Trading signals",
+                "Research reports",
+                "Portfolio recommendations"
+            ]
+        },
+        {
+            "_key": "network",
+            "title": "Professional Network",
+            "description": "Connect with fellow investors, industry experts, and potential partners in our exclusive community.",
+            "icon": "Users",
+            "color": "#7C3AED",
+            "href": "/solutions/network",
+            "features": [
+                "Exclusive events",
+                "Networking opportunities",
+                "Expert introductions",
+                "Community forums"
+            ]
+        },
+        {
+            "_key": "realestate",
+            "title": "Real Estate",
+            "description": "Explore carefully vetted real estate investment opportunities with strong return potential.",
+            "icon": "Building2",
+            "color": "#059669",
+            "href": "/solutions/real-estate",
+            "features": [
+                "Property analysis",
+                "Investment opportunities",
+                "Due diligence",
+                "Portfolio diversification"
+            ]
+        }
+    ],
+    "ctaTitle": "Not Sure Where to Start?",
+    "ctaDescription": "Book a free consultation call to discuss your goals and find the right solution for your investment needs.",
+    "primaryCtaText": "Schedule a Call",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "View Memberships",
+    "secondaryCtaLink": "/memberships"
+}

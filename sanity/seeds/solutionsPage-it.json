@@ -1,0 +1,61 @@
+{
+    "_id": "solutionsPage-it",
+    "_type": "solutionsPage",
+    "language": "it",
+    "seoTitle": "Le Nostre Soluzioni - Gamma Capital",
+    "seoDescription": "Scopri soluzioni di investimento complete da Gamma Capital. Dall'intelligenza di mercato alla consulenza personalizzata.",
+    "heroBadge": "Le Nostre Soluzioni",
+    "heroTitle": "Soluzioni di Investimento Complete",
+    "heroSubtitle": "Soluzioni di Investimento",
+    "heroDescription": "Dall'intelligenza di mercato alla consulenza personalizzata, forniamo gli strumenti e gli approfondimenti necessari per avere successo nei mercati di oggi.",
+    "solutions": [
+        {
+            "_key": "insights",
+            "title": "Strategy Insights",
+            "description": "Accedi ad analisi di mercato premium, segnali di trading e ricerche sugli investimenti dal nostro team di esperti.",
+            "icon": "BarChart3",
+            "color": "#2563EB",
+            "href": "/solutions/strategy-insights",
+            "features": [
+                "Analisi di mercato giornaliera",
+                "Segnali di trading",
+                "Report di ricerca",
+                "Raccomandazioni di portafoglio"
+            ]
+        },
+        {
+            "_key": "network",
+            "title": "Network Professionale",
+            "description": "Connettiti con altri investitori, esperti del settore e potenziali partner nella nostra comunità esclusiva.",
+            "icon": "Users",
+            "color": "#7C3AED",
+            "href": "/solutions/network",
+            "features": [
+                "Eventi esclusivi",
+                "Opportunità di networking",
+                "Presentazioni di esperti",
+                "Forum della comunità"
+            ]
+        },
+        {
+            "_key": "realestate",
+            "title": "Immobiliare",
+            "description": "Esplora opportunità di investimento immobiliare accuratamente selezionate con forte potenziale di rendimento.",
+            "icon": "Building2",
+            "color": "#059669",
+            "href": "/solutions/real-estate",
+            "features": [
+                "Analisi immobiliare",
+                "Opportunità di investimento",
+                "Due diligence",
+                "Diversificazione del portafoglio"
+            ]
+        }
+    ],
+    "ctaTitle": "Non Sai Da Dove Iniziare?",
+    "ctaDescription": "Prenota una chiamata di consulenza gratuita per discutere i tuoi obiettivi e trovare la soluzione giusta per le tue esigenze di investimento.",
+    "primaryCtaText": "Prenota una Chiamata",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "Vedi Abbonamenti",
+    "secondaryCtaLink": "/memberships"
+}
