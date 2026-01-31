@@ -23,11 +23,11 @@ const i18nSchemaTypes = [
   'uiStrings'
 ]
 
-// Custom structure for singleton-like documents (types that should have limited instances)
-const singletonTypes = ['serviceLandingPage']
+// Custom structure for singleton documents (excluding i18n types that need multiple docs per language)
+const singletonTypes = ['networkPage', 'realEstatePage', 'strategyPage']
 
 // Types that should show as lists in the structure (for i18n management)
-const i18nListTypes = ['siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage', 'uiStrings', 'serviceLandingPage']
+const i18nListTypes = ['siteSettings', 'contactPage', 'membershipsPage', 'consultingPage', 'solutionsPage', 'uiStrings']
 
 const structure = (S: any) =>
   S.list()
@@ -50,7 +50,7 @@ const structure = (S: any) =>
             .title('Solutions Page (All Languages)')
         ),
       S.divider(),
-      // Service Pages (Converted to Lists for i18n support)
+      // Service Pages (Singletons - using serviceLandingPage type)
       S.listItem()
         .title('Service Pages')
         .id('servicePages')
@@ -124,11 +124,10 @@ export const createSanityConfig = (options?: {
     ],
     schema: {
       types: schemaTypes,
-      // Filter out manage-only types from the global "New document" menu
-      // New documents should be created from the translated lists or specialized menus
+      // Filter out singleton types and i18n management types from the global "New document" menu
       templates: (templates) =>
         templates.filter(({ schemaType }) =>
-          !i18nListTypes.includes(schemaType)
+          !singletonTypes.includes(schemaType) && !i18nListTypes.includes(schemaType)
         ),
     },
     document: {
