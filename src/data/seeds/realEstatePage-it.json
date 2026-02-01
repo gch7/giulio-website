@@ -1,0 +1,54 @@
+{
+    "_id": "realEstatePage-it",
+    "_type": "serviceLandingPage",
+    "language": "it",
+    "seoTitle": "Advisory Immobiliare - Gamma Capital",
+    "seoDescription": "Guida strategica agli investimenti immobiliari inclusa analisi di mercato, due diligence e sviluppo di strategie di investimento per proprietà.",
+    "heroBadge": "Advisory Immobiliare",
+    "heroTitle": "Advisory Immobiliare",
+    "heroSubtitle": "Guida Strategica Immobiliare",
+    "heroDescription": "Guida strategica agli investimenti immobiliari inclusa analisi di mercato, due diligence e sviluppo di strategie di investimento per proprietà.",
+    "heroCtaText": "Contattaci",
+    "heroCtaLink": "/contact",
+    "services": [
+        {
+            "_key": "market_analysis",
+            "title": "Analisi di Mercato",
+            "description": "Analisi approfondita dei mercati immobiliari in Svizzera e Italia, identificando tendenze e opportunità.",
+            "icon": "BarChart3",
+            "features": [
+                "Tendenze di mercato",
+                "Analisi regionale",
+                "Identificazione opportunità"
+            ]
+        },
+        {
+            "_key": "due_diligence",
+            "title": "Due Diligence",
+            "description": "Servizi completi di due diligence per garantire decisioni di investimento informate e mitigazione del rischio.",
+            "icon": "Check",
+            "features": [
+                "Due diligence finanziaria",
+                "Verifica legale e compliance",
+                "Valutazione del rischio"
+            ]
+        },
+        {
+            "_key": "investment_strategy",
+            "title": "Strategia di Investimento",
+            "description": "Strategie di investimento su misura per massimizzare i rendimenti e allinearsi con gli obiettivi più ampi del tuo portafoglio.",
+            "icon": "TrendingUp",
+            "features": [
+                "Ottimizzazione cash flow",
+                "Miglioramento del rendimento",
+                "Strategie di exit"
+            ]
+        }
+    ],
+    "ctaTitle": "Ottimizza il tuo portafoglio immobiliare.",
+    "ctaDescription": "Contattaci per discutere le tue esigenze di investimento immobiliare e come possiamo supportarti.",
+    "primaryCtaText": "Contattaci",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "Vedi Soluzioni",
+    "secondaryCtaLink": "/solutions"
+}

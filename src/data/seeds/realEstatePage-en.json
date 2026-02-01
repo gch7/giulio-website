@@ -1,0 +1,54 @@
+{
+    "_id": "realEstatePage",
+    "_type": "serviceLandingPage",
+    "language": "en",
+    "seoTitle": "Real Estate Advisory - Gamma Capital",
+    "seoDescription": "Strategic real estate investment guidance including market analysis, due diligence, and investment strategy development for property investments.",
+    "heroBadge": "Real Estate Advisory",
+    "heroTitle": "Real Estate Advisory",
+    "heroSubtitle": "Strategic Real Estate Guidance",
+    "heroDescription": "Strategic real estate investment guidance including market analysis, due diligence, and investment strategy development for property investments.",
+    "heroCtaText": "Contact Us",
+    "heroCtaLink": "/contact",
+    "services": [
+        {
+            "_key": "market_analysis",
+            "title": "Market Analysis",
+            "description": "In-depth analysis of real estate markets in Switzerland and Italy, identifying trends and opportunities.",
+            "icon": "BarChart3",
+            "features": [
+                "Market trends",
+                "Regional analysis",
+                "Opportunity identification"
+            ]
+        },
+        {
+            "_key": "due_diligence",
+            "title": "Due Diligence",
+            "description": "Comprehensive due diligence services to ensure informed investment decisions and risk mitigation.",
+            "icon": "Check",
+            "features": [
+                "Financial due diligence",
+                "Legal & compliance check",
+                "Risk assessment"
+            ]
+        },
+        {
+            "_key": "investment_strategy",
+            "title": "Investment Strategy",
+            "description": "Tailored investment strategies to maximize returns and align with your broader portfolio goals.",
+            "icon": "TrendingUp",
+            "features": [
+                "Cash flow optimization",
+                "Yield enhancement",
+                "Exit strategies"
+            ]
+        }
+    ],
+    "ctaTitle": "Optimize your real estate portfolio.",
+    "ctaDescription": "Contact us to discuss your real estate investment needs and how we can support you.",
+    "primaryCtaText": "Contact Us",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "View Solutions",
+    "secondaryCtaLink": "/solutions"
+}

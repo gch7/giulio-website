@@ -1,0 +1,54 @@
+{
+    "_id": "networkPage-it",
+    "_type": "serviceLandingPage",
+    "language": "it",
+    "seoTitle": "Network Strategico - Gamma Capital",
+    "seoDescription": "Accedi a deal flow esclusivi, connessioni istituzionali e opportunità di investimento selezionate attraverso il nostro network strategico.",
+    "heroBadge": "Network Strategico",
+    "heroTitle": "Network Strategico",
+    "heroSubtitle": "Accesso Esclusivo & Connessioni",
+    "heroDescription": "Accedi a deal flow esclusivi, connessioni istituzionali e opportunità di investimento selezionate attraverso il nostro network strategico.",
+    "heroCtaText": "Contattaci",
+    "heroCtaLink": "/contact",
+    "services": [
+        {
+            "_key": "deal_flow",
+            "title": "Deal Flow Esclusivo",
+            "description": "Accesso a opportunità di investimento off-market in varie classi di attività, curate dal nostro team di esperti.",
+            "icon": "Network",
+            "features": [
+                "Immobiliare off-market",
+                "Opportunità di private equity",
+                "Accesso a venture capital"
+            ]
+        },
+        {
+            "_key": "connections",
+            "title": "Connessioni Istituzionali",
+            "description": "Sfrutta la nostra vasta rete di partner istituzionali, tra cui banche, gestori patrimoniali e family office.",
+            "icon": "Users",
+            "features": [
+                "Relazioni bancarie",
+                "Network di gestori patrimoniali",
+                "Connessioni con family office"
+            ]
+        },
+        {
+            "_key": "strategic_partnerships",
+            "title": "Partnership Strategiche",
+            "description": "Facilitiamo partnership strategiche in linea con i tuoi obiettivi di investimento e requisiti operativi.",
+            "icon": "Briefcase",
+            "features": [
+                "Joint venture",
+                "Partner operativi",
+                "Allineamento strategico"
+            ]
+        }
+    ],
+    "ctaTitle": "Unisciti al nostro network.",
+    "ctaDescription": "Contattaci per esplorare come il nostro network strategico può beneficiare il tuo portafoglio di investimenti.",
+    "primaryCtaText": "Contattaci",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "Vedi Strategy Insights",
+    "secondaryCtaLink": "/solutions/strategy-insights"
+}

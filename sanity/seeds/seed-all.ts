@@ -15,6 +15,10 @@ import contactPageEn from './contactPage-en.json'
 import contactPageIt from './contactPage-it.json'
 import strategyPageEn from './strategyPage-en.json'
 import strategyPageIt from './strategyPage-it.json'
+import networkPageEn from './networkPage-en.json'
+import networkPageIt from './networkPage-it.json'
+import realEstatePageEn from './realEstatePage-en.json'
+import realEstatePageIt from './realEstatePage-it.json'
 
 const client = createClient({
     projectId: 'rm9kkope',
@@ -45,6 +49,10 @@ const documents: SeedDocument[] = [
     contactPageIt as SeedDocument,
     strategyPageEn as SeedDocument,
     strategyPageIt as SeedDocument,
+    networkPageEn as SeedDocument,
+    networkPageIt as SeedDocument,
+    realEstatePageEn as SeedDocument,
+    realEstatePageIt as SeedDocument,
 ]
 
 async function seedAll() {

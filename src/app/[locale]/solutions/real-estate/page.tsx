@@ -6,19 +6,33 @@ import { SERVICE_LANDING_PAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/qu
 import type { ServiceLandingPage, SiteSettings } from "@/types/sanity";
 import type { Locale } from '@/i18n/config';
 
+import realEstatePageEn from '@/data/seeds/realEstatePage-en.json';
+import realEstatePageIt from '@/data/seeds/realEstatePage-it.json';
+
+const REAL_ESTATE_PAGE_IDS: Record<string, string> = {
+  en: 'realEstatePage',
+  it: 'realEstatePage-it',
+};
+
 interface PageProps {
   params: Promise<{ locale: Locale }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const pageData = await sanityFetch<ServiceLandingPage | null>({
+  const id = REAL_ESTATE_PAGE_IDS[locale] || 'realEstatePage';
+
+  let pageData = await sanityFetch<ServiceLandingPage | null>({
     query: SERVICE_LANDING_PAGE_QUERY,
-    params: { id: 'realEstatePage', locale },
+    params: { id, locale },
     revalidate: 60,
     tags: ['realEstatePage'],
     skipDraftMode: true,
   });
+
+  if (!pageData) {
+    pageData = (locale === 'it' ? realEstatePageIt : realEstatePageEn) as unknown as ServiceLandingPage;
+  }
 
   return {
     title: pageData?.seoTitle || 'Real Estate Advisory | Gamma Capital',
@@ -29,11 +43,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function RealEstatePage({ params }: PageProps) {
   const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
+  const id = REAL_ESTATE_PAGE_IDS[locale] || 'realEstatePage';
 
-  const [pageData, siteSettings] = await Promise.all([
+  let [pageData, siteSettings] = await Promise.all([
     sanityFetch<ServiceLandingPage | null>({
       query: SERVICE_LANDING_PAGE_QUERY,
-      params: { id: 'realEstatePage', locale },
+      params: { id, locale },
       revalidate: isDraftMode ? 0 : 60,
       tags: ['realEstatePage'],
     }),
@@ -44,6 +59,10 @@ export default async function RealEstatePage({ params }: PageProps) {
       tags: ['siteSettings'],
     }),
   ]);
+
+  if (!pageData) {
+    pageData = (locale === 'it' ? realEstatePageIt : realEstatePageEn) as unknown as ServiceLandingPage;
+  }
 
   return (
     <ServicePageClient

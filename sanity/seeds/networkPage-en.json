@@ -1,0 +1,54 @@
+{
+    "_id": "networkPage",
+    "_type": "serviceLandingPage",
+    "language": "en",
+    "seoTitle": "Strategic Network - Gamma Capital",
+    "seoDescription": "Access exclusive deal flow, institutional connections, and curated investment opportunities through our strategic network.",
+    "heroBadge": "Strategic Network",
+    "heroTitle": "Strategic Network",
+    "heroSubtitle": "Exclusive Access & Connections",
+    "heroDescription": "Access exclusive deal flow, institutional connections, and curated investment opportunities through our strategic network.",
+    "heroCtaText": "Contact Us",
+    "heroCtaLink": "/contact",
+    "services": [
+        {
+            "_key": "deal_flow",
+            "title": "Exclusive Deal Flow",
+            "description": "Access to off-market investment opportunities across various asset classes, curated by our team of experts.",
+            "icon": "Network",
+            "features": [
+                "Off-market real estate",
+                "Private equity opportunities",
+                "Venture capital access"
+            ]
+        },
+        {
+            "_key": "connections",
+            "title": "Institutional Connections",
+            "description": "Leverage our extensive network of institutional partners, including banks, asset managers, and family offices.",
+            "icon": "Users",
+            "features": [
+                "Banking relationships",
+                "Asset manager network",
+                "Family office connections"
+            ]
+        },
+        {
+            "_key": "strategic_partnerships",
+            "title": "Strategic Partnerships",
+            "description": "We facilitate strategic partnerships that align with your investment goals and operational requirements.",
+            "icon": "Briefcase",
+            "features": [
+                "Joint ventures",
+                "Operational partners",
+                "Strategic alignment"
+            ]
+        }
+    ],
+    "ctaTitle": "Join our network.",
+    "ctaDescription": "Contact us to explore how our strategic network can benefit your investment portfolio.",
+    "primaryCtaText": "Contact Us",
+    "primaryCtaLink": "/contact",
+    "secondaryCtaText": "View Strategy Insights",
+    "secondaryCtaLink": "/solutions/strategy-insights"
+}

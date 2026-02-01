@@ -6,19 +6,33 @@ import { SERVICE_LANDING_PAGE_QUERY, SITE_SETTINGS_QUERY } from "@/sanity/lib/qu
 import type { ServiceLandingPage, SiteSettings } from "@/types/sanity";
 import type { Locale } from '@/i18n/config';
 
+import networkPageEn from '@/data/seeds/networkPage-en.json';
+import networkPageIt from '@/data/seeds/networkPage-it.json';
+
+const NETWORK_PAGE_IDS: Record<string, string> = {
+  en: 'networkPage',
+  it: 'networkPage-it',
+};
+
 interface PageProps {
   params: Promise<{ locale: Locale }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  const pageData = await sanityFetch<ServiceLandingPage | null>({
+  const id = NETWORK_PAGE_IDS[locale] || 'networkPage';
+
+  let pageData = await sanityFetch<ServiceLandingPage | null>({
     query: SERVICE_LANDING_PAGE_QUERY,
-    params: { id: 'networkPage', locale },
+    params: { id, locale },
     revalidate: 60,
     tags: ['networkPage'],
     skipDraftMode: true,
   });
+
+  if (!pageData) {
+    pageData = (locale === 'it' ? networkPageIt : networkPageEn) as unknown as ServiceLandingPage;
+  }
 
   return {
     title: pageData?.seoTitle || 'Strategic Network | Gamma Capital',
@@ -29,11 +43,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function NetworkPage({ params }: PageProps) {
   const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
+  const id = NETWORK_PAGE_IDS[locale] || 'networkPage';
 
-  const [pageData, siteSettings] = await Promise.all([
+  let [pageData, siteSettings] = await Promise.all([
     sanityFetch<ServiceLandingPage | null>({
       query: SERVICE_LANDING_PAGE_QUERY,
-      params: { id: 'networkPage', locale },
+      params: { id, locale },
       revalidate: isDraftMode ? 0 : 60,
       tags: ['networkPage'],
     }),
@@ -44,6 +59,10 @@ export default async function NetworkPage({ params }: PageProps) {
       tags: ['siteSettings'],
     }),
   ]);
+
+  if (!pageData) {
+    pageData = (locale === 'it' ? networkPageIt : networkPageEn) as unknown as ServiceLandingPage;
+  }
 
   return (
     <ServicePageClient
