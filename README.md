@@ -1,169 +1,115 @@
-# Gamma Capital - Website
+# Gamma Capital - Institutional Grade Website
 
-A Next.js 15 website with Sanity CMS integration for Gamma Capital, delivering institutional-grade market intelligence and strategic advisory services.
+A high-performance, institutional-grade website built with **Next.js 15** and **Sanity CMS v4**, designed for Gamma Capital. The platform delivers market intelligence, strategic advisory, and premium membership services with a focus on visual performance and global accessibility via modern localization patterns.
 
 ## 🚀 Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **CMS**: [Sanity v3](https://www.sanity.io/) (embedded studio at `/admin`)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animation**: [GSAP](https://gsap.com/) + [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Fonts**: Geist Sans & Mono
+- **Framework**: [Next.js 15.1+](https://nextjs.org/) (App Router, Server Components)
+- **CMS**: [Sanity v4](https://www.sanity.io/) (Headless CMS with embedded Studio at `/admin`)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) + CSS Variables based Theming
+- **Animation**: [GSAP](https://gsap.com/) & [Framer Motion](https://www.framer.com/motion/)
+- **Localization**: Multi-language support (EN/IT) via `[locale]` dynamic routing
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide Icons](https://lucide.dev/)
+- **State Management**: React Context (Locale, UI Strings) + URL-based state (`nuqs`)
 
 ## 📁 Project Structure
 
 ```
+├── .agent/                     # Agentic coding workflows
+├── _bmad/                      # BMad Core System (Epics, Stories, Config)
+├── docs/                       # Project documentation & scan reports
+├── sanity/                     # Sanity Studio Source
+│   ├── schemaTypes/            # Document, Object, and Section schemas
+│   └── plugins/                # Custom Sanity plugins
 ├── src/
-│   ├── app/                    # Next.js App Router pages
-│   │   ├── admin/              # Sanity Studio (embedded)
-│   │   ├── contact/            # Contact page
-│   │   ├── consulting/         # Consulting services page
-│   │   ├── memberships/        # Membership plans page
-│   │   └── solutions/          # Solutions pages
-│   ├── components/
-│   │   └── sections/           # Reusable page sections
-│   ├── sanity/
-│   │   └── lib/                # Sanity client & queries
-│   └── types/
-│       └── sanity.ts           # TypeScript interfaces
-├── sanity/
-│   └── schemaTypes/            # Sanity schema definitions
-│       ├── documents/          # Document schemas
-│       ├── sections/           # Section schemas
-│       └── objects/            # Reusable object schemas
-└── CMS-GUIDE.md                # Content editor documentation
+│   ├── app/                    # Next.js App Router
+│   │   ├── [locale]/           # Localized routes (Home, Solutions, etc.)
+│   │   ├── admin/              # Embedded Sanity Studio
+│   │   └── api/                # Backend API routes
+│   ├── components/             # React components
+│   │   ├── sections/           # CMS-driven page sections
+│   │   ├── ui/                 # Shadcn/Basic UI elements
+│   │   └── providers/          # Context providers (Theme, Locale)
+│   ├── lib/                    # Shared utilities & configurations
+│   ├── sanity/                 # Sanity client & query definitions
+│   ├── i18n/                   # Internationalization config
+│   └── types/                  # TypeScript definitions
+└── CMS-GUIDE.md                # Content editor handbook
 ```
 
 ## 🏗️ CMS Architecture
 
-### Singleton Documents (Single Instance)
+### Singleton Documents (Global State)
 | Document | Purpose |
 |----------|---------|
-| `siteSettings` | Navigation, footer, global SEO |
-| `contactPage` | Contact page content |
-| `membershipsPage` | Membership plans & FAQs |
-| `consultingPage` | Consulting services |
-| `uiStrings` | System messages (404, labels) |
+| `brandSettings` | Global branding (logos, favicons, social links, contact email) |
+| `siteSettings` | Navigation menu, footer structure, and global SEO fallbacks |
+| `uiStrings` | System-wide labels, error messages, and button texts (Localized) |
 
-### Page Builder Sections
-| Section | Description |
-|---------|-------------|
-| `heroSection` | Hero banner with CTAs, stats, bullet points |
-| `whatWeDoSection` | Services grid |
-| `testimonialCTASection` | Call-to-action block |
-| `threeCardsSection` | Feature cards |
-| `richTextSection` | Long-form content |
-| `multiAssetSection` | Asset class display |
-| `whyGammaSection` | Differentiators list |
+### Page-Specific Singletons
+| Document | Page Managed |
+|----------|--------------|
+| `consultingPage` | Strategy, Portfolio, and Advisory service content |
+| `membershipsPage` | Membership tiers, pricing, and FAQ content |
+| `solutionsPage` | Main solutions overview and service matrix |
+| `contactPage` | Professional inquiry form and contact details |
+
+### Flexible Page Builder (`page` type)
+Custom pages can be constructed using the **Page Builder** section array:
+- `heroSection`: High-impact banners with animations and stats.
+- `whatWeDoSection`: Grid-based service/feature overviews.
+- `threeCardsSection`: Highlighted feature cards.
+- `multiAssetSection`: Interactive asset class displays.
+- `richTextSection`: Long-form formatted content.
+- `whyGammaSection`: Value proposition lists.
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- npm or yarn
+- Node.js 20+
+- `pnpm` (recommended) or `npm`
 
 ### Installation
 ```bash
-# Clone repository
+# Clone the repository
 git clone <repository-url>
 cd orchids-atquo-website
 
 # Install dependencies
 npm install
 
-# Set up environment variables
+# Setup environment variables
 cp .env.example .env.local
-# Edit .env.local with your Sanity project credentials
 ```
 
 ### Development
 ```bash
 npm run dev
 ```
-- **Website**: http://localhost:3000
-- **Sanity Studio**: http://localhost:3000/admin
+- **Website**: [http://localhost:3000](http://localhost:3000)
+- **Sanity Studio**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-### Build
-```bash
-npm run build
-npm start
-```
+### Localization
+The site automatically detects and routes based on the locale:
+- `http://localhost:3000/en` (English - Default)
+- `http://localhost:3000/it` (Italian)
 
 ## 🔑 Environment Variables
 
 ```env
-# Sanity
-NEXT_PUBLIC_SANITY_PROJECT_ID=your-project-id
+# Sanity Config
+NEXT_PUBLIC_SANITY_PROJECT_ID=...
 NEXT_PUBLIC_SANITY_DATASET=production
-SANITY_API_READ_TOKEN=your-read-token
+SANITY_API_READ_TOKEN=...
 
-# Preview
-SANITY_PREVIEW_SECRET=your-secret
-
-# Stripe (if using payments)
-STRIPE_SECRET_KEY=sk_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_...
+# Feature Flags & URLs
+NEXT_PUBLIC_SITE_URL=https://gammacap.ch
 ```
 
-## 📝 Content Management
-
-See [CMS-GUIDE.md](./CMS-GUIDE.md) for detailed content editor documentation.
-
-### Quick Start for Editors
-1. Navigate to `/admin`
-2. Log in with Google/GitHub/Email
-3. Edit content in the Sanity Studio interface
-4. Click "Publish" to make changes live
-
-### Content Update Flow
-```
-Edit in Studio → Auto-save as Draft → Publish → Live in ~60s
-```
-
-## 🔄 Data Fetching Pattern
-
-All pages use server-side data fetching with fallbacks:
-
-```typescript
-// Server Component
-const data = await sanityFetch<PageType>({ query: PAGE_QUERY });
-return <ClientComponent pageData={data} />;
-
-// Client Component  
-const content = pageData?.field ?? defaultValue;
-```
-
-## 📐 Icon Mapping
-
-Section components use dynamic icon mapping for CMS-driven icons:
-
-```typescript
-const iconMap: Record<string, LucideIcon> = {
-  TrendingUp, Activity, Shield, // ...
-};
-const IconComponent = iconMap[item.icon ?? ''] ?? DefaultIcon;
-```
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Connect GitHub repository to Vercel
-2. Set environment variables
-3. Deploy
-
-### Manual
-```bash
-npm run build
-npm start
-```
-
-## 📚 Documentation
-
-- [CMS-GUIDE.md](./CMS-GUIDE.md) - Content editor guide
-- [Sanity Docs](https://www.sanity.io/docs) - CMS documentation
-- [Next.js Docs](https://nextjs.org/docs) - Framework documentation
+## 📝 Maintenance
+- **Schema Updates**: Modifications to `sanity/schemaTypes` require a deployment to update the Studio interface.
+- **Visual Editing**: Enabled in development. Use the Sanity toolbar to edit content directly from the live preview.
 
 ## 📄 License
+Private - All Rights Reserved Gamma Capital.
 
-Private - All rights reserved.

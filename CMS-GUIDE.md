@@ -1,386 +1,112 @@
-# Content Management Guide
+# Content Management System Handbook
 
-Welcome to the Gamma Capital content management system. This guide will help you manage all content on your website without any coding knowledge.
-
----
-
-## Quick Start (5 minutes)
-
-### Step 1: Access the Admin Panel
-
-1. Open your browser and go to: `https://gammacap.ch/admin`
-2. Click **"Log in"**
-3. Choose your login method (Google, GitHub, or Email)
-4. You're in! You'll see the content management dashboard
-
-### Step 2: Make Your First Edit
-
-1. Click **"Site Settings"** in the left sidebar
-2. Find any text field you want to change
-3. Edit the text
-4. Click the green **"Publish"** button (bottom right corner)
-5. Wait about 60 seconds - your changes are now live!
+Welcome to the Gamma Capital content management platform. This guide provides comprehensive instructions for managing your global institutional website, localized content, and professional service modules.
 
 ---
 
-## Understanding the Dashboard
+## 🚀 Quick Start (5 Minutes)
 
-When you log in, you'll see a left sidebar with all your content sections:
+### Step 1: Access the Dashboard
+1. Open your browser and navigate to: `https://gammacap.ch/admin` (or `localhost:3000/admin` in development).
+2. Click **"Log in"**.
+3. Choose your preferred authentication method (Google, GitHub, or Email).
 
-| Menu Item | What It Controls |
-|-----------|------------------|
-| **Site Settings** | Logo, navigation menu, footer, SEO settings |
-| **Solutions Page** | The main solutions/services overview page |
-| **Network Page** | Network services page content |
-| **Real Estate Page** | Real estate services page content |
-| **Strategy Page** | Strategy insights page content |
-| **Memberships Page** | Membership plans, pricing, FAQs |
-| **Consulting Page** | Consulting services and features |
-| **Contact Page** | Contact form and related content |
-| **UI Strings** | Error messages, 404 page text |
-| **Pages** | Custom pages you can create |
+### Step 2: Live Visual Editing
+1. From the dashboard, you can click the **"View Live"** button or use the **Preview** mode.
+2. If you are in the **Preview** environment, you can click directly on page elements to be taken to their corresponding fields in the CMS.
 
 ---
 
-## Editing Each Section
+## 🌍 Localization & Multi-Language
 
-### 1. Site Settings
+This platform supports **English (en)** and **Italian (it)**. There are two patterns for how content is translated:
 
-**What it controls:** Everything that appears on every page (header, footer, branding)
+### 1. Document-Level Translation (Pages)
+For standard **Pages**, you create separate documents for each language. 
+- Use the **Language Dropdown** at the top of the editor to switch between languages.
+- You can use the **Visual Comparison** tool to see English and Italian versions side-by-side.
 
-Click **"Site Settings"** and you'll see 4 tabs:
-
-#### Navigation Tab
-| Field | What It Does |
-|-------|--------------|
-| Site Name | Your company name (appears in browser tab) |
-| Logo | Upload your logo image |
-| Logo Text | Fallback text if no logo (default: "Γ") |
-| Navigation Menu Items | Links in your top menu |
-| Navigation CTA Button | The main button in your header (e.g., "Join Now") |
-
-**To add a menu item:**
-1. Scroll to "Navigation Menu Items"
-2. Click **"Add item"**
-3. Fill in the text and URL (e.g., `/contact` for internal pages, `https://...` for external)
-4. For dropdown menus: check "Has Dropdown" and add sub-items
-
-#### Mobile Menu Tab
-| Field | What It Does |
-|-------|--------------|
-| Mobile Secondary Links | Extra links shown on mobile menu |
-| Mobile Footer Text | Text at bottom of mobile menu |
-
-#### Footer Tab
-| Field | What It Does |
-|-------|--------------|
-| Footer Description | Short text about your company |
-| Social Media Links | Your social media profiles |
-| Footer Link Columns | Organized link groups (e.g., "Company", "Legal") |
-| Contact Email | Your support email |
-| Copyright Text | The © notice at the bottom |
-| Disclaimer | Legal disclaimer text |
-
-**To add social media links:**
-1. Click **"Add item"** under Social Media Links
-2. Select the platform (Twitter, LinkedIn, etc.)
-3. Paste your profile URL
-4. Publish changes
-
-#### SEO & Meta Tab
-| Field | What It Does | Tip |
-|-------|--------------|-----|
-| Default SEO Title | Title shown in Google searches | Include your brand name |
-| Default Meta Description | Description in Google results | Keep under 160 characters |
-| Default OG Image | Image when shared on social media | Use 1200x630 pixels |
+### 2. Field-Level Translation (Global Values)
+For global settings like **UI Strings** and **Brand Settings**, translations are managed within a single document:
+- You will see tabs or fields labeled with language codes.
+- Ensure both versions are filled to avoid "fallback" indicators on the live site.
 
 ---
 
-### 2. Solutions Page
+## 🗂️ Understanding the Dashboard
 
-**What it controls:** The main page showcasing your solutions/services
+The sidebar is organized into three main categories:
 
-Click **"Solutions Page"** to edit:
-
-| Section | Fields |
-|---------|--------|
-| **Hero** | Badge text, main title, description |
-| **Cards** | Service cards with icons, titles, descriptions |
-| **CTA** | Call-to-action section at the bottom |
-
----
-
-### 3. Service Pages (Network, Real Estate, Strategy)
-
-Each service page has the same structure:
-
-| Section | What to Edit |
-|---------|--------------|
-| **Hero Section** | Page title, subtitle, background description |
-| **Why Choose Us** | Benefits and differentiators |
-| **Features** | List of features with icons |
-| **CTA Section** | Final call-to-action |
-| **SEO** | Page-specific SEO settings |
+| Category | Documents Included | Description |
+|----------|--------------------|-------------|
+| **Branding** | `Brand Settings` | Logos, Favicons, Social Media, and Contact Emails. |
+| **Pages (Singleton)** | `Home`, `Consulting`, `Solutions`, `Memberships`, `Contact` | High-level pages with specialized, structured layouts. |
+| **System** | `Site Settings`, `UI Strings` | Navigation menus, footers, system labels, and 404 pages. |
+| **Page Builder** | `Pages` | Create custom landing pages using a flexible block system. |
 
 ---
 
-### 4. Memberships Page
+## 📝 Document Reference
 
-**What it controls:** Your membership plans and pricing
+### 1. Brand Settings (Global)
+**Location**: Dashboard → Brand Settings
+- **Logos**: Primary, Light, and Dark variants for different sections.
+- **Social Media**: Add platform URLs with icon auto-mapping.
+- **Favicon**: Centralized management for browser tab icons.
 
-| Section | What to Edit |
-|---------|--------------|
-| **Hero** | Badge, title, subtitle, description |
-| **Inside Features** | What's included in membership |
-| **Benefits** | Key benefits with icons |
-| **Pricing Plans** | Plan names, prices, features, buttons |
-| **FAQs** | Frequently asked questions |
-| **Final CTA** | Bottom call-to-action |
+### 2. Consulting Page (Services)
+**Location**: Dashboard → Consulting Page
+This page uses the **Service Section Navigator**:
+- **Service Navigation**: Cards that appear at the top to jump to sections.
+- **Service Sections**: Detailed descriptions for Portfolio Review, Strategy Design, etc.
+- **Feature Matrix**: Add specific icons and short descriptors for each service pillar.
 
-**To edit pricing:**
-1. Find the "Plans" section
-2. Click on a plan to expand it
-3. Edit name, price, description
-4. Toggle "Popular" to highlight a plan
-5. Add or remove features in the list
-
----
-
-### 5. Consulting Page
-
-**What it controls:** Your consulting services page
-
-| Section | What to Edit |
-|---------|--------------|
-| **Hero** | Main headline and description |
-| **Service Navigation** | Quick nav cards at the top |
-| **Service Sections** | Detailed descriptions of each service |
-| **CTA** | Final call-to-action |
+### 3. Site Settings (Structure)
+**Location**: Dashboard → Site Settings
+- **Navigation**: Manage the header menu, dropdown items, and the main CTA button.
+- **Footer**: Managed as columns of links and global legal disclaimers.
+- **Global SEO**: Default tracking titles and social sharing images.
 
 ---
 
-### 6. Contact Page
+## 🛠️ Working with Sections (Page Builder)
 
-**What it controls:** Your contact form page
+When creating or editing a **Page**, you can add, remove, and reorder the following blocks:
 
-| Section | What to Edit |
-|---------|--------------|
-| **Hero** | Page title and description |
-| **Intro** | Heading, description, email |
-| **Form** | Title, labels, success/error messages |
-| **Expectations** | What visitors can expect after contact |
-| **Disclaimer** | Legal text below form |
+- **Hero High-Impact**: Large banner with GSAP-powered stats and badge highlights.
+- **Solutions Grid**: Displays services in a clean, categorized grid layout.
+- **Three Cards**: Focused feature highlight with large icons and descriptions.
+- **Multi-Asset Row**: High-lighting specific asset classes (Real Estate, Crypto, etc.).
+- **Rich Text Content**: Standard text block for legal pages or long-form descriptions.
 
 ---
 
-### 7. UI Strings
+## 🖼️ Image & Media Guidelines
 
-**What it controls:** System messages and labels
-
-| Field | What It Controls |
-|-------|-----------------|
-| 404 Badge Text | Error label on not-found page |
-| 404 Title | Main headline when page not found |
-| 404 Description | Explanation text |
-| Home Button Text | Button to go home |
-| Contact Button Text | Button to contact page |
-| Quick Links | Helpful links on 404 page |
+| Asset Type | Recommended Spec | Tip |
+|------------|------------------|-----|
+| **Logo** | SVG or Transparent PNG | Use dark/light variants for better contrast. |
+| **Hero Background** | 1920x1080px (WebP) | Keep focal points centered. |
+| **OG Image** | 1200x630px | Essential for professional social sharing. |
+| **Icons** | Selection from Lucide | Use "Icon Map" reference fields in CMS. |
 
 ---
 
-### 8. Custom Pages
+## ✅ Best Practices
 
-**What it controls:** Additional pages you create
-
-**To create a new page:**
-1. Click **"Pages"** in the sidebar
-2. Click **"+ Create new"** at the top
-3. Fill in:
-   - **Page Title**: Name of your page
-   - **Slug**: URL path (e.g., "about-us" creates `/about-us`)
-   - **Is Homepage**: Check if this should be your homepage
-4. Add sections using **"Page Sections"**
-
-**Available Sections:**
-| Section Type | Best For |
-|--------------|----------|
-| Hero Section | Page banners with CTAs and stats |
-| What We Do | Services grid layout |
-| CTA Section | Call-to-action blocks |
-| Three Cards | Feature highlights |
-| Rich Text | Long-form content |
-| Multi-Asset Section | Asset class displays |
-| Why Gamma Section | Bullet point lists |
+1. **Always use Alt Text**: Ensure every image has a description for SEO and Accessibility.
+2. **Handle Slugs Carefully**: Do not change URL "Slugs" after a page is indexed by Google without setting up a redirect.
+3. **Draft vs. Published**: Changes are auto-saved as **Drafts**. You must click the green **"Publish"** button to make them live globally.
+4. **Localization Check**: Before publishing a new page, verify that its counterpart in the other language is also prepared to maintain a seamless user experience.
 
 ---
 
-## Working with Images
+## 🆘 Troubleshooting
 
-### Uploading Images
-
-1. Click the image field
-2. Click **"Upload"** or drag & drop your image
-3. Add **Alt Text** (description for accessibility)
-4. Click **"Save"**
-
-### Image Recommendations
-
-| Image Type | Recommended Size |
-|------------|------------------|
-| Logo | 200x50 pixels (PNG with transparency) |
-| OG/Social Image | 1200x630 pixels |
-| Hero Background | 1920x1080 pixels |
-| Icons | Use the built-in icon picker |
+- **Changes not appearing?** Wait 60 seconds (CDN caching) or try a "Hard Refresh" (`Cmd + Shift + R`).
+- **Validation Errors?** Check for missing required fields marked with a red asterisk.
+- **Accidental Deletion?** Use the **History** tab in the top-right menu to restore a previous version of any document.
 
 ---
 
-## Publishing Your Changes
-
-### The Publishing Process
-
-1. **Edit** - Make your changes (auto-saved as draft)
-2. **Preview** - See changes before going live
-3. **Publish** - Click the green button to make it live
-4. **Wait** - Changes appear on website within 60 seconds
-
-### The Publish Button
-
-- **Blue dot** next to a field = unsaved changes
-- **Green "Publish" button** = ready to publish
-- **Gray "Published" text** = no pending changes
-
-### Version History
-
-Made a mistake? You can restore previous versions:
-
-1. Click the **"..."** menu (top right)
-2. Select **"History"**
-3. Browse previous versions
-4. Click **"Restore"** on the version you want
-
----
-
-## Working with Links
-
-### Internal Links (pages on your site)
-Use relative paths starting with `/`:
-- `/contact` - Contact page
-- `/memberships` - Memberships page
-- `/consulting` - Consulting page
-- `/solutions` - Solutions page
-
-### External Links (other websites)
-Use full URLs starting with `https://`:
-- `https://twitter.com/yourhandle`
-- `https://linkedin.com/company/yourcompany`
-
----
-
-## Icons Reference
-
-When editing service cards or features, you can choose from these icons:
-
-| Icon Name | Description |
-|-----------|-------------|
-| BarChart3 | Chart/analytics |
-| TrendingUp | Growth arrow |
-| Users | People/team |
-| Building2 | Building/corporate |
-| Shield | Security/protection |
-| Target | Goal/precision |
-| Rocket | Launch/fast |
-| Network | Connections |
-| Layers | Multi-level |
-| Globe | International |
-
----
-
-## Common Tasks
-
-### Change Your Logo
-
-1. Go to **Site Settings** > **Navigation** tab
-2. Click on the Logo field
-3. Upload your new logo
-4. Add alt text (e.g., "Gamma Capital Logo")
-5. Publish
-
-### Update Footer Links
-
-1. Go to **Site Settings** > **Footer** tab
-2. Find **Footer Link Columns**
-3. Click on a column to expand
-4. Add, edit, or remove links
-5. Publish
-
-### Add a New Membership Plan
-
-1. Go to **Memberships Page**
-2. Find the **Plans** section
-3. Click **"Add item"**
-4. Fill in all plan details
-5. Publish
-
-### Update SEO for a Page
-
-1. Go to the page you want to update
-2. Find the **SEO** section (usually at the bottom)
-3. Update title and description
-4. Upload an OG image if needed
-5. Publish
-
----
-
-## Troubleshooting
-
-### My changes aren't showing on the website
-
-1. Did you click **"Publish"**? (green button)
-2. Wait 60 seconds after publishing
-3. Hard refresh your browser: `Ctrl + Shift + R` (Windows) or `Cmd + Shift + R` (Mac)
-4. Try opening in an incognito/private window
-
-### I'm getting validation errors
-
-| Error | How to Fix |
-|-------|-----------|
-| "SEO Description too long" | Keep under 160 characters |
-| "Invalid URL" | Use `/path` for internal or `https://...` for external |
-| "Only one homepage allowed" | Uncheck "Is Homepage" on other pages first |
-
-### I accidentally deleted something
-
-1. Click **"..."** menu > **"History"**
-2. Find the version before your deletion
-3. Click **"Restore"**
-4. Publish the restored version
-
-### I can't log in
-
-1. Make sure you're using the correct email
-2. Try a different login method (Google, GitHub)
-3. Clear your browser cookies
-4. Contact your administrator
-
----
-
-## Best Practices
-
-1. **Always add alt text to images** - Helps with SEO and accessibility
-2. **Keep descriptions concise** - Under 160 characters for SEO fields
-3. **Use consistent formatting** - Maintain the same style across pages
-4. **Test on mobile** - Check how your changes look on phones
-5. **Publish during low-traffic hours** - If making major changes
-6. **Review before publishing** - Double-check spelling and links
-
----
-
-## Need Help?
-
-- **Sanity Documentation**: https://www.sanity.io/docs
-- **Video Tutorials**: Available in Sanity Studio (Help menu)
-- **Technical Issues**: Contact your development team
-
----
-
-*Last updated: January 2026*
+*Last Updated: February 2026*
