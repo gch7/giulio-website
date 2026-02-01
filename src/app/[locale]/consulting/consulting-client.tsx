@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import NavigationHeader from "@/components/sections/navigation-header";
 import Footer from "@/components/sections/footer";
+import { useParams } from 'next/navigation';
+import { getLocalizedHref } from '@/lib/utils';
 import {
   PieChart,
   Compass,
@@ -83,6 +85,8 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
   const heroRef = useRef<HTMLElement>(null);
   const navCardsRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState<string>('');
+  const params = useParams();
+  const locale = params?.locale as string;
 
   useGSAP(() => {
     // Hero animations
@@ -465,7 +469,7 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
             </p>
             {ctaButtonHref && ctaButtonText && (
               <Link
-                href={ctaButtonHref}
+                href={getLocalizedHref(ctaButtonHref, locale)}
                 className="inline-flex items-center gap-3 bg-[#2563EB] text-white px-8 py-4 rounded-xl text-[15px] font-semibold hover:bg-[#1E3A8A] transition-all duration-300 group shadow-lg shadow-[#2563EB]/20"
               >
                 {ctaButtonText}

@@ -9,6 +9,8 @@ import { ChevronDown, Menu, X, ChevronRight } from 'lucide-react';
 import type { SiteSettings, UIStrings } from '@/types/sanity';
 import { getImageUrl } from '@/sanity/lib/image';
 import { LanguageSwitcher, LanguageSwitcherMobile } from '@/components/language-switcher';
+import { useParams } from 'next/navigation';
+import { getLocalizedHref } from '@/lib/utils';
 
 interface NavigationHeaderProps {
   siteSettings?: SiteSettings | null;
@@ -22,6 +24,8 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
   const logoRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const params = useParams();
+  const locale = params?.locale as string;
 
   // Use CMS data or return null/skeleton if critical data is missing
   const siteName = siteSettings?.siteName;
@@ -77,7 +81,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
       <nav ref={navRef} className="sticky top-0 z-50 w-full bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#E5E7EB]">
         <div className="relative flex h-[72px] items-center justify-between px-6 md:px-12 max-w-[1400px] mx-auto">
           <div ref={logoRef} className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-3" aria-label={logoAriaLabel}>
+            <Link href={getLocalizedHref('/', locale)} className="flex items-center gap-3" aria-label={logoAriaLabel}>
               {logoUrl && (
                 <Image
                   src={logoUrl}
@@ -115,7 +119,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
                     {isSolutionsOpen && item.dropdownItems && (
                       <div className="absolute top-full left-0 w-56 bg-white border border-[#E5E7EB] rounded-lg shadow-lg py-2 mt-0">
                         {item.dropdownItems.map((dropdownItem, dropIndex) => (
-                          <Link key={dropIndex} href={dropdownItem.href} className="block px-4 py-3 hover:bg-[#F8F9FB] transition-colors">
+                          <Link key={dropIndex} href={getLocalizedHref(dropdownItem.href, locale)} className="block px-4 py-3 hover:bg-[#F8F9FB] transition-colors">
                             <span className="text-[14px] font-medium text-[#111827]">{dropdownItem.text}</span>
                             {dropdownItem.description && (
                               <p className="text-[12px] text-[#6B7280] mt-0.5">{dropdownItem.description}</p>
@@ -126,7 +130,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
                     )}
                   </div>
                 ) : (
-                  <NavLink key={index} text={item.text} href={item.href} />
+                  <NavLink key={index} text={item.text} href={getLocalizedHref(item.href, locale)} />
                 )
               ))}
             </div>
@@ -140,7 +144,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
               <div ref={ctaRef} className="hidden lg:flex items-center ml-6 gap-5">
                 <div className="w-px h-5 bg-[#E5E7EB]" />
                 <Link
-                  href={navCTA.href}
+                  href={getLocalizedHref(navCTA.href, locale)}
                   className="bg-[#2563EB] text-white px-5 py-2.5 rounded-md text-[13px] font-semibold hover:bg-[#1E3A8A] transition-colors"
                 >
                   {navCTA.text}
@@ -175,7 +179,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
               {navItems.map((item, index) => (
                 <div key={index} className="border-b border-gray-100">
                   <Link
-                    href={item.href}
+                    href={getLocalizedHref(item.href, locale)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center justify-between py-6 group"
                   >
@@ -197,7 +201,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
                 {mobileSecondaryLinks.map((item, index) => (
                   <Link
                     key={index}
-                    href={item.href}
+                    href={getLocalizedHref(item.href, locale)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="text-[#2563EB] text-[15px] font-semibold tracking-tight hover:opacity-80 transition-opacity"
                   >

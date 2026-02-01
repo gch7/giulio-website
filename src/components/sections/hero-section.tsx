@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { ArrowRight, TrendingUp, Activity, Shield, type LucideIcon } from 'lucide-react';
 import type { HeroSectionData } from '@/types/sanity';
+import { useParams } from 'next/navigation';
+import { getLocalizedHref } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +31,9 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
   const bulletPoints = content.bulletPoints || [];
   const supportingTagline = content.supportingTagline;
+
+  const params = useParams();
+  const locale = params?.locale as string;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -161,7 +166,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
                   onMouseLeave={(e) => e.currentTarget.style.setProperty('--o', '0')}
                   className="btn-glow relative z-10 overflow-hidden transition-transform duration-150 ease-out active:scale-[0.98] bg-[#2563EB] text-white border-[#2563EB] border rounded-xl py-3.5 px-8 shadow-lg shadow-[#2563EB]/20"
                 >
-                  <Link href={content.primaryCTA.href} className="relative z-10 inline-flex items-center gap-2 font-semibold text-[14px]">
+                  <Link href={getLocalizedHref(content.primaryCTA.href, locale)} className="relative z-10 inline-flex items-center gap-2 font-semibold text-[14px]">
                     {content.primaryCTA.text}
                     {content.primaryCTA.showArrow && (
                       <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-0.5" />
@@ -183,7 +188,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
 
             {content.secondaryCTA && (
               <Link
-                href={content.secondaryCTA.href}
+                href={getLocalizedHref(content.secondaryCTA.href, locale)}
                 className="bg-white text-[#111827] px-8 py-3.5 rounded-xl text-[14px] font-medium border border-[#E5E7EB] hover:border-[#6B7280] hover:bg-[#F8F9FB] transition-colors"
               >
                 {content.secondaryCTA.text}

@@ -9,6 +9,8 @@ import { useGSAP } from '@gsap/react';
 import { Mail, Linkedin, Twitter, Facebook, Instagram, Youtube, Github } from 'lucide-react';
 import type { SiteSettings } from '@/types/sanity';
 import { getImageUrl } from '@/sanity/lib/image';
+import { useParams } from 'next/navigation';
+import { getLocalizedHref } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,6 +41,9 @@ export default function Footer({ siteSettings }: FooterProps) {
   const footerRef = useRef<HTMLElement>(null);
   const columnsRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  const params = useParams();
+  const locale = params?.locale as string;
 
   // Use CMS data or return safe defaults/null
   const siteName = siteSettings?.siteName;
@@ -95,7 +100,7 @@ export default function Footer({ siteSettings }: FooterProps) {
       <div className="w-full max-w-[1200px] mx-auto px-6 md:px-12 py-16">
         <div ref={columnsRef} className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="flex flex-col gap-4 md:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-2">
+            <Link href={getLocalizedHref('/', locale)} className="flex items-center gap-3 mb-2">
               {logoUrl && (
                 <Image
                   src={logoUrl}
@@ -146,7 +151,7 @@ export default function Footer({ siteSettings }: FooterProps) {
                 {column.links?.map((link, linkIndex) => (
                   <Link
                     key={linkIndex}
-                    href={link.href}
+                    href={getLocalizedHref(link.href, locale)}
                     className="text-[13px] font-medium text-[#6B7280] hover:text-[#111827] transition-colors"
                   >
                     {link.text}
