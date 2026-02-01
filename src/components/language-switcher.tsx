@@ -19,6 +19,10 @@ export function LanguageSwitcher() {
     return segments.join('/') || `/${newLocale}`
   }
 
+  const handleLocaleChange = (newLocale: Locale) => {
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`
+  }
+
   return (
     <div className="flex items-center gap-1 text-sm">
       {locales.map((locale, index) => (
@@ -26,11 +30,11 @@ export function LanguageSwitcher() {
           {index > 0 && <span className="text-gray-300 mx-1">|</span>}
           <Link
             href={switchLocale(locale)}
-            className={`px-1 py-0.5 rounded transition-colors ${
-              currentLocale === locale
+            onClick={() => handleLocaleChange(locale)}
+            className={`px-1 py-0.5 rounded transition-colors ${currentLocale === locale
                 ? 'text-[#2563EB] font-semibold'
                 : 'text-[#6B7280] hover:text-[#111827]'
-            }`}
+              }`}
           >
             {locale.toUpperCase()}
           </Link>
@@ -53,17 +57,21 @@ export function LanguageSwitcherMobile() {
     return segments.join('/') || `/${newLocale}`
   }
 
+  const handleLocaleChange = (newLocale: Locale) => {
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`
+  }
+
   return (
     <div className="flex items-center gap-3">
       {locales.map((locale) => (
         <Link
           key={locale}
           href={switchLocale(locale)}
-          className={`px-4 py-2 rounded-lg text-[15px] font-medium transition-colors ${
-            currentLocale === locale
+          onClick={() => handleLocaleChange(locale)}
+          className={`px-4 py-2 rounded-lg text-[15px] font-medium transition-colors ${currentLocale === locale
               ? 'bg-[#2563EB]/10 text-[#2563EB] border border-[#2563EB]/20'
               : 'bg-white text-[#6B7280] border border-[#E5E7EB] hover:border-[#2563EB]/30 hover:text-[#111827]'
-          }`}
+            }`}
         >
           {locale.toUpperCase()}
         </Link>
