@@ -54,9 +54,32 @@ const structure = (S: any) =>
         .id('solutionsPage')
         .child(S.documentTypeList('solutionsPage').title('Solutions Page (All Languages)')),
       S.listItem()
-        .title('Service Pages')
-        .id('servicePages')
-        .child(S.documentTypeList('serviceLandingPage').title('Service Pages (All Languages)')),
+        .title('Strategy Insights')
+        .icon(() => '📈')
+        .child(
+          S.documentList()
+            .title('Strategy Insights')
+            .schemaType('serviceLandingPage')
+            .filter('_type == "serviceLandingPage" && (_id == "strategyPage" || _id == "strategyPage-it")')
+        ),
+      S.listItem()
+        .title('Strategic Network')
+        .icon(() => '🤝')
+        .child(
+          S.documentList()
+            .title('Strategic Network')
+            .schemaType('serviceLandingPage')
+            .filter('_type == "serviceLandingPage" && (_id == "networkPage" || _id == "networkPage-it")')
+        ),
+      S.listItem()
+        .title('Real Estate Advisory')
+        .icon(() => '🏢')
+        .child(
+          S.documentList()
+            .title('Real Estate Advisory')
+            .schemaType('serviceLandingPage')
+            .filter('_type == "serviceLandingPage" && (_id == "realEstatePage" || _id == "realEstatePage-it")')
+        ),
       S.listItem()
         .title('Memberships Page')
         .id('membershipsPage')
