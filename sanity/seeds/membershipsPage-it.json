@@ -116,6 +116,45 @@
             "stripePriceId": "price_annual_id",
             "popular": false,
             "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale"
+        },
+        {
+            "id": "black-label-monthly",
+            "name": "Black Label — Mensile",
+            "price": "€24.99",
+            "priceValue": 24.99,
+            "trial": "3 giorni prova gratuita",
+            "description": "Accesso ai flussi di opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento significativo — filtrato e istantaneo.",
+            "cta": "Abbonati Black Label Mensile",
+            "stripePriceId": "price_1T5ZqgEJRFKN7GwZpBsOrU4O",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile_bl"
+        },
+        {
+            "id": "black-label-quarterly",
+            "name": "Black Label — Trimestrale",
+            "price": "€68.99",
+            "priceValue": 68.99,
+            "trial": "7 giorni prova gratuita",
+            "description": "Accesso ai flussi di opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento significativo — filtrato e istantaneo.",
+            "cta": "Abbonati Black Label Trimestrale",
+            "stripePriceId": "price_1T5ZsPEJRFKN7GwZk38rvhCE",
+            "popular": true,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale_bl"
+        },
+        {
+            "id": "black-label-annual",
+            "name": "Black Label — Annuale",
+            "price": "€269.99",
+            "priceValue": 269.99,
+            "trial": "30 giorni prova gratuita",
+            "description": "Accesso ai flussi di opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento significativo — filtrato e istantaneo.",
+            "cta": "Abbonati Black Label Annuale",
+            "stripePriceId": "price_1T5ZucEJRFKN7GwZLPDjT2GF",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale_bl"
         }
     ],
     "accessSectionTitle": "Come Funziona l'Accesso",
@@ -163,6 +202,10 @@
         {
             "question": "Su quali mercati vi concentrate?",
             "answer": "Principalmente azionario USA, opzioni e segnali di mercato basati sui flussi."
+        },
+        {
+            "question": "Cos'è il livello Black Label?",
+            "answer": "Black Label ti dà accesso ai flussi di opzioni in tempo reale con punteggio algoritmico. Ogni movimento rilevante viene rilevato e notificato istantaneamente dal nostro bot, usando i filtri che affiniamo da anni nel monitoraggio dei mercati."
         }
     ],
     "comingSoonTitle": "In Arrivo",
