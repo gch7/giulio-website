@@ -2,155 +2,260 @@
     "_id": "membershipsPage-it",
     "_type": "membershipsPage",
     "language": "it",
-    "seoTitle": "Gamma Capital Membership - Community Discord Privata",
-    "seoDescription": "Unisciti a un ambiente privato dedicato a insight azionabili, interpretazione dei flussi di opzioni e guida di mercato strutturata.",
+    "seoTitle": "Gamma Capital Membership — Scegli il tuo livello di accesso",
+    "seoDescription": "Due livelli di membership: accesso Premium alla community Discord e il tier Black Label con flussi algoritmici in tempo reale e notifiche bot istantanee.",
     "heroBadge": "Membership",
-    "heroTitle": "Accesso Discord Premium per Partecipanti Seri al Mercato",
-    "heroSubtitle": "Chiarezza Istituzionale",
-    "heroDescription": "Unisciti a un ambiente privato dedicato a insight azionabili, interpretazione dei flussi di opzioni, monitoraggio di attività inusuali e guida di mercato strutturata e in tempo reale — senza rumore, hype o confusione.",
-    "heroPrimaryCta": "Unisciti alla Membership",
-    "heroSecondaryCta": "Scopri Cosa C'è Dentro",
-    "insideSectionTitle": "Cosa Troverai Dentro Discord",
-    "insideSectionDescription": "Il Discord di Gamma Capital è progettato per investitori che vogliono vera chiarezza nei mercati veloci. All'interno dei canali privati troverai:",
+    "heroTitle": "Due Livelli. Una Sola Missione: Chiarezza nei Mercati.",
+    "heroSubtitle": "Scegli il livello che fa per te",
+    "heroDescription": "Dal canale flussi curato manualmente da Gamma Capital fino al monitoraggio algoritmico in tempo reale con scoring automatico — scegli il livello di profondità che si adatta al tuo stile operativo.",
+    "heroPrimaryCta": "Scopri il Black Label",
+    "heroSecondaryCta": "Confronta i Piani",
+
+    "insideSectionTitle": "Due Esperienze, Due Livelli di Profondità",
+    "insideSectionDescription": "Ogni membership dà accesso alla community Discord privata di Gamma Capital. La differenza sta nel livello di strumenti e nell'intensità del flusso informativo.",
+
     "insideFeatures": [
         {
+            "icon": "Users",
+            "text": "Accesso alle chat comuni della community Discord privata"
+        },
+        {
             "icon": "TrendingUp",
-            "text": "Monitoraggio in tempo reale dei flussi istituzionali e attività in opzioni inusuali"
+            "text": "Canale flussi opzioni segnalati manualmente dal team Gamma Capital"
         },
         {
             "icon": "BarChart3",
-            "text": "Analisi di mercato giornaliera su equity USA e driver macro chiave"
+            "text": "Newsletter quotidiana con le principali notizie di mercato"
         },
         {
-            "icon": "Zap",
-            "text": "Avvisi veloci su movimenti anomali e setup ad alto potenziale"
-        },
-        {
-            "icon": "MessageSquare",
-            "text": "Discussioni private in una community di alta qualità con membri motivati"
+            "icon": "Calendar",
+            "text": "Riassunto giornaliero degli eventi macro in arrivo che possono muovere i mercati"
         },
         {
             "icon": "GraduationCap",
-            "text": "Materiale educativo, inclusi moduli introduttivi su opzioni e interpretazione dei flussi"
+            "text": "Materiale educativo introduttivo su opzioni, flussi e logica smart money"
+        },
+        {
+            "icon": "Zap",
+            "text": "Black Label: flussi algoritmici in tempo reale con punteggio automatico e notifiche bot istantanee"
         }
     ],
-    "benefitsSectionTitle": "Vantaggi Chiave dell'Adesione",
+
+    "benefitsSectionTitle": "Perché Scegliere Gamma Capital",
     "keyBenefits": [
         {
             "icon": "BookOpen",
-            "title": "Insight Strutturati",
-            "description": "Ricevi insight di mercato disciplinati e ben organizzati — non rumore o speculazione."
+            "title": "Segnali Strutturati, Non Rumore",
+            "description": "Ogni flusso segnalato passa attraverso filtri affinati negli anni. Niente spam, niente hype — solo ciò che conta."
         },
         {
             "icon": "Zap",
             "title": "Vantaggio Informativo Anticipato",
-            "description": "Monitora il comportamento istituzionale e l'attività inusuale prima che la maggior parte dei trader retail se ne accorga."
+            "description": "Monitora il comportamento istituzionale prima che la maggior parte dei trader retail se ne accorga."
         },
         {
             "icon": "Users",
-            "title": "Una Community Pulita e Seria",
-            "description": "Uno spazio curato per investitori che vogliono focus, chiarezza e analisi reale."
-        },
-        {
-            "icon": "GraduationCap",
-            "title": "Fondamenta Educative",
-            "description": "Accedi a materiale introduttivo che ti aiuta a capire opzioni, flussi e la logica smart money."
+            "title": "Community Seria e Curata",
+            "description": "Un ambiente privato per investitori che cercano focus, analisi reale e zero confusione."
         },
         {
             "icon": "Target",
             "title": "Metodologia Comprovata",
-            "description": "Lo stesso approccio analitico usato nella nostra consulenza — adattato per l'uso operativo quotidiano."
+            "description": "Lo stesso approccio analitico usato nella nostra consulenza istituzionale — adattato per l'uso operativo quotidiano."
+        },
+        {
+            "icon": "GraduationCap",
+            "title": "Fondamenta Educative Incluse",
+            "description": "Anche se sei agli inizi, il materiale introduttivo ti guida a capire opzioni, flussi e la logica dietro i movimenti smart money."
         }
     ],
-    "includedSectionTitle": "Cosa è Incluso nella Membership",
+
+    "includedSectionTitle": "Cosa Include Ogni Livello",
+
     "includedFeatures": [
-        "Accesso a tutti i canali privati Discord",
-        "Monitoraggio in tempo reale dei flussi di opzioni istituzionali",
-        "Commento giornaliero su eventi di mercato ad alto impatto",
-        "Avvisi veloci su attività inusuale e setup ad alto potenziale",
-        "Accesso prioritario alle discussioni della community",
-        "Assegnazione automatica del ruolo Premium dopo l'acquisto"
+        "✅ Accesso alle chat comuni della community Discord",
+        "✅ Canale flussi opzioni segnalati manualmente dal team",
+        "✅ Newsletter quotidiana con le notizie di mercato principali",
+        "✅ Riassunto giornaliero degli eventi macro in calendario",
+        "✅ Materiale educativo introduttivo (opzioni, flussi, smart money)"
     ],
-    "educationalMiniCourseTitle": "Mini-corso educativo:",
+
+    "educationalMiniCourseTitle": "Mini-corso educativo incluso:",
     "educationalItems": [
         "come funzionano le opzioni",
         "come leggere i flussi istituzionali",
         "come operare con la logica smart money"
     ],
-    "includedTagline": "Tutto è progettato per supportare il tuo processo decisionale con chiarezza e focus.",
-    "pricingSectionTitle": "Livelli di Membership",
-    "pricingSectionDescription": "Tutti i piani includono l'esperienza premium completa. L'unica differenza è la durata.",
+    "includedTagline": "Il piano base ti dà accesso alla community e agli insight del team. Il Black Label ti mette davanti a ogni movimento prima che accada.",
+
+    "pricingSectionTitle": "Scegli il Tuo Livello",
+    "pricingSectionDescription": "Il piano Premium ti dà accesso completo alla community e ai contenuti curati dal team. Il Black Label aggiunge il layer algoritmico: flussi in tempo reale, scoring automatico e notifiche bot su ogni movimento rilevante — con i filtri proprietari che utilizziamo da anni.",
+
     "plans": [
         {
             "id": "monthly",
-            "name": "Piano Mensile",
+            "name": "Premium — Mensile",
             "price": "€19.99",
             "priceValue": 19.99,
             "trial": "3 giorni prova gratuita",
-            "description": "Ideale per testare la community e il suo valore.",
-            "cta": "Abbonati Mensile",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "cta": "Abbonati Premium Mensile",
             "stripePriceId": "price_monthly_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile"
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile",
+            "features": [
+                "Accesso canali Discord privati",
+                "Flussi opzioni segnalati manualmente",
+                "Newsletter quotidiana",
+                "Calendario eventi macro giornaliero",
+                "Materiale educativo introduttivo"
+            ]
         },
         {
             "id": "quarterly",
-            "name": "Piano Trimestrale",
+            "name": "Premium — Trimestrale",
             "price": "€54.99",
             "priceValue": 54.99,
             "trial": "7 giorni prova gratuita",
-            "description": "Risparmia rispetto al piano mensile.",
-            "cta": "Abbonati Trimestrale",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "cta": "Abbonati Premium Trimestrale",
             "stripePriceId": "price_quarterly_id",
-            "popular": true,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale"
+            "popular": false,
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale",
+            "features": [
+                "Accesso canali Discord privati",
+                "Flussi opzioni segnalati manualmente",
+                "Newsletter quotidiana",
+                "Calendario eventi macro giornaliero",
+                "Materiale educativo introduttivo"
+            ]
         },
         {
             "id": "annual",
-            "name": "Piano Annuale",
+            "name": "Premium — Annuale",
             "price": "€219.99",
             "priceValue": 219.99,
             "trial": "30 giorni prova gratuita",
-            "description": "Il miglior valore per membri dedicati.",
-            "cta": "Abbonati Annuale",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "cta": "Abbonati Premium Annuale",
             "stripePriceId": "price_annual_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale"
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale",
+            "features": [
+                "Accesso canali Discord privati",
+                "Flussi opzioni segnalati manualmente",
+                "Newsletter quotidiana",
+                "Calendario eventi macro giornaliero",
+                "Materiale educativo introduttivo"
+            ]
+        },
+        {
+            "id": "black-label-monthly",
+            "name": "Black Label — Mensile",
+            "price": "€24.99",
+            "priceValue": 24.99,
+            "trial": "3 giorni prova gratuita",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "cta": "Abbonati Black Label Mensile",
+            "stripePriceId": "price_1T5ZqgEJRFKN7GwZpBsOrU4O",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile_bl",
+            "features": [
+                "Tutto il piano Premium incluso",
+                "Flussi opzioni algoritmici in tempo reale",
+                "Punteggio automatico su ogni flusso",
+                "Notifiche bot istantanee su ogni movimento",
+                "Filtri proprietari affinati negli anni"
+            ]
+        },
+        {
+            "id": "black-label-quarterly",
+            "name": "Black Label — Trimestrale",
+            "price": "€68.99",
+            "priceValue": 68.99,
+            "trial": "7 giorni prova gratuita",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "cta": "Abbonati Black Label Trimestrale",
+            "stripePriceId": "price_1T5ZsPEJRFKN7GwZk38rvhCE",
+            "popular": true,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale_bl",
+            "features": [
+                "Tutto il piano Premium incluso",
+                "Flussi opzioni algoritmici in tempo reale",
+                "Punteggio automatico su ogni flusso",
+                "Notifiche bot istantanee su ogni movimento",
+                "Filtri proprietari affinati negli anni"
+            ]
+        },
+        {
+            "id": "black-label-annual",
+            "name": "Black Label — Annuale",
+            "price": "€269.99",
+            "priceValue": 269.99,
+            "trial": "30 giorni prova gratuita",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "cta": "Abbonati Black Label Annuale",
+            "stripePriceId": "price_1T5ZucEJRFKN7GwZLPDjT2GF",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale_bl",
+            "features": [
+                "Tutto il piano Premium incluso",
+                "Flussi opzioni algoritmici in tempo reale",
+                "Punteggio automatico su ogni flusso",
+                "Notifiche bot istantanee su ogni movimento",
+                "Filtri proprietari affinati negli anni"
+            ]
         }
     ],
+
     "accessSectionTitle": "Come Funziona l'Accesso",
     "accessSteps": [
         {
             "step": 1,
-            "title": "Seleziona Piano",
-            "description": "Seleziona il piano che preferisci e completa il checkout via Stripe."
+            "title": "Scegli il Livello",
+            "description": "Seleziona Premium o Black Label e scegli la durata che preferisci."
         },
         {
             "step": 2,
-            "title": "Attivazione",
-            "description": "Il tuo ruolo Premium su Discord viene attivato automaticamente."
+            "title": "Checkout via Stripe",
+            "description": "Pagamento sicuro in pochi secondi. Nessun dato salvato manualmente."
         },
         {
             "step": 3,
-            "title": "Accesso",
-            "description": "Ottieni accesso immediato a tutti i canali privati e materiali educativi."
+            "title": "Ruolo Attivato",
+            "description": "Il tuo ruolo Discord viene assegnato automaticamente dopo il pagamento."
         },
         {
             "step": 4,
-            "title": "Libertà",
-            "description": "Alla scadenza, puoi rinnovare o cancellare liberamente — il tuo ruolo si adegua di conseguenza."
+            "title": "Accesso Immediato",
+            "description": "Entri subito nei canali del tuo livello. Alla scadenza puoi rinnovare o cancellare liberamente."
         }
     ],
     "accessTagline": "Nessuna frizione, nessun passaggio manuale, nessuna attesa.",
+
     "faqSectionTitle": "FAQ",
     "faqs": [
         {
-            "question": "Serve esperienza di trading per unirsi?",
-            "answer": "La conoscenza base aiuta, ma la community è progettata per essere accessibile anche agli investitori che stanno ancora imparando."
+            "question": "Qual è la differenza tra Premium e Black Label?",
+            "answer": "Il piano Premium include l'accesso alla community Discord, i flussi segnalati manualmente dal team, la newsletter quotidiana, il calendario macro e il materiale educativo. Il Black Label aggiunge tutto il livello algoritmico: flussi in tempo reale con scoring automatico e notifiche bot istantanee su ogni movimento rilevante, filtrati con i nostri parametri proprietari."
         },
         {
-            "question": "Fornite segnali?",
-            "answer": "No. Offriamo struttura, contesto e insight strategici — non chiamate cieche."
+            "question": "Il Black Label include anche tutto il Premium?",
+            "answer": "Sì. Il Black Label è un livello superiore che include tutto ciò che è nel Premium, più l'accesso al layer algoritmico in tempo reale."
+        },
+        {
+            "question": "Serve esperienza di trading per unirsi?",
+            "answer": "La conoscenza base aiuta, ma la community è progettata per essere accessibile anche agli investitori che stanno ancora imparando. Il materiale educativo è incluso per questo motivo."
+        },
+        {
+            "question": "Fornite segnali operativi?",
+            "answer": "No. Offriamo struttura, contesto e insight strategici — non chiamate cieche. La decisione operativa rimane sempre tua."
         },
         {
             "question": "Posso cancellare quando voglio?",
@@ -162,19 +267,21 @@
         },
         {
             "question": "Su quali mercati vi concentrate?",
-            "answer": "Principalmente azionario USA, opzioni e segnali di mercato basati sui flussi."
+            "answer": "Principalmente azionario USA, opzioni e segnali di mercato basati sui flussi istituzionali."
         }
     ],
+
     "comingSoonTitle": "In Arrivo",
     "comingSoonDescription": "Gamma Capital evolve costantemente. Nuovi strumenti e canali verranno aggiunti progressivamente, inclusi:",
     "comingSoonFeatures": [
         "dashboard flussi avanzate",
-        "moduli educativi",
-        "canali analitici più profondi",
+        "moduli educativi approfonditi",
+        "canali analitici dedicati",
         "breakdown periodici di mercato"
     ],
-    "comingSoonNote": "I membri Premium riceveranno l'accesso automaticamente man mano che queste funzionalità verranno rilasciate.",
-    "finalCtaTitle": "Unisciti al Discord di Gamma Capital",
-    "finalCtaDescription": "Ottieni chiarezza, struttura e insight anticipati nei mercati che premiano gli investitori preparati.",
+    "comingSoonNote": "I membri Premium e Black Label riceveranno accesso automaticamente man mano che queste funzionalità verranno rilasciate.",
+
+    "finalCtaTitle": "Pronto a Vedere i Mercati con Più Chiarezza?",
+    "finalCtaDescription": "Scegli il livello di accesso che si adatta al tuo stile. Entra nella community, oppure passa direttamente al layer algoritmico con il Black Label.",
     "finalCtaButton": "Scegli il Tuo Piano"
 }
