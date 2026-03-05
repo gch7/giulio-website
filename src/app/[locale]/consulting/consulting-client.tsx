@@ -315,36 +315,36 @@ export default function ConsultingPageClient({ pageData, siteSettings, uiStrings
             </div>
 
             {/* Right: Feature Cards */}
-{/* Right: Feature Cards or Icon Visual */}
-            {features && features.length > 0 ? (
-              <div className="grid sm:grid-cols-1 gap-4">
-                {features.map((feature, index) => (
-                  <FeatureCard key={index} {...feature} accentColor={accentColor} />
-                ))}
-              </div>
-            ) : (
-              <div className={`aspect-[4/3] rounded-2xl flex items-center justify-center relative overflow-hidden ${bgAlt ? 'bg-gradient-to-br from-[#EFF6FF] to-[#F0F7FF] border border-[#DBEAFE]' : 'bg-gradient-to-br from-[#F8F9FB] to-white border border-[#E5E7EB]'}`}>
-                <div className="absolute inset-0 opacity-[0.035]" style={{ backgroundImage: 'radial-gradient(circle, #2563EB 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-                <div className="absolute top-5 right-5 w-20 h-20 rounded-full border border-[#2563EB]/10 bg-[#2563EB]/5" />
-                <div className="absolute bottom-5 left-5 w-12 h-12 rounded-full border border-[#2563EB]/10 bg-[#2563EB]/5" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[#2563EB]/5" />
-                <div className="relative z-10 flex flex-col items-center gap-5">
-                  <div className="w-24 h-24 rounded-3xl bg-white shadow-xl shadow-[#2563EB]/10 border border-[#E5E7EB]/80 flex items-center justify-center">
-                    <Icon className="w-12 h-12 text-[#2563EB]" />
-                  </div>
-                  <div className="flex gap-2 items-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/25" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/60" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/25" />
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-    );
-  };
+            {/* Right: Feature Cards or Icon Visual */}
+                        {features && features.length > 0 ? (
+                          <div className="grid sm:grid-cols-1 gap-4">
+                            {features.map((feature, index) => (
+                              <FeatureCard key={index} {...feature} accentColor={accentColor} />
+                            ))}
+                          </div>
+                        ) : (
+                          <div className={`aspect-[4/3] rounded-2xl flex items-center justify-center relative overflow-hidden ${bgAlt ? 'bg-gradient-to-br from-[#EFF6FF] to-[#F0F7FF] border border-[#DBEAFE]' : 'bg-gradient-to-br from-[#F8F9FB] to-white border border-[#E5E7EB]'}`}>
+                            <div className="absolute inset-0 opacity-[0.035]" style={{ backgroundImage: 'radial-gradient(circle, #2563EB 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+                            <div className="absolute top-5 right-5 w-20 h-20 rounded-full border border-[#2563EB]/10 bg-[#2563EB]/5" />
+                            <div className="absolute bottom-5 left-5 w-12 h-12 rounded-full border border-[#2563EB]/10 bg-[#2563EB]/5" />
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-[#2563EB]/5" />
+                            <div className="relative z-10 flex flex-col items-center gap-5">
+                              <div className="w-24 h-24 rounded-3xl bg-white shadow-xl shadow-[#2563EB]/10 border border-[#E5E7EB]/80 flex items-center justify-center">
+                                <Icon className="w-12 h-12 text-[#2563EB]" />
+                              </div>
+                              <div className="flex gap-2 items-center">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/25" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/60" />
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/25" />
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </section>
+                );
+              };
 
   return (
     <div className="min-h-screen bg-white">
