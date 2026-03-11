@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "posthog-js": "^1.240.0"
     "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
