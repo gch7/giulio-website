@@ -52,20 +52,11 @@ function useCheckoutUrl() {
   const searchParams = useSearchParams();
   const ref = searchParams.get('ref');
   
-function getRef(): string | null {
-  if (typeof document === 'undefined') return null;
-  const match = document.cookie.match(/gammacap_ref=([^;]+)/);
-  return match ? match[1] : null;
-}
-
-function getCheckoutUrl(plan: { id: string; checkoutUrl?: string }): string {
-  const base = plan.checkoutUrl || (() => {
-    const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
-    return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
-  })();
-  const ref = getRef();
-  return ref ? `${base}?ref=${encodeURIComponent(ref)}` : base;
-})();
+  return function getCheckoutUrl(plan: { id: string; checkoutUrl?: string }): string {
+    const base = plan.checkoutUrl || (() => {
+      const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
+      return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
+    })();
     return ref ? `${base}?ref=${ref}` : base;
   };
 }
