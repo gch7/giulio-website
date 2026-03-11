@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -47,10 +48,17 @@ const PLAN_ID_TO_RAILWAY_PATH: Record<string, string> = {
   yearly: 'annuale',
 };
 
-function getCheckoutUrl(plan: { id: string; checkoutUrl?: string }): string {
-  if (plan.checkoutUrl) return plan.checkoutUrl;
-  const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
-  return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
+function useCheckoutUrl() {
+  const searchParams = useSearchParams();
+  const ref = searchParams.get('ref');
+  
+  return function getCheckoutUrl(plan: { id: string; checkoutUrl?: string }): string {
+    const base = plan.checkoutUrl || (() => {
+      const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
+      return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
+    })();
+    return ref ? `${base}?ref=${ref}` : base;
+  };
 }
 
 interface MembershipsPageClientProps {
@@ -60,6 +68,7 @@ interface MembershipsPageClientProps {
 }
 
 export default function MembershipsPageClient({ pageData, siteSettings, uiStrings }: MembershipsPageClientProps) {
+  const getCheckoutUrl = useCheckoutUrl();
   // Extract CMS data (empty string fallbacks - CMS is source of truth)
   const heroBadge = pageData?.heroBadge ?? '';
   const heroTitle = pageData?.heroTitle ?? '';
