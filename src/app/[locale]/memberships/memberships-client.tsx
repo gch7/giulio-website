@@ -550,6 +550,15 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
 
                   <a
                     href={getCheckoutUrl(plan)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const ref = getRef();
+                      const base = plan.checkoutUrl || (() => {
+                        const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
+                        return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
+                      })();
+                      window.location.href = ref ? `${base}?ref=${encodeURIComponent(ref)}` : base;
+                    }}
                     className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-[14px] font-semibold transition-all duration-200 ${
                       plan.tier === 'black-label'
                         ? 'bg-[#2563EB] hover:bg-[#1D4ED8] text-white'
