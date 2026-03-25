@@ -523,12 +523,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                         {plan.price}
                       </span>
                     </div>
-                    <div className="flex items-center justify-center gap-2 mt-3">
-                      <Clock className={`w-4 h-4 ${plan.tier === 'black-label' ? 'text-blue-400' : 'text-[#2563EB]'}`} />
-                      <span className={`text-[13px] font-medium ${plan.tier === 'black-label' ? 'text-blue-400' : 'text-[#2563EB]'}`}>
-                        {plan.trial} {uiStrings?.freeTrialSuffix ?? ''}
-                      </span>
-                    </div>
                   </div>
 
                   <p className={`text-[14px] text-center mb-6 min-h-[40px] ${plan.tier === 'black-label' ? 'text-white/70' : 'text-[#6B7280]'}`}>
