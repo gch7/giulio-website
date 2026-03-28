@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -112,6 +113,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
   const finalCtaDescription = pageData?.finalCtaDescription ?? '';
   const finalCtaButton = pageData?.finalCtaButton ?? '';
 
+  const params = useParams();
+  const locale = params?.locale as string;
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
   const heroRef = useRef<HTMLElement>(null);
