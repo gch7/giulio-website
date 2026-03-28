@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -13,7 +13,6 @@ import type { MembershipsPage, SiteSettings, UIStrings } from '@/types/sanity';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Icon mapping for CMS-driven icons
 const iconMap: Record<string, LucideIcon> = {
   TrendingUp,
   Eye,
@@ -29,17 +28,6 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
 };
 
-const defaultInsideFeatures = []; // Removed
-const defaultKeyBenefits = []; // Removed
-const defaultIncludedFeatures = []; // Removed
-const defaultEducationalItems = []; // Removed
-const defaultAdditionalIncluded = []; // Removed
-const defaultPlans = []; // Removed
-const defaultAccessSteps = []; // Removed
-const defaultFaqs = []; // Removed
-const defaultComingSoon = []; // Removed
-
-// Railway checkout URLs – used when plan.checkoutUrl is not set in Sanity (same-tab redirect, no Stripe)
 const RAILWAY_CHECKOUT_BASE = 'https://gammacap-bot-production.up.railway.app/checkout';
 const PLAN_ID_TO_RAILWAY_PATH: Record<string, string> = {
   monthly: 'mensile',
@@ -70,7 +58,9 @@ interface MembershipsPageClientProps {
 }
 
 export default function MembershipsPageClient({ pageData, siteSettings, uiStrings }: MembershipsPageClientProps) {
-  // Extract CMS data (empty string fallbacks - CMS is source of truth)
+  const params = useParams();
+  const locale = params?.locale as string;
+
   const heroBadge = pageData?.heroBadge ?? '';
   const heroTitle = pageData?.heroTitle ?? '';
   const heroSubtitle = pageData?.heroSubtitle ?? '';
@@ -113,8 +103,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
   const finalCtaDescription = pageData?.finalCtaDescription ?? '';
   const finalCtaButton = pageData?.finalCtaButton ?? '';
 
-  const params = useParams();
-  const locale = params?.locale as string;
   const [openFaq, setOpenFaq] = React.useState<number | null>(null);
 
   const heroRef = useRef<HTMLElement>(null);
@@ -137,182 +125,63 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
-    tl.fromTo(
-      badgeRef.current,
-      { opacity: 0, y: -10, scale: 0.95 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.4 }
-    )
-      .fromTo(
-        titleRef.current,
-        { opacity: 0, y: 25 },
-        { opacity: 1, y: 0, duration: 0.5 },
-        "-=0.2"
-      )
-      .fromTo(
-        paragraphRef.current,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.4 },
-        "-=0.25"
-      );
+    tl.fromTo(badgeRef.current, { opacity: 0, y: -10, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.4 })
+      .fromTo(titleRef.current, { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.5 }, "-=0.2")
+      .fromTo(paragraphRef.current, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.4 }, "-=0.25");
 
-    // Inside Discord section
     if (insideRef.current) {
-      gsap.fromTo(
-        insideRef.current.querySelectorAll('.animate-item'),
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.35,
-          stagger: 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: insideRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(insideRef.current.querySelectorAll('.animate-item'), { opacity: 0, y: 20 }, {
+        opacity: 1, y: 0, duration: 0.35, stagger: 0.05, ease: "power2.out",
+        scrollTrigger: { trigger: insideRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Benefits section
     if (benefitsRef.current) {
-      gsap.fromTo(
-        benefitsRef.current.querySelectorAll('.benefit-card'),
-        { opacity: 0, y: 25, scale: 0.98 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.4,
-          stagger: 0.06,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: benefitsRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(benefitsRef.current.querySelectorAll('.benefit-card'), { opacity: 0, y: 25, scale: 0.98 }, {
+        opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.06, ease: "power2.out",
+        scrollTrigger: { trigger: benefitsRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Included section
     if (includedRef.current) {
-      gsap.fromTo(
-        includedRef.current.querySelectorAll('.animate-item'),
-        { opacity: 0, x: -15 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.3,
-          stagger: 0.04,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: includedRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(includedRef.current.querySelectorAll('.animate-item'), { opacity: 0, x: -15 }, {
+        opacity: 1, x: 0, duration: 0.3, stagger: 0.04, ease: "power2.out",
+        scrollTrigger: { trigger: includedRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Pricing section
     if (pricingRef.current) {
-      gsap.fromTo(
-        pricingRef.current.querySelectorAll('.pricing-card'),
-        { opacity: 0, y: 30, scale: 0.98 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.45,
-          stagger: 0.08,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: pricingRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(pricingRef.current.querySelectorAll('.pricing-card'), { opacity: 0, y: 30, scale: 0.98 }, {
+        opacity: 1, y: 0, scale: 1, duration: 0.45, stagger: 0.08, ease: "power2.out",
+        scrollTrigger: { trigger: pricingRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Access steps
     if (accessRef.current) {
-      gsap.fromTo(
-        accessRef.current.querySelectorAll('.access-step'),
-        { opacity: 0, x: -20 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.35,
-          stagger: 0.06,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: accessRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(accessRef.current.querySelectorAll('.access-step'), { opacity: 0, x: -20 }, {
+        opacity: 1, x: 0, duration: 0.35, stagger: 0.06, ease: "power2.out",
+        scrollTrigger: { trigger: accessRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // FAQ section
     if (faqRef.current) {
-      const faqItems = faqRef.current.querySelectorAll('.faq-item');
-      gsap.fromTo(
-        faqItems,
-        { opacity: 0, y: 15 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.35,
-          stagger: 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: faqRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(faqRef.current.querySelectorAll('.faq-item'), { opacity: 0, y: 15 }, {
+        opacity: 1, y: 0, duration: 0.35, stagger: 0.05, ease: "power2.out",
+        scrollTrigger: { trigger: faqRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Coming soon section
     if (comingSoonRef.current) {
-      gsap.fromTo(
-        comingSoonRef.current,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.4,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: comingSoonRef.current,
-            start: "top 92%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+      gsap.fromTo(comingSoonRef.current, { opacity: 0, y: 20 }, {
+        opacity: 1, y: 0, duration: 0.4, ease: "power2.out",
+        scrollTrigger: { trigger: comingSoonRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+      });
     }
 
-    // Final CTA
-    gsap.fromTo(
-      ctaRef.current,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ctaRef.current,
-          start: "top 92%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    );
+    gsap.fromTo(ctaRef.current, { opacity: 0, y: 20 }, {
+      opacity: 1, y: 0, duration: 0.4, ease: "power2.out",
+      scrollTrigger: { trigger: ctaRef.current, start: "top 92%", toggleActions: "play none none reverse" }
+    });
   }, []);
 
   return (
@@ -357,12 +226,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         <section id="inside" ref={insideRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12 animate-item">
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">
-                {insideSectionTitle}
-              </h2>
-              <p className="text-[16px] text-[#71717a] max-w-2xl mx-auto">
-                {insideSectionDescription}
-              </p>
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#0a0a0b] mb-4">{insideSectionTitle}</h2>
+              <p className="text-[16px] text-[#71717a] max-w-2xl mx-auto">{insideSectionDescription}</p>
             </div>
             <div className="bg-[#F8F9FB] rounded-2xl p-8 border border-[#E5E7EB]">
               <p className="text-[14px] uppercase tracking-wide text-[#374151] font-medium mb-6 animate-item">
@@ -376,9 +241,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                       <div className="w-10 h-10 bg-[#2563EB]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <IconComponent className="w-5 h-5 text-[#2563EB]" />
                       </div>
-                      <p className="text-[15px] text-[#374151] leading-relaxed pt-2">
-                        {feature.text}
-                      </p>
+                      <p className="text-[15px] text-[#374151] leading-relaxed pt-2">{feature.text}</p>
                     </div>
                   );
                 })}
@@ -391,9 +254,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         <section ref={benefitsRef} className="w-full bg-[#fafafa] py-10 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-8 md:mb-12">
-              <h2 className="text-[24px] md:text-[36px] font-semibold text-[#111827] mb-4">
-                {benefitsSectionTitle}
-              </h2>
+              <h2 className="text-[24px] md:text-[36px] font-semibold text-[#111827] mb-4">{benefitsSectionTitle}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {keyBenefits.map((benefit, index) => {
@@ -403,12 +264,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#2563EB]/10 to-[#2563EB]/5 rounded-xl flex items-center justify-center mb-4 md:mb-5">
                       <BenefitIcon className="w-5 h-5 md:w-6 md:h-6 text-[#2563EB]" />
                     </div>
-                    <h3 className="text-[16px] md:text-[18px] font-semibold text-[#111827] mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-[13px] md:text-[14px] text-[#71717a] leading-relaxed">
-                      {benefit.description}
-                    </p>
+                    <h3 className="text-[16px] md:text-[18px] font-semibold text-[#111827] mb-2">{benefit.title}</h3>
+                    <p className="text-[13px] md:text-[14px] text-[#71717a] leading-relaxed">{benefit.description}</p>
                   </div>
                 );
               })}
@@ -420,9 +277,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         <section ref={includedRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[900px] mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">
-                {includedSectionTitle}
-              </h2>
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">{includedSectionTitle}</h2>
             </div>
             <div className="bg-gradient-to-br from-[#0A1A2F] to-[#111827] rounded-2xl p-8 md:p-10 text-white">
               <div className="space-y-4 mb-8">
@@ -433,7 +288,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                   </div>
                 ))}
               </div>
-
               <div className="bg-white/10 rounded-xl p-6 mb-8 animate-item">
                 <div className="flex items-center gap-2 mb-4">
                   <GraduationCap className="w-5 h-5 text-[#2563EB]" />
@@ -448,7 +302,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                   ))}
                 </div>
               </div>
-
               <div className="space-y-4">
                 {additionalIncluded.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3 animate-item">
@@ -457,11 +310,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                   </div>
                 ))}
               </div>
-
               <div className="mt-8 pt-6 border-t border-white/10 text-center animate-item">
-                <p className="text-[14px] text-white/60 italic">
-                  {includedTagline}
-                </p>
+                <p className="text-[14px] text-white/60 italic">{includedTagline}</p>
               </div>
             </div>
           </div>
@@ -471,12 +321,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         <section ref={pricingRef} id="pricing" className="w-full bg-[#F8F9FB] py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-6">
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">
-                {pricingSectionTitle}
-              </h2>
-              <p className="text-[16px] text-[#6B7280] max-w-xl mx-auto whitespace-pre-line">
-                {pricingSectionDescription}
-              </p>
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">{pricingSectionTitle}</h2>
+              <p className="text-[16px] text-[#6B7280] max-w-xl mx-auto whitespace-pre-line">{pricingSectionDescription}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
@@ -494,21 +340,17 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                   {plan.popular && plan.tier !== 'black-label' && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                       <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#2563EB] text-white text-[11px] font-semibold uppercase tracking-wide rounded-full">
-                        <Sparkles className="w-3 h-3" />
-                        {popularBadgeText}
+                        <Sparkles className="w-3 h-3" />{popularBadgeText}
                       </span>
                     </div>
                   )}
-
                   {plan.tier === 'black-label' && plan.popular && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                       <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] text-white text-[11px] font-semibold uppercase tracking-wide rounded-full">
-                        <Sparkles className="w-3 h-3" />
-                        {popularBadgeText}
+                        <Sparkles className="w-3 h-3" />{popularBadgeText}
                       </span>
                     </div>
                   )}
-
                   {plan.tier === 'black-label' && (
                     <div className="absolute -top-3 right-4">
                       <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-[#1E3A8A] to-[#0A1A2F] border border-[#2563EB]/40 text-white text-[11px] font-semibold uppercase tracking-wide rounded-full">
@@ -572,13 +414,14 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
             </div>
           </div>
         </section>
+
         {/* Stripe Billing Portal */}
         <div className="w-full bg-white border-t border-[#E5E7EB] py-5 px-6 md:px-12">
           <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
             <span className="text-[14px] text-[#6B7280]">
               {locale === 'it' ? 'Sei già abbonato?' : 'Already a member?'}
             </span>
-            
+            <a
               href="https://billing.stripe.com/p/login/bIY4kjdUbaPR49ObII"
               target="_blank"
               rel="noopener noreferrer"
@@ -589,18 +432,15 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
             </a>
           </div>
         </div>
+
         {/* SECTION 6 - How Access Works */}
         <section ref={accessRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[800px] mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">
-                {accessSectionTitle}
-              </h2>
+              <h2 className="text-[28px] md:text-[36px] font-semibold text-[#111827] mb-4">{accessSectionTitle}</h2>
             </div>
-
             <div className="relative">
               <div className="absolute left-[23px] top-0 bottom-0 w-px bg-gradient-to-b from-[#2563EB] via-[#2563EB]/50 to-transparent hidden md:block" />
-
               <div className="space-y-6">
                 {accessSteps.map((step, index) => (
                   <div key={index} className="access-step flex gap-6 items-start">
@@ -615,7 +455,6 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                 ))}
               </div>
             </div>
-
             <div className="mt-10 text-center">
               <p className="inline-flex items-center gap-2 text-[14px] text-[#2563EB] font-medium bg-[#2563EB]/10 px-4 py-2 rounded-full">
                 <Shield className="w-4 h-4" />
@@ -628,9 +467,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         {/* SECTION 7 - FAQ */}
         <section ref={faqRef} className="w-full bg-[#f4f4f5] py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[700px] mx-auto">
-            <h2 className="text-[28px] md:text-[36px] font-semibold text-center mb-10 text-[#111827]">
-              {faqSectionTitle}
-            </h2>
+            <h2 className="text-[28px] md:text-[36px] font-semibold text-center mb-10 text-[#111827]">{faqSectionTitle}</h2>
             <div className="flex flex-col gap-3">
               {faqs.map((faq, index) => (
                 <div key={index} className="faq-item border border-[#E5E7EB] rounded-xl bg-white overflow-hidden shadow-sm">
@@ -660,15 +497,9 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                 <div className="w-10 h-10 bg-[#2563EB]/10 rounded-lg flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-[#2563EB]" />
                 </div>
-                <h2 className="text-[22px] md:text-[28px] font-semibold text-[#111827]">
-                  {comingSoonTitle}
-                </h2>
+                <h2 className="text-[22px] md:text-[28px] font-semibold text-[#111827]">{comingSoonTitle}</h2>
               </div>
-
-              <p className="text-[14px] md:text-[15px] text-[#6B7280] mb-5 whitespace-pre-line">
-                {comingSoonDescription}
-              </p>
-
+              <p className="text-[14px] md:text-[15px] text-[#6B7280] mb-5 whitespace-pre-line">{comingSoonDescription}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
                 {comingSoonFeatures.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
@@ -677,10 +508,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                   </div>
                 ))}
               </div>
-
-              <p className="text-[13px] md:text-[14px] text-[#2563EB] font-medium">
-                {comingSoonNote}
-              </p>
+              <p className="text-[13px] md:text-[14px] text-[#2563EB] font-medium">{comingSoonNote}</p>
             </div>
           </div>
         </section>
@@ -688,12 +516,8 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
         {/* SECTION 9 - Final CTA */}
         <section ref={ctaRef} className="w-full bg-gradient-to-b from-[#F8F9FB] to-[#F3F4F6] py-16 md:py-24 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[700px] mx-auto text-center">
-            <h2 className="text-[32px] md:text-[42px] font-semibold text-[#111827] mb-5 tracking-tight">
-              {finalCtaTitle}
-            </h2>
-            <p className="text-[17px] text-[#6B7280] mb-10 max-w-xl mx-auto">
-              {finalCtaDescription}
-            </p>
+            <h2 className="text-[32px] md:text-[42px] font-semibold text-[#111827] mb-5 tracking-tight">{finalCtaTitle}</h2>
+            <p className="text-[17px] text-[#6B7280] mb-10 max-w-xl mx-auto">{finalCtaDescription}</p>
             <button
               onClick={scrollToPricing}
               className="inline-flex items-center justify-center gap-2 bg-[#0A1A2F] text-white px-8 py-4 rounded-xl text-[15px] font-semibold hover:bg-[#1E3A8A] transition-all duration-200 shadow-lg shadow-[#0A1A2F]/10 hover:shadow-xl hover:-translate-y-0.5"
