@@ -569,7 +569,23 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
             </div>
           </div>
         </section>
-
+        {/* Stripe Billing Portal */}
+        <div className="w-full bg-white border-t border-[#E5E7EB] py-5 px-6 md:px-12">
+          <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+            <span className="text-[14px] text-[#6B7280]">
+              {locale === 'it' ? 'Sei già abbonato?' : 'Already a member?'}
+            </span>
+            
+              href="https://billing.stripe.com/p/login/bIY4kjdUbaPR49ObII"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#2563EB] hover:text-[#1E3A8A] transition-colors underline underline-offset-2"
+            >
+              {locale === 'it' ? 'Gestisci il tuo abbonamento' : 'Manage your subscription'}
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
         {/* SECTION 6 - How Access Works */}
         <section ref={accessRef} className="w-full bg-white py-12 md:py-20 px-6 md:px-12 border-t border-[#E5E7EB]">
           <div className="max-w-[800px] mx-auto">
