@@ -2,88 +2,88 @@
     "_id": "solutionsPage-it",
     "_type": "solutionsPage",
     "language": "it",
-    "seoTitle": "Market Intelligence - Gamma Capital",
-    "seoDescription": "Insight guidati dai dati, algoritmi e framework istituzionali per comprendere i mercati e gestire il rischio.",
-    "heroBadge": "Market Intelligence",
-    "heroTitle": "Market Intelligence",
-    "heroSubtitle": "Insight guidati dai dati",
-    "heroDescription": "Insight guidati dai dati, algoritmi e framework istituzionali per comprendere i mercati e gestire il rischio.",
+    "seoTitle": "I Nostri Pilastri — Gamma Capital",
+    "seoDescription": "I tre pilastri di Gamma Capital: Education, Tecnologia, Community. Strumenti di comprensione e analisi, niente consulenza personalizzata.",
+    "heroBadge": "I Nostri Pilastri",
+    "heroTitle": "Education, Tecnologia, Community",
+    "heroSubtitle": "I tre pilastri di Gamma Capital",
+    "heroDescription": "Il nostro lavoro è organizzato attorno a tre pilastri complementari. Ognuno è progettato per dare strumenti di comprensione e analisi. Niente consulenza personalizzata: il membro decide sempre in autonomia.",
     "solutions": [
         {
-            "_key": "core_intelligence",
-            "title": "Analisi e Algoritmi",
-            "description": "Sviluppiamo framework analitici avanzati e algoritmi proprietari per interpretare i mercati, gestire il rischio di portafoglio e identificare opportunità asimmetriche. I nostri modelli si adattano ai regimi di volatilità, liquidità e macro.",
-            "icon": "BarChart3",
+            "_key": "education",
+            "title": "Education & Masterclass",
+            "description": "Masterclass strutturate su opzioni, flussi istituzionali, GEX, AI quantitativa e logica smart money. Materiale di derivazione istituzionale, riformulato per l'autoformazione.",
+            "icon": "GraduationCap",
             "color": "#2563EB",
-            "href": "/contact",
+            "href": "/quant-studio",
             "features": [
-                "Algoritmi proprietari",
-                "Gestione del rischio",
-                "Opportunità asimmetriche",
-                "Adattamento al regime"
+                "Moduli video + materiale scritto",
+                "Case study e ricerche storiche",
+                "Accesso a vita ai contenuti",
+                "Aggiornamenti periodici inclusi"
             ]
         },
         {
-            "_key": "options_intelligence",
-            "title": "Intelligence sulle Opzioni",
-            "description": "Analizziamo i flussi istituzionali di opzioni, GEX, posizionamento dei dealer e dinamiche della volatilità per capire dove si accumula il rischio. Questa intelligence supporta il timing e la strategia.",
-            "icon": "TrendingUp",
+            "_key": "quant_tech",
+            "title": "Quant Tech & AI Tools",
+            "description": "Strumenti di analisi proprietari: flow scanner, GEX dashboard, modelli AI. Tutto self-service: il membro vede i dati, le sue conclusioni operative restano sue. I tool sono inclusi nella Membership Discord.",
+            "icon": "Cpu",
             "color": "#7C3AED",
-            "href": "/solutions/strategy-insights",
+            "href": "/quant-studio",
             "features": [
-                "Comportamento guidato dai flussi",
-                "Esposizione Gamma e hedging",
-                "Regimi di volatilità",
-                "Analisi strutturale"
+                "Flow scanner in tempo reale",
+                "GEX & dealer positioning",
+                "Modelli AI documentati",
+                "Inclusi nella Membership Discord"
             ]
         },
         {
-            "_key": "structured_products",
-            "title": "Prodotti Strutturati",
-            "description": "Analizziamo e progettiamo payoff strutturati da una prospettiva istituzionale. Replichiamo o miglioriamo i payoff strutturati utilizzando le opzioni, rimuovendo l'opacità non necessaria.",
-            "icon": "Building2",
+            "_key": "community",
+            "title": "Community Discord",
+            "description": "Una community privata di investitori seri. Research collaborativa, commentary giornaliero, eventi periodici. Tutti i contenuti sono identici per i membri di uno stesso livello.",
+            "icon": "Users",
             "color": "#059669",
-            "href": "/consulting",
+            "href": "/memberships",
             "features": [
-                "Asimmetria del payoff",
-                "Logica di copertura",
-                "Performance dipendente dal regime",
-                "Efficienza vs complessità"
+                "Canali tematici",
+                "Research condivisa",
+                "Eventi periodici",
+                "Tool & Dashboard inclusi"
             ]
         },
         {
             "_key": "real_estate",
-            "title": "Advisory Immobiliare",
-            "description": "La nostra intelligence unisce analisi finanziaria ed esperienza operativa diretta in Svizzera e Italia. L'immobiliare è trattato come parte di un framework multi-asset più ampio, non come investimento isolato.",
+            "title": "Real Estate Insights",
+            "description": "Analisi e contenuti su mercati immobiliari (focus Svizzera e Italia). Materiale educativo e di mercato — non consulenza immobiliare regolata. Distribuito in forma generale.",
             "icon": "Building2",
             "color": "#D97706",
-            "href": "/contact",
+            "href": "/quant-studio",
             "features": [
-                "Lugano, Chiasso, Venezia, Como...",
-                "Analisi rendimento e rischio",
-                "Ottimizzazione cash flow",
+                "Lugano, Chiasso, Como, Venezia, Udine, Roma",
+                "Modelli yield e cash-flow",
+                "Trend di mercato",
                 "Allocazione strategica"
             ]
         },
         {
             "_key": "network",
-            "title": "Network Strategico",
-            "description": "Gamma Capital opera all'interno di un network selettivo di professionisti in finanza, immobiliare e investimenti alternativi. Non un servizio, ma un vantaggio strategico per clienti selezionati.",
+            "title": "Network",
+            "description": "Gamma Capital opera all'interno di un network selettivo di professionisti in finanza, immobiliare e investimenti alternativi. Non un servizio, ma un contesto di discussione e research.",
             "icon": "Network",
             "color": "#DC2626",
             "href": "/contact",
             "features": [
                 "Insight di alto livello",
                 "Operatori esperti",
-                "Allineamento strategico",
-                "Introduzioni executive"
+                "Discussione qualificata",
+                "Eventi selezionati"
             ]
         }
     ],
-    "ctaTitle": "Insight istituzionali, applicati con chiarezza.",
-    "ctaDescription": "Contattaci per discutere come la nostra market intelligence può supportare la tua strategia di investimento.",
-    "primaryCtaText": "Contattaci",
-    "primaryCtaLink": "/contact",
-    "secondaryCtaText": "Vedi Strategy Insights",
-    "secondaryCtaLink": "/solutions/strategy-insights"
+    "ctaTitle": "Vuoi Saperne di Più?",
+    "ctaDescription": "Esplora i nostri pilastri o contattaci per orientarti. Non offriamo consulenza personalizzata: il primo contatto serve solo per chiarire quale percorso self-service è più adatto.",
+    "primaryCtaText": "Esplora il Quant Studio",
+    "primaryCtaLink": "/quant-studio",
+    "secondaryCtaText": "Scopri la Community",
+    "secondaryCtaLink": "/memberships"
 }

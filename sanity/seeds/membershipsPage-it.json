@@ -2,12 +2,12 @@
     "_id": "membershipsPage-it",
     "_type": "membershipsPage",
     "language": "it",
-    "seoTitle": "Gamma Capital Membership — Scegli il tuo livello di accesso",
-    "seoDescription": "Due livelli di membership: accesso Premium alla community Discord e il tier Black Label con flussi algoritmici in tempo reale e notifiche bot istantanee.",
+    "seoTitle": "Gamma Capital Membership — Discord Premium e Black Label",
+    "seoDescription": "Due livelli di membership Discord: Premium e Black Label con flussi algoritmici in tempo reale. Tool & Dashboard del Quant Studio inclusi.",
     "heroBadge": "Membership",
-    "heroTitle": "Due Livelli. Una Sola Missione: Chiarezza nei Mercati.",
-    "heroSubtitle": "Scegli il livello che fa per te",
-    "heroDescription": "Dal canale flussi curato manualmente da Gamma Capital fino al monitoraggio algoritmico in tempo reale con scoring automatico — scegli il livello di profondità che si adatta al tuo stile operativo.",
+    "heroTitle": "Discord Premium per Capire i Mercati",
+    "heroSubtitle": "con più chiarezza",
+    "heroDescription": "Una community privata su Discord per investitori che cercano analisi strutturata, research collaborativa e materiale educativo. Tutti i contenuti — flussi, newsletter, materiale, notifiche bot — sono identici per tutti i membri dello stesso livello: si tratta di market commentary generale, non di consulenza personalizzata.",
     "heroPrimaryCta": "Scopri il Black Label",
     "heroSecondaryCta": "Confronta i Piani",
 
@@ -17,7 +17,7 @@
     "insideFeatures": [
         {
             "icon": "Users",
-            "text": "Accesso alle chat comuni della community Discord privata"
+            "text": "Accesso a tutti i canali della community Discord privata, identici per tutti i membri"
         },
         {
             "icon": "TrendingUp",
@@ -36,8 +36,12 @@
             "text": "Materiale educativo introduttivo su opzioni, flussi e logica smart money"
         },
         {
+            "icon": "LayoutGrid",
+            "text": "Accesso ai tool self-service del Quant Studio: Flow Scanner, GEX Dashboard, Volatility Regime Analyzer"
+        },
+        {
             "icon": "Zap",
-            "text": "Black Label: flussi algoritmici in tempo reale con punteggio automatico e notifiche bot istantanee"
+            "text": "Black Label: flussi algoritmici in tempo reale con scoring automatico, distribuiti in modo identico a tutti i sottoscrittori del livello"
         }
     ],
 
@@ -61,7 +65,7 @@
         {
             "icon": "Target",
             "title": "Metodologia Comprovata",
-            "description": "Lo stesso approccio analitico usato nella nostra consulenza istituzionale — adattato per l'uso operativo quotidiano."
+            "description": "Lo stesso approccio analitico di derivazione istituzionale — riformulato per l'autoformazione e l'uso autonomo."
         },
         {
             "icon": "GraduationCap",
@@ -77,7 +81,8 @@
         "✅ Canale flussi opzioni segnalati manualmente dal team",
         "✅ Newsletter quotidiana con le notizie di mercato principali",
         "✅ Riassunto giornaliero degli eventi macro in calendario",
-        "✅ Materiale educativo introduttivo (opzioni, flussi, smart money)"
+        "✅ Materiale educativo introduttivo (opzioni, flussi, smart money)",
+        "✅ Tool & Dashboard self-service del Quant Studio (Flow Scanner, GEX, Volatility Analyzer)"
     ],
 
     "educationalMiniCourseTitle": "Mini-corso educativo incluso:",
@@ -86,10 +91,10 @@
         "come leggere i flussi istituzionali",
         "come operare con la logica smart money"
     ],
-    "includedTagline": "Il piano base ti dà accesso alla community e agli insight del team. Il Black Label ti mette davanti a ogni movimento prima che accada.",
+    "includedTagline": "Il piano Premium ti dà accesso alla community, agli insight del team e ai tool self-service. Il Black Label aggiunge il layer algoritmico in tempo reale, distribuito in modo identico a tutti i sottoscrittori del livello.",
 
     "pricingSectionTitle": "Scegli il Tuo Livello",
-    "pricingSectionDescription": "Il piano Premium ti dà accesso completo alla community e ai contenuti curati dal team. Il Black Label aggiunge il layer algoritmico: flussi in tempo reale, scoring automatico e notifiche bot su ogni movimento rilevante — con i filtri proprietari che utilizziamo da anni.",
+    "pricingSectionDescription": "Il piano Premium ti dà accesso completo alla community e ai contenuti curati dal team. Il Black Label aggiunge il layer algoritmico: flussi in tempo reale, scoring automatico e notifiche bot — identici per tutti i sottoscrittori del livello, con i filtri proprietari che utilizziamo da anni.",
 
     "plans": [
         {
@@ -98,7 +103,7 @@
             "price": "€19.99",
             "priceValue": 19.99,
             "trial": "3 giorni prova gratuita",
-            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana, materiale educativo e tool self-service del Quant Studio.",
             "cta": "Abbonati Premium Mensile",
             "stripePriceId": "price_monthly_id",
             "popular": false,
@@ -109,7 +114,10 @@
                 "Flussi opzioni segnalati manualmente",
                 "Newsletter quotidiana",
                 "Calendario eventi macro giornaliero",
-                "Materiale educativo introduttivo"
+                "Materiale educativo introduttivo",
+                "Flow Scanner self-service",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
             ]
         },
         {
@@ -118,7 +126,7 @@
             "price": "€54.99",
             "priceValue": 54.99,
             "trial": "7 giorni prova gratuita",
-            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana, materiale educativo e tool self-service del Quant Studio.",
             "cta": "Abbonati Premium Trimestrale",
             "stripePriceId": "price_quarterly_id",
             "popular": false,
@@ -129,7 +137,10 @@
                 "Flussi opzioni segnalati manualmente",
                 "Newsletter quotidiana",
                 "Calendario eventi macro giornaliero",
-                "Materiale educativo introduttivo"
+                "Materiale educativo introduttivo",
+                "Flow Scanner self-service",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
             ]
         },
         {
@@ -138,7 +149,7 @@
             "price": "€219.99",
             "priceValue": 219.99,
             "trial": "30 giorni prova gratuita",
-            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana e materiale educativo.",
+            "description": "Accesso completo alla community, flussi segnalati dal team, newsletter quotidiana, materiale educativo e tool self-service del Quant Studio.",
             "cta": "Abbonati Premium Annuale",
             "stripePriceId": "price_annual_id",
             "popular": false,
@@ -149,7 +160,10 @@
                 "Flussi opzioni segnalati manualmente",
                 "Newsletter quotidiana",
                 "Calendario eventi macro giornaliero",
-                "Materiale educativo introduttivo"
+                "Materiale educativo introduttivo",
+                "Flow Scanner self-service",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
             ]
         },
         {
@@ -158,7 +172,7 @@
             "price": "€24.99",
             "priceValue": 24.99,
             "trial": "3 giorni prova gratuita",
-            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico e notifiche bot istantanee, distribuite in modo identico a tutti i sottoscrittori del livello. Non si tratta di segnali personalizzati.",
             "cta": "Abbonati Black Label Mensile",
             "stripePriceId": "price_1T5ZqgEJRFKN7GwZpBsOrU4O",
             "popular": false,
@@ -168,8 +182,9 @@
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
                 "Punteggio automatico su ogni flusso",
-                "Notifiche bot istantanee su ogni movimento",
-                "Filtri proprietari affinati negli anni"
+                "Notifiche bot identiche per tutti i sottoscrittori del livello",
+                "Filtri proprietari affinati negli anni",
+                "Tool & Dashboard del Quant Studio inclusi"
             ]
         },
         {
@@ -178,7 +193,7 @@
             "price": "€68.99",
             "priceValue": 68.99,
             "trial": "7 giorni prova gratuita",
-            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico e notifiche bot istantanee, distribuite in modo identico a tutti i sottoscrittori del livello. Non si tratta di segnali personalizzati.",
             "cta": "Abbonati Black Label Trimestrale",
             "stripePriceId": "price_1T5ZsPEJRFKN7GwZk38rvhCE",
             "popular": true,
@@ -188,8 +203,9 @@
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
                 "Punteggio automatico su ogni flusso",
-                "Notifiche bot istantanee su ogni movimento",
-                "Filtri proprietari affinati negli anni"
+                "Notifiche bot identiche per tutti i sottoscrittori del livello",
+                "Filtri proprietari affinati negli anni",
+                "Tool & Dashboard del Quant Studio inclusi"
             ]
         },
         {
@@ -198,7 +214,7 @@
             "price": "€269.99",
             "priceValue": 269.99,
             "trial": "30 giorni prova gratuita",
-            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico. Il bot notifica ogni movimento rilevante — istantaneamente, con i nostri filtri proprietari.",
+            "description": "Tutto il Premium, più flussi opzioni in tempo reale con punteggio algoritmico e notifiche bot istantanee, distribuite in modo identico a tutti i sottoscrittori del livello. Non si tratta di segnali personalizzati.",
             "cta": "Abbonati Black Label Annuale",
             "stripePriceId": "price_1T5ZucEJRFKN7GwZLPDjT2GF",
             "popular": false,
@@ -208,8 +224,9 @@
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
                 "Punteggio automatico su ogni flusso",
-                "Notifiche bot istantanee su ogni movimento",
-                "Filtri proprietari affinati negli anni"
+                "Notifiche bot identiche per tutti i sottoscrittori del livello",
+                "Filtri proprietari affinati negli anni",
+                "Tool & Dashboard del Quant Studio inclusi"
             ]
         }
     ],
@@ -243,11 +260,23 @@
     "faqs": [
         {
             "question": "Qual è la differenza tra Premium e Black Label?",
-            "answer": "Il piano Premium include l'accesso alla community Discord, i flussi segnalati manualmente dal team, la newsletter quotidiana, il calendario macro e il materiale educativo. Il Black Label aggiunge tutto il livello algoritmico: flussi in tempo reale con scoring automatico e notifiche bot istantanee su ogni movimento rilevante, filtrati con i nostri parametri proprietari."
+            "answer": "Il piano Premium include l'accesso alla community Discord, i flussi segnalati manualmente dal team, la newsletter quotidiana, il calendario macro, il materiale educativo e i tool self-service del Quant Studio. Il Black Label aggiunge tutto il livello algoritmico: flussi in tempo reale con scoring automatico e notifiche bot, distribuiti in modo identico a tutti i sottoscrittori del livello."
         },
         {
             "question": "Il Black Label include anche tutto il Premium?",
             "answer": "Sì. Il Black Label è un livello superiore che include tutto ciò che è nel Premium, più l'accesso al layer algoritmico in tempo reale."
+        },
+        {
+            "question": "I contenuti sono personalizzati?",
+            "answer": "No. Tutti i contenuti, incluse le notifiche bot Black Label, sono distribuiti in modo identico a tutti i membri del corrispondente livello. Non rispondiamo al portafoglio o al profilo del singolo membro."
+        },
+        {
+            "question": "Offrite consulenza in investimenti?",
+            "answer": "No. Non prestiamo consulenza in investimenti ai sensi della LSerFi né gestione patrimoniale ai sensi della LIsFi. Le decisioni operative sono sempre del membro."
+        },
+        {
+            "question": "Come funzionano le notifiche bot?",
+            "answer": "Sono market commentary algoritmico distribuito a tutti i sottoscrittori del livello. Non sono raccomandazioni personali e non vanno considerate tali."
         },
         {
             "question": "Serve esperienza di trading per unirsi?",
@@ -274,14 +303,14 @@
     "comingSoonTitle": "In Arrivo",
     "comingSoonDescription": "Gamma Capital evolve costantemente. Nuovi strumenti e canali verranno aggiunti progressivamente, inclusi:",
     "comingSoonFeatures": [
-        "dashboard flussi avanzate",
+        "dashboard flussi avanzate self-service",
         "moduli educativi approfonditi",
         "canali analitici dedicati",
         "breakdown periodici di mercato"
     ],
     "comingSoonNote": "I membri Premium e Black Label riceveranno accesso automaticamente man mano che queste funzionalità verranno rilasciate.",
 
-    "finalCtaTitle": "Pronto a Vedere i Mercati con Più Chiarezza?",
-    "finalCtaDescription": "Scegli il livello di accesso che si adatta al tuo stile. Entra nella community, oppure passa direttamente al layer algoritmico con il Black Label.",
+    "finalCtaTitle": "Pronto a Capire i Mercati con Più Chiarezza?",
+    "finalCtaDescription": "Scegli il livello di accesso che si adatta al tuo stile. Entra nella community con il Premium, oppure aggiungi il layer algoritmico con il Black Label.",
     "finalCtaButton": "Scegli il Tuo Piano"
 }

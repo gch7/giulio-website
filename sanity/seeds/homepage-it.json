@@ -8,107 +8,107 @@
         "current": "home-it"
     },
     "isHomepage": true,
-    "seoTitle": "Gamma Capital - Intelligence di Mercato Istituzionale e Strategia",
-    "seoDescription": "Gamma Capital aiuta gli investitori a navigare nei mercati complessi attraverso analisi strutturate, insight basati sulle opzioni e framework strategici disciplinati.",
+    "seoTitle": "Gamma Capital — Quant Education & Market Tech",
+    "seoDescription": "Gamma Capital è uno studio di education quantitativa e tecnologia per i mercati: masterclass, AI lab, dashboard e community privata. Niente consulenza personalizzata.",
     "sections": [
         {
             "_key": "hero",
             "_type": "heroSection",
-            "badge": "Intelligenza Istituzionale",
-            "titleLine1": "Intelligence di Mercato Istituzionale",
-            "titleLine2": "e Progettazione Strategica",
-            "description": "Gamma Capital aiuta gli investitori a navigare nei mercati complessi attraverso analisi strutturate, insight basati sulle opzioni e framework strategici disciplinati. Combiniamo metodologia istituzionale, market intelligence in tempo reale e una community Discord privata per supportare decisioni migliori.",
+            "badge": "Quant Studio · Education & Technology",
+            "titleLine1": "Quant Education e Strumenti Tech",
+            "titleLine2": "per Investitori che Vogliono Capire",
+            "description": "Gamma Capital è uno studio di formazione quantitativa e tecnologia per i mercati. Costruiamo masterclass, dashboard di analisi, modelli AI e una community privata. Tutto è progettato per l'autoformazione e l'uso autonomo: niente consulenza personalizzata, niente gestione di portafogli, niente raccomandazioni operative.",
             "primaryCTA": {
-                "text": "Unisciti agli Abbonamenti Discord",
-                "href": "/memberships",
+                "text": "Esplora il Quant Studio",
+                "href": "/quant-studio",
                 "variant": "primary",
                 "showArrow": true
             },
             "secondaryCTA": {
-                "text": "Esplora le Soluzioni",
-                "href": "/solutions",
+                "text": "Scopri la Community",
+                "href": "/memberships",
                 "variant": "outline",
                 "showArrow": false
             },
             "stats": [
                 {
                     "_key": "s1",
-                    "value": "15+",
-                    "label": "Anni di Esperienza"
+                    "value": "10+",
+                    "label": "Anni di esperienza sui mercati"
                 },
                 {
                     "_key": "s2",
-                    "value": "€50M+",
-                    "label": "Patrimonio Gestito"
+                    "value": "1.000+",
+                    "label": "Ore di contenuti formativi"
                 },
                 {
                     "_key": "s3",
-                    "value": "500+",
-                    "label": "Membri della Community"
+                    "value": "5",
+                    "label": "Asset class coperte"
                 }
             ],
             "bulletPoints": [
                 {
                     "_key": "b1",
                     "icon": "Activity",
-                    "text": "Flussi di opzioni, dinamiche di volatilità e segnali istituzionali"
+                    "text": "Masterclass su opzioni, flussi istituzionali, GEX, AI quantitativa"
                 },
                 {
                     "_key": "b2",
-                    "icon": "Shield",
-                    "text": "Insight strategici su derivati, rendimenti e gestione del rischio"
+                    "icon": "Cpu",
+                    "text": "Strumenti tech proprietari: scanner, dashboard, modelli AI self-service"
                 },
                 {
                     "_key": "b3",
-                    "icon": "TrendingUp",
-                    "text": "Accesso Discord Premium, formazione e consulenza professionale"
+                    "icon": "Users",
+                    "text": "Community privata Discord per discussione e research collaborativa"
                 }
             ],
-            "supportingTagline": "Nessun hype, nessun rumore - solo insight strutturati e guidati dai dati."
+            "supportingTagline": "Education e tecnologia. Niente consulenza, niente consigli personalizzati."
         },
         {
             "_key": "whatWeDo",
             "_type": "whatWeDoSection",
-            "badge": "I Nostri Servizi",
-            "title": "Cosa Facciamo",
-            "description": "Gamma Capital è una piattaforma di ricerca, strategia e consulenza focalizzata su opzioni, prodotti strutturati e framework di portafoglio multi-asset. La nostra missione è portare disciplina e strumenti istituzionali agli investitori seri.",
+            "badge": "Studio · Education + Tech",
+            "title": "Cosa Costruiamo",
+            "description": "Il nostro lavoro si articola in tre aree complementari: contenuti formativi avanzati, strumenti tecnologici proprietari, e una community privata. Tutto è progettato per l'utilizzo autonomo. Non offriamo consulenza in investimenti né gestione patrimoniale.",
             "showViewAllButton": true,
-            "viewAllButtonText": "Tutte le Soluzioni",
+            "viewAllButtonText": "Vedi Tutti i Pilastri",
             "viewAllButtonHref": "/solutions",
             "services": [
                 {
                     "_key": "svc1",
-                    "icon": "BarChart3",
-                    "title": "Market Intelligence & Strategy Insights",
-                    "description": "Analizziamo flussi di opzioni, regimi di volatilità e driver macro. Invece di idee isolate, ci concentriamo sul contesto: perché esiste un setup e come si comporta nei vari scenari all'interno di un framework di rischio.",
-                    "href": "/solutions/strategy-insights",
-                    "linkText": "Scopri di più"
+                    "icon": "GraduationCap",
+                    "title": "Education & Masterclass",
+                    "description": "Masterclass strutturate su opzioni, flussi istituzionali, GEX e AI quantitativa. Materiale di derivazione istituzionale, riformulato per l'autoformazione. Accesso a vita ai contenuti.",
+                    "href": "/quant-studio",
+                    "linkText": "Esplora le masterclass"
                 },
                 {
                     "_key": "svc2",
-                    "icon": "Users",
-                    "title": "Abbonamenti Discord",
-                    "description": "Accesso a commenti di mercato in tempo reale, attività in opzioni inusuali e materiale educativo. Un ambiente progettato per investitori che apprezzano chiarezza, disciplina e discussione professionale.",
-                    "href": "/memberships",
-                    "linkText": "Unisciti ora"
+                    "icon": "Cpu",
+                    "title": "Quant Tech & AI Lab",
+                    "description": "Modelli AI per il riconoscimento di pattern di mercato e sviluppo software custom. Programmatori del dominio finanziario: dashboard, alerting, backtest engines, classificatori.",
+                    "href": "/quant-studio",
+                    "linkText": "Scopri il Lab"
                 },
                 {
                     "_key": "svc3",
-                    "icon": "Briefcase",
-                    "title": "Consulenza & Advisory",
-                    "description": "Consulenza one-to-one su revisione del portafoglio, strategia, strutture di opzioni e asset allocation. L'obiettivo è allineare strategia, rischio e orizzonte temporale in modo coerente.",
-                    "href": "/consulting",
-                    "linkText": "Prenota chiamata"
+                    "icon": "Users",
+                    "title": "Community Discord",
+                    "description": "Community privata di investitori seri. Research collaborativa, market commentary identico per tutti i membri del livello, accesso ai tool self-service del Quant Studio.",
+                    "href": "/memberships",
+                    "linkText": "Entra nella community"
                 }
             ]
         },
         {
             "_key": "multiAsset",
             "_type": "multiAssetSection",
-            "badge": "Visione Olistica",
-            "title": "Una Prospettiva Multi-Asset, Istituzionale",
-            "description": "Gamma Capital opera su diverse classi di asset, tra cui azioni, derivati, prodotti strutturati, immobiliare e asset digitali.",
-            "secondaryDescription": "Questa prospettiva cross-asset ci permette di identificare correlazioni nascoste e opportunità invisibili. Il nostro lavoro integra l'analisi dei mercati finanziari con l'esperienza negli asset reali, offrendo una visione strategica più ampia e resiliente.",
+            "badge": "Cross-Asset Coverage",
+            "title": "Una Visione Multi-Asset",
+            "description": "I nostri contenuti formativi e i nostri strumenti coprono più asset class — azioni, derivati, prodotti strutturati, immobiliare, asset digitali — perché capire correlazioni e liquidità tra mercati è la base di una visione moderna.",
+            "secondaryDescription": "La missione è dare strumenti per capire, non sostituirsi alle decisioni di chi li usa. Integriamo analisi dei mercati finanziari ed esperienza sull'asset reale per fornire un materiale formativo più ampio e resistente.",
             "assetClasses": [
                 {
                     "_key": "ac1",
@@ -140,52 +140,52 @@
         {
             "_key": "whyGamma",
             "_type": "whyGammaSection",
-            "badge": "Perché Gamma Capital",
+            "badge": "Perché Noi",
             "title": "Perché Gamma Capital",
             "reasons": [
                 {
                     "_key": "r1",
                     "icon": "Building",
-                    "text": "Logica istituzionale applicata ai portafogli privati"
+                    "text": "Approccio rigoroso, di derivazione istituzionale"
                 },
                 {
                     "_key": "r2",
                     "icon": "Activity",
-                    "text": "Forte focus sui flussi di opzioni e payoff strutturati"
+                    "text": "Focus profondo su flussi opzioni e meccaniche dei derivati"
                 },
                 {
                     "_key": "r3",
-                    "icon": "Shield",
-                    "text": "Metodologia consapevole del rischio e basata su scenari"
+                    "icon": "Layers",
+                    "text": "Ecosistema integrato: education + tecnologia + community"
                 },
                 {
                     "_key": "r4",
                     "icon": "MessageSquare",
-                    "text": "Comunicazione pulita, nessun hype o rumore retail"
+                    "text": "Comunicazione pulita, niente hype, niente segnali ciechi"
                 },
                 {
                     "_key": "r5",
-                    "icon": "Layers",
-                    "text": "Un ecosistema in crescita: ricerca, Discord e consulenza"
+                    "icon": "Cpu",
+                    "text": "Strumenti che mettono i dati nelle mani dei membri, non al posto loro"
                 }
             ]
         },
         {
             "_key": "cta",
             "_type": "testimonialCTASection",
-            "badge": "Inizia Ora",
-            "titleLine1": "Costruito per Investitori che Vogliono",
-            "titleLine2": "Struttura e Chiarezza",
-            "description": "Che tu stia cercando market intelligence azionabile, una community disciplinata o supporto di consulenza strategica, Gamma Capital è progettata per aiutarti a operare con fiducia nei mercati complessi.",
+            "badge": "Inizia",
+            "titleLine1": "Costruito per Investitori",
+            "titleLine2": "Che Vogliono Capire",
+            "description": "Education strutturata, tecnologia di analisi, una community seria. Niente consulenza personalizzata, niente gestione di portafogli. Diamo gli strumenti per capire i mercati in autonomia.",
             "primaryCTA": {
-                "text": "Unisciti agli Abbonamenti Discord",
-                "href": "/memberships",
+                "text": "Esplora il Quant Studio",
+                "href": "/quant-studio",
                 "variant": "primary",
                 "showArrow": true
             },
             "secondaryCTA": {
-                "text": "Esplora le Soluzioni",
-                "href": "/solutions",
+                "text": "Scopri la Community",
+                "href": "/memberships",
                 "variant": "outline",
                 "showArrow": false
             }
