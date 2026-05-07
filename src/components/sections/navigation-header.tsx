@@ -91,7 +91,7 @@ export default function NavigationHeader({ siteSettings, uiStrings }: Navigation
                   className="rounded"
                 />
               )}
-              {!logoUrl && logoText && (
+              {!logoUrl && logoText && logoText.length <= 3 && (
                 <div className="w-9 h-9 border border-[#2563EB]/30 rounded flex items-center justify-center bg-[#2563EB]/5">
                   <span className="text-[#2563EB] font-display font-semibold text-lg tracking-tight">{logoText}</span>
                 </div>

@@ -89,8 +89,13 @@ export default function ServicePageClient({ pageData, siteSettings, defaultBadge
                             <span className="text-[12px] font-medium text-[#2563EB] tracking-wide uppercase">{heroBadge}</span>
                         </div>
                         <h1 ref={titleRef} className="text-[36px] md:text-[48px] font-display font-medium tracking-[-0.03em] leading-[1.1] mb-6 text-[#111827]">
-                            {heroTitle.replace(heroSubtitle, '')}
-                            <span className="text-[#6B7280]">{heroSubtitle}</span>
+                            {heroTitle}
+                            {heroSubtitle && (
+                                <>
+                                    <br />
+                                    <span className="text-[#6B7280]">{heroSubtitle}</span>
+                                </>
+                            )}
                         </h1>
                         <p ref={paragraphRef} className="text-[17px] text-[#6B7280] font-normal leading-relaxed max-w-xl mx-auto mb-8">
                             {heroDescription}
