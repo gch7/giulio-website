@@ -58,6 +58,13 @@ const nextConfig: NextConfig = {
     // Use lighter build for faster dev
     webpackBuildWorker: true,
   },
+
+  async redirects() {
+    return [
+      { source: '/consulting', destination: '/quant-studio', permanent: true },
+      { source: '/:locale(it|en)/consulting', destination: '/:locale/quant-studio', permanent: true },
+    ];
+  },
 } as NextConfig;
 
 export default nextConfig;

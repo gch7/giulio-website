@@ -29,6 +29,17 @@ import {
   Activity,
   Zap,
   Briefcase,
+  Cpu,
+  Brain,
+  Code2,
+  LayoutGrid,
+  Radar,
+  PlayCircle,
+  Infinity,
+  FileText,
+  Calendar,
+  BookOpen,
+  Eye,
   type LucideIcon
 } from 'lucide-react';
 import type { ConsultingPage, SiteSettings, UIStrings } from '@/types/sanity';
@@ -53,15 +64,26 @@ const iconMap: Record<string, LucideIcon> = {
   Activity,
   Zap,
   Briefcase,
+  Cpu,
+  Brain,
+  Code2,
+  LayoutGrid,
+  Radar,
+  PlayCircle,
+  Infinity,
+  FileText,
+  Calendar,
+  BookOpen,
+  Eye,
 };
 
-interface ConsultingPageClientProps {
+interface QuantStudioPageClientProps {
   pageData?: ConsultingPage | null;
   siteSettings?: SiteSettings | null;
   uiStrings?: UIStrings | null;
 }
 
-export default function ConsultingPageClient({ pageData, siteSettings, uiStrings }: ConsultingPageClientProps) {
+export default function QuantStudioPageClient({ pageData, siteSettings, uiStrings }: QuantStudioPageClientProps) {
   // Extract CMS data with fallbacks
   const heroBadge = pageData?.heroBadge;
   const heroTitle = pageData?.heroTitle;

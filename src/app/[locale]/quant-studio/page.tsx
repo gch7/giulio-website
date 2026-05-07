@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { draftMode } from 'next/headers';
-import ConsultingPageClient from './consulting-client';
+import QuantStudioPageClient from './quant-studio-client';
 import { sanityFetch } from '@/sanity/lib/client';
 import { CONSULTING_PAGE_QUERY, SITE_SETTINGS_QUERY, UI_STRINGS_QUERY } from '@/sanity/lib/queries';
 import type { ConsultingPage, SiteSettings, UIStrings } from '@/types/sanity';
@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   });
 
   return {
-    title: pageData?.seoTitle ?? 'Consulting Services | Gamma Capital',
-    description: pageData?.seoDescription ?? 'Expert investment consulting services including portfolio review, strategy design, and risk framework development.',
+    title: pageData?.seoTitle ?? 'Quant Studio | Gamma Capital',
+    description: pageData?.seoDescription ?? 'Education and technology for the markets: masterclasses, AI lab, dashboards. Self-service, no personalised advice.',
   };
 }
 
-export default async function ConsultingPage({ params }: PageProps) {
+export default async function QuantStudioPage({ params }: PageProps) {
   const { locale } = await params;
   const { isEnabled: isDraftMode } = await draftMode();
 
@@ -52,5 +52,5 @@ export default async function ConsultingPage({ params }: PageProps) {
     }),
   ]);
 
-  return <ConsultingPageClient pageData={pageData} siteSettings={siteSettings} uiStrings={uiStrings} />;
+  return <QuantStudioPageClient pageData={pageData} siteSettings={siteSettings} uiStrings={uiStrings} />;
 }
