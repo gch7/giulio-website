@@ -110,7 +110,7 @@ export default function Footer({ siteSettings }: FooterProps) {
                   className="rounded"
                 />
               )}
-              {!logoUrl && logoText && (
+              {!logoUrl && logoText && logoText.length <= 3 && (
                 <div className="w-8 h-8 border border-[#2563EB]/30 rounded flex items-center justify-center bg-[#2563EB]/5">
                   <span className="text-[#2563EB] font-display font-semibold text-base tracking-tight">{logoText}</span>
                 </div>
