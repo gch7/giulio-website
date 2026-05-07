@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "stripe:portal:setup": "npx -y tsx scripts/setup-stripe-portal.ts",
+    "stripe:portal:setup:dry-run": "npx -y tsx scripts/setup-stripe-portal.ts --dry-run --verbose"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

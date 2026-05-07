@@ -111,6 +111,31 @@ NEXT_PUBLIC_SITE_URL=https://gammacap.ch
 - **Schema Updates**: Modifications to `sanity/schemaTypes` require a deployment to update the Studio interface.
 - **Visual Editing**: Enabled in development. Use the Sanity toolbar to edit content directly from the live preview.
 
+## 💳 Stripe Customer Portal — Plan Switching
+
+The "Manage your subscription" link on `/memberships` opens the Stripe Customer Portal. The portal must be configured in Stripe to allow customers to switch between Premium and Black Label tiers.
+
+A helper script under `scripts/setup-stripe-portal.ts` configures the **default** portal configuration to:
+- enable `subscription_update` (plan switching)
+- list every active recurring product (Premium + Black Label) as a switchable option
+- use prorated billing on plan changes
+
+### How to run
+
+`STRIPE_SECRET_KEY` must be set in `.env.local` (or in the shell environment). To target production, use a `sk_live_…` key.
+
+```bash
+# Preview what the script would do, without applying changes:
+npm run stripe:portal:setup:dry-run
+
+# Apply the configuration:
+npm run stripe:portal:setup
+```
+
+After running it, open the customer portal login link and verify that both Premium and Black Label products show up as alternatives in the "Aggiorna il tuo abbonamento" screen.
+
+The script is idempotent: re-running it overwrites only the `subscription_update` block of the default configuration, leaving other settings untouched.
+
 ## 📄 License
 Private - All Rights Reserved Gamma Capital.
 
