@@ -2,12 +2,12 @@
     "_id": "contactPage-en",
     "_type": "contactPage",
     "language": "en",
-    "seoTitle": "Contact Gamma Capital - Get In Touch",
-    "seoDescription": "Contact Gamma Capital for consulting services, Discord memberships, or strategic collaborations. We review every request carefully.",
+    "seoTitle": "Contact Gamma Capital",
+    "seoDescription": "Contact Gamma Capital for masterclasses, tools, Quant Studio access or the Discord community. No personalised advice.",
     "heroTitle": "Get in Touch with {brand}Gamma Capital{/brand}",
-    "heroDescription": "Whether you are interested in our Discord memberships, consulting services, or a strategic collaboration, you can contact us here. We review every request carefully and respond selectively.",
-    "introHeading": "How to Contact Us",
-    "introDescription": "Gamma Capital works with investors, professionals and partners who value clarity, structure and disciplined decision-making. Use the form below to reach us regarding memberships, consulting, or other professional inquiries.",
+    "heroDescription": "For questions about masterclasses, tools, access to the Quant Studio or the Discord community, write to us here. We do not offer personalised advice or portfolio management: the contact is meant to help you find your way among our self-service products.",
+    "introHeading": "How to Reach Us",
+    "introDescription": "Gamma Capital works with investors who want to understand the markets through education and the use of technology tools. Use the form below to ask about masterclasses, tools, the Discord community, or educational material. We do not respond to requests for personalised advice, portfolio review, or asset management — these are not part of our services.",
     "introEmailLabel": "For general communication, you can also reach us directly at:",
     "introEmail": "contact@gammacap.ch",
     "formTitle": "Contact Request",
@@ -21,40 +21,36 @@
     "formInterestLabel": "Area of Interest",
     "formInterestPlaceholder": "Select an area of interest",
     "formMessageLabel": "Message",
-    "formMessagePlaceholder": "Briefly describe your situation, objectives, or question.",
+    "formMessagePlaceholder": "Briefly describe your request or question.",
     "formButtonText": "Submit Request",
     "formButtonSubmittingText": "Submitting...",
     "areaOfInterestOptions": [
         {
-            "value": "discord",
-            "label": "Discord Memberships"
+            "value": "masterclass",
+            "label": "Masterclass & Education"
         },
         {
-            "value": "consulting",
-            "label": "Consulting & Portfolio Review"
+            "value": "ai-lab",
+            "label": "Quant & AI Lab"
         },
         {
-            "value": "strategy",
-            "label": "Strategy Design"
+            "value": "tools",
+            "label": "Tools & Dashboards"
         },
         {
-            "value": "options",
-            "label": "Options & Derivatives"
+            "value": "community",
+            "label": "Discord Community"
         },
         {
-            "value": "structured_products",
-            "label": "Structured Products"
+            "value": "research",
+            "label": "Research & Insights"
         },
         {
-            "value": "real_estate",
-            "label": "Real Estate & Other Assets"
+            "value": "real-estate",
+            "label": "Real Estate Insights"
         },
         {
-            "value": "crypto",
-            "label": "Crypto"
-        },
-        {
-            "value": "other",
+            "value": "partnerships",
             "label": "Partnerships / Other"
         }
     ],
@@ -74,8 +70,8 @@
         },
         {
             "icon": "ShieldCheck",
-            "text": "Consulting engagements are subject to availability and fit"
+            "text": "We do not respond to requests for personalised advice or asset management"
         }
     ],
-    "disclaimer": "Gamma Capital does not provide brokerage services, does not execute trades on behalf of clients, and does not offer legal or tax advice. All information and consulting services are provided for educational and strategic purposes only."
+    "disclaimer": "Gamma Capital is an education and technology studio. It is not authorised by FINMA. We do not provide investment advice under the Financial Services Act (FinSA) nor portfolio management under the Financial Institutions Act (FinIA). All content is for informational or educational purposes. For personalised advice, please refer to registered financial advisers or FINMA-authorised institutions."
 }

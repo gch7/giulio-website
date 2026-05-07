@@ -28,11 +28,11 @@ const siteSettings = {
             dropdownItems: [
                 { text: 'Strategy Insights', description: 'Market Intelligence', href: '/solutions/strategy-insights' },
                 { text: 'Discord Memberships', description: 'Join our community', href: '/memberships' },
-                { text: 'Consulting', description: 'Expert guidance', href: '/consulting' },
+                { text: 'Quant Studio', description: 'Education & Technology', href: '/quant-studio' },
             ],
         },
         { _key: 'nav-2', text: 'Memberships', href: '/memberships', hasDropdown: false },
-        { _key: 'nav-3', text: 'Consulting', href: '/consulting', hasDropdown: false },
+        { _key: 'nav-3', text: 'Quant Studio', href: '/quant-studio', hasDropdown: false },
         { _key: 'nav-4', text: 'Contact', href: '/contact', hasDropdown: false },
     ],
     navCTA: {
@@ -52,7 +52,7 @@ const siteSettings = {
             links: [
                 { _key: 'link-1', text: 'Strategy Insights', href: '/solutions/strategy-insights', isExternal: false },
                 { _key: 'link-2', text: 'Discord Memberships', href: '/memberships', isExternal: false },
-                { _key: 'link-3', text: 'Consulting', href: '/consulting', isExternal: false },
+                { _key: 'link-3', text: 'Quant Studio', href: '/quant-studio', isExternal: false },
             ],
         },
         {
@@ -151,10 +151,10 @@ const homepage = {
                 },
                 {
                     _key: 'service-3',
-                    icon: 'Users',
-                    title: 'Consulting & Portfolio Advisory',
-                    description: "For investors requiring tailored guidance, Gamma Capital offers one-to-one consulting across portfolio review, strategy design, options structures, structured products and broader asset allocation.\n\nThe objective is simple: align strategy, risk and time horizon in a coherent, professional way.",
-                    href: '/consulting',
+                    icon: 'Cpu',
+                    title: 'Quant Studio',
+                    description: "Education and technology for the markets: masterclasses on options and institutional flow, AI lab for pattern recognition and custom software development, research library and self-service tools.\n\nEverything is designed for autonomous use and self-learning. No personalised advice, no portfolio management.",
+                    href: '/quant-studio',
                     linkText: 'Learn more',
                 },
             ],
@@ -247,12 +247,12 @@ const solutionsPage = {
         },
         {
             _key: 'sol-3',
-            title: 'Consulting Services',
-            description: 'Personalized strategic guidance.',
-            icon: 'Building2',
+            title: 'Quant Studio',
+            description: 'Education and technology for the markets.',
+            icon: 'Cpu',
             color: '#059669',
-            href: '/consulting',
-            features: ['Portfolio Review', 'Risk Assessment', 'Strategy Design']
+            href: '/quant-studio',
+            features: ['Masterclasses', 'AI Lab', 'Tools & Dashboards']
         }
     ],
     ctaTitle: 'Not Sure Where to Start?',

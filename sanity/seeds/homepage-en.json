@@ -8,107 +8,107 @@
         "current": "home"
     },
     "isHomepage": true,
-    "seoTitle": "Gamma Capital - Institutional Market Intelligence & Strategy",
-    "seoDescription": "Gamma Capital helps investors navigate complex markets through structured analysis, options-driven insights, and disciplined strategy frameworks.",
+    "seoTitle": "Gamma Capital — Quant Education & Market Tech",
+    "seoDescription": "Gamma Capital is a quant education and technology studio for the markets: masterclasses, AI lab, dashboards and a private community. No personalised advice.",
     "sections": [
         {
             "_key": "hero",
             "_type": "heroSection",
-            "badge": "Institutional Intelligence",
-            "titleLine1": "Institutional-Grade Market Intelligence",
-            "titleLine2": "and Strategy Design",
-            "description": "Gamma Capital helps investors navigate complex markets through structured analysis, options-driven insights, and disciplined strategy frameworks. We combine institutional methodology, real-time market intelligence, and a private Discord community to support better decision-making across market conditions.",
+            "badge": "Quant Studio · Education & Technology",
+            "titleLine1": "Quant Education and Tech Tools",
+            "titleLine2": "for Investors Who Want to Understand",
+            "description": "Gamma Capital is a quant education and technology studio for the markets. We build masterclasses, analytical dashboards, AI models, and a private community. Everything is designed for autonomous use and self-learning: no personalised advice, no portfolio management, no operational recommendations.",
             "primaryCTA": {
-                "text": "Join Discord Memberships",
-                "href": "/memberships",
+                "text": "Explore the Quant Studio",
+                "href": "/quant-studio",
                 "variant": "primary",
                 "showArrow": true
             },
             "secondaryCTA": {
-                "text": "Explore Our Solutions",
-                "href": "/solutions",
+                "text": "Discover the Community",
+                "href": "/memberships",
                 "variant": "outline",
                 "showArrow": false
             },
             "stats": [
                 {
                     "_key": "s1",
-                    "value": "15+",
-                    "label": "Years Experience"
+                    "value": "10+",
+                    "label": "Years of markets experience"
                 },
                 {
                     "_key": "s2",
-                    "value": "€50M+",
-                    "label": "Assets Advised"
+                    "value": "1,000+",
+                    "label": "Hours of educational content"
                 },
                 {
                     "_key": "s3",
-                    "value": "500+",
-                    "label": "Community Members"
+                    "value": "5",
+                    "label": "Asset classes covered"
                 }
             ],
             "bulletPoints": [
                 {
                     "_key": "b1",
                     "icon": "Activity",
-                    "text": "Options flow, volatility dynamics, and institutional market signals"
+                    "text": "Masterclasses on options, institutional flow, GEX, quantitative AI"
                 },
                 {
                     "_key": "b2",
-                    "icon": "Shield",
-                    "text": "Structured strategy insights across derivatives, yield and risk management"
+                    "icon": "Cpu",
+                    "text": "Proprietary tech tools: scanners, dashboards, self-service AI models"
                 },
                 {
                     "_key": "b3",
-                    "icon": "TrendingUp",
-                    "text": "Premium Discord access, education, and professional consulting"
+                    "icon": "Users",
+                    "text": "Private Discord community for discussion and collaborative research"
                 }
             ],
-            "supportingTagline": "No hype, no noise — just structured, data-driven insight."
+            "supportingTagline": "Education and technology. No advice, no personalised recommendations."
         },
         {
             "_key": "whatWeDo",
             "_type": "whatWeDoSection",
-            "badge": "Our Services",
-            "title": "What We Do",
-            "description": "Gamma Capital is a research, strategy and advisory platform focused on options, structured products and multi-asset portfolio frameworks. Our mission is to bring institutional-style discipline, tools and reasoning to serious investors who seek clarity, structure and consistency rather than generic market commentary.",
+            "badge": "Studio · Education + Tech",
+            "title": "What We Build",
+            "description": "Our work spans three complementary areas: advanced educational content, proprietary technology tools, and a private community. Everything is designed for autonomous use. We do not provide investment advice or portfolio management.",
             "showViewAllButton": true,
-            "viewAllButtonText": "View All Solutions",
+            "viewAllButtonText": "See All Pillars",
             "viewAllButtonHref": "/solutions",
             "services": [
                 {
                     "_key": "svc1",
-                    "icon": "BarChart3",
-                    "title": "Market Intelligence & Strategy Insights",
-                    "description": "Instead of isolated trade ideas, we focus on context: why a setup exists, how it behaves across scenarios, and how it fits into a coherent risk framework. We analyse options flow, volatility regimes, dealer positioning and key macro drivers.",
-                    "href": "/solutions/strategy-insights",
-                    "linkText": "Learn more"
+                    "icon": "GraduationCap",
+                    "title": "Education & Masterclass",
+                    "description": "Structured masterclasses on options, institutional flow, GEX and quantitative AI. Material with institutional roots, reframed for self-learning. Lifetime access to content.",
+                    "href": "/quant-studio",
+                    "linkText": "Explore the masterclasses"
                 },
                 {
                     "_key": "svc2",
-                    "icon": "Users",
-                    "title": "Discord Memberships",
-                    "description": "Through our private Discord community, members access real-time market commentary, unusual options activity, structured insights and educational material. Designed for investors who value clarity and professional discussion.",
-                    "href": "/memberships",
-                    "linkText": "Join now"
+                    "icon": "Cpu",
+                    "title": "Quant Tech & AI Lab",
+                    "description": "AI models for market pattern recognition and custom software development. Domain-expert programmers: dashboards, alerting systems, backtest engines, classifiers.",
+                    "href": "/quant-studio",
+                    "linkText": "Discover the Lab"
                 },
                 {
                     "_key": "svc3",
-                    "icon": "Briefcase",
-                    "title": "Consulting & Portfolio Advisory",
-                    "description": "One-to-one consulting across portfolio review, strategy design, options structures, structured products and broader asset allocation. The objective is simple: align strategy, risk and time horizon in a coherent way.",
-                    "href": "/consulting",
-                    "linkText": "Book call"
+                    "icon": "Users",
+                    "title": "Discord Community",
+                    "description": "A private community of serious investors. Collaborative research, market commentary identical for all members of the same tier, access to the Quant Studio self-service tools.",
+                    "href": "/memberships",
+                    "linkText": "Join the community"
                 }
             ]
         },
         {
             "_key": "multiAsset",
             "_type": "multiAssetSection",
-            "badge": "Holistic View",
-            "title": "A Multi-Asset, Institutional Perspective",
-            "description": "Gamma Capital operates across multiple asset classes, including equities, derivatives, structured products, real estate and digital assets.",
-            "secondaryDescription": "This cross-asset perspective allows us to identify hidden correlations, structural inefficiencies and opportunities that remain invisible within single-asset approaches. Our work integrates financial markets analysis with real-world asset experience, offering a broader and more resilient strategic view.",
+            "badge": "Cross-Asset Coverage",
+            "title": "A Multi-Asset Perspective",
+            "description": "Our educational content and tools cover multiple asset classes — equities, derivatives, structured products, real estate, digital assets — because understanding correlations and liquidity across markets is the foundation of a modern view.",
+            "secondaryDescription": "Our mission is to provide the tools to understand, not to replace the decisions of those who use them. We integrate financial-market analysis with real-asset experience to deliver a broader and more resilient body of educational material.",
             "assetClasses": [
                 {
                     "_key": "ac1",
@@ -140,33 +140,33 @@
         {
             "_key": "whyGamma",
             "_type": "whyGammaSection",
-            "badge": "Why Gamma Capital",
+            "badge": "Why Us",
             "title": "Why Gamma Capital",
             "reasons": [
                 {
                     "_key": "r1",
                     "icon": "Building",
-                    "text": "Institutional logic applied to private portfolios"
+                    "text": "Rigorous approach with institutional roots"
                 },
                 {
                     "_key": "r2",
                     "icon": "Activity",
-                    "text": "Strong focus on options flow and structured payoffs"
+                    "text": "Deep focus on options flow and derivatives mechanics"
                 },
                 {
                     "_key": "r3",
-                    "icon": "Shield",
-                    "text": "Risk-aware, scenario-driven methodology"
+                    "icon": "Layers",
+                    "text": "Integrated ecosystem: education + technology + community"
                 },
                 {
                     "_key": "r4",
                     "icon": "MessageSquare",
-                    "text": "Clean communication, no hype or retail noise"
+                    "text": "Clean communication, no hype, no blind signals"
                 },
                 {
                     "_key": "r5",
-                    "icon": "Layers",
-                    "text": "A growing ecosystem: research, Discord, and advisory"
+                    "icon": "Cpu",
+                    "text": "Tools that put data in the members' hands, not in their place"
                 }
             ]
         },
@@ -174,18 +174,18 @@
             "_key": "cta",
             "_type": "testimonialCTASection",
             "badge": "Get Started",
-            "titleLine1": "Built for Investors Who Want",
-            "titleLine2": "Structure and Clarity",
-            "description": "Whether you are looking for actionable market intelligence, a disciplined community, or strategic advisory support, Gamma Capital is designed to help you operate with confidence in complex markets.",
+            "titleLine1": "Built for Investors",
+            "titleLine2": "Who Want to Understand",
+            "description": "Structured education, analytical technology, a serious community. No personalised advice, no portfolio management. We provide the tools to understand the markets autonomously.",
             "primaryCTA": {
-                "text": "Join Discord Memberships",
-                "href": "/memberships",
+                "text": "Explore the Quant Studio",
+                "href": "/quant-studio",
                 "variant": "primary",
                 "showArrow": true
             },
             "secondaryCTA": {
-                "text": "Explore Our Solutions",
-                "href": "/solutions",
+                "text": "Discover the Community",
+                "href": "/memberships",
                 "variant": "outline",
                 "showArrow": false
             }

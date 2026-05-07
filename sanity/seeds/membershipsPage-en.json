@@ -2,36 +2,44 @@
     "_id": "membershipsPage-en",
     "_type": "membershipsPage",
     "language": "en",
-    "seoTitle": "Gamma Capital Membership - Private Discord Community",
-    "seoDescription": "Join a private environment dedicated to actionable insights, options flow interpretation, and structured market guidance.",
+    "seoTitle": "Gamma Capital Membership — Discord Premium and Black Label",
+    "seoDescription": "Two Discord membership tiers: Premium and Black Label with real-time algorithmic flow. Quant Studio tools and dashboards included.",
     "heroBadge": "Membership",
-    "heroTitle": "Premium Discord Access for Serious Market Participants",
-    "heroSubtitle": "Institutional Clarity",
-    "heroDescription": "Join a private environment dedicated to actionable insights, options flow interpretation, unusual activity monitoring and structured, real-time market guidance — without noise, hype or confusion.",
-    "heroPrimaryCta": "Join the Membership",
-    "heroSecondaryCta": "Discover What’s Inside",
-    "insideSectionTitle": "What You Will Find Inside the Discord",
-    "insideSectionDescription": "The Gamma Capital Discord is designed for investors who want real clarity in fast-moving markets. Inside the private channels you will find:",
+    "heroTitle": "Discord Premium to Understand the Markets",
+    "heroSubtitle": "with greater clarity",
+    "heroDescription": "A private Discord community for investors looking for structured analysis, collaborative research, and educational material. All content — flow, newsletter, material, bot notifications — is identical for all members of the same tier: this is general market commentary, not personalised advice.",
+    "heroPrimaryCta": "Discover Black Label",
+    "heroSecondaryCta": "Compare Plans",
+    "insideSectionTitle": "Two Experiences, Two Levels of Depth",
+    "insideSectionDescription": "Every membership gives you access to Gamma Capital's private Discord community. The difference lies in the level of tools and the intensity of the information flow.",
     "insideFeatures": [
         {
+            "icon": "Users",
+            "text": "Access to all channels of the private Discord community, identical for all members"
+        },
+        {
             "icon": "TrendingUp",
-            "text": "Real-time monitoring of institutional flows and unusual options activity"
+            "text": "Options flow channel curated manually by the Gamma Capital team"
         },
         {
             "icon": "BarChart3",
             "text": "Daily market analysis on key U.S. equities and macro drivers"
         },
         {
-            "icon": "Zap",
-            "text": "Fast alerts on anomalous moves and high-potential setups"
-        },
-        {
-            "icon": "MessageSquare",
-            "text": "Private discussions within a high-quality community of motivated members"
+            "icon": "Calendar",
+            "text": "Daily summary of upcoming macro events that may move markets"
         },
         {
             "icon": "GraduationCap",
-            "text": "Educational material, including introductory modules on options and flow interpretation"
+            "text": "Educational material on options, flow, and smart-money logic"
+        },
+        {
+            "icon": "LayoutGrid",
+            "text": "Access to the self-service Quant Studio tools: Flow Scanner, GEX Dashboard, Volatility Regime Analyzer"
+        },
+        {
+            "icon": "Zap",
+            "text": "Black Label: real-time algorithmic flow with automatic scoring, distributed identically to all subscribers of the tier"
         }
     ],
     "benefitsSectionTitle": "Key Benefits of Joining",
@@ -59,17 +67,17 @@
         {
             "icon": "Target",
             "title": "Proven Methodology",
-            "description": "The same analytical approach used in our consulting work — adapted for daily operational use."
+            "description": "The same analytical approach with institutional roots — reframed for self-learning and autonomous use."
         }
     ],
-    "includedSectionTitle": "What’s Included in the Membership",
+    "includedSectionTitle": "What's Included in the Membership",
     "includedFeatures": [
         "Access to all private Discord channels",
-        "Real-time monitoring of institutional options flow",
+        "Manually curated options flow channel",
         "Daily commentary on high-impact market events",
-        "Fast alerts on unusual activity and high-potential setups",
-        "Priority access to community discussions",
-        "Automatic Premium role assignment after purchase"
+        "Daily macro events calendar",
+        "Educational material (options, flow, smart-money)",
+        "Self-service Quant Studio tools (Flow Scanner, GEX, Volatility Analyzer)"
     ],
     "educationalMiniCourseTitle": "Educational mini-course:",
     "educationalItems": [
@@ -77,45 +85,141 @@
         "how to read institutional flows",
         "how to operate with smart-money logic"
     ],
-    "includedTagline": "Everything is designed to support your decision-making with clarity and focus.",
-    "pricingSectionTitle": "Membership Tiers",
-    "pricingSectionDescription": "All plans include the full premium experience. The only difference is the duration.",
+    "includedTagline": "The Premium plan gives you access to the community, the team's insights, and the self-service tools. Black Label adds the real-time algorithmic layer, distributed identically to all subscribers of the tier.",
+    "pricingSectionTitle": "Choose Your Tier",
+    "pricingSectionDescription": "The Premium plan gives you full access to the community and team-curated content. Black Label adds the algorithmic layer: real-time flow, automatic scoring, and bot notifications — identical for all subscribers of the tier, with the proprietary filters we have refined over years.",
     "plans": [
         {
             "id": "monthly",
-            "name": "Monthly Plan",
+            "name": "Premium — Monthly",
             "price": "€19.99",
             "priceValue": 19.99,
             "trial": "3 days free trial",
-            "description": "Best for testing the community and its value.",
-            "cta": "Join Monthly",
+            "description": "Full access to the community, team-curated flow, daily newsletter, educational material and Quant Studio self-service tools.",
+            "cta": "Subscribe Premium Monthly",
             "stripePriceId": "price_monthly_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile"
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile",
+            "features": [
+                "Private Discord channels access",
+                "Manually curated options flow",
+                "Daily newsletter",
+                "Daily macro events calendar",
+                "Introductory educational material",
+                "Self-service Flow Scanner",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
+            ]
         },
         {
             "id": "quarterly",
-            "name": "Quarterly Plan",
+            "name": "Premium — Quarterly",
             "price": "€54.99",
             "priceValue": 54.99,
             "trial": "7 days free trial",
-            "description": "Saves money compared to the monthly plan.",
-            "cta": "Join Quarterly",
+            "description": "Full access to the community, team-curated flow, daily newsletter, educational material and Quant Studio self-service tools.",
+            "cta": "Subscribe Premium Quarterly",
             "stripePriceId": "price_quarterly_id",
-            "popular": true,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale"
+            "popular": false,
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale",
+            "features": [
+                "Private Discord channels access",
+                "Manually curated options flow",
+                "Daily newsletter",
+                "Daily macro events calendar",
+                "Introductory educational material",
+                "Self-service Flow Scanner",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
+            ]
         },
         {
             "id": "annual",
-            "name": "Annual Plan",
+            "name": "Premium — Annual",
             "price": "€219.99",
             "priceValue": 219.99,
             "trial": "30 days free trial",
-            "description": "The best value for dedicated members.",
-            "cta": "Join Annual",
+            "description": "Full access to the community, team-curated flow, daily newsletter, educational material and Quant Studio self-service tools.",
+            "cta": "Subscribe Premium Annual",
             "stripePriceId": "price_annual_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale"
+            "tier": "premium",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale",
+            "features": [
+                "Private Discord channels access",
+                "Manually curated options flow",
+                "Daily newsletter",
+                "Daily macro events calendar",
+                "Introductory educational material",
+                "Self-service Flow Scanner",
+                "GEX & dealer-positioning dashboard",
+                "Volatility Regime Analyzer"
+            ]
+        },
+        {
+            "id": "black-label-monthly",
+            "name": "Black Label — Monthly",
+            "price": "€24.99",
+            "priceValue": 24.99,
+            "trial": "3 days free trial",
+            "description": "Everything in Premium, plus real-time algorithmic options flow with automatic scoring and bot notifications, distributed identically to all subscribers of the tier. Not personalised signals.",
+            "cta": "Subscribe Black Label Monthly",
+            "stripePriceId": "price_1T5ZqgEJRFKN7GwZpBsOrU4O",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile_bl",
+            "features": [
+                "Everything in the Premium plan",
+                "Real-time algorithmic options flow",
+                "Automatic scoring on every flow",
+                "Bot notifications identical for all tier subscribers",
+                "Proprietary filters refined over years",
+                "Quant Studio Tools & Dashboards included"
+            ]
+        },
+        {
+            "id": "black-label-quarterly",
+            "name": "Black Label — Quarterly",
+            "price": "€68.99",
+            "priceValue": 68.99,
+            "trial": "7 days free trial",
+            "description": "Everything in Premium, plus real-time algorithmic options flow with automatic scoring and bot notifications, distributed identically to all subscribers of the tier. Not personalised signals.",
+            "cta": "Subscribe Black Label Quarterly",
+            "stripePriceId": "price_1T5ZsPEJRFKN7GwZk38rvhCE",
+            "popular": true,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale_bl",
+            "features": [
+                "Everything in the Premium plan",
+                "Real-time algorithmic options flow",
+                "Automatic scoring on every flow",
+                "Bot notifications identical for all tier subscribers",
+                "Proprietary filters refined over years",
+                "Quant Studio Tools & Dashboards included"
+            ]
+        },
+        {
+            "id": "black-label-annual",
+            "name": "Black Label — Annual",
+            "price": "€269.99",
+            "priceValue": 269.99,
+            "trial": "30 days free trial",
+            "description": "Everything in Premium, plus real-time algorithmic options flow with automatic scoring and bot notifications, distributed identically to all subscribers of the tier. Not personalised signals.",
+            "cta": "Subscribe Black Label Annual",
+            "stripePriceId": "price_1T5ZucEJRFKN7GwZLPDjT2GF",
+            "popular": false,
+            "tier": "black-label",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale_bl",
+            "features": [
+                "Everything in the Premium plan",
+                "Real-time algorithmic options flow",
+                "Automatic scoring on every flow",
+                "Bot notifications identical for all tier subscribers",
+                "Proprietary filters refined over years",
+                "Quant Studio Tools & Dashboards included"
+            ]
         }
     ],
     "accessSectionTitle": "How Access Works",
@@ -145,6 +249,26 @@
     "faqSectionTitle": "FAQ",
     "faqs": [
         {
+            "question": "What's the difference between Premium and Black Label?",
+            "answer": "Premium includes access to the Discord community, manually curated team flow, the daily newsletter, the macro calendar, educational material and the Quant Studio self-service tools. Black Label adds the algorithmic layer: real-time flow with automatic scoring and bot notifications, distributed identically to all subscribers of the tier."
+        },
+        {
+            "question": "Does Black Label include everything in Premium?",
+            "answer": "Yes. Black Label is a higher tier that includes everything in Premium, plus access to the real-time algorithmic layer."
+        },
+        {
+            "question": "Is the content personalised?",
+            "answer": "No. All content, including Black Label bot notifications, is distributed identically to all members of the corresponding tier. We do not respond to a single member's portfolio or profile."
+        },
+        {
+            "question": "Do you offer investment advice?",
+            "answer": "No. We do not provide investment advice under FinSA, nor portfolio management under FinIA. Operational decisions are always the member's."
+        },
+        {
+            "question": "How do bot notifications work?",
+            "answer": "They are algorithmic market commentary distributed to all subscribers of the tier. They are not personal recommendations and should not be treated as such."
+        },
+        {
             "question": "Do I need trading experience to join?",
             "answer": "Basic market knowledge helps, but the community is designed to be accessible even for investors who are still learning."
         },
@@ -168,13 +292,13 @@
     "comingSoonTitle": "Coming Soon",
     "comingSoonDescription": "Gamma Capital constantly evolves. New tools and channels will be added progressively, including:",
     "comingSoonFeatures": [
-        "enhanced flow dashboards",
-        "educational modules",
-        "deeper analytical channels",
+        "advanced self-service flow dashboards",
+        "in-depth educational modules",
+        "dedicated analytical channels",
         "periodic market breakdowns"
     ],
-    "comingSoonNote": "Premium members will receive access automatically as these features roll out.",
-    "finalCtaTitle": "Join the Gamma Capital Discord",
-    "finalCtaDescription": "Gain clarity, structure and early insight in markets that reward prepared investors.",
-    "finalCtaButton": "Choose Your Membership Plan"
+    "comingSoonNote": "Premium and Black Label members will receive access automatically as these features roll out.",
+    "finalCtaTitle": "Ready to Understand the Markets with Greater Clarity?",
+    "finalCtaDescription": "Choose the access tier that fits your style. Join the community with Premium, or add the algorithmic layer with Black Label.",
+    "finalCtaButton": "Choose Your Plan"
 }
