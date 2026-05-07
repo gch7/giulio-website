@@ -91,7 +91,7 @@
             "cta": "Join Monthly",
             "stripePriceId": "price_monthly_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile"
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile"
         },
         {
             "id": "quarterly",
@@ -103,7 +103,7 @@
             "cta": "Join Quarterly",
             "stripePriceId": "price_quarterly_id",
             "popular": true,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale"
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale"
         },
         {
             "id": "annual",
@@ -115,7 +115,7 @@
             "cta": "Join Annual",
             "stripePriceId": "price_annual_id",
             "popular": false,
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale"
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale"
         }
     ],
     "accessSectionTitle": "How Access Works",

@@ -322,7 +322,7 @@ const membershipsPage = {
             cta: 'Join Monthly',
             popular: false,
             stripePriceId: 'price_monthly_id',
-            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/checkout/mensile'
+            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/upgrade/mensile'
         },
         {
             _key: 'plan-2',
@@ -335,7 +335,7 @@ const membershipsPage = {
             cta: 'Join Quarterly',
             popular: true,
             stripePriceId: 'price_quarterly_id',
-            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/checkout/trimestrale'
+            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/upgrade/trimestrale'
         },
         {
             _key: 'plan-3',
@@ -348,7 +348,7 @@ const membershipsPage = {
             cta: 'Join Annual',
             popular: false,
             stripePriceId: 'price_yearly_id',
-            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/checkout/annuale'
+            checkoutUrl: 'https://gammacap-bot-production.up.railway.app/upgrade/annuale'
         }
     ],
     popularBadgeText: 'Most Popular',
