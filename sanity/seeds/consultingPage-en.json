@@ -2,130 +2,122 @@
     "_id": "consultingPage-en",
     "_type": "consultingPage",
     "language": "en",
-    "seoTitle": "Gamma Capital Consulting - Portfolio Review & Strategy Design",
-    "seoDescription": "Institutional-grade consulting for portfolio review, strategy design, options, structured products, and multi-asset allocation.",
-    "heroBadge": "Advisory Services",
-    "heroTitle": "Institutional Consulting",
-    "heroSubtitle": "Strategic Guidance",
-    "heroDescription": "Tailored strategic guidance for sophisticated investors, family offices, and professional traders. We bring institutional structure to private portfolios.",
+    "seoTitle": "Quant Studio — Education and Technology for the Markets | Gamma Capital",
+    "seoDescription": "Gamma Capital's Quant Studio: masterclasses, AI lab, dashboards and research library. Self-service, no personalised advice.",
+    "heroBadge": "Quant Studio",
+    "heroTitle": "Education and Technology for the Markets",
+    "heroSubtitle": "Built to Understand, Not to Delegate",
+    "heroDescription": "Gamma Capital's Quant Studio is a space where institutional rigour meets modern self-learning. We build masterclasses, analytical dashboards, and proprietary AI models. Everything is self-service: members learn and use the tools autonomously. We do not provide personalised advice, portfolio management, or investment recommendations.",
     "heroStats": [
         {
-            "value": "15+",
-            "label": "Years Experience"
+            "value": "10+ years",
+            "label": "of markets experience"
         },
         {
-            "value": "Bespoke",
-            "label": "Strategy Design"
+            "value": "1,000+ hours",
+            "label": "of educational content produced"
         }
     ],
-    "serviceNavTitle": "Our Advisory Services",
-    "serviceNavSubtitle": "Click to explore each service in detail",
+    "serviceNavTitle": "What You'll Find in the Quant Studio",
+    "serviceNavSubtitle": "Click to explore each area",
     "serviceNavItems": [
         {
-            "id": "portfolio-review",
-            "title": "Portfolio Review",
-            "icon": "Briefcase"
+            "id": "options-mc",
+            "title": "Options Masterclass",
+            "icon": "TrendingUp"
         },
         {
-            "id": "strategy-design",
-            "title": "Strategy Design",
-            "icon": "BarChart3"
+            "id": "flow-mc",
+            "title": "Flow Masterclass",
+            "icon": "Activity"
         },
         {
-            "id": "options",
-            "title": "Options",
-            "icon": "Layers"
+            "id": "ai-lab",
+            "title": "Quant & AI Lab",
+            "icon": "Cpu"
         },
         {
-            "id": "structured-products",
-            "title": "Structured Products",
-            "icon": "Shield"
+            "id": "tools",
+            "title": "Tools & Dashboards",
+            "icon": "LayoutGrid"
+        },
+        {
+            "id": "research",
+            "title": "Research Library",
+            "icon": "BookOpen"
         },
         {
             "id": "real-estate",
-            "title": "Real Estate",
+            "title": "Real Estate Insights",
             "icon": "Building2"
-        },
-        {
-            "id": "crypto",
-            "title": "Crypto",
-            "icon": "Bitcoin"
         }
     ],
     "serviceSections": [
         {
-            "id": "portfolio-review",
-            "icon": "Briefcase",
-            "title": "Portfolio Review",
+            "id": "options-mc",
+            "icon": "TrendingUp",
+            "title": "Options Masterclass",
             "description": [
-                "A disciplined, multi-asset review designed to reveal how your portfolio truly behaves.",
-                "We analyse every component to identify hidden risks, inefficiencies and structural imbalances: equities, options, ETFs, fixed income, structured products, crypto, real estate and alternatives.",
-                "Using institutional tools such as scenario analysis, stress testing, correlation mapping, VaR/CVaR and factor modelling, we highlight where performance is being lost and how risk can be repositioned.",
-                "The result is a clear, refined interpretation of your exposures and a practical roadmap to bring order, coherence and discipline to your investment process."
+                "A modular masterclass to truly understand how options work: Greeks mechanics, market-maker hedging, GEX, vanna, charm, volatility regimes, skew, and term structure.",
+                "The material is built on years of institutional experience and reframed for self-learning. No signals, no trade calls — only the conceptual tools to understand what happens when the market moves.",
+                "Suitable both for those starting from scratch and for those wanting to deepen a specific mechanic."
             ],
-            "highlight": "Highlight hidden risks and structural imbalances"
+            "highlight": "Understand options with the depth of a professional desk"
         },
         {
-            "id": "strategy-design",
-            "icon": "BarChart3",
-            "title": "Strategy Design",
+            "id": "flow-mc",
+            "icon": "Activity",
+            "title": "Institutional Flow Masterclass",
             "description": [
-                "We design investment strategies that combine institutional structure with private-investor flexibility. Our philosophy is opportunistic and options-driven, integrating short-term tactics with medium- and long-term positioning.",
-                "Each strategy is built around your objectives, risk tolerance and liquidity profile, ranging from tailored frameworks to fully bespoke architectures. Where requested, we also design tailor-made algorithms to systematise execution, risk rules and signal logic.",
-                "What makes our work unique is the fusion of options flow analysis, structured-product logic, multi-asset integration and scenario-driven adaptability.",
-                "Every strategy defines how to express an idea, how to size it, how to hedge it, and how to evolve it as conditions change — creating a disciplined, repeatable system rather than isolated trades."
+                "How institutional options flow is interpreted: what truly counts as unusual activity, how to separate signal from noise, how to read dealer positioning.",
+                "A masterclass for those who want to understand smart-money logic — not to receive operational calls. We provide the analytical framework; operational decisions remain yours."
             ],
-            "highlight": "Fusion of options flow, structured logic and adaptability"
+            "highlight": "From the map to the territory"
         },
         {
-            "id": "options",
-            "icon": "Layers",
-            "title": "Options",
+            "id": "ai-lab",
+            "icon": "Cpu",
+            "title": "Quant & AI Lab",
             "description": [
-                "Options flow is the core of Gamma Capital. Our primary edge comes from monitoring and interpreting institutional-grade options flow and unusual activity to understand positioning, risk transfer, and potential market intent.",
-                "We connect flow to derivatives mechanics, GEX (gamma exposure), delta hedging dynamics, vanna/charm effects, volatility regimes, skew, and term structure, to frame how options markets can influence price action and liquidity.",
-                "Whether the objective is tactical exposure, yield enhancement, convexity management, or hedging, our approach translates complex market signals into clear, risk-aware frameworks — with the structure and precision of a professional derivatives desk."
+                "Our laboratory of quant and AI applied to the markets. We design AI models capable of recognising patterns in market data — options flow, GEX, volatility regimes, dealer positioning, correlation anomalies.",
+                "We are first and foremost expert programmers in the financial domain. In addition to our proprietary models, we develop custom software on request: dashboards, alerting systems, backtest engines, classifiers, data pipelines, any analytical or research tool our members or clients may need.",
+                "What we do not do: we do not build robo-advisors, we do not develop algorithms that operate directly on client accounts, we do not issue personalised signals. Everything we design is an informational or analytical tool — not an operational recommendation, not an automated execution system."
             ],
-            "highlight": "Structure and precision of a professional derivatives desk"
+            "highlight": "AI for pattern recognition + custom development"
         },
         {
-            "id": "structured-products",
-            "icon": "Shield",
-            "title": "Structured Products",
+            "id": "tools",
+            "icon": "LayoutGrid",
+            "title": "Tools & Dashboards",
             "description": [
-                "Our structured-product advisory blends academic depth with institutional insight gained through exposure to portfolio managers at UBS and studies at USI Lugano.",
-                "We help investors evaluate and design a wide range of structures, from autocallables and Phoenix notes to reverse convertibles, express products and capital-protected solutions.",
-                "Our focus is on understanding payoff design, issuer hedging, risk transfer and market-regime suitability.",
-                "When appropriate, we replicate or enhance these payoffs using options to achieve greater flexibility and efficiency."
+                "A suite of self-service analytical tools: Flow Scanner for real-time options flow, GEX Dashboard for gamma exposure and dealer positioning, Volatility Regime Analyzer.",
+                "The tools are included in the Discord Membership (Premium or Black Label tier) — they are not sold separately. They present market data neutrally: no tool tells you what to buy or sell, they only show what is happening in the markets. Operational conclusions remain the member's."
             ],
-            "highlight": "Payoff design, issuer hedging and risk transfer"
+            "highlight": "Included in the Discord Membership"
+        },
+        {
+            "id": "research",
+            "icon": "BookOpen",
+            "title": "Research Library",
+            "description": [
+                "An archive of research, articles, market notes, periodic breakdowns. All content is distributed identically to all subscribers.",
+                "This is general market commentary and published research — not personal recommendations."
+            ],
+            "highlight": "Structured research, publicly distributed"
         },
         {
             "id": "real-estate",
             "icon": "Building2",
-            "title": "Real Estate & Other Assets",
+            "title": "Real Estate Insights",
             "description": [
-                "Our real estate perspective is shaped by direct experience in Switzerland and Italy, with deep familiarity in markets such as Lugano, Chiasso, Venice, Como, Udine and Rome.",
-                "We analyse property opportunities with the same rigor applied to financial assets — cash-flow projections, yield modelling, risk mapping, seasonality, and strategic integration within a broader portfolio.",
-                "From short-stay optimisation to long-term capital allocation, we help clients treat real estate not as isolated purchases but as deliberate components of a multi-asset strategy."
+                "Analysis and content on real estate markets (focus on Switzerland and Italy: Lugano, Chiasso, Como, Venice, Udine, Rome).",
+                "Educational and market material — not regulated real-estate advice. Real estate is not a financial instrument under FinSA: content is nonetheless distributed in general form."
             ],
-            "highlight": "Real estate as a deliberate component of multi-asset strategy"
-        },
-        {
-            "id": "crypto",
-            "icon": "Bitcoin",
-            "title": "Crypto",
-            "description": [
-                "Active in the crypto markets since 2017, we bring historical context and institutional discipline to an asset class often dominated by noise.",
-                "We focus on market structure, liquidity cycles, risk sizing, macro correlations and scenario-based positioning.",
-                "Our network includes experienced crypto professionals whose insights add depth beyond superficial commentary.",
-                "Crypto is approached not as speculation, but as an asymmetric asset requiring measured sizing, structural awareness and strategic integration within a diversified portfolio."
-            ],
-            "highlight": "Asymmetric asset requiring measured sizing and structure"
+            "highlight": "Real estate markets analysed with method"
         }
     ],
-    "ctaTitle": "Ready to Optimise Your Portfolio?",
-    "ctaDescription": "Contact us to schedule a personalized consultation and discuss your specific requirements.",
-    "ctaButtonText": "Get a Consultation",
-    "ctaButtonHref": "/contact"
+    "ctaTitle": "Get Started with the Quant Studio",
+    "ctaDescription": "Explore the masterclasses, try the tools, access the research library. Everything is self-service. For guidance on the right path, contact us.",
+    "ctaButtonText": "Explore the Content",
+    "ctaButtonHref": "/memberships"
 }

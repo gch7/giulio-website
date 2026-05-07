@@ -36,7 +36,7 @@
                 {
                     "_key": "realestate",
                     "text": "Immobiliare",
-                    "description": "Investimenti immobiliari",
+                    "description": "Insight immobiliari",
                     "href": "/solutions/real-estate"
                 }
             ]
@@ -48,9 +48,9 @@
             "hasDropdown": false
         },
         {
-            "_key": "consulting",
-            "text": "Consulenza",
-            "href": "/consulting",
+            "_key": "quant-studio",
+            "text": "Quant Studio",
+            "href": "/quant-studio",
             "hasDropdown": false
         },
         {
@@ -66,8 +66,8 @@
         "variant": "primary",
         "showArrow": true
     },
-    "mobileFooterText": "Unisciti a migliaia di investitori che prendono decisioni più intelligenti.",
-    "footerDescription": "Gamma Capital fornisce approfondimenti premium sugli investimenti e servizi di consulenza per aiutarti a navigare nei mercati complessi di oggi.",
+    "mobileFooterText": "Education e tecnologia per investitori che vogliono capire i mercati.",
+    "footerDescription": "Gamma Capital è uno studio di education quantitativa e tecnologia per i mercati. Masterclass, strumenti e community privata — niente consulenza personalizzata.",
     "footerColumns": [
         {
             "_key": "solutions",
@@ -104,9 +104,9 @@
                     "isExternal": false
                 },
                 {
-                    "_key": "consulting",
-                    "text": "Consulenza",
-                    "href": "/consulting",
+                    "_key": "quant-studio",
+                    "text": "Quant Studio",
+                    "href": "/quant-studio",
                     "isExternal": false
                 },
                 {
@@ -114,12 +114,18 @@
                     "text": "Contatti",
                     "href": "/contact",
                     "isExternal": false
+                },
+                {
+                    "_key": "legal",
+                    "text": "Note Legali",
+                    "href": "/legal",
+                    "isExternal": false
                 }
             ]
         }
     ],
     "copyrightText": "© 2024 Gamma Capital. Tutti i diritti riservati.",
-    "disclaimer": "L'investimento comporta rischi. Le performance passate non sono indicative dei risultati futuri.",
-    "seoTitle": "Gamma Capital - Approfondimenti Premium sugli Investimenti",
-    "seoDescription": "Gamma Capital fornisce approfondimenti premium sugli investimenti e servizi di consulenza per aiutarti a navigare nei mercati complessi di oggi."
+    "disclaimer": "Gamma Capital è uno studio di education e tecnologia. Non è autorizzato dalla FINMA. Non prestiamo consulenza in investimenti ai sensi della LSerFi né gestione patrimoniale ai sensi della LIsFi. Tutti i contenuti hanno scopo informativo o formativo e sono distribuiti in modo identico a tutti gli abbonati di un determinato livello. Le performance passate non sono indicative di risultati futuri. Le decisioni operative sono di esclusiva responsabilità di chi le prende.",
+    "seoTitle": "Gamma Capital — Quant Education & Market Tech",
+    "seoDescription": "Gamma Capital è uno studio di education quantitativa e tecnologia per i mercati: masterclass, AI lab, dashboard e community privata. Niente consulenza personalizzata."
 }

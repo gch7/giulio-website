@@ -2,130 +2,122 @@
     "_id": "consultingPage-it",
     "_type": "consultingPage",
     "language": "it",
-    "seoTitle": "Gamma Capital Consulting - Revisione Portafoglio e Strategia",
-    "seoDescription": "Consulenza di livello istituzionale per revisione portafogli, design strategico, opzioni, prodotti strutturati e asset allocation.",
-    "heroBadge": "Servizi di Advisory",
-    "heroTitle": "Consulenza Istituzionale",
-    "heroSubtitle": "Guida Strategica",
-    "heroDescription": "Guida strategica su misura per investitori sofisticati, family office e trader professionisti. Portiamo struttura istituzionale ai portafogli privati.",
+    "seoTitle": "Quant Studio — Education e Tecnologia per i Mercati | Gamma Capital",
+    "seoDescription": "Il Quant Studio di Gamma Capital: masterclass, AI lab, dashboard e research library. Self-service, niente consulenza personalizzata.",
+    "heroBadge": "Quant Studio",
+    "heroTitle": "Education e Tecnologia per i Mercati",
+    "heroSubtitle": "Costruito per Capire, Non per Delegare",
+    "heroDescription": "Il Quant Studio di Gamma Capital è uno spazio dove la rigorosità istituzionale incontra l'autoformazione moderna. Costruiamo masterclass, dashboard di analisi e modelli AI proprietari. Tutto è self-service: i membri imparano e usano gli strumenti in autonomia. Non offriamo consulenza personalizzata, gestione patrimoniale o raccomandazioni d'investimento.",
     "heroStats": [
         {
-            "value": "15+",
-            "label": "Anni di Esperienza"
+            "value": "10+ anni",
+            "label": "di esperienza sui mercati"
         },
         {
-            "value": "Su Misura",
-            "label": "Design Strategico"
+            "value": "1.000+ ore",
+            "label": "di contenuti formativi"
         }
     ],
-    "serviceNavTitle": "I Nostri Servizi",
-    "serviceNavSubtitle": "Clicca per esplorare ogni servizio nel dettaglio",
+    "serviceNavTitle": "Cosa Trovi nel Quant Studio",
+    "serviceNavSubtitle": "Clicca per esplorare ogni area",
     "serviceNavItems": [
         {
-            "id": "portfolio-review",
-            "title": "Revisione Portafoglio",
-            "icon": "Briefcase"
+            "id": "options-mc",
+            "title": "Masterclass Opzioni",
+            "icon": "TrendingUp"
         },
         {
-            "id": "strategy-design",
-            "title": "Design Strategico",
-            "icon": "BarChart3"
+            "id": "flow-mc",
+            "title": "Masterclass Flussi",
+            "icon": "Activity"
         },
         {
-            "id": "options",
-            "title": "Opzioni",
-            "icon": "Layers"
+            "id": "ai-lab",
+            "title": "Quant & AI Lab",
+            "icon": "Cpu"
         },
         {
-            "id": "structured-products",
-            "title": "Prodotti Strutturati",
-            "icon": "Shield"
+            "id": "tools",
+            "title": "Tool & Dashboard",
+            "icon": "LayoutGrid"
+        },
+        {
+            "id": "research",
+            "title": "Research Library",
+            "icon": "BookOpen"
         },
         {
             "id": "real-estate",
-            "title": "Immobiliare",
+            "title": "Real Estate Insights",
             "icon": "Building2"
-        },
-        {
-            "id": "crypto",
-            "title": "Cripto",
-            "icon": "Bitcoin"
         }
     ],
     "serviceSections": [
         {
-            "id": "portfolio-review",
-            "icon": "Briefcase",
-            "title": "Revisione del Portafoglio",
+            "id": "options-mc",
+            "icon": "TrendingUp",
+            "title": "Masterclass Opzioni",
             "description": [
-                "Una revisione disciplinata e multi-asset progettata per rivelare come si comporta veramente il tuo portafoglio.",
-                "Analizziamo ogni componente per identificare rischi nascosti, inefficienze e squilibri strutturali: azioni, opzioni, ETF, reddito fisso, prodotti strutturati, cripto, immobiliare e alternativi.",
-                "Utilizzando strumenti istituzionali come analisi di scenario, stress testing, mappatura delle correlazioni, VaR/CVaR e modellazione fattoriale, evidenziamo dove si perde performance e come riposizionare il rischio.",
-                "Il risultato è un'interpretazione chiara e raffinata delle tue esposizioni e una roadmap pratica per portare ordine, coerenza e disciplina al tuo processo di investimento."
+                "Una masterclass modulare per capire come funzionano davvero le opzioni: meccanica delle Greche, hedging del market maker, GEX, vanna, charm, regimi di volatilità, skew e term structure.",
+                "Il materiale è costruito su anni di esperienza istituzionale e riformulato per l'autoformazione. Niente segnali, niente trade calls — solo gli strumenti concettuali per capire cosa succede quando il mercato si muove.",
+                "Adatta sia a chi parte da zero sia a chi vuole approfondire una meccanica specifica."
             ],
-            "highlight": "Evidenzia rischi nascosti e squilibri strutturali"
+            "highlight": "Capire le opzioni con la profondità di un desk professionale"
         },
         {
-            "id": "strategy-design",
-            "icon": "BarChart3",
-            "title": "Progettazione Strategica",
+            "id": "flow-mc",
+            "icon": "Activity",
+            "title": "Masterclass Flussi Istituzionali",
             "description": [
-                "Progettiamo strategie di investimento che combinano struttura istituzionale con flessibilità da investitore privato. La nostra filosofia è opportunistica e guidata dalle opzioni, integrando tattiche a breve termine con posizionamento a medio e lungo termine.",
-                "Ogni strategia è costruita attorno ai tuoi obiettivi, tolleranza al rischio e profilo di liquidità, spaziando da framework su misura ad architetture completamente personalizzate. Dove richiesto, progettiamo anche algoritmi su misura per sistematizzare esecuzione, regole di rischio e logica dei segnali.",
-                "Ciò che rende unico il nostro lavoro è la fusione di analisi dei flussi di opzioni, logica dei prodotti strutturati, integrazione multi-asset e adattabilità guidata dagli scenari.",
-                "Ogni strategia definisce come esprimere un'idea, come dimensionarla (sizing), come coprirla (hedging) e come evolverla al cambiare delle condizioni — creando un sistema disciplinato e ripetibile piuttosto che operazioni isolate."
+                "Come si interpretano i flussi opzioni a livello istituzionale: cosa è davvero unusual activity, come si distingue il segnale dal rumore, come si legge il posizionamento dei dealer.",
+                "Una masterclass per chi vuole capire la logica smart money, non per ricevere chiamate operative. Ti diamo il framework analitico; le decisioni operative restano tue."
             ],
-            "highlight": "Fusione di flussi di opzioni, logica strutturata e adattabilità"
+            "highlight": "Dalla mappa al territorio"
         },
         {
-            "id": "options",
-            "icon": "Layers",
-            "title": "Opzioni",
+            "id": "ai-lab",
+            "icon": "Cpu",
+            "title": "Quant & AI Lab",
             "description": [
-                "Il flusso di opzioni è il cuore di Gamma Capital. Il nostro vantaggio principale deriva dal monitoraggio e dall'interpretazione dei flussi di opzioni istituzionali e dell'attività inusuale per comprendere il posizionamento, il trasferimento del rischio e le potenziali intenzioni di mercato.",
-                "Colleghiamo il flusso alla meccanica dei derivati, GEX (esposizione gamma), dinamiche di delta hedging, effetti vanna/charm, regimi di volatilità, skew e struttura a termine, per inquadrare come i mercati delle opzioni possono influenzare l'azione dei prezzi e la liquidità.",
-                "Che l'obiettivo sia esposizione tattica, miglioramento del rendimento (yield enhancement), gestione della convessità o copertura, il nostro approccio traduce segnali di mercato complessi in framework chiari e consapevoli del rischio — con la struttura e la precisione di un desk derivati professionale."
+                "Il nostro laboratorio di quant e intelligenza artificiale applicata ai mercati. Progettiamo modelli di AI capaci di riconoscere pattern nei dati di mercato — flussi opzioni, GEX, regimi di volatilità, dealer positioning, anomalie nelle correlazioni.",
+                "Siamo prima di tutto programmatori esperti del dominio finanziario. Oltre ai nostri modelli proprietari, sviluppiamo software custom su richiesta: dashboard, sistemi di alerting, backtest engines, classificatori, pipeline di dati, qualsiasi strumento di analisi o di ricerca di cui i membri o i clienti abbiano bisogno.",
+                "Cosa non facciamo: non costruiamo robo-advisor, non sviluppiamo algoritmi che operano direttamente sui conti dei clienti, non rilasciamo segnali personalizzati. Tutto ciò che progettiamo è uno strumento informativo o analitico — non una raccomandazione operativa né un sistema di esecuzione automatica."
             ],
-            "highlight": "Struttura e precisione di un desk derivati professionale"
+            "highlight": "Modelli AI per pattern recognition + sviluppo custom"
         },
         {
-            "id": "structured-products",
-            "icon": "Shield",
-            "title": "Prodotti Strutturati",
+            "id": "tools",
+            "icon": "LayoutGrid",
+            "title": "Tool & Dashboard",
             "description": [
-                "La nostra consulenza sui prodotti strutturati fonde profondità accademica con insight istituzionale acquisito attraverso l'esposizione a gestori di portafoglio presso UBS e studi all'USI di Lugano.",
-                "Aiutiamo gli investitori a valutare e progettare una vasta gamma di strutture, da autocallable e note Phoenix a reverse convertible, prodotti express e soluzioni a capitale protetto.",
-                "Il nostro focus è sulla comprensione del design del payoff, dell'hedging dell'emittente, del trasferimento del rischio e dell'idoneità al regime di mercato.",
-                "Quando appropriato, replichiamo o miglioriamo questi payoff utilizzando le opzioni per ottenere maggiore flessibilità ed efficienza."
+                "Una suite di strumenti di analisi self-service: Flow Scanner per i flussi opzioni in tempo reale, GEX Dashboard per esposizione gamma e dealer positioning, Volatility Regime Analyzer.",
+                "I tool sono inclusi nella Membership Discord (livello Premium o Black Label) — non si vendono separatamente. Presentano dati di mercato in modo neutrale: nessun tool dice cosa comprare o vendere, mostrano solo cosa sta succedendo nei mercati. Le conclusioni operative restano del membro."
             ],
-            "highlight": "Design del payoff, hedging dell'emittente e trasferimento del rischio"
+            "highlight": "Inclusi nella Membership Discord"
+        },
+        {
+            "id": "research",
+            "icon": "BookOpen",
+            "title": "Research Library",
+            "description": [
+                "Archivio di ricerche, articoli, note di mercato, breakdown periodici. Tutti i contenuti sono distribuiti in modo identico a tutti gli abbonati.",
+                "Si tratta di market commentary generale e research di pubblicazione, non di raccomandazioni personali."
+            ],
+            "highlight": "Research strutturata, distribuita pubblicamente"
         },
         {
             "id": "real-estate",
             "icon": "Building2",
-            "title": "Immobiliare e Altri Asset",
+            "title": "Real Estate Insights",
             "description": [
-                "La nostra prospettiva immobiliare è plasmata dall'esperienza diretta in Svizzera e Italia, con profonda familiarità in mercati come Lugano, Chiasso, Venezia, Como, Udine e Roma.",
-                "Analizziamo le opportunità immobiliari con lo stesso rigore applicato agli asset finanziari — proiezioni di cash-flow, modellazione del rendimento, mappatura del rischio, stagionalità e integrazione strategica all'interno di un portafoglio più ampio.",
-                "Dall'ottimizzazione degli affitti brevi all'allocazione di capitale a lungo termine, aiutiamo i clienti a trattare l'immobiliare non come acquisti isolati ma come componenti deliberate di una strategia multi-asset."
+                "Analisi e contenuti su mercati immobiliari (focus Svizzera e Italia: Lugano, Chiasso, Como, Venezia, Udine, Roma).",
+                "Materiale educativo e di mercato — non consulenza immobiliare regolata. Gli immobili non sono strumenti finanziari ai sensi della LSerFi: i contenuti sono comunque distribuiti in forma generale."
             ],
-            "highlight": "Immobiliare come componente deliberata di una strategia multi-asset"
-        },
-        {
-            "id": "crypto",
-            "icon": "Bitcoin",
-            "title": "Cripto",
-            "description": [
-                "Attivi nei mercati cripto dal 2017, portiamo contesto storico e disciplina istituzionale a una classe di asset spesso dominata dal rumore.",
-                "Ci concentriamo sulla struttura del mercato, cicli di liquidità, sizing del rischio, correlazioni macro e posizionamento basato su scenari.",
-                "Il nostro network include professionisti cripto esperti i cui insight aggiungono profondità oltre i commenti superficiali.",
-                "Le cripto vengono approcciate non come speculazione, ma come un asset asimmetrico che richiede dimensionamento misurato, consapevolezza strutturale e integrazione strategica all'interno di un portafoglio diversificato."
-            ],
-            "highlight": "Asset asimmetrico che richiede dimensionamento e struttura"
+            "highlight": "Mercati immobiliari analizzati con metodo"
         }
     ],
-    "ctaTitle": "Pronto a Ottimizzare il Tuo Portafoglio?",
-    "ctaDescription": "Contattaci per pianificare una consulenza personalizzata e discutere le tue esigenze specifiche.",
-    "ctaButtonText": "Richiedi Consulenza",
-    "ctaButtonHref": "/contact"
+    "ctaTitle": "Inizia con il Quant Studio",
+    "ctaDescription": "Esplora le masterclass, prova i tool, accedi alla research library. Tutto è self-service. Per orientarti tra i contenuti, contattaci.",
+    "ctaButtonText": "Esplora i Contenuti",
+    "ctaButtonHref": "/memberships"
 }
