@@ -28,7 +28,7 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
 };
 
-const RAILWAY_CHECKOUT_BASE = 'https://gammacap-bot-production.up.railway.app/checkout';
+const RAILWAY_CHECKOUT_BASE = 'https://gammacap-bot-production.up.railway.app/upgrade';
 const PLAN_ID_TO_RAILWAY_PATH: Record<string, string> = {
   monthly: 'mensile',
   quarterly: 'trimestrale',

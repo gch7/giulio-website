@@ -103,7 +103,7 @@
             "stripePriceId": "price_monthly_id",
             "popular": false,
             "tier": "premium",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile",
             "features": [
                 "Accesso canali Discord privati",
                 "Flussi opzioni segnalati manualmente",
@@ -123,7 +123,7 @@
             "stripePriceId": "price_quarterly_id",
             "popular": false,
             "tier": "premium",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale",
             "features": [
                 "Accesso canali Discord privati",
                 "Flussi opzioni segnalati manualmente",
@@ -143,7 +143,7 @@
             "stripePriceId": "price_annual_id",
             "popular": false,
             "tier": "premium",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale",
             "features": [
                 "Accesso canali Discord privati",
                 "Flussi opzioni segnalati manualmente",
@@ -163,7 +163,7 @@
             "stripePriceId": "price_1T5ZqgEJRFKN7GwZpBsOrU4O",
             "popular": false,
             "tier": "black-label",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/mensile_bl",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/mensile_bl",
             "features": [
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
@@ -183,7 +183,7 @@
             "stripePriceId": "price_1T5ZsPEJRFKN7GwZk38rvhCE",
             "popular": true,
             "tier": "black-label",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/trimestrale_bl",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/trimestrale_bl",
             "features": [
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
@@ -203,7 +203,7 @@
             "stripePriceId": "price_1T5ZucEJRFKN7GwZLPDjT2GF",
             "popular": false,
             "tier": "black-label",
-            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/checkout/annuale_bl",
+            "checkoutUrl": "https://gammacap-bot-production.up.railway.app/upgrade/annuale_bl",
             "features": [
                 "Tutto il piano Premium incluso",
                 "Flussi opzioni algoritmici in tempo reale",
