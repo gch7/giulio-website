@@ -28,12 +28,15 @@ const iconMap: Record<string, LucideIcon> = {
   Shield,
 };
 
-const RAILWAY_CHECKOUT_BASE = 'https://gammacap-bot-production.up.railway.app/upgrade';
+const RAILWAY_CHECKOUT_BASE = 'https://gammacap-bot-production.up.railway.app/checkout';
 const PLAN_ID_TO_RAILWAY_PATH: Record<string, string> = {
   monthly: 'mensile',
   quarterly: 'trimestrale',
   annual: 'annuale',
   yearly: 'annuale',
+  'black-label-monthly': 'mensile_bl',
+  'black-label-quarterly': 'trimestrale_bl',
+  'black-label-annual': 'annuale_bl',
 };
 
 function getRef(): string | null {
@@ -42,11 +45,21 @@ function getRef(): string | null {
   return match ? match[1] : null;
 }
 
+function normalizeBase(url: string): string {
+  return url.replace(
+    'gammacap-bot-production.up.railway.app/upgrade',
+    'gammacap-bot-production.up.railway.app/checkout',
+  );
+}
+
+function resolveBase(plan: { id: string; checkoutUrl?: string }): string {
+  if (plan.checkoutUrl) return normalizeBase(plan.checkoutUrl);
+  const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
+  return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
+}
+
 function getCheckoutUrl(plan: { id: string; checkoutUrl?: string }): string {
-  const base = plan.checkoutUrl || (() => {
-    const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
-    return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
-  })();
+  const base = resolveBase(plan);
   const ref = getRef();
   return ref ? `${base}?ref=${encodeURIComponent(ref)}` : base;
 }
@@ -391,12 +404,7 @@ export default function MembershipsPageClient({ pageData, siteSettings, uiString
                     href={getCheckoutUrl(plan)}
                     onClick={(e) => {
                       e.preventDefault();
-                      const ref = getRef();
-                      const base = plan.checkoutUrl || (() => {
-                        const path = PLAN_ID_TO_RAILWAY_PATH[plan.id];
-                        return path ? `${RAILWAY_CHECKOUT_BASE}/${path}` : RAILWAY_CHECKOUT_BASE;
-                      })();
-                      window.location.href = ref ? `${base}?ref=${encodeURIComponent(ref)}` : base;
+                      window.location.href = getCheckoutUrl(plan);
                     }}
                     className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl text-[14px] font-semibold transition-all duration-200 ${
                       plan.tier === 'black-label'
